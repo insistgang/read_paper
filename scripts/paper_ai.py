@@ -31,7 +31,10 @@ def extract_text_from_pdf(pdf_path: str) -> str:
             reader = PyPDF2.PdfReader(file)
             text = ""
             for page in reader.pages:
-                text += page.extract_text() + "\n"
+                # page.extract_text() 在某些 PDF (扫描件/无文本层) 上可能返回 None,
+                # 之前会直接 None + "\n" 抛 TypeError。这里兜成空串。
+                page_text = page.extract_text() or ""
+                text += page_text + "\n"
             return text
     except ImportError:
         print("请安装PyPDF2: pip install PyPDF2")
@@ -358,13 +361,17 @@ def main():
     elif args.command == "notes":
         text = extract_text_from_pdf_advanced(args.pdf)
         if text:
-            notes = generate_reading_notes(text)
+            # 跟 batch 路径一致: 走 create_paper_note, 这样会带上 frontmatter
+            # (title/authors/year/venue/pdf/tags/status/date_added) + Obsidian 元数据,
+            # 而不是只写 AI 正文。output_dir 用 -o 指定；没指定就放 PDF 旁边。
+            output_dir = str(Path(args.output).parent) if args.output else str(Path(args.pdf).parent)
+            note_content = create_paper_note(args.pdf, output_dir=output_dir)
             if args.output:
                 with open(args.output, 'w', encoding='utf-8') as f:
-                    f.write(notes)
+                    f.write(note_content)
                 print(f"笔记已保存到: {args.output}")
             else:
-                print(notes)
+                print(note_content)
     
     elif args.command == "batch":
         batch_process_pdfs(args.dir, args.output)

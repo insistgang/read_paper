@@ -8,16 +8,19 @@
 read_paper/
 ├── .obsidian/              # Obsidian配置
 ├── 00-Inbox/              # 收件箱（新论文暂存）
-├── 01-Papers/             # 论文笔记（按主题组织）
+├── 01-Papers/             # 论文 PDF + 笔记 (按主题组织, PDF 与同名 .md 放一起)
 ├── 02-Notes/              # 阅读笔记和想法
 ├── 03-Templates/          # 模板文件
-├── 04-Attachments/        # 附件
-│   └── PDFs/             # PDF文件存储
+├── 04-Attachments/        # 附件 (备用, 目前 PDF 都直接放 01-Papers/)
 ├── 05-Literature/         # 文献综述
 ├── 06-Projects/           # 研究项目
 ├── 07-Archive/            # 归档
 └── scripts/               # AI辅助脚本
 ```
+
+> **PDF 存放约定**：当前所有 PDF 都在 `01-Papers/` 下，笔记同名 `.md` 也放同一目录。
+> `04-Attachments/PDFs/` 保留为可选备用目录，如果你想把 PDF 单独集中管理可以把 PDF
+> 移过去，然后改 `scripts/paper` 里的 `PDF_DIR` 指向新位置。
 
 ## 🚀 快速开始
 
@@ -60,8 +63,8 @@ read_paper/
 ### 添加新论文
 
 1. **方法一：直接添加**
-   - 将PDF文件放入 `04-Attachments/PDFs/`
-   - 在 `01-Papers` 创建新笔记
+   - 将PDF文件放入 `01-Papers/`（与笔记同目录）
+   - 在 `01-Papers/` 创建同名笔记 `.md`
    - 使用模板 `Paper Template.md`
 
 2. **方法二：使用Zotero（推荐）**
@@ -244,7 +247,7 @@ read_paper/
 
 确保：
 1. 安装了PDF++或Annotator插件
-2. PDF文件在 `04-Attachments/PDFs/` 目录
+2. PDF文件在 `01-Papers/` 目录（当前约定）
 3. 笔记中正确引用了PDF
 
 ### Q: Dataview查询无结果？

@@ -4,7 +4,9 @@
 VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PAPERS_DIR="$VAULT_DIR/01-Papers"
 TEMPLATES_DIR="$VAULT_DIR/03-Templates"
-PDF_DIR="$VAULT_DIR/04-Attachments/PDFs"
+# 当前 PDF 跟笔记同目录放在 01-Papers/, 04-Attachments/PDFs 留作未来备用。
+# 想切换的话改这里就行, 或者用环境变量 PAPER_PDF_DIR 覆盖。
+PDF_DIR="${PAPER_PDF_DIR:-$PAPERS_DIR}"
 
 show_help() {
     echo "📚 论文阅读中心 CLI"
@@ -74,10 +76,11 @@ search_papers() {
 show_stats() {
     echo "📊 统计信息"
     echo "============"
-    
-    local paper_count=$(find "$PAPERS_DIR" -name "*.md" -type f 2>/dev/null | wc -l)
-    local pdf_count=$(find "$PDF_DIR" -name "*.pdf" -type f 2>/dev/null | wc -l)
-    
+
+    # -maxdepth 1 排除 01-Papers/read_paper/ 嵌套副本 (云同步事故产物)
+    local paper_count=$(find "$PAPERS_DIR" -maxdepth 1 -name "*.md" -type f 2>/dev/null | wc -l)
+    local pdf_count=$(find "$PDF_DIR" -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
+
     echo "论文笔记: $paper_count 篇"
     echo "PDF文件: $pdf_count 个"
 }

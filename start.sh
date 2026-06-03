@@ -38,22 +38,22 @@ add_paper() {
         echo "错误: 文件不存在"
         return
     fi
-    
-    # 复制PDF到附件目录
+
+    # 复制 PDF 到论文目录 (跟笔记同目录, 当前约定)
     pdf_name=$(basename "$pdf_path")
-    cp "$pdf_path" "04-Attachments/PDFs/$pdf_name"
-    echo "PDF已复制到: 04-Attachments/PDFs/$pdf_name"
-    
+    cp "$pdf_path" "01-Papers/$pdf_name"
+    echo "PDF已复制到: 01-Papers/$pdf_name"
+
     # 使用AI生成笔记
     if command -v python3 &> /dev/null; then
         read -p "是否使用AI生成笔记? (y/n): " use_ai
         if [ "$use_ai" = "y" ] || [ "$use_ai" = "Y" ]; then
             echo "正在生成笔记..."
-            python3 scripts/paper_ai.py notes "04-Attachments/PDFs/$pdf_name" -o "01-Papers/${pdf_name%.pdf}.md"
+            python3 scripts/paper_ai.py notes "01-Papers/$pdf_name" -o "01-Papers/${pdf_name%.pdf}.md"
             echo "笔记已生成: 01-Papers/${pdf_name%.pdf}.md"
         fi
     fi
-    
+
     echo "✅ 论文添加完成"
 }
 
@@ -74,18 +74,19 @@ batch_process() {
 show_stats() {
     echo "📊 论文统计"
     echo "============"
-    
+
     # 统计论文数量
     paper_count=$(find 01-Papers -name "*.md" -type f 2>/dev/null | wc -l)
-    pdf_count=$(find 04-Attachments/PDFs -name "*.pdf" -type f 2>/dev/null | wc -l)
-    
+    # 排除嵌套副本 01-Papers/read_paper/ 下的 PDF, 那是云同步事故产物
+    pdf_count=$(find 01-Papers -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
+
     echo "论文笔记: $paper_count 篇"
-    echo "PDF文件: $pdf_count 个"
+    echo "PDF文件 (顶层 01-Papers/): $pdf_count 个"
     echo ""
-    
+
     # 显示最近添加的论文
     echo "📝 最近添加的论文:"
-    find 01-Papers -name "*.md" -type f -exec ls -t {} \; 2>/dev/null | head -5 | while read file; do
+    find 01-Papers -maxdepth 1 -name "*.md" -type f -exec ls -t {} \; 2>/dev/null | head -5 | while read file; do
         echo "  - $(basename "$file" .md)"
     done
 }

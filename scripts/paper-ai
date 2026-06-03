@@ -11,10 +11,19 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
-# 检查依赖
-if ! python3 -c "import PyPDF2" &> /dev/null; then
-    echo "警告: 未安装PyPDF2，正在安装..."
-    pip3 install -r "$PROJECT_DIR/requirements.txt"
+# 检查依赖: 缺就明确提示，让用户决定装不装，不再静默 pip install
+# (受限网络/生产环境里静默 pip install 容易卡住或者装错环境)
+missing=()
+for pkg in PyPDF2 pdfplumber requests; do
+    if ! python3 -c "import $pkg" &> /dev/null; then
+        missing+=("$pkg")
+    fi
+done
+if [ ${#missing[@]} -gt 0 ]; then
+    echo "错误: 缺少依赖: ${missing[*]}"
+    echo "请手动安装: pip3 install -r $PROJECT_DIR/requirements.txt"
+    echo "或单独装: pip3 install ${missing[*]}"
+    exit 2
 fi
 
 # 运行命令

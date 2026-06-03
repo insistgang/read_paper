@@ -14,8 +14,8 @@ Thumbs.db
 *.temp
 ~*
 
-# PDF files (optional, uncomment if you don't want to track PDFs)
-# *.pdf
+# PDF files (默认不跟踪, 改用 Git LFS 或在 04-Attachments/PDFs 单独管理)
+*.pdf
 
 # Large files
 *.zip
@@ -42,3 +42,36 @@ pip-delete-this-directory.txt
 
 # Logs
 *.log
+
+# ---- 论文仓库特定规则 ----
+
+# 嵌套项目副本 (云同步事故产物, 不要纳入仓库)
+# 真实 PDF 资产在 01-Papers/ 顶层, 嵌套 read_paper/ 是被同步软件复制进来的完整副本
+01-Papers/read_paper/
+
+# 论文推送 / 上传脚本 (含敏感凭据风险, 不要进仓库)
+# 这些脚本只在你本机使用, 推上 GitHub 反而会泄露路径和元数据
+01-Papers/push_pdfs.py
+01-Papers/push_pdfs2.py
+01-Papers/upload_to_github.py
+01-Papers/batch_push.py
+
+# 临时检查 / 状态文件
+01-Papers/check_remote.json
+01-Papers/final_check.json
+01-Papers/remote_check.json
+01-Papers/remote_status.json
+01-Papers/remote_status2.json
+01-Papers/repo_tree.json
+
+# 临时工具脚本
+01-Papers/batch_push.py
+*.bak
+*.swp
+
+# AI 生成产物 (如果不想跟, 打开下行)
+# 01-Papers/paper_classification.md
+
+# 临时 / 调试目录
+01-Papers/marker_output/
+01-Papers/read_lunwen/
