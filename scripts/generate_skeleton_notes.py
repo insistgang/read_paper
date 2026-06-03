@@ -20,7 +20,10 @@ tags: [paper]
 ---
 
 约定:
-  - 不会覆盖已存在的 .md (默认行为; --force 可覆盖)
+  - 默认: 不会覆盖已存在的 .md, 跳过
+  - --force: 只覆盖 status=unread + source_basis=filename 的骨架笔记,
+    已读笔记(status=read 或 source_basis=pdf-text)自动保护
+  - --really-force: 无条件覆盖所有 .md, 包括已读笔记 (日常增量用 --force 即可)
   - 不读 PDF 内容, 不编造作者/会议/实验
   - 标题用 PDF stem (去除扩展名 + 清理下划线/短横线/年份前缀)
   - keywords 从文件名提取 1-3 个有意义的 token

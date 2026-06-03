@@ -75,18 +75,23 @@ show_stats() {
     echo "📊 论文统计"
     echo "============"
 
-    # -maxdepth 1: 排除未来可能出现的 01-Papers/read_paper/ 嵌套副本
-    # (云同步事故; 已经在 .gitignore 排除, 但回收站误恢复仍可能)
-    paper_count=$(find 01-Papers -maxdepth 1 -name "*.md" -type f 2>/dev/null | wc -l)
+    # 统一"非论文笔记"排除规则 (跟 validate_library.py / scripts/paper 一致):
+    #   - paper_classification.md: 分类清单, 机器生成的索引
+    #   - 示例-* / 模板-* / template-*: 用户的参考笔记, 允许没 PDF
+    # 真实论文卡片数应该 == PDF 数 (499)
+    local md_filter='! -name paper_classification.md ! -name "示例-*.md" ! -name "模板-*.md" ! -name "template-*.md"'
+
+    # -maxdepth 1: 排除 01-Papers/read_paper/ 嵌套副本 (云同步事故)
+    paper_count=$(eval "find 01-Papers -maxdepth 1 -name '*.md' -type f $md_filter" 2>/dev/null | wc -l)
     pdf_count=$(find 01-Papers -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
 
     echo "论文笔记: $paper_count 篇"
     echo "PDF文件 (顶层 01-Papers/): $pdf_count 个"
     echo ""
 
-    # 显示最近添加的论文
+    # 显示最近添加的论文 (同样的过滤)
     echo "📝 最近添加的论文:"
-    find 01-Papers -maxdepth 1 -name "*.md" -type f -exec ls -t {} \; 2>/dev/null | head -5 | while read file; do
+    eval "find 01-Papers -maxdepth 1 -name '*.md' -type f $md_filter -exec ls -t {} +" 2>/dev/null | head -5 | while read file; do
         echo "  - $(basename "$file" .md)"
     done
 }

@@ -77,13 +77,15 @@ show_stats() {
     echo "📊 统计信息"
     echo "============"
 
-    # -maxdepth 1: 排除未来可能出现的 01-Papers/read_paper/ 嵌套副本
-    # (云同步事故; 已经在 .gitignore 排除, 但回收站误恢复仍可能)
-    #
-    # paper_classification.md 是分类清单 (机器生成的索引), 不是论文笔记,
-    # 排除掉保持口径跟 validate_library 一致.
+    # 统一"非论文笔记"排除规则 (跟 start.sh / validate_library.py 一致):
+    #   - paper_classification.md: 分类清单, 机器生成的索引
+    #   - 示例-* / 模板-* / template-*: 用户的参考笔记, 允许没 PDF
+    # 真实论文卡片数应该 == PDF 数 (499)
     local paper_count=$(find "$PAPERS_DIR" -maxdepth 1 -name "*.md" -type f \
-        ! -name "paper_classification.md" 2>/dev/null | wc -l)
+        ! -name "paper_classification.md" \
+        ! -name "示例-*.md" \
+        ! -name "模板-*.md" \
+        ! -name "template-*.md" 2>/dev/null | wc -l)
     local pdf_count=$(find "$PDF_DIR" -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
 
     echo "论文笔记: $paper_count 篇"

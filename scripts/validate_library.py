@@ -62,6 +62,22 @@ def parse_frontmatter(md_text: str) -> dict[str, str]:
     return out
 
 
+# 统一"非论文笔记"排除规则 (跟 start.sh / scripts/paper / generate_skeleton_notes 一致):
+#   - paper_classification.md: 分类清单, 机器生成的索引
+#   - 示例-* / 模板-* / template-*: 用户的参考笔记, 允许没 PDF
+# 真实论文卡片数应该 == PDF 数
+_NON_PAPER_NOTE_STEMS = ("paper_classification",)
+_NON_PAPER_NOTE_PREFIXES = ("示例-", "模板-", "template-")
+
+
+def is_paper_note(name: str) -> bool:
+    """判定一个 .md 文件名 (含扩展名) 是不是真实论文笔记。"""
+    stem = Path(name).stem
+    if stem in _NON_PAPER_NOTE_STEMS:
+        return False
+    return not any(stem.startswith(p) for p in _NON_PAPER_NOTE_PREFIXES)
+
+
 def check_papers_dir(papers: Path) -> tuple[list, list]:
     """返回 (errors, warnings) 列表"""
     errors, warnings = [], []
@@ -69,23 +85,17 @@ def check_papers_dir(papers: Path) -> tuple[list, list]:
         return ([f"01-Papers/ 不存在: {papers}"], [])
 
     pdfs = {p.stem: p for p in papers.glob("*.pdf")}
-    mds = {p.stem: p for p in papers.glob("*.md") if p.name != "paper_classification.md"}
+    # 真实论文卡片: 排除分类清单 + 示例/模板笔记
+    mds = {p.stem: p for p in papers.glob("*.md") if is_paper_note(p.name)}
 
-    # 排除示例/模板笔记: 文件名以 "示例-" 开头的是参考模板, 允许没 PDF
-    # (用户在 03-Templates/ 之外放示例笔记是常见情况, validate 不该报错)
-    is_template = lambda stem: stem.startswith("示例-") or stem.startswith("模板-") or stem.startswith("template-")
-
-    # 1. 孤立 PDF
+    # 1. 孤立 PDF (有 PDF 但没同名 .md)
     orphan_pdfs = sorted(set(pdfs) - set(mds))
     for stem in orphan_pdfs:
         warnings.append(f"[孤立 PDF] 没有同名 .md: {pdfs[stem].name}")
 
-    # 2. 孤立 .md (引用了 PDF, 但 PDF 不存在)
+    # 2. 孤立 .md (有笔记但 PDF 不存在) -- 因为 mds 已经过滤了非论文笔记, 这里不用再判
     orphan_mds = sorted(set(mds) - set(pdfs))
     for stem in orphan_mds:
-        if is_template(stem):
-            # 示例/模板笔记允许没 PDF, 不警告
-            continue
         warnings.append(f"[孤立 .md] 找不到同名 PDF: {mds[stem].name}")
 
     # 3. frontmatter 完整性
@@ -185,7 +195,7 @@ def main():
 
     # 统计
     pdf_count = len(list(papers.glob("*.pdf"))) if papers.is_dir() else 0
-    md_count = len([p for p in papers.glob("*.md") if p.name != "paper_classification.md"]) if papers.is_dir() else 0
+    md_count = len([p for p in papers.glob("*.md") if is_paper_note(p.name)]) if papers.is_dir() else 0
     print(f"📊 01-Papers/ 下: {pdf_count} PDF / {md_count} 笔记")
     print()
 
