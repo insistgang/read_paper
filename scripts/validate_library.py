@@ -145,6 +145,10 @@ def main():
         default=Path(__file__).resolve().parent.parent,
         help="仓库根目录 (默认: 脚本同级的上级目录)",
     )
+    parser.add_argument(
+        "-v", "--verbose", action="store_true",
+        help="显示全部 warning, 不截断",
+    )
     args = parser.parse_args()
 
     root = args.root
@@ -154,6 +158,7 @@ def main():
     papers = root / "01-Papers"
     inbox = root / "00-Inbox"
     attachments = root / "04-Attachments" / "PDFs"
+    verbose = args.verbose
 
     print(f"📚 论文库健康检查 — 根目录: {root}\n")
 
@@ -185,7 +190,6 @@ def main():
             print(f"   - {kind}: {n}")
         print()
         # 默认每类最多展示 5 条, 用 --verbose 看全部
-        verbose = "--verbose" in sys.argv
         limit = None if verbose else 5
         for kind in sorted(by_kind.keys()):
             items = [w for w in warns if w.startswith(f"[{kind}]")]
@@ -193,7 +197,7 @@ def main():
             for w in shown:
                 print(f"  {w}")
             if limit and len(items) > limit:
-                print(f"  ... [{kind}] 还有 {len(items) - limit} 条, 加 --verbose 看全部")
+                print(f"  ... [{kind}] 还有 {len(items) - limit} 条, 加 -v/--verbose 看全部")
         print()
 
     if not errs and not warns:
