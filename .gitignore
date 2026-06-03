@@ -43,6 +43,11 @@ pip-delete-this-directory.txt
 # Logs
 *.log
 
+# Environment variables
+.env
+.env.local
+.env.*.local
+
 # ---- 论文仓库特定规则 ----
 
 # 嵌套项目副本 (云同步事故产物, 不要纳入仓库)

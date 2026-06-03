@@ -72,7 +72,7 @@ search_papers() {
     
     echo "🔍 搜索结果: $keyword"
     echo "=================="
-    grep -r -l "$keyword" "$NOTES_DIR" 2>/dev/null | while read file; do
+    grep -r -l --include="*.md" "$keyword" "$NOTES_DIR" 2>/dev/null | while read file; do
         echo "- $(basename "$file" .md)"
     done
 }

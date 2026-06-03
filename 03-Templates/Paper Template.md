@@ -6,10 +6,15 @@ year:
 venue: 
 doi: 
 pdf: "[[{{title}}.pdf]]"
+primary_topic: "U_未归类"
+topics: [U_未归类]
 tags:
   - paper
   - 
 status: unread
+reading_stage: first-pass
+confidence: medium
+source_basis: pdf-text
 rating: 
 date_added: "{{date}}"
 ---
