@@ -1,0 +1,15 @@
+# 论文阅读中心 - Python依赖
+
+# PDF处理
+PyPDF2>=3.0.0
+pdfplumber>=0.10.0
+
+# HTTP请求
+requests>=2.28.0
+
+# 文本处理
+tiktoken>=0.5.0
+
+# 可选：本地Embedding支持
+# sentence-transformers>=2.2.0
+# faiss-cpu>=1.7.0

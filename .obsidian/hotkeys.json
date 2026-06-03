@@ -1,0 +1,14 @@
+{
+  "templater-obsidian:insert-templater": [
+    {
+      "modifiers": ["Mod", "Shift"],
+      "key": "t"
+    }
+  ],
+  "obsidian-git:open-git-view": [
+    {
+      "modifiers": ["Mod", "Shift"],
+      "key": "g"
+    }
+  ]
+}

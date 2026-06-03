@@ -1,0 +1,116 @@
+#!/bin/bash
+# 论文阅读中心 - 命令行工具
+
+VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PAPERS_DIR="$VAULT_DIR/01-Papers"
+TEMPLATES_DIR="$VAULT_DIR/03-Templates"
+PDF_DIR="$VAULT_DIR/04-Attachments/PDFs"
+
+show_help() {
+    echo "📚 论文阅读中心 CLI"
+    echo ""
+    echo "用法: paper <命令> [参数]"
+    echo ""
+    echo "命令:"
+    echo "  list              列出所有论文"
+    echo "  new <标题>        创建新论文笔记"
+    echo "  search <关键词>   搜索论文"
+    echo "  stats             显示统计信息"
+    echo "  open              在 Obsidian 中打开"
+    echo "  help              显示帮助"
+}
+
+list_papers() {
+    echo "📄 论文列表:"
+    echo "============"
+    if [ -d "$PAPERS_DIR" ]; then
+        find "$PAPERS_DIR" -name "*.md" -type f | while read file; do
+            basename "$file" .md
+        done | sort
+    else
+        echo "暂无论文"
+    fi
+}
+
+new_paper() {
+    local title="$1"
+    if [ -z "$title" ]; then
+        echo "错误: 请提供论文标题"
+        echo "用法: paper new <标题>"
+        return 1
+    fi
+    
+    local filename="$PAPERS_DIR/$title.md"
+    if [ -f "$filename" ]; then
+        echo "错误: 论文已存在"
+        return 1
+    fi
+    
+    # 使用模板创建
+    if [ -f "$TEMPLATES_DIR/Paper Template.md" ]; then
+        sed "s/{{title}}/$title/g; s/{{date}}/$(date +%Y-%m-%d)/g" "$TEMPLATES_DIR/Paper Template.md" > "$filename"
+        echo "✅ 已创建: $filename"
+    else
+        echo "错误: 模板不存在"
+        return 1
+    fi
+}
+
+search_papers() {
+    local keyword="$1"
+    if [ -z "$keyword" ]; then
+        echo "错误: 请提供搜索关键词"
+        echo "用法: paper search <关键词>"
+        return 1
+    fi
+    
+    echo "🔍 搜索结果: $keyword"
+    echo "=================="
+    grep -r -l "$keyword" "$PAPERS_DIR" 2>/dev/null | while read file; do
+        echo "- $(basename "$file" .md)"
+    done
+}
+
+show_stats() {
+    echo "📊 统计信息"
+    echo "============"
+    
+    local paper_count=$(find "$PAPERS_DIR" -name "*.md" -type f 2>/dev/null | wc -l)
+    local pdf_count=$(find "$PDF_DIR" -name "*.pdf" -type f 2>/dev/null | wc -l)
+    
+    echo "论文笔记: $paper_count 篇"
+    echo "PDF文件: $pdf_count 个"
+}
+
+open_vault() {
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        open -a Obsidian "$VAULT_DIR"
+    else
+        echo "请手动打开 Obsidian 并选择: $VAULT_DIR"
+    fi
+}
+
+# 主命令
+case "$1" in
+    list)
+        list_papers
+        ;;
+    new)
+        new_paper "$2"
+        ;;
+    search)
+        search_papers "$2"
+        ;;
+    stats)
+        show_stats
+        ;;
+    open)
+        open_vault
+        ;;
+    help|--help|-h)
+        show_help
+        ;;
+    *)
+        show_help
+        ;;
+esac
