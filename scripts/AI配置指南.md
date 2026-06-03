@@ -85,10 +85,10 @@ chmod +x scripts/paper-ai
 ./scripts/paper-ai qa paper.pdf "这篇论文的主要贡献是什么？"
 
 # 生成阅读笔记
-./scripts/paper-ai notes paper.pdf -o notes.md
+./scripts/paper-ai notes 01-Papers/paper.pdf -o 02-Notes/Papers/paper.md
 
 # 批量处理
-./scripts/paper-ai batch ./pdfs -o ./01-Papers
+./scripts/paper-ai batch ./01-Papers -o ./02-Notes/Papers
 ```
 
 ### Python代码调用

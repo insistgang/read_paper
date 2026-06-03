@@ -74,7 +74,7 @@
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "01-Papers"
+FROM "02-Notes/Papers"
 WHERE primary_topic = "E_图像复原_超分_去噪_去雨去雾"
 SORT year DESC
 ```
@@ -83,7 +83,7 @@ SORT year DESC
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "01-Papers"
+FROM "02-Notes/Papers"
 WHERE contains(topics, "E_图像复原_超分_去噪_去雨去雾")
 SORT year DESC
 ```

@@ -78,22 +78,26 @@ def is_paper_note(name: str) -> bool:
     return not any(stem.startswith(p) for p in _NON_PAPER_NOTE_PREFIXES)
 
 
-def check_papers_dir(papers: Path) -> tuple[list, list]:
-    """返回 (errors, warnings) 列表"""
+def check_library(papers: Path, notes: Path) -> tuple[list, list]:
+    """检查 PDF (在 papers/) 和 .md 笔记 (在 notes/) 是否一一对应。
+
+    返回 (errors, warnings) 列表。
+    """
     errors, warnings = [], []
     if not papers.is_dir():
         return ([f"01-Papers/ 不存在: {papers}"], [])
+    if not notes.is_dir():
+        return ([f"02-Notes/Papers/ 不存在: {notes}"], [])
 
     pdfs = {p.stem: p for p in papers.glob("*.pdf")}
-    # 真实论文卡片: 排除分类清单 + 示例/模板笔记
-    mds = {p.stem: p for p in papers.glob("*.md") if is_paper_note(p.name)}
+    mds = {p.stem: p for p in notes.glob("*.md")}
 
     # 1. 孤立 PDF (有 PDF 但没同名 .md)
     orphan_pdfs = sorted(set(pdfs) - set(mds))
     for stem in orphan_pdfs:
         warnings.append(f"[孤立 PDF] 没有同名 .md: {pdfs[stem].name}")
 
-    # 2. 孤立 .md (有笔记但 PDF 不存在) -- 因为 mds 已经过滤了非论文笔记, 这里不用再判
+    # 2. 孤立 .md (有笔记但 PDF 不存在)
     orphan_mds = sorted(set(mds) - set(pdfs))
     for stem in orphan_mds:
         warnings.append(f"[孤立 .md] 找不到同名 PDF: {mds[stem].name}")
@@ -183,20 +187,21 @@ def main():
         sys.exit(f"错误: 仓库根目录不存在: {root}")
 
     papers = root / "01-Papers"
+    notes = root / "02-Notes" / "Papers"
     inbox = root / "00-Inbox"
     attachments = root / "04-Attachments" / "PDFs"
     verbose = args.verbose
 
     print(f"📚 论文库健康检查 — 根目录: {root}\n")
 
-    errs, warns = check_papers_dir(papers)
+    errs, warns = check_library(papers, notes)
     warns += check_inbox(inbox)
     warns += check_attachments_pdfs(attachments)
 
     # 统计
     pdf_count = len(list(papers.glob("*.pdf"))) if papers.is_dir() else 0
-    md_count = len([p for p in papers.glob("*.md") if is_paper_note(p.name)]) if papers.is_dir() else 0
-    print(f"📊 01-Papers/ 下: {pdf_count} PDF / {md_count} 笔记")
+    md_count = len(list(notes.glob("*.md"))) if notes.is_dir() else 0
+    print(f"📊 PDF (01-Papers/): {pdf_count} / 论文笔记 (02-Notes/Papers/): {md_count}")
     print()
 
     # 按类别统计 warnings

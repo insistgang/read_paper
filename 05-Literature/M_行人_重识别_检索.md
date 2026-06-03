@@ -62,7 +62,7 @@
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "01-Papers"
+FROM "02-Notes/Papers"
 WHERE primary_topic = "M_行人_重识别_检索"
 SORT year DESC
 ```
@@ -71,7 +71,7 @@ SORT year DESC
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "01-Papers"
+FROM "02-Notes/Papers"
 WHERE contains(topics, "M_行人_重识别_检索")
 SORT year DESC
 ```

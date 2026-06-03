@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""为 01-Papers/ 下的每个 PDF 生成同名 .md 骨架笔记。
+"""为 01-Papers/ 下的每个 PDF 在 02-Notes/Papers/ 生成同名 .md 骨架笔记。
 
 骨架只基于文件名 + 主题分类, 不读 PDF 内容。读 PDF 后用 scripts/paper_ai.py
 升级正文, 但 frontmatter 不动 (primary_topic/topics 由本脚本写入, 是机器
@@ -37,9 +37,10 @@ from pathlib import Path
 
 # 仓库根
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_PAPERS = ROOT / "01-Papers"
-DEFAULT_TOPICS_JSON = DEFAULT_PAPERS / "paper_topics.json"
-DEFAULT_LIT = ROOT / "05-Literature"
+DEFAULT_PAPERS = ROOT / "01-Papers"          # PDF 原文目录 (只读)
+DEFAULT_NOTES = ROOT / "02-Notes" / "Papers"  # 论文笔记目录 (输出)
+DEFAULT_TOPICS_JSON = DEFAULT_PAPERS / "paper_topics.json"  # 主题映射, 留在 01-Papers
+DEFAULT_LIT = ROOT / "05-Literature"          # 主题首页
 
 # 中文停用词（不作为关键词保留）
 STOP_WORDS_ZH = {
@@ -198,11 +199,15 @@ tags: [paper]
 
 def main():
     parser = argparse.ArgumentParser(
-        description="为 01-Papers/ 下的每个 PDF 生成同名 .md 骨架笔记",
+        description="为 01-Papers/ 下的每个 PDF 生成同名 .md 骨架笔记, 输出到 02-Notes/Papers/",
     )
     parser.add_argument(
         "--papers", type=Path, default=DEFAULT_PAPERS,
         help="PDF 所在目录 (默认: 01-Papers/)",
+    )
+    parser.add_argument(
+        "--notes", type=Path, default=DEFAULT_NOTES,
+        help="笔记输出目录 (默认: 02-Notes/Papers/)",
     )
     parser.add_argument(
         "--topics-json", type=Path, default=DEFAULT_TOPICS_JSON,
@@ -229,33 +234,29 @@ def main():
         sys.exit(
             f"错误: {args.topics_json} 不存在, 先跑 scripts/classify_papers.py 生成。"
         )
+    args.notes.mkdir(parents=True, exist_ok=True)
 
     paper_topics = json.loads(args.topics_json.read_text(encoding="utf-8"))
 
     pdfs = sorted(p for p in args.papers.iterdir() if p.suffix.lower() == ".pdf")
-    # 排除非论文文件 (paper_classification.md 等)
     today = date.today().isoformat()
 
     created, skipped, forced, protected = 0, 0, 0, 0
     for pdf in pdfs:
-        md_path = pdf.with_suffix(".md")
-        # 跳过清单文件
-        if md_path.name in {"paper_classification.md", "paper_topics.json"}:
-            continue
+        # 输出到 02-Notes/Papers/, 不再写到 PDF 旁边
+        md_path = args.notes / f"{pdf.stem}.md"
         if md_path.exists() and not args.force and not args.really_force:
             skipped += 1
             continue
         if md_path.exists():
             # 已存在: 检查要不要保护
             if not args.really_force:
-                # --force 模式: 只覆盖骨架 (status=unread + source_basis=filename)
                 text = md_path.read_text(encoding="utf-8", errors="replace")
                 fm = parse_frontmatter(text)
                 if fm:
                     status = fm.get("status", "")
                     source = fm.get("source_basis", "")
                     if status != "unread" or source != "filename":
-                        # 已是精读/非骨架, 保护
                         protected += 1
                         continue
             forced += 1
@@ -269,6 +270,7 @@ def main():
         created += 1
 
     print(f"总计 PDF: {len(pdfs)}")
+    print(f"笔记输出到: {args.notes}")
     print(f"骨架笔记生成: {created} (其中覆盖: {forced})")
     print(f"跳过已存在:  {skipped}")
     if args.force and not args.really_force:

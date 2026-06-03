@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Optional
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_PAPERS = ROOT / "01-Papers"
+DEFAULT_PAPERS = ROOT / "01-Papers"          # PDF 原文目录 (只读)
 DEFAULT_TOPICS_JSON = DEFAULT_PAPERS / "paper_topics.json"
 DEFAULT_LIT = ROOT / "05-Literature"
 DEFAULT_CLASSIFY_PY = ROOT / "scripts" / "classify_papers.py"
@@ -151,7 +151,7 @@ def build_index(topic_code: str, papers: list[dict]) -> str:
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "01-Papers"
+FROM "02-Notes/Papers"
 WHERE primary_topic = "{topic_code}"
 SORT year DESC
 ```
@@ -160,7 +160,7 @@ SORT year DESC
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "01-Papers"
+FROM "02-Notes/Papers"
 WHERE contains(topics, "{topic_code}")
 SORT year DESC
 ```
@@ -174,7 +174,7 @@ SORT year DESC
 
 def main():
     parser = argparse.ArgumentParser(
-        description="为每个主题在 05-Literature/ 下生成主题首页",
+        description="为每个主题在 05-Literature/ 下生成主题首页 (链接 02-Notes/Papers/ 笔记)",
     )
     parser.add_argument(
         "--papers", type=Path, default=DEFAULT_PAPERS,

@@ -39,7 +39,7 @@ add_paper() {
         return
     fi
 
-    # 复制 PDF 到论文目录 (跟笔记同目录, 当前约定)
+    # 复制 PDF 到原文目录；笔记统一写到 02-Notes/Papers/
     pdf_name=$(basename "$pdf_path")
     cp "$pdf_path" "01-Papers/$pdf_name"
     echo "PDF已复制到: 01-Papers/$pdf_name"
@@ -49,8 +49,9 @@ add_paper() {
         read -p "是否使用AI生成笔记? (y/n): " use_ai
         if [ "$use_ai" = "y" ] || [ "$use_ai" = "Y" ]; then
             echo "正在生成笔记..."
-            python3 scripts/paper_ai.py notes "01-Papers/$pdf_name" -o "01-Papers/${pdf_name%.pdf}.md"
-            echo "笔记已生成: 01-Papers/${pdf_name%.pdf}.md"
+            mkdir -p "02-Notes/Papers"
+            python3 scripts/paper_ai.py notes "01-Papers/$pdf_name" -o "02-Notes/Papers/${pdf_name%.pdf}.md"
+            echo "笔记已生成: 02-Notes/Papers/${pdf_name%.pdf}.md"
         fi
     fi
 
@@ -66,7 +67,7 @@ batch_process() {
     fi
     
     echo "正在批量处理..."
-    python3 scripts/paper_ai.py batch "$pdf_dir" -o "01-Papers"
+    python3 scripts/paper_ai.py batch "$pdf_dir" -o "02-Notes/Papers"
     echo "✅ 批量处理完成"
 }
 
@@ -75,23 +76,22 @@ show_stats() {
     echo "📊 论文统计"
     echo "============"
 
-    # 统一"非论文笔记"排除规则 (跟 validate_library.py / scripts/paper 一致):
-    #   - paper_classification.md: 分类清单, 机器生成的索引
-    #   - 示例-* / 模板-* / template-*: 用户的参考笔记, 允许没 PDF
-    # 真实论文卡片数应该 == PDF 数 (499)
-    local md_filter='! -name paper_classification.md ! -name "示例-*.md" ! -name "模板-*.md" ! -name "template-*.md"'
+    # 论文笔记统一在 02-Notes/Papers/, 整个目录里都是论文笔记
+    # (paper_classification.md 等分类/示例文件保留在 01-Papers/)
+    local notes_dir="02-Notes/Papers"
+    local pdf_dir="01-Papers"
 
-    # -maxdepth 1: 排除 01-Papers/read_paper/ 嵌套副本 (云同步事故)
-    paper_count=$(eval "find 01-Papers -maxdepth 1 -name '*.md' -type f $md_filter" 2>/dev/null | wc -l)
-    pdf_count=$(find 01-Papers -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
+    # -maxdepth 1 防御嵌套副本 (历史教训: read_paper/ 嵌套事故)
+    local note_count=$(find "$notes_dir" -maxdepth 1 -name "*.md" -type f 2>/dev/null | wc -l)
+    local pdf_count=$(find "$pdf_dir" -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
 
-    echo "论文笔记: $paper_count 篇"
-    echo "PDF文件 (顶层 01-Papers/): $pdf_count 个"
+    echo "PDF文件 (01-Papers/):         $pdf_count 个"
+    echo "论文笔记 (02-Notes/Papers/):  $note_count 篇"
     echo ""
 
-    # 显示最近添加的论文 (同样的过滤)
+    # 显示最近添加的论文 (按 mtime)
     echo "📝 最近添加的论文:"
-    eval "find 01-Papers -maxdepth 1 -name '*.md' -type f $md_filter -exec ls -t {} +" 2>/dev/null | head -5 | while read file; do
+    find "$notes_dir" -maxdepth 1 -name "*.md" -type f -exec ls -t {} + 2>/dev/null | head -5 | while read file; do
         echo "  - $(basename "$file" .md)"
     done
 }

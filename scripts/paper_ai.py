@@ -7,6 +7,7 @@
 import os
 import json
 import argparse
+from datetime import date
 from pathlib import Path
 from typing import Optional, List
 import re
@@ -215,7 +216,13 @@ def compare_papers(texts: List[str], titles: List[str]) -> str:
 
 # ============== Obsidian集成 ==============
 
-def create_paper_note(pdf_path: str, output_dir: str = "01-Papers") -> str:
+def yaml_list(items: list[str]) -> str:
+    """Return a simple one-line YAML string list."""
+    cleaned = [i.strip() for i in items if i and i.strip()]
+    return "[" + ", ".join('"' + i.replace("\\", "\\\\").replace('"', '\\"') + '"' for i in cleaned) + "]"
+
+
+def create_paper_note(pdf_path: str, output_dir: str = "02-Notes/Papers") -> str:
     """创建论文笔记"""
     # 提取文本
     text = extract_text_from_pdf_advanced(pdf_path)
@@ -231,6 +238,8 @@ def create_paper_note(pdf_path: str, output_dir: str = "01-Papers") -> str:
     
     # 获取文件名
     pdf_name = Path(pdf_path).stem
+    today = date.today().isoformat()
+    keyword_list = keywords[:10]
     
     # 创建笔记内容
     note_content = f"""---
@@ -241,11 +250,15 @@ year:
 venue: 
 doi: 
 pdf: "[[{pdf_name}.pdf]]"
-tags:
-  - paper
-  - {', '.join(keywords[:5])}
+primary_topic: "U_未归类"
+topics: [U_未归类]
 status: unread
-date_added: "{Path(pdf_path).stat().st_mtime}"
+reading_stage: first-pass
+confidence: medium
+source_basis: pdf-text
+date_added: {today}
+keywords: {yaml_list(keyword_list)}
+tags: [paper]
 ---
 
 # {pdf_name}
@@ -269,7 +282,7 @@ date_added: "{Path(pdf_path).stat().st_mtime}"
     
     return note_content
 
-def batch_process_pdfs(pdf_dir: str, output_dir: str = "01-Papers") -> None:
+def batch_process_pdfs(pdf_dir: str, output_dir: str = "02-Notes/Papers") -> None:
     """批量处理PDF文件"""
     pdf_dir_path = Path(pdf_dir)
     output_dir_path = Path(output_dir)
@@ -325,7 +338,7 @@ def main():
     # 批量处理命令
     batch_parser = subparsers.add_parser("batch", help="批量处理PDF")
     batch_parser.add_argument("dir", help="PDF目录")
-    batch_parser.add_argument("-o", "--output", default="01-Papers", help="输出目录")
+    batch_parser.add_argument("-o", "--output", default="02-Notes/Papers", help="输出目录")
     
     # 比较命令
     compare_parser = subparsers.add_parser("compare", help="比较多篇论文")

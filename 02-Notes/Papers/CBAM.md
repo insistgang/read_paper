@@ -1,8 +1,8 @@
 ---
-title: "SODA Site Object De"
-pdf: "[[2022_SODA_Site_Object_De.pdf]]"
-primary_topic: "C_目标检测_通用与旋转框"
-topics: [C_目标检测_通用与旋转框, T_通用_NLP_其他]
+title: "CBAM"
+pdf: "[[CBAM.pdf]]"
+primary_topic: "B_注意力算子模块"
+topics: [B_注意力算子模块]
 status: unread
 reading_stage: filename-only
 confidence: low
@@ -11,12 +11,12 @@ date_added: 2026-06-03
 tags: [paper]
 ---
 
-# SODA Site Object De
+# CBAM
 
 ## 基本信息
-- **PDF**: [[2022_SODA_Site_Object_De.pdf]]
-- **primary_topic**: `C_目标检测_通用与旋转框`
-- **topics**: `C_目标检测_通用与旋转框`, `T_通用_NLP_其他`
+- **PDF**: [[CBAM.pdf]]
+- **primary_topic**: `B_注意力算子模块`
+- **topics**: `B_注意力算子模块`
 - **状态**: unread (仅根据文件名推断, 待阅读全文确认)
 - **date_added**: 2026-06-03
 
@@ -27,18 +27,16 @@ tags: [paper]
 
 **提取的关键词**:
 
-- SODA
-- Site
-- Object
+- CBAM
 
-**文件名模式**: `2022_SODA_Site_Object_De`
+**文件名模式**: `CBAM`
 
 ## 可能研究方向
 
 > 基于 primary_topic + topics 推测, 仅作入门指引。
 
-- 属于主题: **C_目标检测_通用与旋转框**
-- 关联主题: T_通用_NLP_其他
+- 属于主题: **B_注意力算子模块**
+- 关联主题: (无)
 
 ## 待读问题
 
@@ -70,5 +68,4 @@ tags: [paper]
 
 ## 相关论文
 
-> 用 `[[]]` 链接到其他论文笔记或主题首页, 例如 [[C_目标检测_通用与旋转框]]。
-
+> 用 `[[]]` 链接到其他论文笔记或主题首页, 例如 [[B_注意力算子模块]]。

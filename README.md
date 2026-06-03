@@ -14,26 +14,35 @@
 - **AI** 负责初稿，不负责最终分类和判断
 
 PDF **不**进 Git（默认 `.gitignore` 排除）；如果你长期在 GitHub 同步大文件，请改用 **Git LFS**。
+AI 提取的 PDF 原文缓存在 `.paper-cache/`（被 `.gitignore` 排除，不进正式知识库）。
 
 ## 📁 目录结构
 
 ```
 read_paper/
 ├── .obsidian/              # Obsidian配置
-├── 00-Inbox/              # 收件箱（新论文暂存）
-├── 01-Papers/             # 论文 PDF + 笔记 (按主题组织, PDF 与同名 .md 放一起)
-├── 02-Notes/              # 阅读笔记和想法
-├── 03-Templates/          # 模板文件
-├── 04-Attachments/        # 附件 (备用, 目前 PDF 都直接放 01-Papers/)
-├── 05-Literature/         # 文献综述
-├── 06-Projects/           # 研究项目
-├── 07-Archive/            # 归档
-└── scripts/               # AI辅助脚本
+├── .paper-cache/           # AI 临时缓存 (不入 Git, 不入正式知识库)
+│   └── extracts/           #   PDF 原文机器提取, 一篇一个 .txt
+├── 00-Inbox/               # 收件箱 (新论文临时入口)
+├── 01-Papers/              # 论文 PDF 原文 (只放 PDF, 499 份)
+│   ├── paper_classification.md    # 分类索引 (机器生成)
+│   ├── paper_topics.json          # 主题映射 (机器生成)
+│   └── *.pdf                       # 论文 PDF
+├── 02-Notes/               # 笔记根目录
+│   └── Papers/             #   论文笔记 (一篇论文对应一个 .md, 499 篇)
+├── 03-Templates/           # Obsidian 模板
+├── 04-Attachments/         # 非论文附件 (图片, 截图, 补充材料)
+├── 05-Literature/          # 主题综述 (机器生成首页 + 人工精读)
+├── 06-Projects/            # 研究项目
+├── 07-Archive/             # 归档
+└── scripts/                # 自动化脚本
 ```
 
-> **PDF 存放约定**：当前所有 PDF 都在 `01-Papers/` 下，笔记同名 `.md` 也放同一目录。
-> `04-Attachments/PDFs/` 保留为可选备用目录，如果你想把 PDF 单独集中管理可以把 PDF
-> 移过去，然后改 `scripts/paper` 里的 `PDF_DIR` 指向新位置。
+> **目录约定**：
+> - `01-Papers/` **只**放 PDF (499 份) + 机器生成的分类索引文件
+> - `02-Notes/Papers/` 放所有论文笔记 (499 篇)，每篇对应 `01-Papers/*.pdf` 的同名 stem
+> - `05-Literature/` 是主题首页 (`<主题代号>.md`) + `论文知识库总览.md`
+> - `.paper-cache/extracts/` 是 AI 提取的 PDF 原文临时缓存，**不进正式知识库**
 
 ## 🚀 快速开始
 
@@ -76,8 +85,8 @@ read_paper/
 ### 添加新论文
 
 1. **方法一：直接添加**
-   - 将PDF文件放入 `01-Papers/`（与笔记同目录）
-   - 在 `01-Papers/` 创建同名笔记 `.md`
+   - 将 PDF 文件放入 `01-Papers/`
+   - 在 `02-Notes/Papers/` 创建同名笔记 `.md`
    - 使用模板 `Paper Template.md`
 
 2. **方法二：使用Zotero（推荐）**
@@ -87,7 +96,7 @@ read_paper/
 3. **方法三：AI自动生成**
    ```bash
    # 使用AI脚本自动生成笔记
-   ./scripts/paper-ai notes paper.pdf -o 01-Papers/paper.md
+   ./scripts/paper-ai notes 01-Papers/paper.pdf -o 02-Notes/Papers/paper.md
    ```
 
 ### 论文库健康检查
@@ -276,7 +285,7 @@ tags: [paper, transformer, segmentation]
 
 - 论文笔记：`作者年份-关键词.md`
   - 例：`Vaswani2017-Attention.md`
-- PDF文件：与笔记同名
+- PDF 文件：与笔记同名 stem，但 PDF 在 `01-Papers/`，笔记在 `02-Notes/Papers/`
 
 ### 2. 标签体系
 

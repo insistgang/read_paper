@@ -2,11 +2,14 @@
 # 论文阅读中心 - 命令行工具
 
 VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PAPERS_DIR="$VAULT_DIR/01-Papers"
+PAPERS_DIR="$VAULT_DIR/01-Papers"           # PDF 原文
+DEFAULT_NOTES_DIR="$VAULT_DIR/02-Notes/Papers"  # 论文笔记
 TEMPLATES_DIR="$VAULT_DIR/03-Templates"
-# 当前 PDF 跟笔记同目录放在 01-Papers/, 04-Attachments/PDFs 留作未来备用。
-# 想切换的话改这里就行, 或者用环境变量 PAPER_PDF_DIR 覆盖。
+# PDF 仍在 01-Papers/; 笔记在 02-Notes/Papers/. 用环境变量可覆盖:
+#   PAPER_PDF_DIR: 自定义 PDF 目录
+#   PAPER_NOTES_DIR: 自定义笔记目录
 PDF_DIR="${PAPER_PDF_DIR:-$PAPERS_DIR}"
+NOTES_DIR="${PAPER_NOTES_DIR:-$DEFAULT_NOTES_DIR}"
 
 show_help() {
     echo "📚 论文阅读中心 CLI"
@@ -25,8 +28,8 @@ show_help() {
 list_papers() {
     echo "📄 论文列表:"
     echo "============"
-    if [ -d "$PAPERS_DIR" ]; then
-        find "$PAPERS_DIR" -name "*.md" -type f | while read file; do
+    if [ -d "$NOTES_DIR" ]; then
+        find "$NOTES_DIR" -name "*.md" -type f | while read file; do
             basename "$file" .md
         done | sort
     else
@@ -42,11 +45,12 @@ new_paper() {
         return 1
     fi
     
-    local filename="$PAPERS_DIR/$title.md"
+    local filename="$NOTES_DIR/$title.md"
     if [ -f "$filename" ]; then
         echo "错误: 论文已存在"
         return 1
     fi
+    mkdir -p "$NOTES_DIR"
     
     # 使用模板创建
     if [ -f "$TEMPLATES_DIR/Paper Template.md" ]; then
@@ -68,7 +72,7 @@ search_papers() {
     
     echo "🔍 搜索结果: $keyword"
     echo "=================="
-    grep -r -l "$keyword" "$PAPERS_DIR" 2>/dev/null | while read file; do
+    grep -r -l "$keyword" "$NOTES_DIR" 2>/dev/null | while read file; do
         echo "- $(basename "$file" .md)"
     done
 }
@@ -77,19 +81,13 @@ show_stats() {
     echo "📊 统计信息"
     echo "============"
 
-    # 统一"非论文笔记"排除规则 (跟 start.sh / validate_library.py 一致):
-    #   - paper_classification.md: 分类清单, 机器生成的索引
-    #   - 示例-* / 模板-* / template-*: 用户的参考笔记, 允许没 PDF
-    # 真实论文卡片数应该 == PDF 数 (499)
-    local paper_count=$(find "$PAPERS_DIR" -maxdepth 1 -name "*.md" -type f \
-        ! -name "paper_classification.md" \
-        ! -name "示例-*.md" \
-        ! -name "模板-*.md" \
-        ! -name "template-*.md" 2>/dev/null | wc -l)
+    # 论文笔记在 02-Notes/Papers/, 整个目录里都是论文笔记 (没有 paper_classification 等混入)
+    # 嵌套副本防护跟之前一样 (-maxdepth 1)
+    local note_count=$(find "$NOTES_DIR" -maxdepth 1 -name "*.md" -type f 2>/dev/null | wc -l)
     local pdf_count=$(find "$PDF_DIR" -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
 
-    echo "论文笔记: $paper_count 篇"
-    echo "PDF文件: $pdf_count 个"
+    echo "论文笔记 (02-Notes/Papers/): $note_count 篇"
+    echo "PDF文件 (01-Papers/):        $pdf_count 个"
 }
 
 open_vault() {
