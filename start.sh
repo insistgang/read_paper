@@ -75,9 +75,9 @@ show_stats() {
     echo "📊 论文统计"
     echo "============"
 
-    # 统计论文数量
-    paper_count=$(find 01-Papers -name "*.md" -type f 2>/dev/null | wc -l)
-    # 排除嵌套副本 01-Papers/read_paper/ 下的 PDF, 那是云同步事故产物
+    # -maxdepth 1: 排除未来可能出现的 01-Papers/read_paper/ 嵌套副本
+    # (云同步事故; 已经在 .gitignore 排除, 但回收站误恢复仍可能)
+    paper_count=$(find 01-Papers -maxdepth 1 -name "*.md" -type f 2>/dev/null | wc -l)
     pdf_count=$(find 01-Papers -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
 
     echo "论文笔记: $paper_count 篇"

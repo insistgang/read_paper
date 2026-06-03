@@ -21,8 +21,10 @@ import re
 import sys
 from pathlib import Path
 
-REQUIRED_FM_FIELDS = {"title", "authors", "year", "venue", "pdf", "tags", "status", "date_added"}
-RECOMMENDED_FM_FIELDS = {"topics", "rating", "source", "doi"}
+# 必填: 不管骨架还是完整笔记都要有
+REQUIRED_FM_FIELDS = {"title", "pdf", "primary_topic", "status", "date_added", "tags"}
+# 推荐: 完整笔记应该有, 骨架阶段(source_basis=filename)允许空
+RECOMMENDED_FM_FIELDS = {"authors", "year", "venue", "topics", "source_basis", "reading_stage", "confidence"}
 
 
 def md5_of(path: Path, chunk: int = 1 << 20) -> str:
@@ -85,10 +87,14 @@ def check_papers_dir(papers: Path) -> tuple[list, list]:
         missing = REQUIRED_FM_FIELDS - set(fm.keys())
         if missing:
             warnings.append(f"[frontmatter 缺字段] {md_path.name}: {', '.join(sorted(missing))}")
-        optional_missing = RECOMMENDED_FM_FIELDS - set(fm.keys())
-        if optional_missing:
-            # 推荐字段缺失只 debug 输出, 不算 warning
-            pass
+        # 推荐字段: 只在 source_basis == 'pdf-text' 时警告, 骨架阶段不警告
+        if fm.get("source_basis") == "pdf-text":
+            optional_missing = RECOMMENDED_FM_FIELDS - set(fm.keys())
+            if optional_missing:
+                warnings.append(
+                    f"[推荐字段缺失 - 完整笔记阶段] {md_path.name}: "
+                    f"{', '.join(sorted(optional_missing))}"
+                )
 
     # 4. PDF 重复 (md5)
     by_hash: dict[str, list[Path]] = {}

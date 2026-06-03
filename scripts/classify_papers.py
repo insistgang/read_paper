@@ -12,6 +12,7 @@
     2  没有 PDF
 """
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -480,12 +481,34 @@ TOPICS = [
 
 
 def classify(name: str) -> str:
+    """返回 primary_topic (单标签, 兼容旧行为)."""
     base = Path(name).name
     for topic, patterns in TOPICS:
         for pat in patterns:
             if re.search(pat, base, flags=re.IGNORECASE):
                 return topic
     return "U_未归类"
+
+
+def classify_multi(name: str) -> tuple[str, list[str]]:
+    """返回 (primary_topic, topics[])。
+
+    primary_topic 是按优先级第一个匹配上的主题 (跟 classify() 兼容)。
+    topics 是所有匹配上的主题列表, 去重并保留顺序, 给后续多标签场景用。
+    """
+    base = Path(name).name
+    matched: list[str] = []
+    seen: set[str] = set()
+    for topic, patterns in TOPICS:
+        for pat in patterns:
+            if re.search(pat, base, flags=re.IGNORECASE):
+                if topic not in seen:
+                    seen.add(topic)
+                    matched.append(topic)
+                break  # 一个主题内多个 pattern 只算一次
+    if not matched:
+        return "U_未归类", ["U_未归类"]
+    return matched[0], matched
 
 
 def main():
@@ -498,7 +521,11 @@ def main():
     )
     parser.add_argument(
         "--out", type=Path, default=None,
-        help="输出文件路径 (默认: <pdf_dir>/paper_classification.md)",
+        help="输出 .md 路径 (默认: <pdf_dir>/paper_classification.md)",
+    )
+    parser.add_argument(
+        "--topics-json", type=Path, default=None,
+        help="同时输出 paper -> topics 映射的 JSON 路径 (默认: <pdf_dir>/paper_topics.json)",
     )
     args = parser.parse_args()
 
@@ -510,15 +537,25 @@ def main():
         sys.exit(f"错误: {args.pdf_dir} 下没有 PDF")
 
     buckets = {t: [] for t, _ in TOPICS}
+    paper_topics: dict[str, list[str]] = {}  # stem -> topics[]
     for p in pdfs:
-        topic = classify(p.name)
-        buckets[topic].append(p.name)
+        primary, topics = classify_multi(p.name)
+        buckets[primary].append(p.name)
+        paper_topics[p.stem] = topics
 
     out = args.out or (args.pdf_dir / "paper_classification.md")
-    write_report(pdfs, buckets, out)
+    write_report(pdfs, buckets, paper_topics, out)
+
+    # 副产物: JSON 映射, 给后续脚本 (generate_skeleton_notes) 读
+    topics_json = args.topics_json or (args.pdf_dir / "paper_topics.json")
+    topics_json.write_text(
+        json.dumps(paper_topics, ensure_ascii=False, indent=2, sort_keys=True),
+        encoding="utf-8",
+    )
+    print(f"已写入 {topics_json}")
 
 
-def write_report(pdfs, buckets, out):
+def write_report(pdfs, buckets, paper_topics, out):
     total = len(pdfs)
     classified = sum(len(v) for k, v in buckets.items() if k != "U_未归类")
     unclassified = len(buckets["U_未归类"])
@@ -531,7 +568,7 @@ def write_report(pdfs, buckets, out):
     lines.append(f"- **未归类**: {unclassified}")
     lines.append("")
     lines.append("> 说明：基于**文件名**做关键词匹配归类，未读 PDF 内容。")
-    lines.append("> 一个文件只归入第一个匹配上的主题（前缀优先级）。")
+    lines.append("> 一个 PDF 可同时属于多个主题 (topics), primary_topic 决定它在哪个分桶。")
     lines.append("> 主题代号：A=医学, B=算子, C=检测, D=3D, E=复原, F=分割, G=VLM, H=显著, I=文本, J=人脸, K=视频, L=数据集, M=行人, N=数学, O=安全, P=跨域, Q=自监督, R=综述, S=变化检测, T=其他, U=未归类, Z=杂项")
     lines.append("")
 
@@ -556,7 +593,12 @@ def write_report(pdfs, buckets, out):
         lines.append(f"### {topic}（{len(items)}）")
         lines.append("")
         for n in items:
-            lines.append(f"- {n}")
+            stem = Path(n).stem
+            tops = paper_topics.get(stem, [topic])
+            if len(tops) > 1:
+                lines.append(f"- {n}  \n  topics: {', '.join(tops)}")
+            else:
+                lines.append(f"- {n}")
         lines.append("")
 
     out.write_text("\n".join(lines), encoding="utf-8")

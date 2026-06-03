@@ -9,6 +9,11 @@ year: 2017
 venue: NeurIPS
 doi: 10.48550/arXiv.1706.03762
 pdf: "[[Attention Is All You Need.pdf]]"
+primary_topic: T_通用_NLP_其他
+topics: [T_通用_NLP_其他, R_综述_Survey, B_注意力算子模块]
+reading_stage: done
+confidence: high
+source_basis: pdf-text
 tags:
   - paper
   - transformer

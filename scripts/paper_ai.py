@@ -359,19 +359,22 @@ def main():
             print(answer)
     
     elif args.command == "notes":
-        text = extract_text_from_pdf_advanced(args.pdf)
-        if text:
-            # 跟 batch 路径一致: 走 create_paper_note, 这样会带上 frontmatter
-            # (title/authors/year/venue/pdf/tags/status/date_added) + Obsidian 元数据,
-            # 而不是只写 AI 正文。output_dir 用 -o 指定；没指定就放 PDF 旁边。
-            output_dir = str(Path(args.output).parent) if args.output else str(Path(args.pdf).parent)
-            note_content = create_paper_note(args.pdf, output_dir=output_dir)
+        # 之前这里只跑 extract_text_from_pdf_advanced(), 提不出文本就什么都不做。
+        # 真正的 PyPDF2 fallback 在 create_paper_note() 里, 之前根本走不到。
+        # 改成直接调 create_paper_note, 让它内部 pdfplumber -> PyPDF2 兜底都跑一遍。
+        output_dir = str(Path(args.output).parent) if args.output else str(Path(args.pdf).parent)
+        note_content = create_paper_note(args.pdf, output_dir=output_dir)
+        # create_paper_note 提不出文本时会返回错误字符串
+        if note_content and not note_content.startswith("无法提取"):
             if args.output:
                 with open(args.output, 'w', encoding='utf-8') as f:
                     f.write(note_content)
                 print(f"笔记已保存到: {args.output}")
             else:
                 print(note_content)
+        else:
+            print(note_content, file=sys.stderr)
+            sys.exit(2)
     
     elif args.command == "batch":
         batch_process_pdfs(args.dir, args.output)

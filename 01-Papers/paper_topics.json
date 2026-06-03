@@ -1,0 +1,1652 @@
+{
+  "(GRN)ConvNeXtV2": [
+    "B_注意力算子模块",
+    "C_目标检测_通用与旋转框"
+  ],
+  "(GSC)SegMamba": [
+    "B_注意力算子模块"
+  ],
+  "(UIB)MobileNetV4": [
+    "B_注意力算子模块"
+  ],
+  "1-s2.0-S0950705124009833-main": [
+    "T_通用_NLP_其他"
+  ],
+  "2005_Active_Amplification": [
+    "T_通用_NLP_其他"
+  ],
+  "2009_Embedded_Sensor_Syst": [
+    "T_通用_NLP_其他"
+  ],
+  "2010_A_Comparative_Study": [
+    "T_通用_NLP_其他"
+  ],
+  "2010_Detecting_Botnets_Th": [
+    "T_通用_NLP_其他"
+  ],
+  "2010_Implications_of_the": [
+    "T_通用_NLP_其他"
+  ],
+  "2013_Byzantine_Fault_Tole": [
+    "T_通用_NLP_其他"
+  ],
+  "2013_Quickest_Change_Poin": [
+    "T_通用_NLP_其他"
+  ],
+  "2014_Semantic-based_Detec": [
+    "T_通用_NLP_其他"
+  ],
+  "2014_Sequential_Detection": [
+    "T_通用_NLP_其他"
+  ],
+  "2015_Automatic_Channel_Ne": [
+    "T_通用_NLP_其他"
+  ],
+  "2015_Precipitation_extrem": [
+    "T_通用_NLP_其他"
+  ],
+  "2016_A_Survey_on_Object_D": [
+    "C_目标检测_通用与旋转框",
+    "R_综述_Survey"
+  ],
+  "2017_A_Comprehensive_Surv": [
+    "R_综述_Survey"
+  ],
+  "2017_Building_Detection_f": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2017_Deep_learning_in_rem": [
+    "R1_遥感_高光谱_变化检测"
+  ],
+  "2017_Fast_Vehicle_Detecti": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2017_Real-Time_Illegal_Pa": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2018_Application_of_a_sem": [
+    "T_通用_NLP_其他"
+  ],
+  "2018_Automatic_Pixelwise": [
+    "T_通用_NLP_其他"
+  ],
+  "2018_Deep_Learning_Approa": [
+    "T_通用_NLP_其他"
+  ],
+  "2018_Deep_learning_based": [
+    "T_通用_NLP_其他"
+  ],
+  "2018_Envision_of_an_integ": [
+    "T_通用_NLP_其他"
+  ],
+  "2018_Mining_Illegal_Insid": [
+    "C2_目标检测_违建_车辆_船舶_行人",
+    "T_通用_NLP_其他"
+  ],
+  "2019_Aggregated_Deep_Loca": [
+    "T_通用_NLP_其他"
+  ],
+  "2019_Anticipating_Illegal": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2019_Building_Damage_Dete": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2019_Building_change_dete": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2019_Change_Detection_and": [
+    "S_变化检测_ChangeDetection"
+  ],
+  "2019_Efficient_ConvNet-ba": [
+    "T_通用_NLP_其他"
+  ],
+  "2019_Introduction_to_Voic": [
+    "T_通用_NLP_其他"
+  ],
+  "2019_Object_Contour_and_E": [
+    "S_变化检测_ChangeDetection"
+  ],
+  "2019_Object_detection_on": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2019_R$^2$-CNN_Fast_Tiny": [
+    "T_通用_NLP_其他"
+  ],
+  "2019_Semantic_Change_and": [
+    "S_变化检测_ChangeDetection"
+  ],
+  "2019_Spectrum_Prediction": [
+    "T_通用_NLP_其他"
+  ],
+  "2019_The_Language_of_Lega": [
+    "T_通用_NLP_其他"
+  ],
+  "2019_The_Price_of_Free_Il": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2019_Thylakoid_Electron_Tomography": [
+    "N_雷达_无线电_张量_数学",
+    "T_通用_NLP_其他"
+  ],
+  "2020_A_Comparison_of_Deep": [
+    "R_综述_Survey"
+  ],
+  "2020_A_computer-friendly": [
+    "S_变化检测_ChangeDetection"
+  ],
+  "2020_Aerial_Imagery_Pixel": [
+    "L_数据集_Benchmark",
+    "T_通用_NLP_其他"
+  ],
+  "2020_Attention_Neural_Net": [
+    "T_通用_NLP_其他"
+  ],
+  "2020_Deep_Learning_for_Re": [
+    "T_通用_NLP_其他"
+  ],
+  "2020_Detecting_the_Presen": [
+    "R1_遥感_高光谱_变化检测"
+  ],
+  "2020_DiResNet_Direction-": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2020_Future_Climate_Chang": [
+    "T_通用_NLP_其他"
+  ],
+  "2020_Illegal_Border_Cross": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2020_Object_sieving_and_m": [
+    "T_通用_NLP_其他"
+  ],
+  "2020_Predicting_Illegal_F": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2020_RSVQA_Visual_Questi": [
+    "L_数据集_Benchmark"
+  ],
+  "2020_TJU-DHD_A_Diverse_H": [
+    "L_数据集_Benchmark"
+  ],
+  "2021_A_Survey_of_Self-Sup": [
+    "Q_自监督_对比学习_主动学习",
+    "R_综述_Survey"
+  ],
+  "2021_Active_learning_for": [
+    "Q_自监督_对比学习_主动学习",
+    "T_通用_NLP_其他"
+  ],
+  "2021_An_Attention-Fused_N": [
+    "T_通用_NLP_其他"
+  ],
+  "2021_CFC-Net_A_Critical": [
+    "T_通用_NLP_其他"
+  ],
+  "2021_Exploring_Depth_Cont": [
+    "T_通用_NLP_其他"
+  ],
+  "2021_Image_Restoration_fo": [
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "2021_MPSN_Motion-aware_P": [
+    "T_通用_NLP_其他"
+  ],
+  "2021_Physical_Adversarial": [
+    "O_物理对抗_安全_鲁棒"
+  ],
+  "2021_S2Looking_A_Satelli": [
+    "F_图像分割_语义_实例_全景",
+    "L_数据集_Benchmark"
+  ],
+  "2021_Uncovering_the_Size": [
+    "T_通用_NLP_其他"
+  ],
+  "2021_Waste_detection_in_P": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2021_What_Makes_Sound_Eve": [
+    "T_通用_NLP_其他"
+  ],
+  "2022_Algorithm_for_detect": [
+    "T_通用_NLP_其他"
+  ],
+  "2022_Building_Height_Pred": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2022_Deep_object_detectio": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2022_Detecting_A_Single_C": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2022_Elastic_buildings_C": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2022_Improved_normal-boun": [
+    "T_通用_NLP_其他"
+  ],
+  "2022_Interpretability_in": [
+    "T_通用_NLP_其他"
+  ],
+  "2022_Object_Detection_in": [
+    "C_目标检测_通用与旋转框",
+    "T_通用_NLP_其他"
+  ],
+  "2022_Recognising_the_impo": [
+    "T_通用_NLP_其他"
+  ],
+  "2022_Reinforcement-based": [
+    "Q_自监督_对比学习_主动学习",
+    "T_通用_NLP_其他"
+  ],
+  "2022_SODA_Site_Object_De": [
+    "C_目标检测_通用与旋转框",
+    "T_通用_NLP_其他"
+  ],
+  "2022_Scrutinizing_Shipmen": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2022_Self-supervised_Lear": [
+    "Q_自监督_对比学习_主动学习",
+    "T_通用_NLP_其他"
+  ],
+  "2023_2307.00056_Proximal_Nested_Sampling": [
+    "G_视觉基础模型_VLM_LLM",
+    "N_雷达_无线电_张量_数学",
+    "T_通用_NLP_其他"
+  ],
+  "2023_2307.12248_Bilevel_Peer_Review": [
+    "N_雷达_无线电_张量_数学",
+    "T_通用_NLP_其他"
+  ],
+  "2023_2308.01480_Tensor_Train_Approximation": [
+    "N_雷达_无线电_张量_数学",
+    "T_通用_NLP_其他"
+  ],
+  "2023_2311.14733_Equalizing_Protected_Attributes": [
+    "N_雷达_无线电_张量_数学",
+    "T_通用_NLP_其他"
+  ],
+  "2023_A_Multi-scale_Genera": [
+    "T_通用_NLP_其他"
+  ],
+  "2023_A_Novel_Multi-scale": [
+    "T_通用_NLP_其他"
+  ],
+  "2023_An_Aligned_Multi-Tem": [
+    "S_变化检测_ChangeDetection"
+  ],
+  "2023_Building-road_Collab": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "2023_Detection_of_Illegal": [
+    "C2_目标检测_违建_车辆_船舶_行人",
+    "T_通用_NLP_其他"
+  ],
+  "2023_Laplacian_Change_Poi": [
+    "S_变化检测_ChangeDetection"
+  ],
+  "2023_Learning_Efficient_U": [
+    "T_通用_NLP_其他"
+  ],
+  "2023_Limpets_Computer_Vision_Frontiers": [
+    "T_通用_NLP_其他"
+  ],
+  "2023_OFAR_A_Multimodal_E": [
+    "G_视觉基础模型_VLM_LLM",
+    "T_通用_NLP_其他"
+  ],
+  "2023_Oriented_object_dete": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2023_Super_Sparse_3D_Obje": [
+    "C_目标检测_通用与旋转框",
+    "D_3D_点云_分类_分割_配准",
+    "T_通用_NLP_其他"
+  ],
+  "2023_Vision-Language_Mode": [
+    "G_视觉基础模型_VLM_LLM",
+    "R_综述_Survey",
+    "T_通用_NLP_其他"
+  ],
+  "2024_2405.04974_Diffusion_Brain_MRI": [
+    "A2_医学图像_分类_配准_生成",
+    "T_通用_NLP_其他"
+  ],
+  "2024_A_Progressive_Image": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_Brain-Inspired_Onlin": [
+    "G_视觉基础模型_VLM_LLM",
+    "T_通用_NLP_其他"
+  ],
+  "2024_Call_to_Protect_the": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_Change-Agent_Toward": [
+    "L_数据集_Benchmark",
+    "S_变化检测_ChangeDetection"
+  ],
+  "2024_Correlation_of_Objec": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_Extracting_Object_He": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_FreezeAsGuard_Mitig": [
+    "G_视觉基础模型_VLM_LLM",
+    "O_物理对抗_安全_鲁棒"
+  ],
+  "2024_Improving_the_Detect": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_MagicBathyNet_A_Mul": [
+    "L_数据集_Benchmark"
+  ],
+  "2024_NBBOX_Noisy_Boundin": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2024_PVAFN_Point-Voxel_A": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2024_Physics-Informed_Rea": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_Reinforcement_Learni": [
+    "Q_自监督_对比学习_主动学习",
+    "T_通用_NLP_其他"
+  ],
+  "2024_Remote_Sensing_ChatG": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_Remote_Sensing_Spati": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_SOAR_Advancements_i": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_YOLOv5-Based_Object": [
+    "C_目标检测_通用与旋转框",
+    "T_通用_NLP_其他"
+  ],
+  "2024_三维人脸成像及重建技术综述": [
+    "D2_3D_重建_神经辐射场_SLAM",
+    "J_人脸_表情_伪造_情感",
+    "R_综述_Survey"
+  ],
+  "2024_三维场景注视点渲染深度学习方法综述": [
+    "D2_3D_重建_神经辐射场_SLAM",
+    "R_综述_Survey"
+  ],
+  "2024_人脸深度伪造检测方法综述": [
+    "J_人脸_表情_伪造_情感",
+    "R_综述_Survey"
+  ],
+  "2024_单帧红外图像多尺度小目标检测技术综述": [
+    "C_目标检测_通用与旋转框",
+    "C3_目标检测_红外_可见光融合",
+    "H_显著性_小目标",
+    "R_综述_Survey"
+  ],
+  "2024_基于单目视觉惯性的同步定位与地图构建方法综述": [
+    "D2_3D_重建_神经辐射场_SLAM",
+    "R_综述_Survey"
+  ],
+  "2024_基于物理的可微渲染综述": [
+    "R_综述_Survey"
+  ],
+  "2024_增量式尺度估计下的相机位置解算": [
+    "D2_3D_重建_神经辐射场_SLAM"
+  ],
+  "2024_布料与刚体模型间的空间网格碰撞检测方法": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_改进YOLOv7的交通标志识别模型": [
+    "C_目标检测_通用与旋转框",
+    "C4_目标检测_交通_标志_检测器"
+  ],
+  "2024_数字室内三维场景构建综述": [
+    "D2_3D_重建_神经辐射场_SLAM",
+    "R_综述_Survey"
+  ],
+  "2024_结合文本自训练和对抗学习的领域自适应工业场景文本检测": [
+    "I_场景文本_OCR"
+  ],
+  "2024_自适应光流估计驱动的微表情识别": [
+    "J_人脸_表情_伪造_情感"
+  ],
+  "2024_融合场景先验的船名文本检测方法": [
+    "I_场景文本_OCR"
+  ],
+  "2024_融合非局部特征表示的模糊图像复原": [
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "2024_超声波空中触觉图形呈现的时空调制方法": [
+    "T_通用_NLP_其他"
+  ],
+  "2024_轻量化视觉定位技术综述": [
+    "R_综述_Survey"
+  ],
+  "2024_面向三维人体坐标及旋转角估计的注意力融合网络": [
+    "D2_3D_重建_神经辐射场_SLAM"
+  ],
+  "2024_面向增强现实的虚实遮挡技术综述": [
+    "R_综述_Survey"
+  ],
+  "2025_2508.08117_GRASPTrack_MultiObject_Tracking": [
+    "G_视觉基础模型_VLM_LLM",
+    "K_跟踪_视频_动作",
+    "T_通用_NLP_其他"
+  ],
+  "2025_2510.09893_HIPPD_Brain-Inspired_Personality_Detection": [
+    "G_视觉基础模型_VLM_LLM",
+    "T_通用_NLP_其他"
+  ],
+  "2025_2511.02142_3D_Growth_Trajectory_Reconstruction": [
+    "D_3D_点云_分类_分割_配准",
+    "T_通用_NLP_其他"
+  ],
+  "2025_2511.18209_MotionDuet_3D_Motion_Generation": [
+    "D_3D_点云_分类_分割_配准",
+    "D2_3D_重建_神经辐射场_SLAM",
+    "T_通用_NLP_其他"
+  ],
+  "2025_Are_Open-Vocabulary": [
+    "T_通用_NLP_其他"
+  ],
+  "2025_Audit_of_takedown_de": [
+    "T_通用_NLP_其他"
+  ],
+  "2025_Benchmarking_Suite_f": [
+    "L_数据集_Benchmark"
+  ],
+  "2025_Cross-View_Open-Voca": [
+    "T_通用_NLP_其他"
+  ],
+  "2025_EdgeAI_Drone_for_Aut": [
+    "T_通用_NLP_其他"
+  ],
+  "2025_Genes_Shells_AI_Scientific_Reports": [
+    "T_通用_NLP_其他"
+  ],
+  "2025_Lightweight_Object_D": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2025_Object_Detection_wit": [
+    "C_目标检测_通用与旋转框",
+    "T_通用_NLP_其他"
+  ],
+  "2025_Remote_Sensing_Retri": [
+    "M_行人_重识别_检索"
+  ],
+  "2025_SAM2-ELNet_Label_En": [
+    "G_视觉基础模型_VLM_LLM",
+    "T_通用_NLP_其他"
+  ],
+  "2025_SoccerSynth-Detectio": [
+    "L_数据集_Benchmark"
+  ],
+  "2025_UAV-DETR_Efficient": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "2025_Vision-Language_Mode": [
+    "G_视觉基础模型_VLM_LLM",
+    "R_综述_Survey"
+  ],
+  "2026_Towards_Remote_Sensi": [
+    "T_通用_NLP_其他"
+  ],
+  "3DKMI Krawtchouk矩形状签名 3DKMI": [
+    "D_3D_点云_分类_分割_配准",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "3DfusionBlock": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "3D方向场变换 3D Orientation Field": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "3D树木分割图 3D Tree Segmentation": [
+    "D_3D_点云_分类_分割_配准",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "3D树木分割图割 3D Tree Graph Cut": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "3D树木描绘图割 3D Tree Delineation": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "A-comprehensive-survey-on-deep-active-learning-in-medi_2024_Medical-Image-An": [
+    "A2_医学图像_分类_配准_生成",
+    "R_综述_Survey"
+  ],
+  "A-prior-knowledge-guided-distributionally-robust-optimization_2024_Informati": [
+    "A3_医学图像_配准_切片_张量_数学"
+  ],
+  "A-survey-on-deep-learning-in-medical-image-registration--Ne_2025_Medical-Ima": [
+    "A2_医学图像_分类_配准_生成",
+    "R_综述_Survey"
+  ],
+  "ACF": [
+    "B_注意力算子模块"
+  ],
+  "AFF": [
+    "B_注意力算子模块"
+  ],
+  "AFPN": [
+    "B_注意力算子模块"
+  ],
+  "ASSA&FRFN": [
+    "B_注意力算子模块"
+  ],
+  "A_Collaborative_Self-Supervised_Domain_Adaptation_for_Low-Quality_Medical_Image_Enhancement": [
+    "A2_医学图像_分类_配准_生成",
+    "P_跨域_域自适应_联邦",
+    "Q_自监督_对比学习_主动学习"
+  ],
+  "Anonymizing-medical-case-based-explanations-through-d_2024_Medical-Image-Ana": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "Assessing_the_Ability_of_Generative_Adversarial_Networks_to_Learn_Canonical_Medical_Image_Statistics": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "Attention": [
+    "B_注意力算子模块"
+  ],
+  "Author_Biography": [
+    "Z_工具与杂项_figures"
+  ],
+  "Beam-wise-dose-composition-learning-for-head-and-neck-can_2024_Medical-Image": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "Biologically-Inspired_Iterative_Learning_Control_Design_A_Modular-Based_Approach": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "CAA&PKIBlock": [
+    "B_注意力算子模块"
+  ],
+  "CAFFN&MultiOrderGatedAggregation": [
+    "B_注意力算子模块"
+  ],
+  "CAFM&MSFN&CAMixingBlock": [
+    "B_注意力算子模块"
+  ],
+  "CBAM": [
+    "B_注意力算子模块"
+  ],
+  "CBM": [
+    "B_注意力算子模块"
+  ],
+  "CCT": [
+    "B_注意力算子模块"
+  ],
+  "CGAFusion": [
+    "B_注意力算子模块"
+  ],
+  "CLFT&UCDC": [
+    "B_注意力算子模块"
+  ],
+  "CMUNeXtBlock": [
+    "A1_医学图像_分割"
+  ],
+  "CPA": [
+    "B_注意力算子模块"
+  ],
+  "CPAM": [
+    "B_注意力算子模块"
+  ],
+  "CPB": [
+    "B_注意力算子模块"
+  ],
+  "CPB_visualisation": [
+    "B_注意力算子模块",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "CPCA": [
+    "B_注意力算子模块"
+  ],
+  "CRMSA": [
+    "B_注意力算子模块"
+  ],
+  "CSAttention": [
+    "B_注意力算子模块",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "CasDyFBlock&RMB&LFB": [
+    "B_注意力算子模块"
+  ],
+  "CenSegNet中心体 CenSegNet": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "CoNIC-Challenge--Pushing-the-frontiers-of-nuclear-detectio_2024_Medical-Imag": [
+    "A1_医学图像_分割",
+    "L_数据集_Benchmark"
+  ],
+  "CogM-Link": [
+    "B_注意力算子模块"
+  ],
+  "CondConv": [
+    "B_注意力算子模块"
+  ],
+  "Content-Noise_Complementary_Learning_for_Medical_Image_Denoising": [
+    "A1_医学图像_分割",
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "Contrastive_and_Selective_Hidden_Embeddings_for_Medical_Image_Segmentation": [
+    "A1_医学图像_分割",
+    "F_图像分割_语义_实例_全景",
+    "Q_自监督_对比学习_主动学习"
+  ],
+  "CornerPoint3D 3D检测新尺度 CornerPoint3D": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "Correlated-and-individual-feature-learning-with-contrast-enha_2023_Pattern-R": [
+    "A3_医学图像_配准_切片_张量_数学"
+  ],
+  "Cover_Letter": [
+    "Z_工具与杂项_figures"
+  ],
+  "DA": [
+    "B_注意力算子模块"
+  ],
+  "DAB": [
+    "B_注意力算子模块"
+  ],
+  "DA_Block": [
+    "B_注意力算子模块"
+  ],
+  "DCA": [
+    "B_注意力算子模块"
+  ],
+  "DFF(3d)": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "DICAM": [
+    "B_注意力算子模块"
+  ],
+  "DLKA": [
+    "B_注意力算子模块"
+  ],
+  "DNCNet雷达去噪 DNCNet": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "N_雷达_无线电_张量_数学"
+  ],
+  "DOConv": [
+    "B_注意力算子模块"
+  ],
+  "DSAM": [
+    "B_注意力算子模块",
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "DWConv": [
+    "B_注意力算子模块"
+  ],
+  "Deep-learning-based-hyperspectral-image-correction-and-unmixing-f_2024_iScie": [
+    "R1_遥感_高光谱_变化检测"
+  ],
+  "Deep-learning-based-synthesis-of-MRI--CT-and-PET--Revi_2024_Medical-Image-An": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "Deep-learning-models-for-ischemic-stroke-lesion-seg_2024_Computers-in-Biolog": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "Dual_Adversarial_Attention_Mechanism_for_Unsupervised_Domain_Adaptive_Medical_Image_Segmentation": [
+    "A1_医学图像_分割",
+    "F_图像分割_语义_实例_全景",
+    "P_跨域_域自适应_联邦"
+  ],
+  "Dysample(上采样)": [
+    "B_注意力算子模块",
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "EFF": [
+    "B_注意力算子模块"
+  ],
+  "EGA": [
+    "B_注意力算子模块"
+  ],
+  "ELAB": [
+    "B_注意力算子模块"
+  ],
+  "ENLTB": [
+    "B_注意力算子模块"
+  ],
+  "EPA3d": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "EPAS_v5_中文终稿": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "Explainable-artificial-intelligence--XAI--in-deep-learni_2022_Medical-Image-": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "FADConv": [
+    "B_注意力算子模块"
+  ],
+  "FECAttention(时序预测)": [
+    "B_注意力算子模块"
+  ],
+  "FEM&SCAM": [
+    "B_注意力算子模块"
+  ],
+  "FFA": [
+    "B_注意力算子模块"
+  ],
+  "FINAL_VERSION": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "FMB": [
+    "B_注意力算子模块"
+  ],
+  "FMM": [
+    "B_注意力算子模块"
+  ],
+  "FMS&MDAF": [
+    "B_注意力算子模块"
+  ],
+  "FSAS&DFFN": [
+    "B_注意力算子模块"
+  ],
+  "FeatUp": [
+    "B_注意力算子模块"
+  ],
+  "Few-Shot_Medical_Image_Segmentation_via_Generating_Multiple_Representative_Descriptors": [
+    "A1_医学图像_分割",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "FreqFusion": [
+    "B_注意力算子模块"
+  ],
+  "GAB&GHPA": [
+    "B_注意力算子模块"
+  ],
+  "GAMED虚假新闻检测 GAMED Fake News": [
+    "B_注意力算子模块",
+    "J_人脸_表情_伪造_情感"
+  ],
+  "GAU": [
+    "B_注意力算子模块"
+  ],
+  "GCTattention": [
+    "B_注意力算子模块"
+  ],
+  "GLSA": [
+    "B_注意力算子模块"
+  ],
+  "GRSA": [
+    "B_注意力算子模块"
+  ],
+  "GatedSlotAttention": [
+    "B_注意力算子模块"
+  ],
+  "GhostModule": [
+    "B_注意力算子模块"
+  ],
+  "GhostModuleV2": [
+    "B_注意力算子模块"
+  ],
+  "GlobalPMFSBlock": [
+    "B_注意力算子模块"
+  ],
+  "GraphLayer": [
+    "B_注意力算子模块"
+  ],
+  "Guest_Editorial_Annotation-Efficient_Deep_Learning_The_Holy_Grail_of_Medical_Imaging": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "HAAM": [
+    "B_注意力算子模块"
+  ],
+  "HFF": [
+    "B_注意力算子模块"
+  ],
+  "HSE&FuGH&S3DSA": [
+    "B_注意力算子模块",
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "HTB": [
+    "B_注意力算子模块"
+  ],
+  "HWAB": [
+    "B_注意力算子模块"
+  ],
+  "HWD下采样": [
+    "B_注意力算子模块"
+  ],
+  "HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction": [
+    "A1_医学图像_分割"
+  ],
+  "HiFi-MambaV2分层MRI HiFi-MambaV2 Hierarchical MRI": [
+    "A1_医学图像_分割"
+  ],
+  "IDC": [
+    "B_注意力算子模块"
+  ],
+  "ISAR卫星特征识别 ISAR": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "Illegal_Buildings_Detection_from_Satellite_Images_using_GoogLeNet_and_Cadastral_Map": [
+    "C2_目标检测_违建_车辆_船舶_行人",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "Inception_mixer": [
+    "B_注意力算子模块"
+  ],
+  "InfoNorm": [
+    "B_注意力算子模块"
+  ],
+  "Interpretability-Guided-Inductive-Bias-For-Deep-Learnin_2022_Medical-Image-A": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "LAE&MSFM&RFAConv": [
+    "B_注意力算子模块"
+  ],
+  "LDConv": [
+    "B_注意力算子模块"
+  ],
+  "LMFLoss": [
+    "B_注意力算子模块"
+  ],
+  "LMLT": [
+    "B_注意力算子模块"
+  ],
+  "LPA&DMC": [
+    "B_注意力算子模块"
+  ],
+  "LViT_Language_Meets_Vision_Transformer_in_Medical_Image_Segmentation": [
+    "A1_医学图像_分割",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "Learning-image-representations-for-anomaly-detection--Applic_2024_Medical-Im": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "LightM-UNet": [
+    "A1_医学图像_分割"
+  ],
+  "Liu2024_Illegal_Construction_Detection": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "LocalViT": [
+    "A1_医学图像_分割",
+    "B_注意力算子模块"
+  ],
+  "MAB": [
+    "B_注意力算子模块"
+  ],
+  "MASAG": [
+    "B_注意力算子模块"
+  ],
+  "MATM&PS2A&MHIASA": [
+    "B_注意力算子模块"
+  ],
+  "MDFM": [
+    "B_注意力算子模块"
+  ],
+  "MFGM&PLM": [
+    "B_注意力算子模块"
+  ],
+  "MLA": [
+    "B_注意力算子模块"
+  ],
+  "MLAttention(文本分类)": [
+    "B_注意力算子模块"
+  ],
+  "MLLA": [
+    "B_注意力算子模块"
+  ],
+  "MOGO 3D人体运动生成 MOGO Motion": [
+    "D_3D_点云_分类_分割_配准",
+    "D2_3D_重建_神经辐射场_SLAM"
+  ],
+  "MSAA": [
+    "B_注意力算子模块"
+  ],
+  "MSAF": [
+    "B_注意力算子模块"
+  ],
+  "MSCA": [
+    "B_注意力算子模块"
+  ],
+  "MSCB&MSACM&EUCB&LGAG": [
+    "B_注意力算子模块"
+  ],
+  "MSPLCK&EPA": [
+    "B_注意力算子模块"
+  ],
+  "Mask_to_Height_YOLOv11_2510.27224": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "Multi-source-multi-modal-markers-for-Bayesian-Networks--Ap_2024_Medical-Imag": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "NAF": [
+    "B_注意力算子模块"
+  ],
+  "OKM": [
+    "B_注意力算子模块"
+  ],
+  "PAAblock": [
+    "B_注意力算子模块"
+  ],
+  "PCBAM&SWA": [
+    "B_注意力算子模块"
+  ],
+  "PConv": [
+    "B_注意力算子模块"
+  ],
+  "PE3d": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "PGM": [
+    "B_注意力算子模块"
+  ],
+  "PPA&DASI&MDCR(红外小目标检测)": [
+    "C_目标检测_通用与旋转框",
+    "C3_目标检测_红外_可见光融合",
+    "H_显著性_小目标"
+  ],
+  "PURIFY分布式优化 PURIFY": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "Parallel ViT": [
+    "B_注意力算子模块"
+  ],
+  "PyConv": [
+    "B_注意力算子模块"
+  ],
+  "Quantitative-evaluation-of-Saliency-Based-Explainable-arti_2024_European-Jou": [
+    "A2_医学图像_分类_配准_生成",
+    "H_显著性_小目标",
+    "N_雷达_无线电_张量_数学"
+  ],
+  "RAB&HDRAB": [
+    "B_注意力算子模块"
+  ],
+  "RAMiT&HRAMi": [
+    "B_注意力算子模块"
+  ],
+  "RCM&dpg_head": [
+    "B_注意力算子模块"
+  ],
+  "RFAConv": [
+    "B_注意力算子模块"
+  ],
+  "RSSG": [
+    "B_注意力算子模块"
+  ],
+  "Rethinking-masked-image-modelling-for-medical-image-r_2024_Medical-Image-Ana": [
+    "A1_医学图像_分割"
+  ],
+  "RevIN(时序预测)": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "Robust-and-fast-stochastic-4D-flow-vector-field-signature-techn_2024_Medical": [
+    "A3_医学图像_配准_切片_张量_数学"
+  ],
+  "RobustPCA树木分类 Robust PCA Trees": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "Robust_Medical_Image_Classification_From_Noisy_Labeled_Data_With_Global_and_Local_Representation_Guided_Co-Training": [
+    "A2_医学图像_分类_配准_生成",
+    "O_物理对抗_安全_鲁棒"
+  ],
+  "SA": [
+    "B_注意力算子模块"
+  ],
+  "SCKansformer": [
+    "B_注意力算子模块"
+  ],
+  "SCSA": [
+    "B_注意力算子模块"
+  ],
+  "SDM": [
+    "B_注意力算子模块"
+  ],
+  "SFFusion": [
+    "B_注意力算子模块"
+  ],
+  "SGFN&ASSA&ACSA": [
+    "B_注意力算子模块"
+  ],
+  "SHSA": [
+    "B_注意力算子模块"
+  ],
+  "SLAB(prepbn&SLA)": [
+    "B_注意力算子模块"
+  ],
+  "SLaT三阶段分割 SLaT Segmentation": [
+    "D_3D_点云_分类_分割_配准",
+    "F_图像分割_语义_实例_全景"
+  ],
+  "SMA&EMLP&Modulator": [
+    "B_注意力算子模块"
+  ],
+  "SPConv": [
+    "B_注意力算子模块"
+  ],
+  "ScaleGraphBlock": [
+    "B_注意力算子模块"
+  ],
+  "Scaling_Laws_for_Neural_Language_Models": [
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "Semi-supervised-medical-image-classification-via-distance-c_2024_Medical-Ima": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "SmoothNet": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "StarBlocks": [
+    "B_注意力算子模块"
+  ],
+  "Structure_and_Illumination_Constrained_GAN_for_Medical_Image_Enhancement": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "SwiftFormerEncoder&ConvEncoder": [
+    "B_注意力算子模块"
+  ],
+  "TIAM": [
+    "B_注意力算子模块"
+  ],
+  "TIF": [
+    "B_注意力算子模块"
+  ],
+  "TSConformerBlock": [
+    "B_注意力算子模块"
+  ],
+  "TSLANet(ICB&ASB)": [
+    "B_注意力算子模块"
+  ],
+  "TVConv": [
+    "B_注意力算子模块"
+  ],
+  "Talk2Radar 雷达语言多模态 Talk2Radar": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "TransNet动作识别 TransNet HAR": [
+    "K_跟踪_视频_动作"
+  ],
+  "Transforming-medical-imaging-with-Transformers--A-comparativ_2023_Medical-Im": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "Tucker近似 Tucker Approximation": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "ULSAM": [
+    "B_注意力算子模块",
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "WCMFandFACMA": [
+    "B_注意力算子模块"
+  ],
+  "ar_residual_growth": [
+    "B_注意力算子模块"
+  ],
+  "assemFormer&mcattn": [
+    "B_注意力算子模块"
+  ],
+  "axial": [
+    "B_注意力算子模块"
+  ],
+  "benchmark_overview": [
+    "Z_工具与杂项_figures",
+    "L_数据集_Benchmark"
+  ],
+  "budget_fairness_accounting": [
+    "Z_工具与杂项_figures"
+  ],
+  "cjig_paper_1": [
+    "T_通用_NLP_其他"
+  ],
+  "cjig_paper_2": [
+    "T_通用_NLP_其他"
+  ],
+  "cjig_paper_3": [
+    "T_通用_NLP_其他"
+  ],
+  "cjig_paper_5": [
+    "T_通用_NLP_其他"
+  ],
+  "cjig_图像处理_基于t-SNE最大化的彩色图像灰度化": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "cjig_图像处理_深度伪造及其取证技术综述": [
+    "I_场景文本_OCR",
+    "J_人脸_表情_伪造_情感",
+    "R_综述_Survey"
+  ],
+  "cjig_图像处理_深度学习点云质量增强方法综述": [
+    "D_3D_点云_分类_分割_配准",
+    "R_综述_Survey"
+  ],
+  "cjig_图像处理_结合背景图的高分辨率视频人像实时抠图网络": [
+    "K_跟踪_视频_动作"
+  ],
+  "cjig_图像处理_轻量级注意力的束对齐网络的视频超分重建": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "K_跟踪_视频_动作"
+  ],
+  "cjig_图像识别_多阶段空间感知道路损伤检测网络": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "cjig_图像识别_弱监督语义分割方法综述": [
+    "F_图像分割_语义_实例_全景",
+    "R_综述_Survey"
+  ],
+  "cjig_图像识别_深度学习实时语义分割综述_完整版": [
+    "F_图像分割_语义_实例_全景",
+    "R_综述_Survey"
+  ],
+  "cjig_图像识别_红外与可见光图像特征动态选择的目标检测网络": [
+    "C_目标检测_通用与旋转框",
+    "C3_目标检测_红外_可见光融合"
+  ],
+  "cjig_图像识别_自适应异构联邦学习": [
+    "P_跨域_域自适应_联邦"
+  ],
+  "cjig_图像识别_融合密度和精细分数的行人检测": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "cjig_图像识别_行人再识别技术研究进展": [
+    "C2_目标检测_违建_车辆_船舶_行人",
+    "M_行人_重识别_检索",
+    "R_综述_Survey"
+  ],
+  "cjig_图像识别_高质量超声成像与重建研究综述": [
+    "R_综述_Survey"
+  ],
+  "cjig_点云_融合小样本元学习和原型对齐的点云分割算法": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "cjig_目标检测_融合点云与图像的环境目标检测研究进展": [
+    "C_目标检测_通用与旋转框",
+    "C2_目标检测_违建_车辆_船舶_行人",
+    "D_3D_点云_分类_分割_配准",
+    "R_综述_Survey"
+  ],
+  "cjig_计算机图形学_RGB-D图像多层特征提取算法综述": [
+    "D_3D_点云_分类_分割_配准",
+    "R_综述_Survey"
+  ],
+  "cjig_计算机图形学_三维场景点云理解与重建技术": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "cjig_计算机图形学_三维重建场景纹理优化算法综述": [
+    "D2_3D_重建_神经辐射场_SLAM",
+    "R_综述_Survey"
+  ],
+  "cjig_计算机图形学_几何属性引导的三维语义实例重建": [
+    "D2_3D_重建_神经辐射场_SLAM"
+  ],
+  "cjig_计算机视觉_分割一切模型SAM的潜力与展望": [
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "cjig_计算机视觉_无人集群系统协同决策与博弈控制综述": [
+    "R_综述_Survey",
+    "T_通用_NLP_其他"
+  ],
+  "cjig_计算机视觉_沉浸式环境和多场景中的视觉提示信息综述": [
+    "R_综述_Survey",
+    "T_通用_NLP_其他"
+  ],
+  "cjig_计算机视觉_车路两端纯视觉鸟瞰图感知研究综述": [
+    "L_数据集_Benchmark",
+    "R_综述_Survey"
+  ],
+  "cjig_遥感_基于深度学习的光谱图像超分辨率综述": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "R_综述_Survey"
+  ],
+  "cjig_遥感_多模态遥感图像配准方法研究综述": [
+    "R_综述_Survey"
+  ],
+  "cjig_遥感_小样本SAR图像分类方法综述": [
+    "R_综述_Survey"
+  ],
+  "cjig_遥感_热红外高光谱遥感影像信息提取": [
+    "R1_遥感_高光谱_变化检测"
+  ],
+  "cjig_遥感_面向无人机海岸带生态系统监测的语义分割基准数据集": [
+    "F_图像分割_语义_实例_全景",
+    "L_数据集_Benchmark"
+  ],
+  "cjig_遥感_高分遥感影像变化检测": [
+    "S_变化检测_ChangeDetection"
+  ],
+  "cleegn": [
+    "B_注意力算子模块"
+  ],
+  "controlled_ablation": [
+    "Z_工具与杂项_figures"
+  ],
+  "cross_attention": [
+    "B_注意力算子模块"
+  ],
+  "dataset": [
+    "Z_工具与杂项_figures",
+    "L_数据集_Benchmark"
+  ],
+  "dataset-imgs-QAs": [
+    "Z_工具与杂项_figures",
+    "L_数据集_Benchmark"
+  ],
+  "dataset_analysis_12": [
+    "Z_工具与杂项_figures",
+    "L_数据集_Benchmark"
+  ],
+  "dataset_analysis_v5_img_dis": [
+    "Z_工具与杂项_figures",
+    "L_数据集_Benchmark"
+  ],
+  "dataset_analysis_v5_qst_length": [
+    "Z_工具与杂项_figures",
+    "L_数据集_Benchmark"
+  ],
+  "dynamic_conv": [
+    "B_注意力算子模块"
+  ],
+  "efficientViT3D": [
+    "B_注意力算子模块",
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "ffc": [
+    "B_注意力算子模块"
+  ],
+  "figure1": [
+    "Z_工具与杂项_figures"
+  ],
+  "illustration_v2": [
+    "Z_工具与杂项_figures"
+  ],
+  "kan": [
+    "B_注意力算子模块"
+  ],
+  "parameter_sensitivity_scan": [
+    "Z_工具与杂项_figures"
+  ],
+  "pnp3d(点云)": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "regionvit": [
+    "B_注意力算子模块"
+  ],
+  "results-question-type-radar": [
+    "Z_工具与杂项_figures"
+  ],
+  "rsablock3d": [
+    "B_注意力算子模块",
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "scSE": [
+    "B_注意力算子模块"
+  ],
+  "scalability_overview": [
+    "Z_工具与杂项_figures"
+  ],
+  "supplemental_parameter_scans": [
+    "Z_工具与杂项_figures"
+  ],
+  "tradeoff_curve": [
+    "Z_工具与杂项_figures"
+  ],
+  "trigger_rate_validation": [
+    "Z_工具与杂项_figures"
+  ],
+  "wtconv2d": [
+    "B_注意力算子模块"
+  ],
+  "一阶全卷积遥感图像倾斜目标检测": [
+    "C_目标检测_通用与旋转框"
+  ],
+  "三维点云场景语义分割研究进展": [
+    "D_3D_点云_分类_分割_配准",
+    "F_图像分割_语义_实例_全景",
+    "R_综述_Survey"
+  ],
+  "两阶段分类 Two-Stage": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "互补特征交互融合的RGB_D实时显著目标检测": [
+    "C_目标检测_通用与旋转框",
+    "H_显著性_小目标"
+  ],
+  "人工智能在文物行业的应用与展望": [
+    "R_综述_Survey"
+  ],
+  "光学遥感图像小目标检测深度学习算法综述": [
+    "C_目标检测_通用与旋转框",
+    "H_显著性_小目标",
+    "R_综述_Survey"
+  ],
+  "全监督和弱监督图网络的病理图像分割": [
+    "A1_医学图像_分割"
+  ],
+  "分割恢复联合模型 Segmentation Restoration": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "分割方法论总览 SaT Overview": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "分布式无线电优化 Distributed Radio Optimization": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "医学图像分类 Medical Classification": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "医学图像小样本学习 Medical Few-Shot": [
+    "A1b_医学图像_小样本_综述"
+  ],
+  "医学报告生成IIHT Medical Report IIHT": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "单幅图像去雨数据集和深度学习算法的联合评估与展望": [
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "单目标跟踪中的视觉智能评估技术综述": [
+    "K_跟踪_视频_动作",
+    "R_综述_Survey"
+  ],
+  "双面Sketching张量 Two-Sided Sketching": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "变分分割基础Mumford-Shah与ROF Mumford-Shah ROF": [
+    "F_图像分割_语义_实例_全景",
+    "N_雷达_无线电_张量_数学"
+  ],
+  "可见表面检测 Detect Closer Surfaces": [
+    "J_人脸_表情_伪造_情感"
+  ],
+  "可解释AI综述 XAI Survey": [
+    "A2_医学图像_分类_配准_生成",
+    "R_综述_Survey"
+  ],
+  "叶绿体电子断层扫描 Thylakoid": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "图像去模糊研究综述": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "R_综述_Survey"
+  ],
+  "图像重定向质量评价的研究进展": [
+    "R_综述_Survey"
+  ],
+  "在线无线电干涉成像 Online Radio Imaging": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "基于深度学习的医学图像分割方法综述": [
+    "A1_医学图像_分割",
+    "A2_医学图像_分类_配准_生成",
+    "R_综述_Survey"
+  ],
+  "基于深度学习的图像融合方法综述": [
+    "R_综述_Survey"
+  ],
+  "基于深度学习的有向目标检测研究进展_基于深度学习的有向目标检测研究进展": [
+    "C_目标检测_通用与旋转框",
+    "R_综述_Survey"
+  ],
+  "基于深度学习的视觉目标检测技术综述": [
+    "C_目标检测_通用与旋转框",
+    "R_综述_Survey"
+  ],
+  "基于照度与场景纹理注意力图的低光图像增强": [
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "基于神经辐射场和三维高斯泼溅的文本指导三维编辑综述": [
+    "D2_3D_重建_神经辐射场_SLAM",
+    "R_综述_Survey"
+  ],
+  "增强小目标特征的航空遥感目标检测": [
+    "C_目标检测_通用与旋转框",
+    "H_显著性_小目标"
+  ],
+  "多传感器树木制图 Multi-Sensor Trees": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "多功能传感器树木分类 Tree Species Classification": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "多层次可解释AI Multilevel XAI": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "多模态大模型驱动的三维视觉理解技术前沿进展": [
+    "G_视觉基础模型_VLM_LLM",
+    "R_综述_Survey"
+  ],
+  "多特征融合与几何卷积的机载LiDAR点云地物分类": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "多类ROF分割 Iterated ROF": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "大小模型端云协同进化技术进展": [
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "大模型时代的光学文字识别_现状及展望": [
+    "I_场景文本_OCR"
+  ],
+  "大模型高效微调CALM CALM Fine-tuning": [
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "大规模室外图像3维重建技术研究进展": [
+    "D2_3D_重建_神经辐射场_SLAM",
+    "R_综述_Survey"
+  ],
+  "室内场景拟人交互研究进展": [
+    "R_综述_Survey"
+  ],
+  "密集挤压激励网络的多标签胸部X光片疾病分类": [
+    "A2_医学图像_分类_配准_生成"
+  ],
+  "小波框架血管分割 Tight-Frame Vessel": [
+    "A1_医学图像_分割"
+  ],
+  "平衡神经网络搜索I Balanced NAS I": [
+    "T_通用_NLP_其他"
+  ],
+  "平衡神经网络搜索II Balanced NAS II": [
+    "T_通用_NLP_其他"
+  ],
+  "张量CUR分解LoRA tCURLoRA": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "情感感知人格检测 EmoPerso Emotion-Aware": [
+    "J_人脸_表情_伪造_情感"
+  ],
+  "情感计算与理解研究发展概述": [
+    "J_人脸_表情_伪造_情感"
+  ],
+  "扩散模型生成视频数据集及其检测基准研究": [
+    "K_跟踪_视频_动作"
+  ],
+  "数据增强综述 Data Augmentation": [
+    "R_综述_Survey"
+  ],
+  "无人机视角下的目标检测研究进展": [
+    "C_目标检测_通用与旋转框",
+    "R_综述_Survey"
+  ],
+  "无参考图像质量评价研究进展": [
+    "R_综述_Survey"
+  ],
+  "无线电干涉不确定性I Radio Interferometric I": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "无线电干涉不确定性II Radio Interferometric II": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "框架管状结构分割 Framelet": [
+    "A1_医学图像_分割"
+  ],
+  "概念级XAI指标 Concept XAI": [
+    "A2_医学图像_分类_配准_生成",
+    "N_雷达_无线电_张量_数学"
+  ],
+  "水下图像复原和增强方法研究进展": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "R_综述_Survey"
+  ],
+  "注意力与方向特征增强的遥感图像语义分割": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "注意力引导局部特征联合学习的人脸表情识别": [
+    "J_人脸_表情_伪造_情感"
+  ],
+  "深度学习单目深度估计研究进展": [
+    "R_综述_Survey",
+    "T_通用_NLP_其他"
+  ],
+  "深度学习在医学影像中的应用综述": [
+    "A2_医学图像_分类_配准_生成",
+    "R_综述_Survey"
+  ],
+  "深度学习架构综述 CNNs RNNs Transformers": [
+    "R_综述_Survey",
+    "T_通用_NLP_其他"
+  ],
+  "深度学习的跨视角地理定位方法综述": [
+    "M_行人_重识别_检索",
+    "R_综述_Survey",
+    "T_通用_NLP_其他"
+  ],
+  "深度学习背景下的图像语义分割方法综述": [
+    "F_图像分割_语义_实例_全景",
+    "R_综述_Survey"
+  ],
+  "深度学习视频超分辨率技术综述": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "K_跟踪_视频_动作",
+    "R_综述_Survey"
+  ],
+  "点云神经表示 Neural Varifolds": [
+    "D_3D_点云_分类_分割_配准",
+    "D2_3D_重建_神经辐射场_SLAM"
+  ],
+  "球面小波分割 Wavelet Sphere": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "生物启发迭代学习控制 ILC": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "生物孔隙分割 Bio-Pores": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "直肠分割放疗 Deep Rectum": [
+    "A1_医学图像_分割"
+  ],
+  "真实场景下图像超分辨技术现状与趋势": [
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "稀疏贝叶斯质量映射I Sparse Bayesian I": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "稀疏贝叶斯质量映射II Sparse Bayesian II": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "稀疏贝叶斯质量映射III Sparse Bayesian III": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "红外与可见光图像分组融合的视觉Transformer": [
+    "C3_目标检测_红外_可见光融合"
+  ],
+  "结合提示学习和视觉语义生成融合的东巴画图像描述": [
+    "I_场景文本_OCR"
+  ],
+  "绿色AI的隐私保护与能量高效的分布式传感网络同步研究": [
+    "T_通用_NLP_其他"
+  ],
+  "自然历史馆藏错误标本能计算机视觉方法 Mislabelled Specimens": [
+    "T_通用_NLP_其他"
+  ],
+  "船舶匹配遥感 Ship Matching": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "蛋白质结构网络图LL4G LL4G Graph": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "融合ViT与对比学习的面部表情识别": [
+    "J_人脸_表情_伪造_情感",
+    "Q_自监督_对比学习_主动学习"
+  ],
+  "视觉基础模型研究现状与发展趋势": [
+    "G_视觉基础模型_VLM_LLM",
+    "R_综述_Survey"
+  ],
+  "视觉模型及多模态大模型推进图像复原增强研究进展": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "G_视觉基础模型_VLM_LLM",
+    "R_综述_Survey"
+  ],
+  "语义比例分割 Semantic Proportions": [
+    "F_图像分割_语义_实例_全景"
+  ],
+  "跨域LiDAR检测 Cross-Domain LiDAR": [
+    "D_3D_点云_分类_分割_配准",
+    "P_跨域_域自适应_联邦"
+  ],
+  "跨域遥感场景解译研究进展": [
+    "P_跨域_域自适应_联邦",
+    "R_综述_Survey"
+  ],
+  "跨层细节感知和分组注意力引导的遥感图像语义分割": [
+    "F_图像分割_语义_实例_全景",
+    "P_跨域_域自适应_联邦"
+  ],
+  "适合跨域目标检测的雾霾图像增强": [
+    "C_目标检测_通用与旋转框",
+    "C3_目标检测_红外_可见光融合",
+    "P_跨域_域自适应_联邦"
+  ],
+  "遥感影像小目标检测研究进展": [
+    "C_目标检测_通用与旋转框",
+    "H_显著性_小目标",
+    "R_综述_Survey"
+  ],
+  "针对视觉深度学习模型的物理对抗攻击研究综述": [
+    "O_物理对抗_安全_鲁棒",
+    "R_综述_Survey"
+  ],
+  "雷达工作模式识别 Radar Work Mode": [
+    "N_雷达_无线电_张量_数学"
+  ],
+  "非负子空间小样本学习 Non-negative Subspace": [
+    "R2_控制_生物启发_其他跨学科"
+  ],
+  "面向图像复原的非因果选择性状态空间模型": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "N_雷达_无线电_张量_数学"
+  ],
+  "面向深度学习的三维点云补全算法综述": [
+    "D_3D_点云_分类_分割_配准",
+    "R_综述_Survey"
+  ],
+  "面向点云几何压缩的隐式编码网络": [
+    "D_3D_点云_分类_分割_配准"
+  ],
+  "面向透射文档图像复原的模糊扩散模型": [
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "预训练大模型技术在行人重识别的应用综述": [
+    "M_行人_重识别_检索",
+    "R_综述_Survey"
+  ],
+  "高光谱图像智能分类研究综述与展望": [
+    "R_综述_Survey",
+    "R1_遥感_高光谱_变化检测"
+  ],
+  "高效PEFT微调 Less but Better PEFT": [
+    "G_视觉基础模型_VLM_LLM"
+  ],
+  "高效变分分类 Efficient Variational": [
+    "N_雷达_无线电_张量_数学",
+    "T_通用_NLP_其他"
+  ],
+  "高斯_维纳表示下的稠密焦栈图生成方法": [
+    "E_图像复原_超分_去噪_去雨去雾",
+    "N_雷达_无线电_张量_数学"
+  ],
+  "高维逆问题不确定性量化 Uncertainty Quantification": [
+    "N_雷达_无线电_张量_数学"
+  ]
+}
