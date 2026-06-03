@@ -2,6 +2,19 @@
 
 基于Obsidian构建的个人论文管理和阅读系统，支持PDF阅读、笔记标注、AI辅助等功能。
 
+## 🎯 系统定位
+
+**Obsidian 论文库 + 自动化加工脚本 + Git 版本管理** 三件套：
+
+- **Obsidian** 负责阅读、链接、知识网络
+- **Markdown frontmatter** 负责结构化数据
+- **paper_classification.md** 负责总览
+- **scripts/** 负责批处理和一致性检查
+- **Git** 负责版本和同步
+- **AI** 负责初稿，不负责最终分类和判断
+
+PDF **不**进 Git（默认 `.gitignore` 排除）；如果你长期在 GitHub 同步大文件，请改用 **Git LFS**。
+
 ## 📁 目录结构
 
 ```
@@ -76,6 +89,59 @@ read_paper/
    # 使用AI脚本自动生成笔记
    ./scripts/paper-ai notes paper.pdf -o 01-Papers/paper.md
    ```
+
+### 论文库健康检查
+
+整理前先跑这个，扫孤立文件、缺 frontmatter、PDF 重复等：
+
+```bash
+python3 scripts/validate_library.py            # 默认: 每类 warning 最多 5 条
+python3 scripts/validate_library.py --verbose  # 全部 warning
+```
+
+退出码: 0 健康 / 1 有 warning / 2 有 error。
+
+### 重新生成主题分类清单
+
+```bash
+python3 scripts/classify_papers.py                              # 默认扫 01-Papers/
+python3 scripts/classify_papers.py /path/to/papers --out foo.md  # 自定义
+```
+
+输出 `01-Papers/paper_classification.md`, 给 Obsidian 当总览页用。
+
+## 🛠 脚本分工
+
+| 脚本 | 职责 |
+|------|------|
+| `scripts/paper` | 本地 CLI: list / search / stats / new |
+| `scripts/paper-ai` / `scripts/paper_ai.py` | PDF 文本提取、AI 摘要、笔记、问答 |
+| `scripts/classify_papers.py` | 基于规则分类，输出 `paper_classification.md` |
+| `scripts/validate_library.py` | 健康检查：孤立文件 / frontmatter / 重复 / inbox 残留 |
+| `start.sh` | 交互菜单，适合日常使用 |
+
+## 📄 论文笔记 frontmatter 约定
+
+每篇 `01-Papers/*.md` 建议保持：
+
+```yaml
+---
+title: 论文标题
+authors: [作者1, 作者2]
+year: 2024
+venue: CVPR
+doi: 10.xxxx/xxxxx
+pdf: "[[xxx.pdf]]"
+topics: [medical-imaging, segmentation]   # 给分类系统用
+tags: [paper, transformer]                # 给 Obsidian 用
+status: unread                            # unread / reading / read
+rating:                                   # 1-5
+date_added: 2026-06-03
+source: arxiv                             # arxiv / venue / 自加
+---
+```
+
+`tags` 给 Obsidian 看, `topics` 给分类系统看。AI 生成笔记后由人工补 `status / rating / topics` 等主观字段。
 
 ### 阅读和标注
 
