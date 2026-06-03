@@ -86,6 +86,25 @@ def yaml_escape(s: str) -> str:
     return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
+def parse_frontmatter(md_text: str) -> dict[str, str]:
+    """粗略解析 YAML frontmatter, 不依赖 PyYAML, 跟 validate_library.py 行为一致。"""
+    if not md_text.startswith("---"):
+        return {}
+    end = md_text.find("\n---", 3)
+    if end < 0:
+        return {}
+    block = md_text[3:end].strip()
+    out: dict[str, str] = {}
+    for line in block.splitlines():
+        line = line.rstrip()
+        if not line or line.startswith("#") or line.startswith("-"):
+            continue
+        m = re.match(r"^([A-Za-z_][\w-]*)\s*:\s*(.*?)\s*$", line)
+        if m:
+            out[m.group(1)] = m.group(2)
+    return out
+
+
 def build_note(stem: str, primary_topic: str, topics: list[str], today: str) -> str:
     title = clean_title(stem)
     kws = extract_keywords(stem, primary_topic)
@@ -188,7 +207,12 @@ def main():
     )
     parser.add_argument(
         "--force", action="store_true",
-        help="覆盖已存在的 .md (默认跳过)",
+        help="覆盖 status=unread + source_basis=filename 的骨架笔记 (保护已读笔记)",
+    )
+    parser.add_argument(
+        "--really-force", action="store_true",
+        help="无条件覆盖所有 .md, 包括 status=read 或 source_basis=pdf-text 的笔记。"
+             "日常增量用 --force 即可, 除非要重置整个库",
     )
     parser.add_argument(
         "--dry-run", action="store_true",
@@ -209,16 +233,28 @@ def main():
     # 排除非论文文件 (paper_classification.md 等)
     today = date.today().isoformat()
 
-    created, skipped, forced = 0, 0, 0
+    created, skipped, forced, protected = 0, 0, 0, 0
     for pdf in pdfs:
         md_path = pdf.with_suffix(".md")
         # 跳过清单文件
         if md_path.name in {"paper_classification.md", "paper_topics.json"}:
             continue
-        if md_path.exists() and not args.force:
+        if md_path.exists() and not args.force and not args.really_force:
             skipped += 1
             continue
-        if md_path.exists() and args.force:
+        if md_path.exists():
+            # 已存在: 检查要不要保护
+            if not args.really_force:
+                # --force 模式: 只覆盖骨架 (status=unread + source_basis=filename)
+                text = md_path.read_text(encoding="utf-8", errors="replace")
+                fm = parse_frontmatter(text)
+                if fm:
+                    status = fm.get("status", "")
+                    source = fm.get("source_basis", "")
+                    if status != "unread" or source != "filename":
+                        # 已是精读/非骨架, 保护
+                        protected += 1
+                        continue
             forced += 1
 
         primary = paper_topics.get(pdf.stem, ["U_未归类"])[0]
@@ -232,6 +268,8 @@ def main():
     print(f"总计 PDF: {len(pdfs)}")
     print(f"骨架笔记生成: {created} (其中覆盖: {forced})")
     print(f"跳过已存在:  {skipped}")
+    if args.force and not args.really_force:
+        print(f"保护已读笔记: {protected} (status=read 或 source_basis=pdf-text, 未覆盖)")
     if args.dry_run:
         print("(dry-run: 未实际写文件)")
 

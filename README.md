@@ -122,26 +122,55 @@ python3 scripts/classify_papers.py /path/to/papers --out foo.md  # 自定义
 
 ## 📄 论文笔记 frontmatter 约定
 
-每篇 `01-Papers/*.md` 建议保持：
+`tags` 给 Obsidian 看, `topics` / `primary_topic` 给分类系统看。骨架阶段不读 PDF, 不编造作者/会议; 读完后人工升级。
+
+### 骨架阶段（机器生成, source_basis=filename）
+
+由 `scripts/generate_skeleton_notes.py` 一次性生成 499 篇, 字段:
 
 ```yaml
 ---
-title: 论文标题
-authors: [作者1, 作者2]
-year: 2024
-venue: CVPR
-doi: 10.xxxx/xxxxx
+title: "论文标题 (从文件名推断)"
 pdf: "[[xxx.pdf]]"
-topics: [medical-imaging, segmentation]   # 给分类系统用
-tags: [paper, transformer]                # 给 Obsidian 用
-status: unread                            # unread / reading / read
-rating:                                   # 1-5
+primary_topic: B_注意力算子模块      # 由 classify_papers.py 决定
+topics: [B_注意力算子模块, ...]      # 多标签, 来自 paper_topics.json
+status: unread                       # 还没读
+reading_stage: filename-only         # 只看了文件名
+confidence: low                      # 推断置信度低
+source_basis: filename               # 关键: 告诉 validate 这是骨架
 date_added: 2026-06-03
-source: arxiv                             # arxiv / venue / 自加
+tags: [paper]
 ---
 ```
 
-`tags` 给 Obsidian 看, `topics` 给分类系统看。AI 生成笔记后由人工补 `status / rating / topics` 等主观字段。
+**必填字段** (validate 必检): `title, pdf, primary_topic, status, date_added, tags`
+**推荐字段** (仅在 `source_basis: pdf-text` 时必检): `authors, year, venue, topics, source_basis, reading_stage, confidence`
+
+### 精读后（人工升级, source_basis=pdf-text）
+
+读完 PDF 后**人工**改这些字段, validate 会重新要求必填/推荐字段:
+
+```yaml
+---
+title: "论文标题 (从 PDF 抄)"
+authors: [作者1, 作者2]               # 必填 (补上)
+year: 2024                            # 必填
+venue: CVPR                           # 必填
+doi: 10.xxxx/xxxxx                    # 选填
+pdf: "[[xxx.pdf]]"
+primary_topic: B_注意力算子模块
+topics: [B_注意力算子模块, C_目标检测]   # 读完后可以手工调整
+status: read                          # 升级
+reading_stage: deep-read              # first-pass / skimming / deep-read / done
+confidence: high                      # low / medium / high
+source_basis: pdf-text                # 关键: 升级这一行, validate 才会要求 authors/year/venue
+date_added: 2026-06-03
+rating: 4                             # 1-5, 主观
+tags: [paper, transformer, segmentation]
+---
+```
+
+升级 frontmatter 后, 把正文的 `## 关键贡献 / 方法 / 实验 / 局限` 五节也填上, 形成可被 Dataview 检索的知识卡片。
 
 ### 阅读和标注
 

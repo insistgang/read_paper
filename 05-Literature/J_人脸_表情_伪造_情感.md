@@ -66,7 +66,17 @@
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "J_人脸_表情_伪造_情感" OR "topic/J_人脸_表情_伪造_情感"
+FROM "01-Papers"
+WHERE primary_topic = "J_人脸_表情_伪造_情感"
+SORT year DESC
+```
+
+如果想包含跨主题的论文 (topics 列表里有本主题代号的, 即多标签), 用 `contains`:
+
+```dataview
+TABLE year, primary_topic, status
+FROM "01-Papers"
+WHERE contains(topics, "J_人脸_表情_伪造_情感")
 SORT year DESC
 ```
 

@@ -77,8 +77,13 @@ show_stats() {
     echo "📊 统计信息"
     echo "============"
 
-    # -maxdepth 1 排除 01-Papers/read_paper/ 嵌套副本 (云同步事故产物)
-    local paper_count=$(find "$PAPERS_DIR" -maxdepth 1 -name "*.md" -type f 2>/dev/null | wc -l)
+    # -maxdepth 1: 排除未来可能出现的 01-Papers/read_paper/ 嵌套副本
+    # (云同步事故; 已经在 .gitignore 排除, 但回收站误恢复仍可能)
+    #
+    # paper_classification.md 是分类清单 (机器生成的索引), 不是论文笔记,
+    # 排除掉保持口径跟 validate_library 一致.
+    local paper_count=$(find "$PAPERS_DIR" -maxdepth 1 -name "*.md" -type f \
+        ! -name "paper_classification.md" 2>/dev/null | wc -l)
     local pdf_count=$(find "$PDF_DIR" -maxdepth 1 -name "*.pdf" -type f 2>/dev/null | wc -l)
 
     echo "论文笔记: $paper_count 篇"

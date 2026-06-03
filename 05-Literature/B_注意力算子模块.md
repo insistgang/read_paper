@@ -193,7 +193,17 @@
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "B_注意力算子模块" OR "topic/B_注意力算子模块"
+FROM "01-Papers"
+WHERE primary_topic = "B_注意力算子模块"
+SORT year DESC
+```
+
+如果想包含跨主题的论文 (topics 列表里有本主题代号的, 即多标签), 用 `contains`:
+
+```dataview
+TABLE year, primary_topic, status
+FROM "01-Papers"
+WHERE contains(topics, "B_注意力算子模块")
 SORT year DESC
 ```
 

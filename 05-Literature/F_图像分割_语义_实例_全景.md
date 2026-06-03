@@ -74,7 +74,17 @@
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "F_图像分割_语义_实例_全景" OR "topic/F_图像分割_语义_实例_全景"
+FROM "01-Papers"
+WHERE primary_topic = "F_图像分割_语义_实例_全景"
+SORT year DESC
+```
+
+如果想包含跨主题的论文 (topics 列表里有本主题代号的, 即多标签), 用 `contains`:
+
+```dataview
+TABLE year, primary_topic, status
+FROM "01-Papers"
+WHERE contains(topics, "F_图像分割_语义_实例_全景")
 SORT year DESC
 ```
 

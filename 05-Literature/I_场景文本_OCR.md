@@ -64,7 +64,17 @@
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "I_场景文本_OCR" OR "topic/I_场景文本_OCR"
+FROM "01-Papers"
+WHERE primary_topic = "I_场景文本_OCR"
+SORT year DESC
+```
+
+如果想包含跨主题的论文 (topics 列表里有本主题代号的, 即多标签), 用 `contains`:
+
+```dataview
+TABLE year, primary_topic, status
+FROM "01-Papers"
+WHERE contains(topics, "I_场景文本_OCR")
 SORT year DESC
 ```
 

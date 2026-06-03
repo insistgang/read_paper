@@ -3,8 +3,12 @@
 
 扫描仓库, 检测:
   1. 孤立 PDF (没有同名 .md)
-  2. 孤立 .md (指向不存在的 PDF)
-  3. frontmatter 字段缺失 (title/authors/year/venue/pdf/tags/status)
+  2. 孤立 .md (指向不存在的 PDF); 例外: "示例-*"/"模板-*"/"template-*" 开头
+     的笔记视为模板, 允许没 PDF
+  3. frontmatter 必填/推荐字段缺失
+     - 必填 (骨架阶段也要求): title, pdf, primary_topic, status, date_added, tags
+     - 推荐 (仅 source_basis=pdf-text 时要求): authors, year, venue,
+       topics, source_basis, reading_stage, confidence
   4. PDF 重复 (按 md5)
   5. 00-Inbox 残留 (有 PDF 但没导入到 01-Papers)
   6. 04-Attachments/PDFs/ 不再作为论文主入口 (警告)
@@ -67,6 +71,10 @@ def check_papers_dir(papers: Path) -> tuple[list, list]:
     pdfs = {p.stem: p for p in papers.glob("*.pdf")}
     mds = {p.stem: p for p in papers.glob("*.md") if p.name != "paper_classification.md"}
 
+    # 排除示例/模板笔记: 文件名以 "示例-" 开头的是参考模板, 允许没 PDF
+    # (用户在 03-Templates/ 之外放示例笔记是常见情况, validate 不该报错)
+    is_template = lambda stem: stem.startswith("示例-") or stem.startswith("模板-") or stem.startswith("template-")
+
     # 1. 孤立 PDF
     orphan_pdfs = sorted(set(pdfs) - set(mds))
     for stem in orphan_pdfs:
@@ -75,6 +83,9 @@ def check_papers_dir(papers: Path) -> tuple[list, list]:
     # 2. 孤立 .md (引用了 PDF, 但 PDF 不存在)
     orphan_mds = sorted(set(mds) - set(pdfs))
     for stem in orphan_mds:
+        if is_template(stem):
+            # 示例/模板笔记允许没 PDF, 不警告
+            continue
         warnings.append(f"[孤立 .md] 找不到同名 PDF: {mds[stem].name}")
 
     # 3. frontmatter 完整性

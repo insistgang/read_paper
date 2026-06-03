@@ -125,7 +125,17 @@
 
 ```dataview
 TABLE year, primary_topic, status
-FROM "T_通用_NLP_其他" OR "topic/T_通用_NLP_其他"
+FROM "01-Papers"
+WHERE primary_topic = "T_通用_NLP_其他"
+SORT year DESC
+```
+
+如果想包含跨主题的论文 (topics 列表里有本主题代号的, 即多标签), 用 `contains`:
+
+```dataview
+TABLE year, primary_topic, status
+FROM "01-Papers"
+WHERE contains(topics, "T_通用_NLP_其他")
 SORT year DESC
 ```
 
