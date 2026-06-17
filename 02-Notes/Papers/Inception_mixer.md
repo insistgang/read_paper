@@ -1,13 +1,14 @@
 ---
-title: ChenyangSi1∗ WeihaoYu1,2∗ PanZhou1YichenZhou1,2XinchaoWang2ShuichengYan1
+title: "Inception Transformer (iFormer)"
 authors:
-  - "Inception Transformer"
-  - "ChenyangSi1∗ WeihaoYu1"
-  - "∗ PanZhou1YichenZhou1"
-  - "XinchaoWang2ShuichengYan1"
-  - "SeaAILab 2NationalUniversityofSingapore"
+  - "Chenyang Si"
+  - "Weihao Yu"
+  - "Pan Zhou"
+  - "Yichen Zhou"
+  - "Xinchao Wang"
+  - "Shuicheng Yan"
 year: 2022
-venue: "arXiv"
+venue: "arXiv (NeurIPS 2022)"
 doi: 
 pdf: [[Inception_mixer.pdf]]
 primary_topic: B_注意力算子模块
@@ -29,127 +30,116 @@ full_text_covered: true
 full_text_completed_at: 2026-06-08
 full_text_completion_basis: "AI supplemental pass; original AI block 12/17 pages"
 ---
-# ChenyangSi1∗ WeihaoYu1,2∗ PanZhou1YichenZhou1,2XinchaoWang2ShuichengYan1
+# Inception Transformer (iFormer)
 
 ## 基本信息
 - **PDF**: [[Inception_mixer.pdf]]
 - **primary_topic**: `B_注意力算子模块`
 - **topics**: `B_注意力算子模块`
-- **状态**: read (已提取 PDF 内容, 待人工复核)
+- **状态**: ai-read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
 ## 文章信息
 
 | 项目 | 内容 |
 |------|------|
-| **题目** | ChenyangSi1∗ WeihaoYu1,2∗ PanZhou1YichenZhou1,2XinchaoWang2ShuichengYan1 |
-| **作者** | Inception Transformer; ChenyangSi1∗ WeihaoYu1; ∗ PanZhou1YichenZhou1; XinchaoWang2ShuichengYan1; SeaAILab 2NationalUniversityofSingapore |
-| **发表时间** | 2022 |
-| **刊物/会议** | arXiv |
+| **题目** | Inception Transformer |
+| **作者** | Chenyang Si, Weihao Yu, Pan Zhou, Yichen Zhou, Xinchao Wang, Shuicheng Yan |
+| **机构** | Sea AI Lab; National University of Singapore |
+| **发表时间** | 2022 (arXiv:2205.12956v2, 26 May 2022) |
+| **刊物/会议** | arXiv 预印本 (后被 NeurIPS 2022 接收) |
+| **代码** | https://github.com/sail-sg/iFormer |
 | **DOI** | 未明确 |
 
 ## 摘要
 
-> RecentstudiesshowthatTransformerhasstrongcapabilityofbuildinglong-range dependencies, yet is incompetent in capturing high frequencies that predomi- nantly convey local information. To tackle this issue, we present a novel and general-purposeInceptionTransformer,oriFormerforshort,thateffectivelylearns comprehensivefeatureswithbothhigh-andlow-frequencyinformationinvisual data. Specifically,wedesignanInceptionmixertoexplicitlygrafttheadvantages of convolution and max-pooling for capturing the high-frequency information toTransformers. Differentfromrecenthybridframeworks,theInceptionmixer bringsgreaterefficiencythroughachannelsplittingmechanismtoadoptparallel convolution/max-poolingpathandself-attentionpathashigh-andlow-frequency mixers,whilehavingtheflexibilitytomodeldiscriminativeinformationscattered withinawidefrequencyrange. Consideringthatbottomlayersplaymorerolesin capturinghigh-frequencydetailswhiletoplayersmoreinmodelinglow-frequency globalinformation,wefurtherintroduceafrequencyr
+清理后的英文原摘要（修复空格与连字符断裂）：
 
-> **来源**: PDF 自动提取，需人工复核。
+> Recent studies show that Transformer has strong capability of building long-range dependencies, yet is incompetent in capturing high frequencies that predominantly convey local information. To tackle this issue, we present a novel and general-purpose Inception Transformer, or iFormer for short, that effectively learns comprehensive features with both high- and low-frequency information in visual data. Specifically, we design an Inception mixer to explicitly graft the advantages of convolution and max-pooling for capturing the high-frequency information to Transformers. Different from recent hybrid frameworks, the Inception mixer brings greater efficiency through a channel splitting mechanism to adopt parallel convolution/max-pooling path and self-attention path as high- and low-frequency mixers, while having the flexibility to model discriminative information scattered within a wide frequency range. Considering that bottom layers play more roles in capturing high-frequency details while top layers more in modeling low-frequency global information, we further introduce a frequency ramp structure, i.e., gradually decreasing the dimensions fed to the high-frequency mixer and increasing those to the low-frequency mixer, which can effectively trade-off high- and low-frequency components across different layers. We benchmark the iFormer on a series of vision tasks, and showcase that it achieves impressive performance on image classification, COCO detection and ADE20K segmentation. For example, our iFormer-S hits the top-1 accuracy of 83.4% on ImageNet-1K, much higher than DeiT-S by 3.6%, and even slightly better than much bigger model Swin-B (83.3%) with only 1/4 parameters and 1/3 FLOPs.
+
+中文翻译：
+
+> 近期研究表明，Transformer 擅长建立长程依赖，却不善于捕捉主要承载局部信息的高频成分。为此，本文提出一种新颖且通用的 Inception Transformer（简称 iFormer），它能有效学习视觉数据中同时包含高频与低频信息的全面特征。具体而言，我们设计了一个 Inception mixer，将卷积与最大池化擅长捕捉高频信息的优势显式地嫁接到 Transformer 中。与近期的混合框架不同，Inception mixer 通过通道拆分机制，把并行的卷积/最大池化路径与自注意力路径分别作为高频与低频混合器，从而带来更高的效率，同时具备建模散布于宽频带内判别性信息的灵活性。考虑到底层更多承担捕捉高频细节的角色、顶层更多承担建模低频全局信息的角色，我们进一步引入频率坡道（frequency ramp）结构，即从底层到顶层逐渐减少送入高频混合器的通道维度、增加送入低频混合器的通道维度，从而在不同层之间有效权衡高低频成分。我们在一系列视觉任务上对 iFormer 进行评测，结果表明它在图像分类、COCO 检测和 ADE20K 分割上均取得出色性能。例如，iFormer-S 在 ImageNet-1K 上取得 83.4% 的 top-1 准确率，比 DeiT-S 高 3.6%，甚至以仅 1/4 的参数量和 1/3 的 FLOPs 略胜参数量大得多的 Swin-B（83.3%）。
+
+> **来源**: 据 PDF 提取文本整理。
 
 ## 研究背景与动机
 
-- **为什么要做**：Vision Transformer（ViT）虽然通过自注意力机制擅长捕捉图像中的长程依赖（低频信息，如全局形状和结构），但其对局部细节（高频信息，如边缘和纹理）的建模能力不足。这限制了其在需要精细纹理信息的任务（如细粒度分类）上的性能。
+- **为什么要做**：ViT 及其变体擅长捕捉视觉数据中的低频信息（全局形状与结构），但学习高频信息（局部边缘与纹理）的能力较弱。原文从傅里叶频谱角度直观解释（图 1(a)、1(b)）：自注意力是非重叠 patch token 间交换信息的全局操作，更擅长聚合全局信息（低频），而对局部信息（高频）建模不足；这与文献 [14] 中"ViT 表现出低通滤波器特性"的经验结论一致。
+- **低频偏好的两点危害**：1) 各层都填充低频信息会破坏高频成分（如局部纹理），削弱 ViT 的建模能力；2) 高频信息同样具有判别性，能使许多任务（如细粒度分类）受益。原文还引用人类视觉系统：低频提供视觉刺激的全局信息，高频传达图像中的局部空间变化（如局部边缘/纹理）。
 - **之前方法的问题**：
-    1.  **纯ViT的局限性**：自注意力作为全局操作，更倾向于捕捉低频信息，导致高频信息被忽略或减弱（如图1(a)和1(b)所示）。
-    2.  **现有混合框架的局限性**：
-        - **串行方法**（如CvT, CoAtNet）：将卷积层与注意力层堆叠，但在单一层内只能处理一种依赖（全局或局部），无法同时建模。
-        - **并行方法**（如CoaT, ViTAE）：将卷积和注意力并行处理，但研究发现不同通道倾向于处理不同类型的信息（局部或全局），对所有通道都使用两种分支会导致信息冗余。
-- **核心矛盾**：如何高效且显式地在一个Transformer层中同时、互补地学习视觉数据中的高频（局部）和低频（全局）信息，避免信息冗余和性能损失。
+    1.  **串行混合**（如 CvT、CoAtNet、PVT-v2、ViT_C、UniFormer）：在 Transformer 不同位置堆叠卷积与注意力层，但单层只能处理一种依赖（全局或局部），在建模局部时丢弃全局信息，反之亦然。
+    2.  **并行混合**（如 CoaT、ViTAE）：把卷积作为与注意力并行的分支并用逐元素相加融合；但 Raghu 等人 [27] 发现部分通道倾向处理局部依赖、另一部分倾向建模全局信息，说明"对所有通道都跑两个分支"存在信息冗余。GLiT 虽用并行结构，但直接拼接卷积与注意力特征作为输出，缺乏不同频率特征的融合。
+- **核心矛盾**：如何在一个 Transformer 层中高效且显式地同时、互补地学习视觉数据中的高频（局部）与低频（全局）信息，避免信息冗余与性能损失。
+
 ## 关键贡献
 
-1.  提出了**Inception Transformer (iFormer)** 整体骨干网络架构，它是一种通用的视觉骨干网络。
-2.  设计了**Inception token mixer (ITM)** 模块，该模块通过**通道拆分机制**，将输入特征分别送入高频混合器（由并行的最大池化和深度卷积构成）和低频混合器（自注意力），显式地在不同通道上学习不同频率的信息。
-3.  引入了**频率坡道结构**，在从低层到高层的网络中，逐渐减少分配给高频混合器的通道维度，同时增加分配给低频混合器的通道维度，以有效地在不同层间权衡高低频信息。
-4.  在多个基础视觉任务（ImageNet图像分类、COCO目标检测与实例分割、ADE20K语义分割）上取得了SOTA性能，验证了方法的有效性和泛化能力。
+1.  提出 **Inception Transformer (iFormer)**，一种通用的层次化视觉骨干网络，将 CNN 捕捉高频的能力嫁接到 ViT。
+2.  设计 **Inception token mixer (ITM)**：先沿通道拆分输入，分别送入高频混合器（最大池化 + 并行深度卷积）与低频混合器（自注意力），并通过显式融合模块合并不同频率分支的输出，从而在对应通道上各自捕捉特定频率信息，减少冗余。命名灵感来自多分支的 Inception 模块 [46, 56–58]。
+3.  引入 **频率坡道结构（frequency ramp structure）**：从浅层到深层逐渐减少高频混合器的通道维度、增加低频混合器的通道维度（Ch/C 递减、Cl/C 递增），在所有层之间权衡高低频成分。
+4.  在 ImageNet 分类、COCO 检测与实例分割、ADE20K 语义分割上取得 SOTA 性能，验证有效性与泛化性。
+
 ## 方法
 
-**整体框架**：
-iFormer采用典型的层次化金字塔结构（如图2），包含4个阶段（Stage）。每个阶段由若干个iFormer Block堆叠而成，负责处理不同分辨率和通道数的特征图。输入为图像，经过Patch Embedding后，依次通过各阶段进行特征提取。
+**整体框架（图 2）**：
+iFormer 采用层次化金字塔结构，含 4 个 Stage。输入图像 3×H×W 经各 Stage 的 Patch Embedding 下采样，依次得到 Stage1~4 的特征图，空间分辨率分别为 H/4、H/8、H/16、H/32（通道为 C1~C4）。每个 Stage 由若干 iFormer Block 堆叠。
 
-**输入输出**：
-- **输入**：原始图像（例如 3 × H × W）。
-- **输出**：多尺度的特征图（例如 Stage1-4分别输出 C1×H/4×W/4 到 C4×H/32×W/32 的特征），可用于下游任务。
+**关键模块 — Inception Token Mixer (ITM)（图 3）**：
+给定输入特征 X ∈ R^{N×C}，沿通道拆分为 X_h ∈ R^{N×Ch} 与 X_l ∈ R^{N×Cl}（Ch + Cl = C），分别送入高频与低频混合器。
 
-**关键模块 - Inception Token Mixer (ITM)**（如图3）：
-这是iFormer的核心创新点，旨在同时捕获高频和低频信息。
-1.  **通道拆分 (Split)**：给定输入特征图 X ∈ R^{N×C}，沿通道维度将其拆分为两部分：X_h ∈ R^{N×Ch} 和 X_l ∈ R^{N×Cl}，其中 Ch + Cl = C。X_h 用于高频混合，X_l 用于低频混合。
-2.  **高频混合器 (High-frequency Mixer)**：
-    - 进一步将 X_h 拆分为 X_h1 和 X_h2。
-    - **X_h1 路径**：经过**最大池化 (MaxPool)** 和一个**线性层 (Linear)**，捕捉锐利的高频敏感信息。公式为：Y_h1 = FC(MaxPool(X_h1))。
-    - **X_h2 路径**：经过一个**线性层**和一个**深度可分离卷积 (DwConv)**，捕捉局部细节。公式为：Y_h2 = DwConv(FC(X_h2))。
-3.  **低频混合器 (Low-frequency Mixer)**：
-    - 为了降低自注意力的计算成本，在注意力操作前，使用**平均池化 (AvePool)** 对 X_l 进行下采样。
-    - 然后应用标准的**多头自注意力 (MSA)**。
-    - 最后通过**上采样 (Upsample)** 恢复原始空间尺寸。公式为：Y_l = Upsample(MSA(AvePooling(X_l)))。
-4.  **融合 (Fusion)**：
-    - 将高频混合器的两个输出 Y_h1, Y_h2 与低频混合器的输出 Y_l 在通道维度上**拼接 (Concat)**，得到 Y_c。
-    - 设计了一个融合模块：将 Y_c 与一个作用于 Y_c 的**深度卷积 (DwConv)** 的结果相加，再通过一个**线性层**。公式为：Y = FC(Y_c + DwConv(Y_c))。这解决了仅使用上采样（邻近插值）可能导致的相邻token过度平滑问题，实现了跨patch的信息交换。
+1.  **高频混合器（High-frequency Mixer）**：进一步将 X_h 沿通道二分为 X_h1、X_h2 ∈ R^{N×(Ch/2)}，并行两路：
+    - X_h1 路：最大池化 + 线性层，利用最大滤波器对锐利变化的敏感性。`Y_h1 = FC(MaxPool(X_h1))`（式 1）。
+    - X_h2 路：线性层 + 深度卷积，利用卷积的细节感知能力。`Y_h2 = DwConv(FC(X_h2))`（式 2）。
+2.  **低频混合器（Low-frequency Mixer）**：用标准多头自注意力（MSA）在所有 token 间交换信息。为降低底层大分辨率特征图的计算开销，先用平均池化下采样，注意力后再上采样恢复尺寸。`Y_l = Upsample(MSA(AvePooling(X_l)))`（式 7）。注意：池化与上采样的 kernel/stride 仅在前两个 Stage 设为 2。
+3.  **拼接与融合（Fusion）**：三路输出沿通道拼接 `Y_c = Concat(Y_l, Y_h1, Y_h2)`（式 3）。由于式 7 的上采样采用最近邻插值，会导致相邻 token 过度平滑，原文设计融合模块：用一个深度卷积在 patch 间交换信息，同时保留逐位置工作的跨通道线性层，`Y = FC(Y_c + DwConv(Y_c))`（式 4）。
 
-**iFormer Block的连接**：
-每个iFormer Block包含两个主要部分：
-1.  **Inception Token Mixer**：如上所述，位于层归一化（LN）之后。
-2.  **前馈网络 (FFN)**：标准的Transformer FFN结构。
-整体计算流程为（公式5和6）：
-- Y = X + ITM(LN(X))
-- H = Y + FFN(LN(Y))
+**iFormer Block**：在 ITM 与 FFN 前各加 LayerNorm，残差连接：
+- `Y = X + ITM(LN(X))`（式 5）
+- `H = Y + FFN(LN(Y))`（式 6）
 
-**频率坡道结构 (Frequency Ramp Structure)**：
-受人类视觉系统和层次化特征学习的启发（底层捕获细节，顶层捕获全局），iFormer从浅层到深层逐渐改变通道分配比例。
-- 在每个Block中，定义高频通道比例 (Ch/C) 和低频通道比例 (Cl/C)，其中 Ch/C + Cl/C = 1。
-- 设计为从Stage 1到Stage 4，**Ch/C 逐渐减小，Cl/C 逐渐增加**。这意味着在网络的浅层（Stage 1, 2），更多的通道被分配给高频混合器以学习局部细节；在网络的深层（Stage 3, 4），更多的通道被分配给低频混合器以建模全局信息。
+**频率坡道结构（Frequency Ramp）**：受层次化表示（如 ResNet：底层捕细节、顶层建全局）与人类视觉系统启发，为每个 block 定义通道比 Ch/C 与 Cl/C（二者和为 1）；从浅到深 Ch/C 逐渐减小、Cl/C 逐渐增大。各 iFormer 变体的具体配置在附录给出（提取缓存未完整覆盖，见下文补读记录）。
 
-**训练与推理**：
-- **训练**：在ImageNet上采用标准的监督学习流程，使用AdamW优化器，300个epoch，224×224输入尺寸，并采用DeiT中的一系列数据增强和正则化技术。
-- **推理**：使用训练好的模型提取特征图，用于下游任务（检测、分割等）。
+**训练设置（分类）**：ImageNet 上用 AdamW，初始学习率 1×10⁻³（cosine decay），动量 0.9，weight decay 0.05，训练 300 epoch，输入 224×224；数据增强与正则化沿用 DeiT；用 LayerScale 训练深层模型，并用 Timm 实现。微调到 384×384 时 weight decay 1×10⁻⁸、学习率 1×10⁻⁵、batch size 512。
 
-**与已有方法的差异**：
-与现有并行混合方法（如CoaT， ViTAE）的关键区别在于：
-1.  **显式通道拆分**：iFormer根据“高频”和“低频”的语义对通道进行分组，而非让所有通道都经过所有分支，减少了信息冗余。
-2.  **结构化的频率权衡**：通过频率坡道结构，显式地控制高低频信息在网络不同深度的比重，这是对层次化特征学习的更精细建模。
+**与已有并行方法的差异**：iFormer 按"高频/低频"语义对通道分组（而非所有通道都跑所有分支），减少冗余；并通过频率坡道显式控制高低频在不同深度的比重；相比 GLiT 直接拼接，iFormer 设计了显式融合模块合并不同频率分支。
+
 ## 实验
 
-- **数据集**：ImageNet-1K（分类）、COCO（目标检测和实例分割）、ADE20K（语义分割）。
-- **对比方法**：包括CNN（ResNet, ConvNeXt）、纯ViT（DeiT, Swin, PVT, Focal, CSwin）和混合ViT（CvT, CoAtNet, ViTAEv2, UniFormer）。
-- **评价指标**：ImageNet上的Top-1和Top-5准确率；COCO上的边界框平均精度（AP^b）和掩码平均精度（AP^m）。
-- **主实验结果**：
-    - **图像分类（表1）**：
-        - iFormer-S（20M参数，4.8G FLOPs）在ImageNet上达到**83.4% Top-1准确率**，比DeiT-S高3.6%，甚至比参数量大4倍的Swin-B（83.3%）还略好。
-        - iFormer-B（48M参数，9.4G FLOPs）达到**84.6% Top-1**，比同等规模的Swin-S（83.0%）和ConvNeXt-S（83.1%）分别高出1.6%和1.5%。
-    - **目标检测与实例分割（表3）**：
-        - 作为Mask R-CNN的骨干，iFormer-S在COCO val2017上达到**46.2 AP^b和41.9 AP^m**，显著优于ResNet50、Swin-T和UniFormer-S等基线。
-        - iFormer-B达到**48.3 AP^b和43.4 AP^m**，超过了Focal-S、CSWin-S和UniFormer-B。
-- **消融实验**：PDF文本中未提供详细的消融实验数据。
-- **泛化实验**：论文展示了在图像分类（表2）上微调到384×384分辨率后，iFormer依然保持显著优势（如iFormer-S^384达到84.6% Top-1）。
-- **效率信息**：在参数量和FLOPs方面，iFormer与对比模型具有可比性，但在相同计算量下通常取得更高精度。
+- **数据集**：ImageNet-1K（分类）、COCO（检测与实例分割）、ADE20K（语义分割）。
+- **对比方法**：CNN（RSB-ResNet、ConvNeXt、RegNetY）、ViT（DeiT、PVT、T2T、Swin、Focal、CSwin）、混合 ViT（CvT、CoAtNet、Container、ViTAE/ViTAEv2、UniFormer、BoTNet）。
+- **指标**：ImageNet Top-1/Top-5；COCO 边界框 AP^b 与掩码 AP^m；ADE20K mIoU/MS mIoU。
+- **图像分类（表 1，224×224）**：
+    - **iFormer-S**：20M 参数、4.8G FLOPs，**83.4% Top-1 / 96.6% Top-5**；比 DeiT-S(79.8%) 高 3.6%，比 SOTA ViT（CSwin-T）高 0.7%、比混合 ViT（UniFormer-S）高 0.5%；甚至略胜参数量约 4 倍、FLOPs 约 3 倍的 Swin-B（83.3%）。
+    - **iFormer-B**：48M、9.4G，**84.6% Top-1 / 97.0% Top-5**；比相近规模的 SOTA ViT 与混合 ViT 分别高 1.0% 与 0.7%，比 ConvNeXt-S(83.1%) 高 1.5%（亦高于 Swin-S 的 83.0%）。
+    - **iFormer-L**：87M、14.0G，**84.8% Top-1 / 97.0% Top-5**，在大模型档位延续优势（参数量与 FLOPs 均低于 CoAtNet-3 的 168M/34.7G 而精度更高）。
+- **更大分辨率微调（表 2，384×384）**：iFormer-S↑384 达 84.6%（20M/16.1G），iFormer-B↑384 达 85.7%，iFormer-L↑384 达 85.8%，跨不同计算档位均显著领先。
+- **目标检测与实例分割（表 3，COCO val2017，Mask R-CNN，1× schedule，800×1280）**：
+    - **iFormer-S**（40M、263G）：**46.2 AP^b / 41.9 AP^m**；相比 ResNet50 提升 8.2 AP^b / 7.5 AP^m，并优于 Swin-T、Focal-T、UniFormer-S。
+    - **iFormer-B**（67M、351G）：**48.3 AP^b / 43.4 AP^m**，超过 Focal-S、CSWin-S、UniFormer-B。
+- **语义分割（ADE20K，UperNet 框架，表 6）**（据原文 p.15，提取缓存仅含关键摘录，待核）：iFormer 取得 **48.4 mIoU / 48.8 MS mIoU**；iFormer-S 用更少参数比 Swin-T 高 3.9 mIoU，比 UniFormer-S 高 0.8 mIoU。
+- **消融与可视化**：原文称在第 4 节做了消融分析以展示各创新点贡献（提取缓存中具体表格数据未覆盖，待核）；图 6 给出 iFormer-S 第 6/12/18 层的傅里叶频谱，显示高频信息从第 6 层到第 18 层逐渐减少，印证频率坡道结构的设计意图。
+
 ## 局限
 
-1.  **计算复杂度**：iFormer的核心Inception Mixer中仍然保留了自注意力操作。尽管使用了平均池化来降低分辨率，但其在低频分支中的计算开销依然存在，这使得iFormer可能不如一些轻量化的纯卷积网络（如MobileNet）或经过极致优化的Transformer（如EfficientFormer）高效。
-2.  **实验覆盖的完整性**：提供的PDF文本仅展示了图像分类和COCO检测的部分结果。摘要中提到的ADE20K语义分割结果在提供的文本中未找到，无法评估其在该任务上的具体表现。
-3.  **设计原则的泛化性**：频率坡道结构中高低频通道比例的具体配置（如每个Stage的Ch/C值）是通过实验确定的，还是存在一个普适的理论或经验公式？论文中未明确说明，这可能对复现和迁移到其他任务带来一定的调参负担。
-4.  **对高频混合器组件的依赖**：高频混合器由最大池化和深度卷积组成。论文没有深入分析这两个组件各自的贡献，以及是否有更优的组合来捕获高频信息。
+1.  **保留自注意力的计算开销**：低频分支虽用平均池化降分辨率，但仍保留 MSA，整体效率难以匹敌极致轻量的纯卷积网络（如 MobileNet）或专门优化的 Transformer（如 EfficientFormer）。（此为笔记推断，原文未直接讨论。）
+2.  **频率坡道配置依赖经验**：各 Stage 的 Ch/C 取值在附录给出（提取缓存未完整覆盖），原文未提供普适的理论或经验公式，复现/迁移可能带来调参负担。
+3.  **高频组件贡献未细分**：高频混合器由最大池化与深度卷积并行构成，原文消融在提取缓存中未覆盖，无法从本缓存判断两个分支各自贡献及是否存在更优组合。
+4.  **本笔记证据覆盖**：提取缓存为前 12 页正文，ADE20K 分割、附录配置表、完整消融的数值依赖原文后续页摘录，已分别标注"待核"。
+
 ## 个人评论
 
-1.  **研究视角的启发**：它从**频率分析**的角度来诊断和设计视觉Transformer，将ViT的缺陷明确归因于对高频信号的不敏感。这种将信号处理思想（频域分析）引入网络设计的方法论，对理解和改进模型有深刻启发。
-2.  **模块设计的启发**：Inception Mixer 的**“拆分-处理-融合”** 框架非常清晰和优雅。它表明，对于视觉特征中固有的不同模式（如全局与局部），可以通过**显式的通道路由**来让网络的不同部分“各司其职”，这比让所有通道都做同样的事更高效。
-3.  **层次化设计的启发**：频率坡道结构将一个固定的、全局的设计原则（高低频通道比）与网络深度动态结合，实现了**自适应的多尺度特征学习**。这启发我们在设计网络时，可以思考如何让不同深度的层自动学习承担不同的任务角色。
+1.  **研究视角的启发**：从**频率分析**角度诊断并设计视觉 Transformer，把 ViT 的缺陷明确归因于对高频信号不敏感（并用傅里叶频谱可视化佐证）。把信号处理思想（频域分析）引入网络设计，对理解与改进模型有启发。
+2.  **模块设计的启发**：Inception Mixer 的"**拆分-处理-融合**"框架清晰优雅。对于视觉特征中固有的不同模式（全局与局部），通过**显式的通道路由**让网络不同部分"各司其职"，比让所有通道做同样的事更高效——这点直接呼应了 [27] 关于"不同通道处理不同频率"的观察。
+3.  **层次化设计的启发**：频率坡道结构把"高低频通道比"这一全局设计原则与网络深度动态结合，实现**自适应的多尺度特征学习**，启发我们让不同深度的层自动承担不同角色。
+4.  **可迁移点**：融合模块用深度卷积缓解最近邻上采样的过度平滑，是一个值得借鉴的小技巧；高频混合器中"最大池化 ∥ 深度卷积"可作为即插即用的局部敏感性增强组件单独尝试。
 
 ### 使用建议
 
-- **如果快速了解**：阅读**摘要**、**图2（整体架构图）** 和**图3（Inception Mixer详解图）**，以及**实验部分（表1和表3）** 的关键结果即可抓住核心。
-- **如果复现**：重点研读**第3节（方法）**，特别是**3.2节（Inception Token Mixer）** 中的公式（1）到（7）和网络结构图，以及**附录**中不同模型的具体配置（通道数、阶段数等）。同时参考其实验设置（4.1节）。
-- **如果借鉴创新点**：
-    - 学习其**“通道拆分分别处理不同模式信息”** 的设计思想，可尝试将此思想用于其他任务（如视频理解中拆分时间/空间信息）。
-    - 学习**频率坡道结构**，思考如何为自己的网络设计一种随深度变化的自适应模块配置策略。
-    - 高频混合器中**最大池化与卷积并行**的设计，可以作为增强局部敏感性的一个即插即用组件进行尝试。
-- **如果写Related Work**：可将本文归类于“**视觉Transformer与CNN的混合架构**”或“**频域感知的视觉模型设计**”这一研究流派中，与CoAtNet, UniFormer, Focal Transformer等工作进行对比和讨论。
+- **快速了解**：读摘要、图 2（整体架构）、图 3（Inception Mixer），以及表 1/表 3 关键结果。
+- **复现**：重点研读第 3 节（方法），特别是 3.2 节式 (1)-(7) 与结构图，并查附录中各变体的通道数/阶段/池化 stride 配置（表 7）；分类训练设置见 4.1 节。
+- **借鉴创新点**：迁移"通道拆分分别处理不同模式信息"的思想（如视频理解拆分时空信息）；借鉴频率坡道做随深度变化的自适应模块配置；尝试高频混合器作为即插即用组件。
+- **写 Related Work**：可归入"视觉 Transformer 与 CNN 的混合架构"或"频域感知的视觉模型设计"流派，与 CoAtNet、UniFormer、Focal/CSwin Transformer 等对比。
+
 ## 相关论文与链接
 
 > 用 `[[]]` 链接到其他论文笔记或主题首页：
@@ -164,121 +154,81 @@ iFormer采用典型的层次化金字塔结构（如图2），包含4个阶段�
 # 论文精读
 
 ## 1. 论文定位
-这篇论文属于计算机视觉中的骨干网络（Backbone）设计方向，特别是视觉Transformer（ViT）的改进。它旨在解决Vision Transformer不擅长捕捉视觉数据中高频信息（如局部边缘、纹理）的问题，通过设计一种新颖的混合架构来同时学习高低频特征。它适合放在“B_注意力算子模块”这个主题下，因为其核心是提出了一个名为“Inception Mixer”的新型token混合模块，该模块创新性地集成了注意力机制、卷积和池化操作。
+本文属于计算机视觉骨干网络（Backbone）设计方向，是对视觉 Transformer（ViT）的改进。它要解决的核心问题是：ViT 不擅长捕捉视觉数据中的高频信息（局部边缘、纹理）。作者提出一种混合架构，在单个 token mixer 内同时学习高低频特征。归入"B_注意力算子模块"主题恰当——其核心是名为 Inception mixer 的新型 token 混合算子，把自注意力与卷积、池化以"通道拆分 + 显式融合"的方式集成在一个算子里。
 
 ## 2. 一句话总结
-这篇论文提出了Inception Transformer（iFormer），通过一种新颖的Inception token mixer显式地将CNN捕捉高频信息的能力嫁接到Transformer中，并利用频率坡道结构在不同网络层间平衡高低频信息，从而学习更全面的视觉特征。
+iFormer 通过 Inception token mixer 显式地把 CNN 捕捉高频信息的能力嫁接到 Transformer，并用频率坡道结构在不同层间权衡高低频，从而学习更全面的视觉特征，在分类/检测/分割上取得 SOTA。
 
 ## 3. 背景与问题
-- **为什么要做**：Vision Transformer（ViT）虽然通过自注意力机制擅长捕捉图像中的长程依赖（低频信息，如全局形状和结构），但其对局部细节（高频信息，如边缘和纹理）的建模能力不足。这限制了其在需要精细纹理信息的任务（如细粒度分类）上的性能。
+- **为什么要做**：ViT 的自注意力是全局操作，倾向捕捉低频（全局形状/结构），对高频（局部边缘/纹理）建模弱；傅里叶频谱（图 1a/1b）显示 ViT 几乎只保留低频，表现为低通滤波器特性 [14]。低频偏好会破坏局部纹理等高频成分、削弱建模能力，而高频对细粒度分类等任务也是判别性的。
 - **之前方法的问题**：
-    1.  **纯ViT的局限性**：自注意力作为全局操作，更倾向于捕捉低频信息，导致高频信息被忽略或减弱（如图1(a)和1(b)所示）。
-    2.  **现有混合框架的局限性**：
-        - **串行方法**（如CvT, CoAtNet）：将卷积层与注意力层堆叠，但在单一层内只能处理一种依赖（全局或局部），无法同时建模。
-        - **并行方法**（如CoaT, ViTAE）：将卷积和注意力并行处理，但研究发现不同通道倾向于处理不同类型的信息（局部或全局），对所有通道都使用两种分支会导致信息冗余。
-- **核心矛盾**：如何高效且显式地在一个Transformer层中同时、互补地学习视觉数据中的高频（局部）和低频（全局）信息，避免信息冗余和性能损失。
+    1.  **串行混合**（CvT、CoAtNet、PVT-v2、UniFormer 等）：单层只能处理一种依赖，建模局部时丢全局，反之亦然。
+    2.  **并行混合**（CoaT、ViTAE 用逐元素相加；GLiT 直接拼接）：Raghu 等 [27] 指出部分通道处理局部、另一部分处理全局，对所有通道跑两个分支存在冗余；GLiT 则缺乏不同频率特征的融合。
+- **核心矛盾**：如何在一层内高效、显式、互补地同时学习高频与低频，避免冗余与性能损失。
 
 ## 4. 核心贡献
-1.  提出了**Inception Transformer (iFormer)** 整体骨干网络架构，它是一种通用的视觉骨干网络。
-2.  设计了**Inception token mixer (ITM)** 模块，该模块通过**通道拆分机制**，将输入特征分别送入高频混合器（由并行的最大池化和深度卷积构成）和低频混合器（自注意力），显式地在不同通道上学习不同频率的信息。
-3.  引入了**频率坡道结构**，在从低层到高层的网络中，逐渐减少分配给高频混合器的通道维度，同时增加分配给低频混合器的通道维度，以有效地在不同层间权衡高低频信息。
-4.  在多个基础视觉任务（ImageNet图像分类、COCO目标检测与实例分割、ADE20K语义分割）上取得了SOTA性能，验证了方法的有效性和泛化能力。
+1.  提出通用层次化视觉骨干 iFormer，将 CNN 的高频能力嫁接到 ViT。
+2.  设计 Inception token mixer：通道拆分 → 高频混合器（最大池化 + 并行深度卷积）/ 低频混合器（自注意力）→ 显式融合，按频率语义路由通道、减少冗余。
+3.  提出频率坡道结构：浅到深 Ch/C 递减、Cl/C 递增，跨层权衡高低频。
+4.  在 ImageNet、COCO、ADE20K 取得 SOTA。
 
 ## 5. 方法详解
-**整体框架**：
-iFormer采用典型的层次化金字塔结构（如图2），包含4个阶段（Stage）。每个阶段由若干个iFormer Block堆叠而成，负责处理不同分辨率和通道数的特征图。输入为图像，经过Patch Embedding后，依次通过各阶段进行特征提取。
+**整体框架（图 2）**：4-Stage 金字塔结构，输入 3×H×W，各 Stage 经 Patch Embedding 下采样，输出空间分辨率 H/4、H/8、H/16、H/32（通道 C1~C4），每 Stage 堆叠若干 iFormer Block。
 
-**输入输出**：
-- **输入**：原始图像（例如 3 × H × W）。
-- **输出**：多尺度的特征图（例如 Stage1-4分别输出 C1×H/4×W/4 到 C4×H/32×W/32 的特征），可用于下游任务。
+**Inception Token Mixer（图 3）**：输入 X ∈ R^{N×C} 沿通道拆为 X_h ∈ R^{N×Ch}、X_l ∈ R^{N×Cl}（Ch+Cl=C）。
+1.  **高频混合器**：X_h 再二分为 X_h1、X_h2 ∈ R^{N×(Ch/2)}：
+    - `Y_h1 = FC(MaxPool(X_h1))`（式 1，最大滤波器对锐利变化敏感）。
+    - `Y_h2 = DwConv(FC(X_h2))`（式 2，卷积捕捉局部细节）。
+2.  **低频混合器**：`Y_l = Upsample(MSA(AvePooling(X_l)))`（式 7）。先平均池化降分辨率以省算力，注意力后上采样恢复；池化/上采样的 kernel 与 stride 仅在前两个 Stage 设为 2。
+3.  **拼接 + 融合**：`Y_c = Concat(Y_l, Y_h1, Y_h2)`（式 3）；因式 7 的最近邻上采样会使相邻 token 过度平滑，融合模块用深度卷积跨 patch 交换信息、并保留逐位置的跨通道线性层：`Y = FC(Y_c + DwConv(Y_c))`（式 4）。
 
-**关键模块 - Inception Token Mixer (ITM)**（如图3）：
-这是iFormer的核心创新点，旨在同时捕获高频和低频信息。
-1.  **通道拆分 (Split)**：给定输入特征图 X ∈ R^{N×C}，沿通道维度将其拆分为两部分：X_h ∈ R^{N×Ch} 和 X_l ∈ R^{N×Cl}，其中 Ch + Cl = C。X_h 用于高频混合，X_l 用于低频混合。
-2.  **高频混合器 (High-frequency Mixer)**：
-    - 进一步将 X_h 拆分为 X_h1 和 X_h2。
-    - **X_h1 路径**：经过**最大池化 (MaxPool)** 和一个**线性层 (Linear)**，捕捉锐利的高频敏感信息。公式为：Y_h1 = FC(MaxPool(X_h1))。
-    - **X_h2 路径**：经过一个**线性层**和一个**深度可分离卷积 (DwConv)**，捕捉局部细节。公式为：Y_h2 = DwConv(FC(X_h2))。
-3.  **低频混合器 (Low-frequency Mixer)**：
-    - 为了降低自注意力的计算成本，在注意力操作前，使用**平均池化 (AvePool)** 对 X_l 进行下采样。
-    - 然后应用标准的**多头自注意力 (MSA)**。
-    - 最后通过**上采样 (Upsample)** 恢复原始空间尺寸。公式为：Y_l = Upsample(MSA(AvePooling(X_l)))。
-4.  **融合 (Fusion)**：
-    - 将高频混合器的两个输出 Y_h1, Y_h2 与低频混合器的输出 Y_l 在通道维度上**拼接 (Concat)**，得到 Y_c。
-    - 设计了一个融合模块：将 Y_c 与一个作用于 Y_c 的**深度卷积 (DwConv)** 的结果相加，再通过一个**线性层**。公式为：Y = FC(Y_c + DwConv(Y_c))。这解决了仅使用上采样（邻近插值）可能导致的相邻token过度平滑问题，实现了跨patch的信息交换。
+**iFormer Block**：`Y = X + ITM(LN(X))`（式 5）、`H = Y + FFN(LN(Y))`（式 6）。
 
-**iFormer Block的连接**：
-每个iFormer Block包含两个主要部分：
-1.  **Inception Token Mixer**：如上所述，位于层归一化（LN）之后。
-2.  **前馈网络 (FFN)**：标准的Transformer FFN结构。
-整体计算流程为（公式5和6）：
-- Y = X + ITM(LN(X))
-- H = Y + FFN(LN(Y))
+**频率坡道结构**：每个 block 定义 Ch/C 与 Cl/C（和为 1），浅到深 Ch/C 递减、Cl/C 递增；具体配置见附录表 7（提取缓存仅含线索，待核）。
 
-**频率坡道结构 (Frequency Ramp Structure)**：
-受人类视觉系统和层次化特征学习的启发（底层捕获细节，顶层捕获全局），iFormer从浅层到深层逐渐改变通道分配比例。
-- 在每个Block中，定义高频通道比例 (Ch/C) 和低频通道比例 (Cl/C)，其中 Ch/C + Cl/C = 1。
-- 设计为从Stage 1到Stage 4，**Ch/C 逐渐减小，Cl/C 逐渐增加**。这意味着在网络的浅层（Stage 1, 2），更多的通道被分配给高频混合器以学习局部细节；在网络的深层（Stage 3, 4），更多的通道被分配给低频混合器以建模全局信息。
-
-**训练与推理**：
-- **训练**：在ImageNet上采用标准的监督学习流程，使用AdamW优化器，300个epoch，224×224输入尺寸，并采用DeiT中的一系列数据增强和正则化技术。
-- **推理**：使用训练好的模型提取特征图，用于下游任务（检测、分割等）。
-
-**与已有方法的差异**：
-与现有并行混合方法（如CoaT， ViTAE）的关键区别在于：
-1.  **显式通道拆分**：iFormer根据“高频”和“低频”的语义对通道进行分组，而非让所有通道都经过所有分支，减少了信息冗余。
-2.  **结构化的频率权衡**：通过频率坡道结构，显式地控制高低频信息在网络不同深度的比重，这是对层次化特征学习的更精细建模。
+**训练**：ImageNet，AdamW，lr 1e-3（cosine），动量 0.9，weight decay 0.05，300 epoch，224×224，DeiT 增强 + LayerScale + Timm；384 微调 weight decay 1e-8、lr 1e-5、batch 512。
 
 ## 6. 实验与结果
-- **数据集**：ImageNet-1K（分类）、COCO（目标检测和实例分割）、ADE20K（语义分割）。
-- **对比方法**：包括CNN（ResNet, ConvNeXt）、纯ViT（DeiT, Swin, PVT, Focal, CSwin）和混合ViT（CvT, CoAtNet, ViTAEv2, UniFormer）。
-- **评价指标**：ImageNet上的Top-1和Top-5准确率；COCO上的边界框平均精度（AP^b）和掩码平均精度（AP^m）。
-- **主实验结果**：
-    - **图像分类（表1）**：
-        - iFormer-S（20M参数，4.8G FLOPs）在ImageNet上达到**83.4% Top-1准确率**，比DeiT-S高3.6%，甚至比参数量大4倍的Swin-B（83.3%）还略好。
-        - iFormer-B（48M参数，9.4G FLOPs）达到**84.6% Top-1**，比同等规模的Swin-S（83.0%）和ConvNeXt-S（83.1%）分别高出1.6%和1.5%。
-    - **目标检测与实例分割（表3）**：
-        - 作为Mask R-CNN的骨干，iFormer-S在COCO val2017上达到**46.2 AP^b和41.9 AP^m**，显著优于ResNet50、Swin-T和UniFormer-S等基线。
-        - iFormer-B达到**48.3 AP^b和43.4 AP^m**，超过了Focal-S、CSWin-S和UniFormer-B。
-- **消融实验**：PDF文本中未提供详细的消融实验数据。
-- **泛化实验**：论文展示了在图像分类（表2）上微调到384×384分辨率后，iFormer依然保持显著优势（如iFormer-S^384达到84.6% Top-1）。
-- **效率信息**：在参数量和FLOPs方面，iFormer与对比模型具有可比性，但在相同计算量下通常取得更高精度。
+- **分类（表 1，224²）**：iFormer-S 20M/4.8G → 83.4%/96.6%（比 DeiT-S 高 3.6%，比 CSwin-T 高 0.7%、UniFormer-S 高 0.5%，略胜 Swin-B 83.3% 且仅 1/4 参数 1/3 FLOPs）；iFormer-B 48M/9.4G → 84.6%/97.0%（比 ConvNeXt-S 高 1.5%、Swin-S 高 1.6%）；iFormer-L 87M/14.0G → 84.8%/97.0%。
+- **384 微调（表 2）**：iFormer-S↑384 84.6%、B↑384 85.7%、L↑384 85.8%。
+- **检测/实例分割（表 3，COCO val2017，Mask R-CNN 1×）**：iFormer-S 40M/263G → 46.2 AP^b/41.9 AP^m（较 ResNet50 +8.2 AP^b/+7.5 AP^m）；iFormer-B 67M/351G → 48.3 AP^b/43.4 AP^m（超 Focal-S、CSWin-S、UniFormer-B）。
+- **分割（ADE20K，UperNet，表 6，据原文 p.15 摘录，待核）**：48.4 mIoU/48.8 MS mIoU；iFormer-S 比 Swin-T 高 3.9 mIoU、比 UniFormer-S 高 0.8 mIoU。
+- **可视化（图 6，据原文 p.17 摘录）**：iFormer-S 第 6/12/18 层傅里叶频谱显示高频随层加深而减少，印证频率坡道动机。
+- **消融**：原文第 4 节称做了消融分析（提取缓存未覆盖具体数值，待核）。
 
 ## 7. 这篇论文真正有价值的地方
-1.  **研究视角的启发**：它从**频率分析**的角度来诊断和设计视觉Transformer，将ViT的缺陷明确归因于对高频信号的不敏感。这种将信号处理思想（频域分析）引入网络设计的方法论，对理解和改进模型有深刻启发。
-2.  **模块设计的启发**：Inception Mixer 的**“拆分-处理-融合”** 框架非常清晰和优雅。它表明，对于视觉特征中固有的不同模式（如全局与局部），可以通过**显式的通道路由**来让网络的不同部分“各司其职”，这比让所有通道都做同样的事更高效。
-3.  **层次化设计的启发**：频率坡道结构将一个固定的、全局的设计原则（高低频通道比）与网络深度动态结合，实现了**自适应的多尺度特征学习**。这启发我们在设计网络时，可以思考如何让不同深度的层自动学习承担不同的任务角色。
+1.  **频域视角**：把 ViT 的缺陷量化为傅里叶频谱上的高频缺失，并据此设计补偿模块——诊断与方案一致、有据可循。
+2.  **拆分-处理-融合范式**：按频率语义路由通道、显式融合，比"所有通道跑所有分支"更省、更有针对性；融合模块还顺手解决了上采样过度平滑。
+3.  **频率坡道**：把"高低频通道比"与深度耦合，是对层次化特征学习的精细建模，且被图 6 的频谱可视化佐证。
 
 ## 8. 局限与问题
-1.  **计算复杂度**：iFormer的核心Inception Mixer中仍然保留了自注意力操作。尽管使用了平均池化来降低分辨率，但其在低频分支中的计算开销依然存在，这使得iFormer可能不如一些轻量化的纯卷积网络（如MobileNet）或经过极致优化的Transformer（如EfficientFormer）高效。
-2.  **实验覆盖的完整性**：提供的PDF文本仅展示了图像分类和COCO检测的部分结果。摘要中提到的ADE20K语义分割结果在提供的文本中未找到，无法评估其在该任务上的具体表现。
-3.  **设计原则的泛化性**：频率坡道结构中高低频通道比例的具体配置（如每个Stage的Ch/C值）是通过实验确定的，还是存在一个普适的理论或经验公式？论文中未明确说明，这可能对复现和迁移到其他任务带来一定的调参负担。
-4.  **对高频混合器组件的依赖**：高频混合器由最大池化和深度卷积组成。论文没有深入分析这两个组件各自的贡献，以及是否有更优的组合来捕获高频信息。
+1.  低频分支仍保留 MSA，整体效率难匹敌极致轻量网络（笔记推断，原文未直接讨论）。
+2.  各 Stage 的 Ch/C 取值依赖经验（附录配置），无普适公式，迁移有调参成本。
+3.  高频混合器两分支（最大池化/深度卷积）各自贡献，因提取缓存未覆盖消融而无法从本缓存判断。
+4.  本笔记的 ADE20K、附录配置、完整消融数值依赖原文后续页摘录，已标"待核"。
 
 ## 9. 我该怎么使用这篇论文
-- **如果快速了解**：阅读**摘要**、**图2（整体架构图）** 和**图3（Inception Mixer详解图）**，以及**实验部分（表1和表3）** 的关键结果即可抓住核心。
-- **如果复现**：重点研读**第3节（方法）**，特别是**3.2节（Inception Token Mixer）** 中的公式（1）到（7）和网络结构图，以及**附录**中不同模型的具体配置（通道数、阶段数等）。同时参考其实验设置（4.1节）。
-- **如果借鉴创新点**：
-    - 学习其**“通道拆分分别处理不同模式信息”** 的设计思想，可尝试将此思想用于其他任务（如视频理解中拆分时间/空间信息）。
-    - 学习**频率坡道结构**，思考如何为自己的网络设计一种随深度变化的自适应模块配置策略。
-    - 高频混合器中**最大池化与卷积并行**的设计，可以作为增强局部敏感性的一个即插即用组件进行尝试。
-- **如果写Related Work**：可将本文归类于“**视觉Transformer与CNN的混合架构**”或“**频域感知的视觉模型设计**”这一研究流派中，与CoAtNet, UniFormer, Focal Transformer等工作进行对比和讨论。
+- **快速了解**：摘要 + 图 2 + 图 3 + 表 1/表 3。
+- **复现**：第 3 节式 (1)-(7) 与结构图 + 附录表 7 配置 + 4.1 训练设置。
+- **借鉴**：迁移"通道按模式拆分处理"思想；借鉴频率坡道做随深度自适应配置；把高频混合器当即插即用组件试用。
+- **写 Related Work**：归入"ViT-CNN 混合架构"或"频域感知视觉模型"，对比 CoAtNet、UniFormer、Focal/CSwin。
 
 ## 10. 和其他论文的关系
-根据主题“B_注意力算子模块”，可能相关的论文包括：
-- [[Swin Transformer]]：同样是层次化视觉Transformer，但通过窗口注意力和移位窗口来引入局部性，iFormer通过显式的高频混合器来引入局部性。
-- [[CoAtNet]] 和 [[UniFormer]]：都是串行或并行混合CNN与Transformer的代表工作，iFormer的Inception Mixer可以看作是一种更结构化和高效的并行混合方案。
-- [[Focal Transformer]] 和 [[CSwin Transformer]]：也关注改进Transformer的局部建模能力，但采用的是不同的注意力机制改进思路（如焦点机制或十字形窗口），iFormer则从频率分解的角度切入。
+同属主题"B_注意力算子模块"，相关工作（据原文引用与对比）：
+- [[Swin Transformer]]：层次化 ViT，用窗口/移位窗口引入局部性；iFormer 用显式高频混合器引入局部性。
+- [[CoAtNet]] / [[UniFormer]]：串行/并行混合 CNN 与 Transformer 的代表；iFormer 是更结构化、按频率拆分的并行方案。
+- [[Focal Transformer]] / [[CSwin Transformer]]：从注意力机制（焦点/十字窗口）改进局部建模；iFormer 从频率分解切入。
+- CoaT / ViTAE / GLiT：原文直接对照的并行混合基线，iFormer 以"通道拆分 + 显式融合"区别于它们。
 
 ## 11. 关键词
-视觉Transformer, 骨干网络, 混合架构, Inception Token Mixer, 频率分解, 高频信息, 低频信息, 通道拆分, 频率坡道结构, 图像分类, 目标检测, 语义分割
+视觉Transformer, 骨干网络, 混合架构, Inception token mixer, 通道拆分, 频率分解, 高频信息, 低频信息, 频率坡道结构, 深度卷积, 最大池化, 图像分类, 目标检测, 语义分割
 
 ## 12. 可信度说明
-这篇精读笔记主要基于提供的PDF文本中的**摘要、引言、相关工作、方法（第3节）以及实验结果部分（第4节，特别是表1、表2、表3）** 生成。这些部分信息密度高，论述清晰，能够准确反映论文的核心思想、技术细节和实验结果。然而，提供的文本仅为论文的前12页（共17页），因此一些细节（如详细的模型配置表、完整的消融实验、ADE20K分割的详细结果、可视化分析等）在本次笔记中可能未完全覆盖。在撰写时，严格遵守了仅基于提供文本、不编造信息的原则。
+本精读笔记主要基于提取缓存覆盖的 PDF 前 12 页（摘要、引言、相关工作、方法第 3 节、实验第 4.1/4.2 节，含表 1/表 2/表 3）生成，这些数值均与提取文本逐项核对。ADE20K 分割（48.4/48.8 mIoU）、图 6 频谱、附录配置（表 7）来自原文 p.13-17，提取缓存仅含关键摘录，已在正文标注"待核"。消融实验的具体数值在提取缓存中未出现。撰写时严格遵守"仅基于提取文本、不编造"的原则。
 
 ---
 
-> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2086 字符/页)); 来源缓存: `.paper-cache/extracts/Inception_mixer.txt` (17/17 页; 原 AI 主体 12/17 + 全文补读 13-17); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro).
+> **可信度补充**: PDF 提取质量 = **high** (提取缓存覆盖 p.1-12/17, 约 2086 字符/页, 清晰); 后续页 p.13-17 仅有关键摘录(见全文补读记录), ADE20K/附录数值标注待核; 来源缓存: `.paper-cache/extracts/Inception_mixer.txt`; 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro)。
 ## 全文补读记录
 
 - **补读日期**: 2026-06-08

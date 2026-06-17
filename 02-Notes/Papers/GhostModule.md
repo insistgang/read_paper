@@ -1,13 +1,14 @@
 ---
 title: "GhostNet: More Features from Cheap Operations"
 authors:
-  - "Noah’sArkLab"
-  - "HuaweiTechnologies. 2PekingUniversity."
-  - "SchoolofComputerScience"
-  - "FacultyofEngineering"
-  - "UniversityofSydney."
-year: 2012
-venue: "arXiv"
+  - "Kai Han"
+  - "Yunhe Wang"
+  - "Qi Tian"
+  - "Jianyuan Guo"
+  - "Chunjing Xu"
+  - "Chang Xu"
+year: 2020
+venue: "arXiv (CVPR 2020)"
 doi: 
 pdf: [[GhostModule.pdf]]
 primary_topic: B_注意力算子模块
@@ -33,7 +34,7 @@ extract_cache: .paper-cache/extracts/GhostModule.txt
 - **PDF**: [[GhostModule.pdf]]
 - **primary_topic**: `B_注意力算子模块`
 - **topics**: `B_注意力算子模块`
-- **状态**: read (已提取 PDF 内容, 待人工复核)
+- **状态**: ai-read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
 ## 文章信息
@@ -41,86 +42,98 @@ extract_cache: .paper-cache/extracts/GhostModule.txt
 | 项目 | 内容 |
 |------|------|
 | **题目** | GhostNet: More Features from Cheap Operations |
-| **作者** | Noah’sArkLab; HuaweiTechnologies. 2PekingUniversity.; SchoolofComputerScience; FacultyofEngineering; UniversityofSydney. |
-| **发表时间** | 2012 |
-| **刊物/会议** | arXiv |
+| **作者** | Kai Han, Yunhe Wang, Qi Tian, Jianyuan Guo, Chunjing Xu, Chang Xu |
+| **单位** | 华为诺亚方舟实验室 (Noah's Ark Lab, Huawei) · 北京大学 · 悉尼大学 |
+| **发表时间** | arXiv:1911.11907v2, 2020-03-13 (CVPR 2020) |
+| **刊物/会议** | arXiv (CVPR 2020) |
+| **代码** | https://github.com/huawei-noah/ghostnet |
 | **DOI** | 未明确 |
 
 ## 摘要
 
-> Deployingconvolutionalneuralnetworks(CNNs)onem- bedded devices is difficult due to the limited memory and computation resources. The redundancy in feature maps is an important characteristic of those successful CNNs, buthasrarelybeeninvestigatedinneuralarchitecturede- sign. ThispaperproposesanovelGhostmoduletogener- ate more feature maps from cheap operations. Based on asetofintrinsicfeaturemaps,weapplyaseriesoflinear transformations with cheap cost to generate many ghost featuremapsthatcouldfullyrevealinformationunderlying intrinsicfeatures. TheproposedGhostmodulecanbetaken Figure1.Visualizationofsomefeaturemapsgeneratedbythefirst as a plug-and-play component to upgrade existing convo- residualgroupinResNet-50,wherethreesimilarfeaturemappair lutional neural networks. Ghost bottlenecks are designed examplesareannotatedwithboxesofthesamecolor.Onefeature to stack Ghost modules, and then the lightweight Ghost- mapinthepaircanbeapproximatelyobtainedbytransformingthe otheronethroughcheapope
+**英文原摘要 (据 PDF 提取文本整理, 已修复空格与连字符):**
 
-> **来源**: PDF 自动提取，需人工复核。
+> Deploying convolutional neural networks (CNNs) on embedded devices is difficult due to the limited memory and computation resources. The redundancy in feature maps is an important characteristic of those successful CNNs, but has rarely been investigated in neural architecture design. This paper proposes a novel Ghost module to generate more feature maps from cheap operations. Based on a set of intrinsic feature maps, we apply a series of linear transformations with cheap cost to generate many ghost feature maps that could fully reveal information underlying intrinsic features. The proposed Ghost module can be taken as a plug-and-play component to upgrade existing convolutional neural networks. Ghost bottlenecks are designed to stack Ghost modules, and then the lightweight GhostNet can be easily established. Experiments conducted on benchmarks demonstrate that the proposed Ghost module is an impressive alternative of convolution layers in baseline models, and our GhostNet can achieve higher recognition performance (e.g. 75.7% top-1 accuracy) than MobileNetV3 with similar computational cost on the ImageNet ILSVRC-2012 classification dataset. Code is available at https://github.com/huawei-noah/ghostnet.
+
+**中文翻译:**
+
+> 在嵌入式设备上部署卷积神经网络 (CNN) 因内存和算力受限而困难。特征图中的冗余是成功 CNN 的一个重要特性, 却很少在网络架构设计中被研究。本文提出一种新颖的 Ghost 模块, 用廉价操作生成更多特征图: 基于一组本征特征图 (intrinsic feature maps), 施加一系列低成本的线性变换, 生成大量能充分揭示本征特征内在信息的 "幽灵 (ghost)" 特征图。该 Ghost 模块是即插即用组件, 可升级现有 CNN。通过堆叠 Ghost 模块设计出 Ghost bottleneck, 进而轻松搭建出轻量级网络 GhostNet。基准实验表明 Ghost 模块是基线模型卷积层的一个出色替代; 在 ImageNet ILSVRC-2012 分类数据集上, GhostNet 在相近算力下取得比 MobileNetV3 更高的识别性能 (如 75.7% top-1 精度)。代码已开源。
+
+> 来源: 据 PDF 提取文本整理。
 
 ## 研究背景与动机
 
-- **为什么要做**：将CNN部署到手机、自动驾驶汽车等嵌入式设备时，面临着内存和计算资源严重受限的挑战。传统的CNN（如ResNet-50）参数量和计算量巨大，无法直接应用。
-- **之前方法的问题**：1）**模型压缩方法**（如剪枝、量化、知识蒸馏）的性能通常受限于预训练好的基线模型。2）**紧凑模型设计方法**（如MobileNet、ShuffleNet）虽然引入了深度可分离卷积等高效操作，但论文指出，它们并没有很好地利用特征图之间存在的**相关性和冗余性**。
-- **核心矛盾**：成功的CNN中，特征图的冗余性是保证其综合理解输入数据的重要特性。传统方法要么忽略这种冗余，要么通过常规卷积昂贵地生成它们。论文旨在**以一种计算成本高效的方式，主动拥抱并利用这种特征图冗余**。
+- **为什么要做**: 将 CNN 部署到手机、自动驾驶汽车等嵌入式设备时, 面临内存和算力严重受限的挑战。传统 CNN 参数量与计算量巨大, 难以直接部署 (论文给出量化例子: ResNet-50 约 25.6M 参数, 处理一张 224×224 图像需约 4.1B FLOPs)。
+- **之前方法的问题**: 1) **模型压缩**方法 (剪枝、低比特量化、张量分解、知识蒸馏) 的性能通常被预训练基线模型 "上界" 所限制 (performance upper bounded by pre-trained baselines)。2) **紧凑模型设计**方法 (Xception/MobileNet 系列用深度可分离卷积、ShuffleNet 用通道混洗) 虽以极少 FLOPs 取得很好性能, 但论文明确指出: 特征图之间的相关性与冗余性 "从未被充分利用 (has never been well exploited)"。
+- **核心观察与矛盾**: 训练好的网络中, 特征图存在大量丰富甚至冗余的信息, 这往往保证了对输入的全面理解 (Figure 1 展示 ResNet-50 第一残差组的特征图存在多对相似图, 彼此像 "幽灵", 可通过廉价变换由另一张近似得到)。论文的立场不是 "避免冗余", 而是 **主动拥抱冗余, 但以一种成本高效的方式生成它** (embrace them, but in a cost-efficient way)。
+
 ## 关键贡献
 
-1.  **提出了Ghost模块**：一种新的基础计算单元，它将一个卷积分解为两部分：a) 用少量卷积滤波器生成“本征特征图”；b) 对这些本征特征图施加一系列廉价的线性变换（如深度卷积）来生成更多“幽灵特征图”。
-2.  **设计了Ghost Bottleneck（G-bneck）**：基于Ghost模块设计的、适用于小型CNN的瓶颈残差结构，可堆叠构建高效网络。
-3.  **构建了GhostNet网络架构**：用Ghost Bottleneck替换MobileNetV3中的标准瓶颈模块，形成一个完整的、高效的轻量级网络。
-4.  **提出了宽度乘子（Width Multiplier）**：一个简单的缩放因子 `α`，用于均匀调整网络各层的通道数，从而灵活控制模型的大小和计算成本。
-5.  **实验验证**：在多个基准数据集（CIFAR-10, ImageNet, COCO）上验证了Ghost模块的有效性以及GhostNet相比MobileNetV3等SOTA轻量模型的优越性能。
+1. **提出 Ghost 模块**: 将一个普通卷积层拆为两部分——(a) 用受严格控制数量的普通卷积生成少量 "本征特征图"; (b) 对本征特征图施加一系列廉价线性变换 (实现上用深度卷积) 生成更多 "幽灵特征图", 并行一个恒等映射保留本征特征。在不改变输出特征图尺寸的前提下降低参数量与计算量。
+2. **设计 Ghost Bottleneck (G-bneck)**: 专为小型 CNN 设计、由两个 Ghost 模块堆叠的残差瓶颈结构 (类似 ResNet basic block), 可堆叠构建高效网络。
+3. **构建 GhostNet**: 基本沿用 MobileNetV3 架构, 将其瓶颈块替换为 Ghost bottleneck; 与 MobileNetV3 不同的是因延迟过大而**不使用 hard-swish**。
+4. **提出宽度乘子 (Width Multiplier) α**: 在每层通道数上统一乘以因子 α (记为 GhostNet-α), 模型大小与计算量随约 α² 二次变化, 灵活权衡精度/速度/体积。
+5. **实验验证**: 在 CIFAR-10 (模块分析)、ImageNet ILSVRC 2012 (分类)、MS COCO (检测) 上验证 Ghost 模块与 GhostNet 的有效性与相对 MobileNetV3 等 SOTA 轻量模型的优越性。
+
 ## 方法
 
-- **整体框架**：GhostNet的整体架构借鉴了MobileNetV3，由一系列Ghost Bottleneck堆叠而成，具体结构详见论文中的**Table 1**（p.4）。网络从一个标准卷积层开始，接着是多组G-bneck（部分包含SE模块），最后通过全局平均池化和全连接层进行分类。
-- **输入输出**：对于Ghost模块，输入特征图 `X ∈ R^(c×h×w)`，输出特征图 `Y ∈ R^(h0×w0×n)`，其中 `n` 为输出通道数。
-- **关键模块**：
-    1.  **Ghost模块**：是核心创新。如**Figure 2(b)**(p.3)所示，它包含：
-        - **主卷积（Primary Convolution）**：用 `m` (`m ≤ n`) 个滤波器 `f0` 对输入 `X` 进行卷积，生成 `m` 张本征特征图 `Y‘`（Eq.2）。其超参数（滤波器大小、步长、填充）与标准卷积相同，以保证输出特征图的空间尺寸不变。
-        - **廉价线性操作（Cheap Linear Operations）**：对每一张本征特征图 `y_i’`，应用 `s-1` 个相同的线性变换 `Φ`（论文中通常为 `d×d` 深度卷积）和一个恒等映射，生成 `s` 张幽灵特征图 `y_ij`（Eq.3）。最终，`n = m × s` 张特征图拼接成最终输出。
-    2.  **Ghost Bottleneck（G-bneck）**：是GhostNet的基本构建单元。如**Figure 3**(p.4)所示，它由两个Ghost模块堆叠而成：
-        - 第一个Ghost模块作为**扩展层**，使用扩展比（expansion ratio）增加通道数。
-        - 第二个Ghost模块**减少通道数**以匹配shortcut路径。
-        - 两者之间（在步长为2时）会插入一个深度可分离卷积进行下采样。
-        - 整体形成一个残差结构，BN和ReLU（第二个Ghost模块后除外）应用于每层之后。
-- **模块连接**：多个G-bneck按**Table 1**中的顺序串联。不同G-bneck的输入输出通道数、是否使用SE模块以及步长都有明确规定，形成从浅层到深层的特征提取流水线。
-- **数学公式直观解释**：
-    - Eq.1：标准卷积 `Y = X * f + b`，计算量巨大。
-    - Eq.2 & Eq.3：Ghost模块首先用更少的参数 (`m` 个滤波器) 得到“精简版”特征图 `Y‘`，然后像“克隆”或“变形”一样，对 `Y‘` 中的每个特征图进行便宜的空间变换（`Φ`），生成一组“幽灵”副本。这样，用 `1/s` 的成本获得了 `n` 倍的特征图。
-    - Eq.4 & Eq.5：理论上的加速比和压缩比都近似等于扩展因子 `s`（假设 `d≈k` 且 `s<<c`）。
-- **训练方式**：论文中提及遵循常用训练策略（如动量、学习率计划），但具体细节（如学习率、优化器、训练轮数）在提供的文本中**未明确说明**。
-- **推理流程**：标准的端到端前向传播，输入图像依次经过Table 1中的各层，得到分类结果。
-- **和已有方法的差异**：论文在3.1节“Difference from Existing Methods”中明确对比(p.3)：
-    1.  **与MobileNet/ShuffleNet比**：主卷积核大小可定制（不一定是1x1），且处理流程相反（先生成少量特征，再扩充通道，而非先升维再做深度卷积）。
-    2.  **线性操作多样性**：操作不限于深度卷积或移位操作，可以是多样化的线性变换。
-    3.  **保留本征特征**：通过并行恒等映射，显式保留原始的本征特征图。
+- **整体框架**: GhostNet 由首层标准卷积 (16 个 33 滤波器, stride=2) + 一系列通道逐渐增大的 Ghost bottleneck (按输入特征图尺寸分组为不同 stage, 每个 stage 最后一个 G-bneck 用 stride=2) + 末端的 11 卷积 (960)、全局平均池化 (77)、11 卷积升到 1280 维、FC (1000 类) 构成, 完整结构见论文 Table 1。
+  - 注: 论文正文在引述整体架构表与 SE 模块时多次写成 "Table 7", 应为 Table 1 的笔误 (提取文本可见此处行文不一致)。
+- **输入输出**: 对 Ghost 模块, 输入 `X ∈ R^(c×h×w)` (c 输入通道, h、w 高宽), 输出 `n` 张特征图 `Y ∈ R^(h'×w'×n)`。
+- **关键模块**:
+    1. **Ghost 模块** (Figure 2(b)):
+        - **主卷积 (Primary Convolution)**: 用 `f0 ∈ R^(c×k×k×m)`、`m ≤ n` 个滤波器对 `X` 卷积, 得 `m` 张本征特征图 `Y' = X * f0` (Eq.2, 略去偏置)。滤波器大小、步长、填充与原卷积 (Eq.1) 一致, 以保持输出空间尺寸 `h'×w'`。
+        - **廉价线性操作 (Cheap Linear Operations)**: 对每张本征图 `y'_i` 施加 `s` 个线性操作 `Φ_{i,j}` 生成幽灵图 `y_ij` (Eq.3); 其中第 `s` 个 (最后一个) 为恒等映射, 用于保留本征特征。最终 `n = m × s` 张特征图拼接为输出。线性操作逐通道作用, 成本远低于普通卷积; 实现上用固定核大小 `d×d` 的深度卷积 (论文建议同一模块内用同尺寸核, 如 33 或 55, 以利 CPU/GPU 效率)。
+    2. **Ghost Bottleneck (G-bneck)** (Figure 3): 由两个堆叠 Ghost 模块构成的残差块。
+        - 第一个 Ghost 模块作为**扩展层 (expansion layer)**, 按扩展比 (expansion ratio) 增加通道数; 第二个 Ghost 模块**减少通道数**以匹配 shortcut。
+        - shortcut 连接两个 Ghost 模块的输入与输出。每层后接 BN+ReLU, 但**第二个 Ghost 模块后不加 ReLU** (沿用 MobileNetV2 的做法)。
+        - **stride=1** 时为标准残差; **stride=2** 时 shortcut 走下采样层, 并在两个 Ghost 模块之间插入一个 stride=2 的深度卷积 (DWConv) 做下采样; 此时 Ghost 模块内的主卷积用 11 逐点卷积以提效。
+- **数学公式直观解释**:
+    - Eq.1: 标准卷积 `Y = X * f + b`, FLOPs ≈ `n·h'·w'·c·k·k`, 因 `n`、`c` 常达 256/512 而非常大。
+    - Eq.2 & Eq.3: 先用 `m` 个滤波器得 "精简版" 本征图, 再对每张做廉价空间变换 `Φ` 克隆出幽灵副本, 以约 `1/s` 的成本得到 `n` 倍特征图。
+    - Eq.4 (加速比) & Eq.5 (压缩比): 在 `d×d` 与 `k×k` 量级相近、`s ≪ c` 的假设下, 加速比 `r_s ≈ (s·c)/(s+c-1) ≈ s`, 压缩比 `r_c` 与之相等, 即理论加速与压缩都近似等于 `s`。
+- **训练方式**: CIFAR-10 实验明确 "训练策略紧密遵循 ResNet [16] 的设置, 包括动量、学习率等"; 具体学习率、轮数等数值在提取文本中**未明确给出**。
+- **和已有方法的差异** (3.1 节 "Difference from Existing Methods"):
+    1. 相比 MobileNet/ShuffleNet 广泛使用的 11 逐点卷积, Ghost 主卷积**核大小可自定义**。
+    2. 已有方法先用逐点卷积跨通道、再用深度卷积处理空间; Ghost **流程相反**: 先用普通卷积生成少量本征特征, 再用廉价线性操作扩充通道。
+    3. 处理单张特征图的操作**不限于**深度卷积或移位 (shift), 线性操作可有更大多样性。
+    4. 用并行**恒等映射显式保留本征特征图**。
+
 ## 实验
 
-- **使用数据集**：CIFAR-10（用于模块分析）、ImageNet ILSVRC 2012（主要分类基准）、MS COCO（目标检测任务）。
-- **对比方法**：MobileNetV3、ShuffleNet系列、MobileNet系列等轻量级网络。
-- **评价指标**：分类准确率（Top-1 Accuracy）、模型大小（参数量）、计算复杂度（FLOPs）、推理延迟。
-- **主实验结果**：
-    - **CIFAR-10上替换实验**：将VGG-16和ResNet-56中的卷积层替换为Ghost模块（Ghost-VGG-16, Ghost-ResNet-56），在计算量减半的情况下，保持甚至略微提升了原始模型的准确率（例如Table 4，s=2时VGG-16准确率93.7% vs 93.6%）。
-    - **ImageNet分类**：GhostNet在**相似的计算量下，达到了75.7%的top-1精度，优于MobileNetV3**（p.1）。
-    - **COCO目标检测**：使用SSD框架，GhostNet作为backbone也展现了比MobileNetV2/V3更好的性能-效率权衡（文中提及，具体数字在提供的文本中未完全展示）。
-- **消融实验**：
-    - **线性操作核大小d**：固定s=2，测试d=1,3,5,7。结果显示**d=3**在准确率和计算量上取得最佳平衡（Table 3, p.5）。
-    - **扩展因子s**：固定d=3，测试s=2,3,4,5。结果显示s越大，FLOPs降低越多，但准确率也下降，验证了Eq.4和Eq.5的理论分析（Table 4, p.5）。
-- **泛化实验**：在CIFAR-10（分类）、ImageNet（分类）、COCO（检测）三个不同任务和数据集上均验证了方法的有效性。
-- **效率信息**：Ghost-VGG-16 (s=2) 的参数量为7.7M（原VGG-16为15.0M），FLOPs为158M（原为313M），压缩和加速约2倍（Table 4）。
+- **使用数据集**: CIFAR-10 (60,000 张 3232 彩图 / 10 类, 50K 训练 + 10K 测试, 用于模块属性分析)、ImageNet ILSVRC 2012 (>1.2M 训练 + 50K 验证 / 1000 类, 主分类基准)、MS COCO (检测; trainval35k 训练, minival 5K 评测)。
+- **对比方法**: VGG-16、ResNet-56 (作替换基线)、MobileNet/ShuffleNet 系列、MobileNetV3 等。
+- **评价指标**: Top-1 准确率、参数量 (Weights, M)、FLOPs (M)、推理延迟、MSE 重建误差 (Toy 实验)。
+- **Toy 实验 (重建误差, Table 2)**: 取 Figure 1 的红/绿/蓝三对相似特征图, 用 ResNet-50 第一残差块特征, 以一个小深度卷积学习一张到另一张的映射。核大小 `d` 从 1 到 7, MSE (×10⁻³) 均极小 (如红对 d=1 为 4.0, d=7 为 3.2; 绿对约 24~25; 蓝对约 11~12), 证明特征图间存在强相关、冗余图可由少量本征图生成。
+- **消融实验 (CIFAR-10, VGG-16)**:
+    - **线性操作核大小 d** (固定 s=2, Table 3): VGG-16 基线 15.0M/313M/93.6%。d=1→7.6M/157M/93.5%; **d=3→7.7M/158M/93.7%** (最佳); d=5→7.7M/160M/93.4%; d=7→7.7M/163M/93.1%。d=1 无法引入空间信息, d=5/7 过拟合且算力上升, 故后续采用 **d=3**。
+    - **扩展因子 s** (固定 d=3, Table 4): **s=2→7.7M/158M/93.7%** (略超原模型); s=3→5.2M/107M/93.4%; s=4→4.0M/80M/93.0%; s=5→3.3M/65M/92.9%。s 越大压缩/加速越多但精度渐降, 印证 Eq.4/Eq.5; s=2 即把 VGG-16 压缩约 2 倍且精度反超原模型。
+- **CIFAR-10 替换实验**: 把 VGG-16、ResNet-56 所有卷积层替换为 Ghost 模块 (记 Ghost-VGG-16、Ghost-ResNet-56), VGG-16 变体用文献 [60] 的常用版本。
+- **ImageNet 分类**: GhostNet 在相近算力下取得 **75.7% top-1**, 优于 MobileNetV3 (摘要与引言明确)。
+- **MS COCO 检测**: 论文称将 GhostNet 作为 backbone 用于检测基准; **具体数字所在表格落在提取缓存截断之后, 提取文本未覆盖** (原文 45453 字符, 仅前 25000 被缓存)。
+- **效率信息**: Ghost-VGG-16 (s=2, d=3) 参数 7.7M (原 15.0M)、FLOPs 158M (原 313M), 压缩与加速约 2 倍, 同时精度 93.7% > 93.6% (Table 3/4)。
+
 ## 局限
 
-1.  **假设依赖**：方法的效果依赖于特征图之间存在显著的、可通过简单线性变换（如深度卷积）建模的相关性。在某些任务或数据域中，这种冗余模式可能不同。
-2.  **计算成本**：虽然理论FLOPs降低，但生成幽灵特征图的过程引入了额外的、分散的深度卷积操作。在实际硬件上，这些操作的内存访问模式和并行效率可能与标准卷积不同，实际加速比可能低于理论值（论文在实验部分也提及了这一点）。
-3.  **实验设置**：提供的文本中未包含完整的训练超参数细节（如学习率、训练周期），这给完全复现带来了一定不确定性。此外，COCO检测实验的详细结果表格（Table 7）在所提供的文本中未完全展示。
-4.  **适用场景**：主要面向图像分类和检测任务，在其他任务（如语义分割、实例分割、生成模型）上的效果如何，需要进一步验证。
+1. **假设依赖**: 方法有效性建立在 "特征图间存在可被简单线性变换 (深度卷积) 建模的强相关" 这一观察上 (Toy 实验在 ResNet-50 上验证); 在相关性较弱的任务/数据域中, 这种冗余模式可能不同。
+2. **实现折中带来的非最优**: 理论上每个线性操作可有不同形状与参数, 但为利于 CPU/GPU 在线推理效率, 论文限制同模块内核同尺寸、`d` 取固定值并统一用深度卷积; 这是工程效率与表达灵活性之间的折中, 实际硬件加速比可能与理论 `s` 有差距 (论文亦指出不规则模块会降低计算单元效率)。
+3. **实验设置未尽**: 提取文本未给出完整训练超参 (学习率、轮数等), COCO 检测的详细结果表格落在提取缓存截断之后; 完全复现需查阅原文后续页与开源代码。
+4. **适用场景**: 验证集中在图像分类与目标检测, 在语义/实例分割、生成模型等任务上的效果需进一步验证。
+
 ## 个人评论
 
-1.  **思想启发性**：“特征图冗余是有用的，但可以廉价生成”这一核心思想非常简洁有力。它从一个独特的视角（观察到的特征图相似性）出发，为网络设计提供了新思路。这启发我们不应只关注滤波器层面的效率，也应关注特征图生成过程本身的效率。
-2.  **模块的简洁性与普适性**：Ghost模块是一个即插即用的组件，可以轻松替换现有CNN中的标准卷积层。其原理清晰，实现简单（主要涉及常规卷积和深度卷积），易于理解和复现。
-3.  **实用的工程价值**：论文不仅提出了模块，还基于它构建了完整的GhostNet架构，并引入了宽度乘子这一实用工具。这使得研究者和工程师可以直接使用或微调该架构来满足不同的部署需求（大小/速度/精度）。
-4.  **对后续研究的启示**：这项工作鼓励研究者去探索和利用神经网络中间表征的内在结构（如冗余、相关性、稀疏性），并将其转化为架构设计的优势，而不仅仅是后处理的压缩。
+1. **思想的简洁与穿透力**: "特征图冗余是有用的, 但可以廉价生成" 这一命题非常凝练。它把效率优化的视角从 "滤波器/权重层面" 移到 "特征图生成过程" 本身, 并且不是去消除冗余, 而是承认冗余有用、再用低成本造出来——这种 "顺势而为" 的设计哲学比单纯压缩更有启发性。
+2. **即插即用 + 完整落地**: Ghost 模块只用普通卷积 + 深度卷积实现, 替换标准卷积层即可, 复现门槛低; 论文还不止于模块, 而是给出 Ghost bottleneck、完整 GhostNet 架构 (Table 1) 与宽度乘子, 形成可直接部署/微调的工程栈。
+3. **理论与实验自洽**: Eq.4/Eq.5 推出加速比与压缩比都近似等于 `s`, 而 Table 4 中 s 增大时 FLOPs 单调下降、精度渐降的趋势与理论吻合; Table 2 的 MSE 又为 "可廉价重建" 的前提提供了直接证据。论证链条 (观察→假设→公式→消融) 比较完整。
+4. **对后续研究的启示**: 鼓励把网络中间表征的内在结构 (冗余、相关、低秩) 当作架构设计的可利用资源, 而不仅是事后压缩的对象。其 "生成少量本征 + 廉价扩充" 的范式后来也被迁移到注意力、Transformer token 生成等场景。
 
 ### 使用建议
 
-- **如果快速了解**：重点阅读**Abstract**、**Figure 1和Figure 2**（直观理解Ghost模块思想）、**Table 1**（GhostNet整体架构）、以及**Section 4.1**和**Section 4.2**的开头部分（了解核心实验结论）。
-- **如果复现**：精读**Section 3.1 (Ghost Module)** 和 **Section 3.2 (Ghost Bottleneck & GhostNet)**，特别是公式Eq.2、Eq.3以及**Figure 3**。参考**Table 1**搭建网络。结合论文提供的GitHub代码仓库（链接在摘要中）进行验证。
-- **如果借鉴创新点**：学习其**将卷积分解为“生成内蕴特征+廉价扩充”的思想**，思考能否将此思想应用于其他操作（如注意力机制）或任务（如Transformer中的Token生成）。此外，Ghost Bottleneck的设计（两个Ghost模块+可选SE+残差连接）也是一个优秀的可复用模块。
-- **如果写related work**：应放在“轻量级/高效神经网络设计”、“模型压缩与加速”、“移动端CNN架构”等类别下，与MobileNet、ShuffleNet、EfficientNet等并列讨论。
+- **如果快速了解**: 读 Abstract、Figure 1/Figure 2 (直观理解 Ghost 思想)、Table 1 (整体架构), 以及 4.1 节开头与消融结论 (Table 2/3/4)。
+- **如果复现**: 精读 3.1 (Ghost Module, Eq.2/Eq.3) 与 3.2 (Ghost Bottleneck & GhostNet, Figure 3), 按 Table 1 搭网络, 配合官方代码 https://github.com/huawei-noah/ghostnet 验证。注意 d=3、s=2 是论文推荐起点。
+- **如果借鉴创新点**: 学习 "把卷积分解为生成本征特征 + 廉价扩充" 的范式, 思考迁移到注意力机制或 Transformer token 生成; Ghost bottleneck (两个 Ghost 模块 + 可选 SE + 残差) 也是优秀可复用结构。
+- **如果写 related work**: 归入 "轻量级/高效网络设计"、"模型压缩与加速"、"移动端 CNN 架构", 与 MobileNet 系列、ShuffleNet、Xception、EfficientNet 等并列讨论。
+
 ## 相关论文与链接
 
 > 用 `[[]]` 链接到其他论文笔记或主题首页：
@@ -135,92 +148,73 @@ extract_cache: .paper-cache/extracts/GhostModule.txt
 # 论文精读
 
 ## 1. 论文定位
-这篇论文属于**轻量级卷积神经网络设计**方向，核心是解决在计算资源受限的嵌入式设备上高效部署深度神经网络的问题。它提出了一种新的基础模块——Ghost模块，用于替代标准卷积层，以更低的计算和参数成本生成同样数量的特征图。论文的标签为“B_注意力算子模块”，虽然Ghost模块本身并非传统的、通过计算权重来强调重要性的“注意力”机制，但它提出了一种高效生成冗余特征图的机制，可以看作是对传统卷积层的一种高效替代或升级，其思想与轻量级注意力模块（如SE模块）的设计目标一致，均旨在提升模型效率。论文中，SE模块也被整合进了其最终架构GhostNet中。
+本文属于**轻量级/高效卷积神经网络设计**方向 (CVPR 2020, 华为诺亚方舟实验室)。核心是解决算力/内存受限的嵌入式设备上高效部署 CNN 的问题, 提出基础算子 **Ghost 模块** 替代标准卷积层, 以更低参数与 FLOPs 生成同等数量特征图。本库归类标签为 "B_注意力算子模块"——严格说 Ghost 模块不是通过学习权重来加权强调的传统注意力, 而是一种**高效特征生成算子**; 之所以仍归入 B, 是因为该桶涵盖 "算子/模块" 类即插即用结构, Ghost 与 SE 等模块的设计目标 (提升模型效率) 一致, 且 GhostNet 架构本身也在部分 bottleneck 中集成了 SE 模块 (Table 1)。
 
 ## 2. 一句话总结
-Ghost模块通过先用普通卷积生成少量“本征特征图”，再对这些特征图施加一系列廉价的线性变换（如深度可分离卷积），以较低的计算代价生成大量的冗余特征图（“幽灵”特征图），从而构建出高效的轻量级网络GhostNet。
+Ghost 模块先用普通卷积生成少量 "本征特征图", 再对每张施加廉价线性变换 (深度卷积) 克隆出 "幽灵特征图" 并保留恒等映射, 以约 1/s 的成本得到 n 倍特征图; 据此堆叠出 Ghost bottleneck 与轻量网络 GhostNet, 在 ImageNet 上以相近算力取得 75.7% top-1, 优于 MobileNetV3。
 
 ## 3. 背景与问题
-- **为什么要做**：将CNN部署到手机、自动驾驶汽车等嵌入式设备时，面临着内存和计算资源严重受限的挑战。传统的CNN（如ResNet-50）参数量和计算量巨大，无法直接应用。
-- **之前方法的问题**：1）**模型压缩方法**（如剪枝、量化、知识蒸馏）的性能通常受限于预训练好的基线模型。2）**紧凑模型设计方法**（如MobileNet、ShuffleNet）虽然引入了深度可分离卷积等高效操作，但论文指出，它们并没有很好地利用特征图之间存在的**相关性和冗余性**。
-- **核心矛盾**：成功的CNN中，特征图的冗余性是保证其综合理解输入数据的重要特性。传统方法要么忽略这种冗余，要么通过常规卷积昂贵地生成它们。论文旨在**以一种计算成本高效的方式，主动拥抱并利用这种特征图冗余**。
+- **为什么要做**: 嵌入式部署 (手机、自动驾驶) 算力内存受限; 传统 CNN 太重 (ResNet-50 约 25.6M 参数、4.1B FLOPs)。
+- **之前方法的问题**: 1) 模型压缩 (剪枝/量化/张量分解/蒸馏) 性能被预训练基线上界限制。2) 紧凑模型设计 (MobileNet/ShuffleNet/Xception) 虽 FLOPs 极低, 但特征图间的相关性与冗余 "从未被充分利用"。
+- **核心立场**: 成功网络的特征图冗余有用 (Figure 1 中存在多对 "幽灵般" 相似特征图); 不回避冗余而是**以成本高效的方式主动生成它**。
 
 ## 4. 核心贡献
-1.  **提出了Ghost模块**：一种新的基础计算单元，它将一个卷积分解为两部分：a) 用少量卷积滤波器生成“本征特征图”；b) 对这些本征特征图施加一系列廉价的线性变换（如深度卷积）来生成更多“幽灵特征图”。
-2.  **设计了Ghost Bottleneck（G-bneck）**：基于Ghost模块设计的、适用于小型CNN的瓶颈残差结构，可堆叠构建高效网络。
-3.  **构建了GhostNet网络架构**：用Ghost Bottleneck替换MobileNetV3中的标准瓶颈模块，形成一个完整的、高效的轻量级网络。
-4.  **提出了宽度乘子（Width Multiplier）**：一个简单的缩放因子 `α`，用于均匀调整网络各层的通道数，从而灵活控制模型的大小和计算成本。
-5.  **实验验证**：在多个基准数据集（CIFAR-10, ImageNet, COCO）上验证了Ghost模块的有效性以及GhostNet相比MobileNetV3等SOTA轻量模型的优越性能。
+1. **Ghost 模块**: 普通卷积拆为 "少量本征卷积 + 廉价线性变换 + 恒等映射", 不改输出尺寸而降参降算。
+2. **Ghost Bottleneck**: 两个 Ghost 模块堆叠的残差瓶颈 (扩展层 + 降维层 + shortcut)。
+3. **GhostNet**: 沿用 MobileNetV3 架构、替换其瓶颈块、去掉 hard-swish。
+4. **宽度乘子 α**: 统一缩放各层通道, 模型大小/算力随约 α² 变化。
+5. **多基准验证**: CIFAR-10 / ImageNet / COCO。
 
 ## 5. 方法详解
-- **整体框架**：GhostNet的整体架构借鉴了MobileNetV3，由一系列Ghost Bottleneck堆叠而成，具体结构详见论文中的**Table 1**（p.4）。网络从一个标准卷积层开始，接着是多组G-bneck（部分包含SE模块），最后通过全局平均池化和全连接层进行分类。
-- **输入输出**：对于Ghost模块，输入特征图 `X ∈ R^(c×h×w)`，输出特征图 `Y ∈ R^(h0×w0×n)`，其中 `n` 为输出通道数。
-- **关键模块**：
-    1.  **Ghost模块**：是核心创新。如**Figure 2(b)**(p.3)所示，它包含：
-        - **主卷积（Primary Convolution）**：用 `m` (`m ≤ n`) 个滤波器 `f0` 对输入 `X` 进行卷积，生成 `m` 张本征特征图 `Y‘`（Eq.2）。其超参数（滤波器大小、步长、填充）与标准卷积相同，以保证输出特征图的空间尺寸不变。
-        - **廉价线性操作（Cheap Linear Operations）**：对每一张本征特征图 `y_i’`，应用 `s-1` 个相同的线性变换 `Φ`（论文中通常为 `d×d` 深度卷积）和一个恒等映射，生成 `s` 张幽灵特征图 `y_ij`（Eq.3）。最终，`n = m × s` 张特征图拼接成最终输出。
-    2.  **Ghost Bottleneck（G-bneck）**：是GhostNet的基本构建单元。如**Figure 3**(p.4)所示，它由两个Ghost模块堆叠而成：
-        - 第一个Ghost模块作为**扩展层**，使用扩展比（expansion ratio）增加通道数。
-        - 第二个Ghost模块**减少通道数**以匹配shortcut路径。
-        - 两者之间（在步长为2时）会插入一个深度可分离卷积进行下采样。
-        - 整体形成一个残差结构，BN和ReLU（第二个Ghost模块后除外）应用于每层之后。
-- **模块连接**：多个G-bneck按**Table 1**中的顺序串联。不同G-bneck的输入输出通道数、是否使用SE模块以及步长都有明确规定，形成从浅层到深层的特征提取流水线。
-- **数学公式直观解释**：
-    - Eq.1：标准卷积 `Y = X * f + b`，计算量巨大。
-    - Eq.2 & Eq.3：Ghost模块首先用更少的参数 (`m` 个滤波器) 得到“精简版”特征图 `Y‘`，然后像“克隆”或“变形”一样，对 `Y‘` 中的每个特征图进行便宜的空间变换（`Φ`），生成一组“幽灵”副本。这样，用 `1/s` 的成本获得了 `n` 倍的特征图。
-    - Eq.4 & Eq.5：理论上的加速比和压缩比都近似等于扩展因子 `s`（假设 `d≈k` 且 `s<<c`）。
-- **训练方式**：论文中提及遵循常用训练策略（如动量、学习率计划），但具体细节（如学习率、优化器、训练轮数）在提供的文本中**未明确说明**。
-- **推理流程**：标准的端到端前向传播，输入图像依次经过Table 1中的各层，得到分类结果。
-- **和已有方法的差异**：论文在3.1节“Difference from Existing Methods”中明确对比(p.3)：
-    1.  **与MobileNet/ShuffleNet比**：主卷积核大小可定制（不一定是1x1），且处理流程相反（先生成少量特征，再扩充通道，而非先升维再做深度卷积）。
-    2.  **线性操作多样性**：操作不限于深度卷积或移位操作，可以是多样化的线性变换。
-    3.  **保留本征特征**：通过并行恒等映射，显式保留原始的本征特征图。
+- **整体框架**: 首层 33 标准卷积 (16 滤波器, stride=2) → 通道渐增的 Ghost bottleneck 堆叠 (分 stage, 每 stage 末 stride=2) → 11 卷积 (960) → 77 全局平均池化 → 11 卷积升 1280 维 → FC(1000)。完整结构见 Table 1 (注: 原文多处将该表与 SE 配置误引为 "Table 7", 应为 Table 1 笔误)。
+- **Ghost 模块** (Figure 2(b)):
+    - 主卷积 Eq.2: `Y' = X * f0`, `f0 ∈ R^(c×k×k×m)`, `m ≤ n`, 超参 (核/步长/填充) 同原卷积以保尺寸。
+    - 廉价线性操作 Eq.3: 对每张本征图 `y'_i` 施加 `s` 个操作 `Φ_{i,j}` (第 s 个为恒等映射), 得 `n = m×s` 张; 逐通道、用固定 `d×d` 深度卷积实现。
+- **Ghost Bottleneck** (Figure 3): 两 Ghost 模块堆叠; 第一个按 expansion ratio 升维、第二个降维匹配 shortcut; 每层后 BN+ReLU, 第二个 Ghost 后不加 ReLU (循 MobileNetV2)。stride=2 时 shortcut 走下采样, 两 Ghost 间插 stride=2 深度卷积, 主卷积用 11 逐点卷积。
+- **复杂度** (Eq.4/Eq.5): 含 1 个恒等 + `n/s·(s-1)` 个 `d×d` 线性操作; 在 `d×d ≈ k×k`、`s ≪ c` 下, 加速比 `r_s ≈ s·c/(s+c-1) ≈ s`, 压缩比 `r_c` 与之相等。
+- **与已有方法差异** (3.1 节): ① 主卷积核可自定义 (非必 11); ② 流程相反 (先生本征再扩充通道); ③ 线性操作不限于深度卷积/移位; ④ 并行恒等映射保留本征特征。
+- **训练**: CIFAR-10 紧随 ResNet [16] 设置 (动量、学习率等); 具体数值提取文本未明确。
 
 ## 6. 实验与结果
-- **使用数据集**：CIFAR-10（用于模块分析）、ImageNet ILSVRC 2012（主要分类基准）、MS COCO（目标检测任务）。
-- **对比方法**：MobileNetV3、ShuffleNet系列、MobileNet系列等轻量级网络。
-- **评价指标**：分类准确率（Top-1 Accuracy）、模型大小（参数量）、计算复杂度（FLOPs）、推理延迟。
-- **主实验结果**：
-    - **CIFAR-10上替换实验**：将VGG-16和ResNet-56中的卷积层替换为Ghost模块（Ghost-VGG-16, Ghost-ResNet-56），在计算量减半的情况下，保持甚至略微提升了原始模型的准确率（例如Table 4，s=2时VGG-16准确率93.7% vs 93.6%）。
-    - **ImageNet分类**：GhostNet在**相似的计算量下，达到了75.7%的top-1精度，优于MobileNetV3**（p.1）。
-    - **COCO目标检测**：使用SSD框架，GhostNet作为backbone也展现了比MobileNetV2/V3更好的性能-效率权衡（文中提及，具体数字在提供的文本中未完全展示）。
-- **消融实验**：
-    - **线性操作核大小d**：固定s=2，测试d=1,3,5,7。结果显示**d=3**在准确率和计算量上取得最佳平衡（Table 3, p.5）。
-    - **扩展因子s**：固定d=3，测试s=2,3,4,5。结果显示s越大，FLOPs降低越多，但准确率也下降，验证了Eq.4和Eq.5的理论分析（Table 4, p.5）。
-- **泛化实验**：在CIFAR-10（分类）、ImageNet（分类）、COCO（检测）三个不同任务和数据集上均验证了方法的有效性。
-- **效率信息**：Ghost-VGG-16 (s=2) 的参数量为7.7M（原VGG-16为15.0M），FLOPs为158M（原为313M），压缩和加速约2倍（Table 4）。
+- **数据集**: CIFAR-10 (10 类, 50K/10K)、ImageNet ILSVRC 2012 (>1.2M/50K, 1000 类)、MS COCO (trainval35k/minival 5K)。
+- **Toy 实验 (Table 2)**: 三对相似特征图用小深度卷积学映射, MSE (×10⁻³) 均极小 (红 3.2~4.0、绿 23.9~25.0、蓝 11.0~12.1), 证明强相关、可廉价重建。
+- **消融 d (Table 3, s=2, VGG-16)**: 基线 15.0M/313M/93.6%; d=1 93.5%、**d=3 7.7M/158M/93.7% (采用)**、d=5 93.4%、d=7 93.1%。
+- **消融 s (Table 4, d=3)**: **s=2 7.7M/158M/93.7%**、s=3 5.2M/107M/93.4%、s=4 4.0M/80M/93.0%、s=5 3.3M/65M/92.9%; 印证 s 越大压缩越多、精度渐降。
+- **ImageNet**: GhostNet 相近算力 **75.7% top-1**, 优于 MobileNetV3。
+- **CIFAR-10 替换**: Ghost-VGG-16 / Ghost-ResNet-56 (替换全部卷积层); s=2 时 VGG-16 压缩约 2 倍且精度反超 (93.7% vs 93.6%)。
+- **COCO 检测**: 原文有检测实验, 但**具体数字表格落在提取缓存截断之后 (前 25000 字符/共 45453), 提取文本未覆盖, 待核**。
 
 ## 7. 这篇论文真正有价值的地方
-1.  **思想启发性**：“特征图冗余是有用的，但可以廉价生成”这一核心思想非常简洁有力。它从一个独特的视角（观察到的特征图相似性）出发，为网络设计提供了新思路。这启发我们不应只关注滤波器层面的效率，也应关注特征图生成过程本身的效率。
-2.  **模块的简洁性与普适性**：Ghost模块是一个即插即用的组件，可以轻松替换现有CNN中的标准卷积层。其原理清晰，实现简单（主要涉及常规卷积和深度卷积），易于理解和复现。
-3.  **实用的工程价值**：论文不仅提出了模块，还基于它构建了完整的GhostNet架构，并引入了宽度乘子这一实用工具。这使得研究者和工程师可以直接使用或微调该架构来满足不同的部署需求（大小/速度/精度）。
-4.  **对后续研究的启示**：这项工作鼓励研究者去探索和利用神经网络中间表征的内在结构（如冗余、相关性、稀疏性），并将其转化为架构设计的优势，而不仅仅是后处理的压缩。
+1. **思想穿透力**: 把效率优化从权重层面移到特征图生成层面, 且 "拥抱冗余 + 廉价生成" 而非消除冗余, 视角独特。
+2. **简洁普适**: 仅普通卷积 + 深度卷积实现, 即插即用替换标准卷积, 复现门槛低。
+3. **理论-实验自洽**: Eq.4/5 的加速压缩比 ≈ s 与 Table 4 趋势吻合, Table 2 的低 MSE 为前提提供直接证据。
+4. **完整工程栈**: 不止模块, 还有 bottleneck、完整 GhostNet、宽度乘子, 可直接部署/微调。
 
 ## 8. 局限与问题
-1.  **假设依赖**：方法的效果依赖于特征图之间存在显著的、可通过简单线性变换（如深度卷积）建模的相关性。在某些任务或数据域中，这种冗余模式可能不同。
-2.  **计算成本**：虽然理论FLOPs降低，但生成幽灵特征图的过程引入了额外的、分散的深度卷积操作。在实际硬件上，这些操作的内存访问模式和并行效率可能与标准卷积不同，实际加速比可能低于理论值（论文在实验部分也提及了这一点）。
-3.  **实验设置**：提供的文本中未包含完整的训练超参数细节（如学习率、训练周期），这给完全复现带来了一定不确定性。此外，COCO检测实验的详细结果表格（Table 7）在所提供的文本中未完全展示。
-4.  **适用场景**：主要面向图像分类和检测任务，在其他任务（如语义分割、实例分割、生成模型）上的效果如何，需要进一步验证。
+1. **假设依赖**: 依赖特征图间可被简单线性变换建模的强相关; 弱相关域可能失效。
+2. **实现折中**: 为推理效率限制核同尺寸、`d` 固定、统一深度卷积, 牺牲了线性操作的潜在多样性, 实测加速比可能低于理论 `s`。
+3. **细节缺口**: 提取文本无完整训练超参; COCO 详细结果落在缓存截断之后。
+4. **任务范围**: 集中分类/检测, 分割与生成等待验证。
 
 ## 9. 我该怎么使用这篇论文
-- **如果快速了解**：重点阅读**Abstract**、**Figure 1和Figure 2**（直观理解Ghost模块思想）、**Table 1**（GhostNet整体架构）、以及**Section 4.1**和**Section 4.2**的开头部分（了解核心实验结论）。
-- **如果复现**：精读**Section 3.1 (Ghost Module)** 和 **Section 3.2 (Ghost Bottleneck & GhostNet)**，特别是公式Eq.2、Eq.3以及**Figure 3**。参考**Table 1**搭建网络。结合论文提供的GitHub代码仓库（链接在摘要中）进行验证。
-- **如果借鉴创新点**：学习其**将卷积分解为“生成内蕴特征+廉价扩充”的思想**，思考能否将此思想应用于其他操作（如注意力机制）或任务（如Transformer中的Token生成）。此外，Ghost Bottleneck的设计（两个Ghost模块+可选SE+残差连接）也是一个优秀的可复用模块。
-- **如果写related work**：应放在“轻量级/高效神经网络设计”、“模型压缩与加速”、“移动端CNN架构”等类别下，与MobileNet、ShuffleNet、EfficientNet等并列讨论。
+- **快速了解**: Abstract + Figure 1/2 + Table 1 + 4.1 节消融结论 (Table 2/3/4)。
+- **复现**: 精读 3.1 (Eq.2/3)、3.2 (Figure 3), 按 Table 1 搭网络, 配合官方代码; 起点 d=3、s=2。
+- **借鉴创新点**: 迁移 "生成本征 + 廉价扩充" 范式到注意力/Transformer token; 复用 Ghost bottleneck (Ghost×2 + 可选 SE + 残差)。
+- **写 related work**: 归 "高效网络设计/模型压缩加速/移动端 CNN", 与 MobileNet、ShuffleNet、Xception、EfficientNet 并列。
 
 ## 10. 和其他论文的关系
-根据提供的主题“B_注意力算子模块”以及文件名“GhostModule.pdf”，这篇论文最直接的相关工作是**轻量级网络设计**领域的论文。
-- `[[MobileNetV3]]`：GhostNet的架构直接借鉴了MobileNetV3，并进行了替换和改进。两者是直接的对比和递进关系。
-- `[[ShuffleNet]]`：同样是旨在降低模型计算成本的轻量级网络，GhostNet的创新部分源于对其未充分利用特征冗余的观察。
-- `[[Squeeze-and-Excitation Networks]]`：SE模块是GhostNet最终架构中集成的一部分，用于通道注意力，两者属于互补组件关系。
+- `[[MobileNetV3]]`: GhostNet 直接沿用其架构并替换瓶颈块、去 hard-swish; 是主要对比与递进对象 (75.7% > MobileNetV3)。
+- `[[ShuffleNet]]` / ShuffleNetV2: 同为轻量网络; GhostNet 的动机部分源于对 ShuffleNet/MobileNet "未充分利用特征冗余" 的观察。
+- `[[Squeeze-and-Excitation Networks]]` (SE): 被集成进 GhostNet 部分 bottleneck (Table 1) 做通道注意力, 与 Ghost 模块是互补关系。
+- MobileNetV2: Ghost bottleneck 的 "第二个 Ghost 后不加 ReLU" 借鉴自 MobileNetV2 的线性瓶颈做法。
 
 ## 11. 关键词
-Ghost Module, GhostNet, 轻量级神经网络, 特征冗余, 深度可分离卷积, 移动端部署, 模型压缩, MobileNetV3, 计算效率, 特征图生成, 宽度乘子
+Ghost Module, GhostNet, 轻量级神经网络, 特征图冗余, 本征特征图, 幽灵特征图, 深度可分离卷积, 移动端部署, 模型压缩, MobileNetV3, 宽度乘子, 即插即用算子
 
 ## 12. 可信度说明
-本精读笔记**完全基于**用户提供的PDF提取文本（共10页，覆盖了摘要、引言、相关工作、方法论、实验部分开头和结果分析）。笔记中的所有方法描述、公式解释、实验数字和结论均严格从文本中提取或转述，未编造任何信息。对于文本中未明确提及的信息（如完整训练超参数、部分实验表格细节），已在相应位置明确标注“PDF文本中未明确说明”或“未找到”。提取的文本质量良好，逻辑清晰，足以支撑完成一份准确、详细的精读笔记。
+本精读笔记基于 PDF 提取文本 (10/10 页, 但原文 45453 字符仅前 25000 被缓存, 覆盖到摘要、引言、相关工作、方法 (3.1/3.2 含 Eq.1~5、Table 1~2)、实验设置与 CIFAR-10 消融 (Table 3/4) 直到 4.1.2 节中段)。摘要、ResNet-50 参数量 (25.6M/4.1B)、ImageNet 75.7%、所有 Table 2/3/4 数字、Eq.1~5、Table 1 架构、与已有方法差异等均严格据提取文本核对。**COCO 检测的具体数值、ImageNet 详细对比表、完整训练超参落在提取缓存截断之后, 已标注 "待核"。** 笔记修正了原版三处事实错误: 年份 (原 2012 → 实为 arXiv 2020-03-13 / CVPR 2020)、作者 (原为乱码机构串 → Kai Han 等 6 人)、摘要乱码 (已据提取文本重建)。未编造任何提取文本之外的数字。
 
 ---
 
-> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2504 字符/页)); 来源缓存: `.paper-cache/extracts/GhostModule.txt` (10/10 页); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro).
+> **可信度补充**: PDF 提取质量 = **high** (提取清晰, 但原文 45453 字符仅前 25000 入缓存, 后续页未覆盖); 来源缓存: `.paper-cache/extracts/GhostModule.txt` (10/10 页, 文本截断于前 25000 字符); 生成日期: 2026-06-05; 复核优化: 2026-06-18; 模式: LLM (mimo-v2.5-pro)。
 <!-- AI_READING_NOTE_END -->
