@@ -9,8 +9,32 @@
   "(UIB)MobileNetV4": [
     "B_注意力算子模块"
   ],
+  "031002300211-35388227": [
+    "U_未归类"
+  ],
   "1-s2.0-S0950705124009833-main": [
     "T_通用_NLP_其他"
+  ],
+  "1-s2.0-S2590123024016360-main": [
+    "U_未归类"
+  ],
+  "1608.03981v1": [
+    "U_未归类"
+  ],
+  "1609.06585v1": [
+    "U_未归类"
+  ],
+  "1808.01316v1": [
+    "U_未归类"
+  ],
+  "1901.06046v1": [
+    "U_未归类"
+  ],
+  "1904.07396v2": [
+    "U_未归类"
+  ],
+  "1911.07167v2": [
+    "U_未归类"
   ],
   "2005_Active_Amplification": [
     "T_通用_NLP_其他"
@@ -497,6 +521,15 @@
   "2026_Towards_Remote_Sensi": [
     "T_通用_NLP_其他"
   ],
+  "21-pr-Image Denoising Using Complex-Valued Deep CNN": [
+    "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "2107.14803v1": [
+    "U_未归类"
+  ],
+  "26211-41200-1-SM": [
+    "U_未归类"
+  ],
   "3DKMI Krawtchouk矩形状签名 3DKMI": [
     "D_3D_点云_分类_分割_配准",
     "F_图像分割_语义_实例_全景"
@@ -545,11 +578,21 @@
     "P_跨域_域自适应_联邦",
     "Q_自监督_对比学习_主动学习"
   ],
+  "A_New_High-Precision_and_Lightweight_Detection_Model_for_Illegal_Construction_Objects_Based_on_Deep_Learning": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "An_Optimized_Edge-Focused_Siamese_Network_for_Monitoring_New_Illegal_Buildings_Using_Satellite_Images": [
+    "C2_目标检测_违建_车辆_船舶_行人",
+    "F_图像分割_语义_实例_全景"
+  ],
   "Anonymizing-medical-case-based-explanations-through-d_2024_Medical-Image-Ana": [
     "A2_医学图像_分类_配准_生成"
   ],
   "Assessing_the_Ability_of_Generative_Adversarial_Networks_to_Learn_Canonical_Medical_Image_Statistics": [
     "A2_医学图像_分类_配准_生成"
+  ],
+  "Assignment_of_AI_Detected_Buildings_from_Satellite_Images_to_Registered_Meters_for_Energy_Theft_Detection": [
+    "F_图像分割_语义_实例_全景"
   ],
   "Attention": [
     "B_注意力算子模块"
@@ -700,6 +743,12 @@
     "B_注意力算子模块",
     "G_视觉基础模型_VLM_LLM"
   ],
+  "EBSCO-FullText-09_12_2025": [
+    "U_未归类"
+  ],
+  "EBSCO-FullText-09_12_2025 (1)": [
+    "U_未归类"
+  ],
   "EFF": [
     "B_注意力算子模块"
   ],
@@ -748,6 +797,9 @@
   "FSAS&DFFN": [
     "B_注意力算子模块"
   ],
+  "FULLTEXT01": [
+    "U_未归类"
+  ],
   "FeatUp": [
     "B_注意力算子模块"
   ],
@@ -794,6 +846,9 @@
   ],
   "Guest_Editorial_Annotation-Efficient_Deep_Learning_The_Holy_Grail_of_Medical_Imaging": [
     "A2_医学图像_分类_配准_生成"
+  ],
+  "H3_AP202501081641860289_1": [
+    "U_未归类"
   ],
   "HAAM": [
     "B_注意力算子模块"
@@ -864,8 +919,8 @@
   "LightM-UNet": [
     "A1_医学图像_分割"
   ],
-  "Liu2024_Illegal_Construction_Detection": [
-    "C2_目标检测_违建_车辆_船舶_行人"
+  "Like_Squinting_Your_Eyes_The_impact_of_different_fusion_modules_on_change": [
+    "U_未归类"
   ],
   "LocalViT": [
     "A1_医学图像_分割",
@@ -885,6 +940,9 @@
   ],
   "MFGM&PLM": [
     "B_注意力算子模块"
+  ],
+  "MIAYOLO_Multiexpert_and_Intraclass_Aggregation-Assisted_Suburban_Building_Detection_in_Unmanned_Aerial_Vehicle_Imagery": [
+    "C2_目标检测_违建_车辆_船舶_行人"
   ],
   "MLA": [
     "B_注意力算子模块"
@@ -922,6 +980,9 @@
   ],
   "NAF": [
     "B_注意力算子模块"
+  ],
+  "NO.2825A30075-b1ad981e31c24999b3a2f13779c88874": [
+    "U_未归类"
   ],
   "OKM": [
     "B_注意力算子模块"
@@ -1052,6 +1113,12 @@
   "TIF": [
     "B_注意力算子模块"
   ],
+  "TPAMI.2015.2439281": [
+    "U_未归类"
+  ],
+  "TPAMI.2017.2699184": [
+    "U_未归类"
+  ],
   "TSConformerBlock": [
     "B_注意力算子模块"
   ],
@@ -1063,6 +1130,12 @@
   ],
   "Talk2Radar 雷达语言多模态 Talk2Radar": [
     "N_雷达_无线电_张量_数学"
+  ],
+  "TfNet_Building_Detection_in_Remote_Sensing_Images_Using_Multi-Scale_Feature_Fusion": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "Three-ways-ChatGPT-helps-me-in-my-academic-writing": [
+    "G_视觉基础模型_VLM_LLM"
   ],
   "TransNet动作识别 TransNet HAR": [
     "K_跟踪_视频_动作"
@@ -1080,6 +1153,12 @@
   "WCMFandFACMA": [
     "B_注意力算子模块"
   ],
+  "YMMNet_A_More_Accurate_and_Lightweight_Detector_of_Illegal_Buildings_for_Smart_Cities": [
+    "C2_目标检测_违建_车辆_船舶_行人"
+  ],
+  "applsci-14-02690-v2": [
+    "U_未归类"
+  ],
   "ar_residual_growth": [
     "B_注意力算子模块"
   ],
@@ -1095,6 +1174,9 @@
   ],
   "budget_fairness_accounting": [
     "Z_工具与杂项_figures"
+  ],
+  "c22af048-3756-4a19-af0c-dfde22120daa": [
+    "U_未归类"
   ],
   "cjig_paper_1": [
     "T_通用_NLP_其他"
@@ -1182,10 +1264,6 @@
   "cjig_计算机视觉_分割一切模型SAM的潜力与展望": [
     "G_视觉基础模型_VLM_LLM"
   ],
-  "cjig_计算机视觉_无人集群系统协同决策与博弈控制综述": [
-    "R_综述_Survey",
-    "T_通用_NLP_其他"
-  ],
   "cjig_计算机视觉_沉浸式环境和多场景中的视觉提示信息综述": [
     "R_综述_Survey",
     "T_通用_NLP_其他"
@@ -1250,17 +1328,41 @@
     "B_注意力算子模块",
     "D_3D_点云_分类_分割_配准"
   ],
+  "electronics-13-03033-v2": [
+    "U_未归类"
+  ],
+  "f3c9e195-f829-49d3-b6b2-4956bc016e4a-2": [
+    "U_未归类"
+  ],
   "ffc": [
     "B_注意力算子模块"
   ],
   "figure1": [
     "Z_工具与杂项_figures"
   ],
+  "ieee-tip-2-badri-final": [
+    "U_未归类"
+  ],
   "illustration_v2": [
     "Z_工具与杂项_figures"
   ],
+  "isprs-archives-XLII-2-W7-505-2017": [
+    "U_未归类"
+  ],
+  "isprs-archives-XLII-3-W10-17-2020": [
+    "U_未归类"
+  ],
+  "isprs-archives-XLVIII-1-2024-247-2024": [
+    "U_未归类"
+  ],
+  "isprsarchives-XL-1-W5-387-2015": [
+    "U_未归类"
+  ],
   "kan": [
     "B_注意力算子模块"
+  ],
+  "machines-12-00557": [
+    "U_未归类"
   ],
   "parameter_sensitivity_scan": [
     "Z_工具与杂项_figures"
@@ -1274,15 +1376,30 @@
   "results-question-type-radar": [
     "Z_工具与杂项_figures"
   ],
+  "ronneberger2015": [
+    "U_未归类"
+  ],
   "rsablock3d": [
     "B_注意力算子模块",
     "D_3D_点云_分类_分割_配准"
+  ],
+  "s10462-025-11212-y": [
+    "U_未归类"
+  ],
+  "s11042-024-19279-5": [
+    "U_未归类"
   ],
   "scSE": [
     "B_注意力算子模块"
   ],
   "scalability_overview": [
     "Z_工具与杂项_figures"
+  ],
+  "sensors-24-07014": [
+    "U_未归类"
+  ],
+  "ssrn-5357895": [
+    "U_未归类"
   ],
   "supplemental_parameter_scans": [
     "Z_工具与杂项_figures"
@@ -1295,6 +1412,12 @@
   ],
   "wtconv2d": [
     "B_注意力算子模块"
+  ],
+  "yang2020": [
+    "U_未归类"
+  ],
+  "一种针对多分类的网络入侵检测系统模型_杨启成": [
+    "U_未归类"
   ],
   "一阶全卷积遥感图像倾斜目标检测": [
     "C_目标检测_通用与旋转框"
@@ -1374,6 +1497,9 @@
   "在线无线电干涉成像 Online Radio Imaging": [
     "N_雷达_无线电_张量_数学"
   ],
+  "基于双向时序窗口Transformer的网络入侵检测方法_王长浩": [
+    "U_未归类"
+  ],
   "基于深度学习的医学图像分割方法综述": [
     "A1_医学图像_分割",
     "A2_医学图像_分类_配准_生成",
@@ -1392,6 +1518,9 @@
   ],
   "基于照度与场景纹理注意力图的低光图像增强": [
     "E_图像复原_超分_去噪_去雨去雾"
+  ],
+  "基于知识蒸馏的轻量化恶意流量检测方法_孙剑文": [
+    "U_未归类"
   ],
   "基于神经辐射场和三维高斯泼溅的文本指导三维编辑综述": [
     "D2_3D_重建_神经辐射场_SLAM",
@@ -1538,6 +1667,9 @@
   "真实场景下图像超分辨技术现状与趋势": [
     "E_图像复原_超分_去噪_去雨去雾"
   ],
+  "科学数据与科学文献关联信息存在状态与整合模式设计研究_卫军朝": [
+    "U_未归类"
+  ],
   "稀疏贝叶斯质量映射I Sparse Bayesian I": [
     "N_雷达_无线电_张量_数学"
   ],
@@ -1565,9 +1697,18 @@
   "蛋白质结构网络图LL4G LL4G Graph": [
     "N_雷达_无线电_张量_数学"
   ],
+  "融合CNN-GRU和Transformer的网络入侵检测方法_黄迎春": [
+    "U_未归类"
+  ],
+  "融合Transformer和Inception的网络入侵检测研究_张万琪": [
+    "U_未归类"
+  ],
   "融合ViT与对比学习的面部表情识别": [
     "J_人脸_表情_伪造_情感",
     "Q_自监督_对比学习_主动学习"
+  ],
+  "融合数据映射和知识蒸馏的恶意软件轻量化检测方法_罗养霞": [
+    "U_未归类"
   ],
   "视觉基础模型研究现状与发展趋势": [
     "G_视觉基础模型_VLM_LLM",
@@ -1577,6 +1718,9 @@
     "E_图像复原_超分_去噪_去雨去雾",
     "G_视觉基础模型_VLM_LLM",
     "R_综述_Survey"
+  ],
+  "论托马斯·库恩科学哲学的创...学革命的结构》出版60周年_崔伟奇": [
+    "U_未归类"
   ],
   "语义比例分割 Semantic Proportions": [
     "F_图像分割_语义_实例_全景"

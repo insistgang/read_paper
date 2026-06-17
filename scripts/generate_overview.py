@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""生成 05-Literature/论文知识库总览.md, 作为整个知识库的入口页。
+"""生成 03-Literature/论文知识库总览.md, 作为整个知识库的入口页。
 
 包含:
   - 仓库统计
-  - 主题列表 (按 paper 数降序), 链接到 05-Literature/<主题>.md
+  - 主题列表 (按 paper 数降序), 链接到 03-Literature/<主题>.md
   - Dataview 查询示例
   - 后续维护说明
 
@@ -17,11 +17,17 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from validate_library import frontmatter_scalar, parse_frontmatter  # noqa: E402
+
+ROOT = SCRIPT_DIR.parent
 DEFAULT_PAPERS = ROOT / "01-Papers"          # PDF 原文目录
 DEFAULT_NOTES = ROOT / "02-Notes" / "Papers"  # 论文笔记目录
 DEFAULT_TOPICS_JSON = DEFAULT_PAPERS / "paper_topics.json"
-DEFAULT_LIT = ROOT / "05-Literature"
+DEFAULT_LIT = ROOT / "03-Literature"
 DEFAULT_OVERVIEW = DEFAULT_LIT / "论文知识库总览.md"
 
 # 主题 -> 中文显示名 (跟 generate_topic_index 保持一致)
@@ -55,8 +61,40 @@ TOPIC_DISPLAY = {
     "R2_控制_生物启发_其他跨学科": "控制/生物启发/其他",
     "S_变化检测_ChangeDetection": "变化检测",
     "T_通用_NLP_其他": "通用/NLP/其他",
+    "T_安全_入侵检测": "安全/入侵检测",
+    "T_图像处理_其他": "图像处理/其他",
+    "T_图像处理_分割": "图像处理/分割",
+    "T_图像处理_去噪": "图像处理/去噪",
+    "T_遥感_建筑检测": "遥感/建筑检测",
     "Z_工具与杂项_figures": "工具/figures/杂项",
 }
+
+
+def parse_topics_value(value: str, primary: str) -> list[str]:
+    scalar = frontmatter_scalar(value)
+    topics: list[str] = []
+    if scalar.startswith("[") and scalar.endswith("]"):
+        raw_items = scalar.strip("[] ")
+        topics = [
+            item.strip().strip('"').strip("'")
+            for item in raw_items.split(",")
+            if item.strip()
+        ]
+    elif scalar:
+        topics = [scalar.strip().strip('"').strip("'")]
+    if primary and primary not in topics:
+        topics.insert(0, primary)
+    return topics or [primary or "U_未归类"]
+
+
+def load_topics_from_notes(notes: Path) -> dict[str, list[str]]:
+    paper_topics: dict[str, list[str]] = {}
+    for md_path in sorted(notes.glob("*.md")):
+        text = md_path.read_text(encoding="utf-8", errors="replace")
+        fm = parse_frontmatter(text)
+        primary = frontmatter_scalar(fm.get("primary_topic", "")) or "U_未归类"
+        paper_topics[md_path.stem] = parse_topics_value(fm.get("topics", ""), primary)
+    return paper_topics
 
 
 def build_overview(paper_topics: dict, today: str) -> str:
@@ -72,23 +110,33 @@ def build_overview(paper_topics: dict, today: str) -> str:
     rows = []
     for code, n in primary_counter.most_common():
         if code == "U_未归类":
+            rows.append(f"| 未归类 | `{code}` | {n} |")
             continue
         name_zh = TOPIC_DISPLAY.get(code, code.replace("_", " "))
         rows.append(f"| [{name_zh}]({code}.md) | `{code}` | {n} |")
 
     rows_block = "\n".join(rows)
+    topic_index_lines = []
+    for code, n in primary_counter.most_common():
+        if code == "U_未归类":
+            topic_index_lines.append(f"- 未归类 (`{code}`) ({n} 篇)")
+            continue
+        topic_index_lines.append(f"- [[{code}]] ({n} 篇)")
+    topic_index_block = "\n".join(topic_index_lines) if topic_index_lines else "- 暂无"
 
     body = f"""# 论文知识库总览
 
 > 这是整个 Obsidian 论文库的入口页。生成于 {today}, 共收录 {total} 份 PDF。
-> 主题分类基于**文件名**, 未读 PDF 内容。读 PDF 后请到对应笔记里升级 `source_basis`。
+> 主题分布来自 `02-Notes/Papers` 的 frontmatter；阅读质量和人工复核状态以仪表盘为准。
 
 ## 快速导航
 
-- **PDF 原文目录**: `01-Papers/` (只放 PDF, 499 份)
-- **论文笔记目录**: `02-Notes/Papers/` (一篇论文对应一个 .md, 499 篇)
+- **PDF 原文目录**: `01-Papers/` (只放 PDF, {total} 份)
+- **论文笔记目录**: `02-Notes/Papers/` (一篇论文对应一个 .md, {total} 篇)
 - **论文清单 (分类索引)**: `01-Papers/paper_classification.md`
-- **主题首页**: `05-Literature/<主题>.md` (下表每个主题都对应一个首页)
+- **主题首页**: `03-Literature/<主题>.md` (下表每个主题都对应一个首页)
+- **全库三遍 Review 报告**: `03-Literature/全库三遍Review报告.md`
+- **阅读质量仪表盘**: `03-Literature/阅读质量仪表盘.md`
 - **AI 临时缓存**: `.paper-cache/extracts/` (不进入正式知识库, 已被 .gitignore)
 - **Dataview 查询**: 见 [[#Dataview 查询示例]]
 
@@ -100,8 +148,8 @@ def build_overview(paper_topics: dict, today: str) -> str:
 
 ## 多标签论文
 
-- 共 {multi_label} 篇论文 (总 {total}) 同时属于多个主题 (基于文件名的次要关键词)
-- 这些论文在 [[paper_classification]] 里以 `topics: ...` 行标注
+- 共 {multi_label} 篇论文 (总 {total}) 在 frontmatter 的 `topics` 中记录了多个主题。
+- 主题首页按 `primary_topic` 归档；跨主题关系以每篇笔记的 `topics` 字段为准。
 
 ## Dataview 查询示例
 
@@ -166,15 +214,7 @@ SORT length(file.outlinks) DESC
 
 ## 主题首页索引
 
-- [[B_注意力算子模块]] (134 篇)
-- [[T_通用_NLP_其他]] (66 篇)
-- [[C_目标检测_通用与旋转框]] (29 篇)
-- [[D_3D_点云_分类_分割_配准]] (28 篇)
-- [[A2_医学图像_分类_配准_生成]] (26 篇)
-- [[C2_目标检测_违建_车辆_船舶_行人]] (23 篇)
-- [[N_雷达_无线电_张量_数学]] (22 篇)
-- [[R_综述_Survey]] (19 篇)
-- ... 其余见上方"主题分布"表, 全部已生成在 05-Literature/
+{topic_index_block}
 
 ---
 
@@ -185,17 +225,21 @@ SORT length(file.outlinks) DESC
 
 def main():
     parser = argparse.ArgumentParser(
-        description="生成 05-Literature/论文知识库总览.md",
+        description="生成 03-Literature/论文知识库总览.md",
     )
     parser.add_argument(
         "--papers", type=Path, default=DEFAULT_PAPERS,
+    )
+    parser.add_argument(
+        "--notes", type=Path, default=DEFAULT_NOTES,
+        help="论文笔记目录 (默认: 02-Notes/Papers/)",
     )
     parser.add_argument(
         "--topics-json", type=Path, default=DEFAULT_TOPICS_JSON,
     )
     parser.add_argument(
         "--out", type=Path, default=DEFAULT_OVERVIEW,
-        help="总览输出路径 (默认: 05-Literature/论文知识库总览.md)",
+        help="总览输出路径 (默认: 03-Literature/论文知识库总览.md)",
     )
     parser.add_argument(
         "--force", action="store_true",
@@ -203,12 +247,15 @@ def main():
     )
     args = parser.parse_args()
 
-    if not args.topics_json.is_file():
+    if args.notes.is_dir():
+        paper_topics = load_topics_from_notes(args.notes)
+    elif args.topics_json.is_file():
+        paper_topics = json.loads(args.topics_json.read_text(encoding="utf-8"))
+    else:
         sys.exit(
-            f"错误: {args.topics_json} 不存在, 先跑 scripts/classify_papers.py。"
+            f"错误: {args.notes} 和 {args.topics_json} 都不存在。"
         )
 
-    paper_topics = json.loads(args.topics_json.read_text(encoding="utf-8"))
     today = date.today().isoformat()
     content = build_overview(paper_topics, today)
 

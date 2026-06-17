@@ -1,74 +1,312 @@
 ---
-title: "Laplacian Change Poi"
-pdf: "[[2023_Laplacian_Change_Poi.pdf]]"
-primary_topic: "S_变化检测_ChangeDetection"
-topics: [S_变化检测_ChangeDetection]
-status: unread
-reading_stage: filename-only
-confidence: low
-source_basis: filename
+title: LaplacianChangePointDetectionforSingleandMulti-viewDynamicGraphs
+authors:
+  - "Shenyang Huang"
+  - "Samy Coulombe"
+  - "Yasmeen Hitti"
+  - "Reihaneh Rabbany"
+  - "Guillaume Rabusseau"
+year: 2023
+venue: "arXiv"
+doi: 
+pdf: [[2023_Laplacian_Change_Poi.pdf]]
+primary_topic: S_变化检测_ChangeDetection
+topics:
+  - "S_变化检测_ChangeDetection"
+status: ai-read
+reading_stage: ai-fulltext
+confidence: high
+source_basis: pdf-text
 date_added: 2026-06-03
-tags: [paper]
+rating: 
+tags:
+  - "paper"
+ai_generated: true
+human_reviewed: false
+ai_generated_at: 2026-06-04
+extract_cache: .paper-cache/extracts/2023_Laplacian_Change_Poi.txt
+full_text_covered: true
+full_text_completed_at: 2026-06-08
+full_text_completion_basis: "AI supplemental pass; original AI block 12/30 pages"
 ---
-
-# Laplacian Change Poi
+# LaplacianChangePointDetectionforSingleandMulti-viewDynamicGraphs
 
 ## 基本信息
 - **PDF**: [[2023_Laplacian_Change_Poi.pdf]]
 - **primary_topic**: `S_变化检测_ChangeDetection`
 - **topics**: `S_变化检测_ChangeDetection`
-- **状态**: unread (仅根据文件名推断, 待阅读全文确认)
+- **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
-## 文件名推断
+## 文章信息
 
-> 仅根据文件名推断, 未读 PDF 内容。读完 PDF 后请把 `source_basis` 改为 `pdf-text`,
-> 并把 `confidence` / `reading_stage` 升级。
+| 项目 | 内容 |
+|------|------|
+| **题目** | LaplacianChangePointDetectionforSingleandMulti-viewDynamicGraphs |
+| **作者** | Shenyang Huang; Samy Coulombe; Yasmeen Hitti; Reihaneh Rabbany; Guillaume Rabusseau |
+| **发表时间** | 2023 |
+| **刊物/会议** | arXiv |
+| **DOI** | 未明确 |
 
-**提取的关键词**:
+## 摘要
 
-- Laplacian
-- Change
-- Poi
+本文提出了一种基于图拉普拉斯矩阵谱（奇异值）的单视图（LAD）及多视图（MultiLAD）动态图变化点检测方法，通过构建短期与长期滑动窗口来比较图结构的时间依赖性变化，并利用标量幂均值操作有效聚合多视图信息以增强检测的准确性和鲁棒性。
+## 研究背景与动机
 
-**文件名模式**: `2023_Laplacian_Change_Poi`
-
-## 可能研究方向
-
-> 基于 primary_topic + topics 推测, 仅作入门指引。
-
-- 属于主题: **S_变化检测_ChangeDetection**
-- 关联主题: (无)
-
-## 待读问题
-
-> 读 PDF 前先列 2-3 个你想在论文里找到答案的问题。
-
-1.
-2.
-3.
-
-## 阅读笔记
-
-> 边读边记; 用 `[[双链]]` 关联到其他论文笔记 / 主题首页。
-
+- **为什么要做**：动态图在社交网络、交通网络、流行病学等领域广泛存在，检测其结构突变（变化点）对于理解网络演变、识别重大事件（如政策实施、疫情爆发）至关重要。传统方法多关注单视图动态图，但现实网络常由多源（多视图）数据描述，需要能融合多视图信息的检测方法。
+- **之前方法的问题**：
+    1. **图比较问题**：如何为不同时间点的图快照生成可比较的低维表示。一些方法（如`Activity vector`）依赖特定矩阵（如加权邻接矩阵）的特征向量，可能对噪声敏感。
+    2. **时间依赖性问题**：如何有效利用历史信息。一些方法（如`EdgeMonitoring`）依赖节点顺序和固定节点数假设，在现实网络中易被违反。
+    3. **多视图融合问题**：现有变化点检测方法均为单视图设计，无法直接用于多视图动态图。简单的视图级分数聚合（如取平均或最大值）效果不佳。
+- **核心矛盾**：需要一种能够：1) 提供稳定、可解释且对图结构变化敏感的低维表示；2) 显式建模短期与长期时间模式；3) 在特征层面有效融合多视图信息，以抵抗单视图噪声并捕获整体网络生成过程变化的方法。
 ## 关键贡献
 
-> 读完填
-
+1. **提出LAD方法**：首次将图拉普拉斯矩阵的谱（奇异值）用于变化点检测，将其作为图结构的低维嵌入（签名向量）。
+2. **显式建模双重时间依赖**：通过构建独立的短期和长期滑动窗口，分别捕获图结构的近期突变和长期演变模式。
+3. **提出MultiLAD方法**：首个面向多视图动态图的变化点检测方法。该方法在特征层面（拉普拉斯谱的奇异值）而非分数层面进行视图聚合。
+4. **引入标量幂均值聚合**：使用**标量幂均值操作**聚合不同视图的特征向量，该操作能自适应地从各视图中提取最有信息量的奇异值，从而降低噪声影响。
+5. **全面的实验验证**：在合成数据集上证明LAD和MultiLAD优于现有单视图基线方法及其多视图扩展；在真实世界数据集（包括单视图和多视图交通网络）上成功识别出如COVID-19封锁令等重大事件。
+6. **开源代码**：提供了LAD和MultiLAD的开源实现。
 ## 方法
 
-> 读完填
+### 整体框架
+LAD/MultiLAD的核心思想是：为每个时间步的图快照计算一个低维的“签名向量”（拉普拉斯谱），然后通过比较当前签名向量与过去签名向量的“典型行为”来计算异常分数。
 
+### 输入输出
+- **输入**：一个多视图动态图 $G = \{G_t\}_{t=1}^T$，其中 $G_t = \{G_{t,r}\}_{r=1}^m$ 是第 $t$ 步、第 $r$ 个视图的图快照。每个图 $G_{t,r}$ 由节点集 $V$ 和带权重的边集 $E_{t,r}$ 定义。
+- **输出**：一个异常分数序列 $s_t$，高分值对应潜在的变化点或事件。
+
+### 关键模块与连接流程
+**1. 图嵌入生成 (Laplacian Spectrum)**
+   - 对每个视图 $r$ 在时间 $t$ 的图 $G_{t,r}$，计算其（未归一化）拉普拉斯矩阵 $L_{t,r} = D_{t,r} - A_{t,r}$。
+   - 对 $L_{t,r}$ 进行奇异值分解（SVD），得到奇异值向量 $\sigma_{t,r} \in \mathbb{R}^n$（$n$ 为节点数）。此向量即为该图快照的**签名向量**。
+   - **选择拉普拉斯谱的原因**：1) 其特征值与图结构属性（如连通分量、社区结构）密切相关；2) 奇异值编码了低秩近似的压缩误差，反映全局结构变化；3) 对节点排列不变；4) 对稀疏矩阵计算高效。
+
+**2. 时间依赖建模 (Dual Sliding Windows for LAD)**
+   - LAD维护两个独立的滑动窗口：一个**短期窗口**和一个**长期窗口**。
+   - 对于每个窗口，收集窗口内所有历史签名向量，构成一个矩阵 $C$。
+   - 对 $C$ 进行SVD，其**第一左奇异向量** $\tilde{\sigma}_t$ 被视为该窗口时间内“典型”或“正常”行为的表示。
+   - 异常分数 $s_t$ 定义为当前签名向量 $\sigma_t$ 与两个窗口的典型行为向量之间的**余弦相似度**（或距离）的综合（例如取平均或最小值）。这允许LAD同时捕捉短期的突变和相对于长期模式的偏离。
+
+**3. 多视图聚合 (Multi-view Aggregation for MultiLAD)**
+   - MultiLAD在**签名向量生成后、计算异常分数前**进行多视图融合。
+   - 对每个视图 $r$，得到其签名向量 $\sigma_{t,r}$。MultiLAD通过**标量幂均值操作**聚合所有视图的签名向量，得到一个**聚合向量** $\sigma_t^{agg}$。
+   - 标量幂均值操作定义为：对于每个奇异值的位置 $i$，计算 $\sigma_{t,i}^{agg} = (\frac{1}{m} \sum_{r=1}^m (\sigma_{t,r,i})^p)^{1/p}$，其中 $p$ 是一个超参数。
+   - **直观解释**：该操作能从多个视图中识别并强化一致的模式（高信息量的奇异值），同时抑制来自单个视图的噪声（不一致或异常大的奇异值）。$p$ 值控制聚合的“硬度”。
+   - 之后，使用与LAD相同的**双滑动窗口机制**，但作用于**聚合后的签名向量序列** $\{\sigma_t^{agg}\}$ 来计算最终的多视图异常分数。
+
+### 训练与推理
+- **无监督/免训练**：LAD和MultiLAD均是**无监督**方法，不需要标签数据。参数（窗口大小、幂均值参数p等）通过经验或验证集设定。
+- **推理流程**：在线处理时间序列：1) 为新到的图快照计算签名向量（LAD直接计算，MultiLAD先计算各视图签名再聚合）；2) 更新滑动窗口中的历史签名矩阵；3) 计算当前签名与窗口内典型行为的差异，输出异常分数。
+
+### 与已有方法的差异
+- **vs. Activity vector** [26]：LAD使用拉普拉斯谱而非加权邻接矩阵的主特征向量，且显式使用双窗口。
+- **vs. EdgeMonitoring** [52]：LAD/MultiLAD无需节点顺序固定和节点数不变的强假设。
+- **vs. 多视图聚类方法**：如矩阵幂均值拉普拉斯（PML）[34]用于静态图聚类，而本文用**标量幂均值**操作处理动态图变化点检测，目标不同。
+- **vs. 其他多视图异常检测**：本文在图快照（时间点）级别进行异常检测，而非节点实例级别。
 ## 实验
 
-> 读完填
-
+- **使用的数据集**：
+    - **合成数据集**：用于可控实验，验证方法在不同变化类型（事件/变化点）、噪声水平下的性能。
+    - **真实世界数据集**：
+        - **单视图**：Congress 联合提案网络、Senate 共同赞助网络、NYC Transit 2015-2016。
+        - **多视图**：NYC Transit 2019-2020（包含绿色出租车、黄色出租车、出租车辆、高容量出租车辆四个视图）、NYC Transit 2020-2021。
+- **对比方法**：包括单视图基线（如`Activity vector`、`TENSORSPLAT`、`EdgeMonitoring`）以及它们的多视图扩展（如`Max/ Mean/ Concat`）。
+- **评价指标**：主要使用精度、召回率、F1分数等标准分类指标，评估检测到的变化点与真实事件（或注入的变化）的匹配程度。
+- **主实验结果**：
+    - 在合成实验中，LAD和MultiLAD在F1分数等指标上**大幅优于**所有对比方法。
+    - 在真实世界实验中，LAD和MultiLAD成功识别出如COVID-19封锁令、圣诞节等重大事件。例如，MultiLAD在NYC数据中准确检测到2020年3月22日（纽约州“暂停”计划首日）为异常日。
+- **消融实验**：文中通过合成实验探讨了窗口大小、幂均值参数p、视图数量等的影响。
+- **泛化实验**：展示了MultiLAD在合成数据中随视图数量增加，性能增益显著提升。
+- **效率信息**：PDF文本中未提供详细的计算成本、FLOPs或参数量比较。但文中提到拉普拉斯谱对稀疏矩阵可高效计算。
 ## 局限
 
-> 读完填
+- **假设依赖**：在问题定义中假设节点集合 $V$ 固定且各视图节点数相同。虽然文中提到MultiLAD能处理该假设不成立的情况（Section 6.1），但具体机制未在提供的文本中详细说明。
+- **计算成本**：对每个图快照计算SVD，对于超大规模动态图可能成为瓶颈。尽管文本中提到了稀疏计算，但未给出具体的复杂度分析。
+- **参数选择**：短期/长期窗口大小、幂均值参数p、L2归一化等需要根据数据调整，缺乏自动化的参数选择指导。
+- **异常分数解释**：方法输出一个异常分数序列，需要人工设定阈值来确定变化点，文中未详细讨论阈值选择策略。
+- **视图权重视角**：标量幂均值操作对所有视图的奇异值位置进行同等聚合，未显式学习不同视图或不同奇异值维度的重要性权重。
+- **数据集限制**：真实世界数据集验证主要集中在交通网络领域，在其他领域（如社交网络、生物网络）的效果未在提供文本中展现。
+## 个人评论
 
-## 相关论文
+1. **问题定义与范式**：清晰定义了多视图动态图的变化点检测问题，为该领域提供了首个基线方法（MultiLAD）。
+2. **优雅的特征工程**：将图拉普拉斯谱（奇异值）作为图快照的“指纹”，是一个理论上可解释、对结构变化敏感且计算可行的方案。
+3. **简单有效的多视图聚合机制**：**标量幂均值操作**是一个轻量、可解释且效果显著的聚合策略，其思想可启发其他需要融合多源信息的序列分析任务（如多模态时间序列）。
+4. **显式的时间建模**：短期与长期双窗口设计直觉清晰，能同时应对突发性事件和渐进性变化点。
+5. **开源与可复现性**：代码公开，便于社区验证和扩展。
 
-> 用 `[[]]` 链接到其他论文笔记或主题首页, 例如 [[S_变化检测_ChangeDetection]]。
+### 使用建议
 
+- **如果快速了解**：阅读**摘要**和**引言**（第1节），即可掌握论文的问题、动机、核心贡献和主要结果。
+- **如果复现**：重点阅读**方法部分**（第4、5节，特别是公式1和相关的滑动窗口、幂均值操作描述）以及**实验部分**（第8节）的设置。同时需参考开源代码。
+- **如果借鉴创新点**：
+    - 学习其将**谱图理论**（拉普拉斯谱）用于图序列分析的思路。
+    - 借鉴**双滑动窗口**机制用于同时捕捉短期和长期时间模式。
+    - 借鉴**标量幂均值**操作进行多视图/多模态特征融合的设计。
+- **如果写related work**：可放在**动态图异常检测/变化点检测**、**多视图/多层图学习**、**谱图方法在机器学习中的应用**这几个类别中。
+## 相关论文与链接
+
+> 用 `[[]]` 链接到其他论文笔记或主题首页：
+> - [[S_变化检测_ChangeDetection]]
+> - [[论文知识库总览]]
+
+---
+
+#paper #read
+
+<!-- AI_READING_NOTE_START -->
+# 论文精读
+
+## 1. 论文定位
+这篇论文属于**图神经网络、动态图分析**与**变化检测**的交叉领域。它主要解决**动态图（特别是多视图动态图）中的变化点检测问题**，即识别出图结构发生显著、持续性改变的时间点。本文提出的方法将谱图理论与时间序列分析相结合。适合作为**“S_变化检测_ChangeDetection”** 主题下的重要文献，也涉及“图神经网络”、“时间序列分析”和“异常检测”等相关主题。
+
+## 2. 一句话总结
+本文提出了一种基于图拉普拉斯矩阵谱（奇异值）的单视图（LAD）及多视图（MultiLAD）动态图变化点检测方法，通过构建短期与长期滑动窗口来比较图结构的时间依赖性变化，并利用标量幂均值操作有效聚合多视图信息以增强检测的准确性和鲁棒性。
+
+## 3. 背景与问题
+- **为什么要做**：动态图在社交网络、交通网络、流行病学等领域广泛存在，检测其结构突变（变化点）对于理解网络演变、识别重大事件（如政策实施、疫情爆发）至关重要。传统方法多关注单视图动态图，但现实网络常由多源（多视图）数据描述，需要能融合多视图信息的检测方法。
+- **之前方法的问题**：
+    1. **图比较问题**：如何为不同时间点的图快照生成可比较的低维表示。一些方法（如`Activity vector`）依赖特定矩阵（如加权邻接矩阵）的特征向量，可能对噪声敏感。
+    2. **时间依赖性问题**：如何有效利用历史信息。一些方法（如`EdgeMonitoring`）依赖节点顺序和固定节点数假设，在现实网络中易被违反。
+    3. **多视图融合问题**：现有变化点检测方法均为单视图设计，无法直接用于多视图动态图。简单的视图级分数聚合（如取平均或最大值）效果不佳。
+- **核心矛盾**：需要一种能够：1) 提供稳定、可解释且对图结构变化敏感的低维表示；2) 显式建模短期与长期时间模式；3) 在特征层面有效融合多视图信息，以抵抗单视图噪声并捕获整体网络生成过程变化的方法。
+
+## 4. 核心贡献
+1. **提出LAD方法**：首次将图拉普拉斯矩阵的谱（奇异值）用于变化点检测，将其作为图结构的低维嵌入（签名向量）。
+2. **显式建模双重时间依赖**：通过构建独立的短期和长期滑动窗口，分别捕获图结构的近期突变和长期演变模式。
+3. **提出MultiLAD方法**：首个面向多视图动态图的变化点检测方法。该方法在特征层面（拉普拉斯谱的奇异值）而非分数层面进行视图聚合。
+4. **引入标量幂均值聚合**：使用**标量幂均值操作**聚合不同视图的特征向量，该操作能自适应地从各视图中提取最有信息量的奇异值，从而降低噪声影响。
+5. **全面的实验验证**：在合成数据集上证明LAD和MultiLAD优于现有单视图基线方法及其多视图扩展；在真实世界数据集（包括单视图和多视图交通网络）上成功识别出如COVID-19封锁令等重大事件。
+6. **开源代码**：提供了LAD和MultiLAD的开源实现。
+
+## 5. 方法详解
+### 整体框架
+LAD/MultiLAD的核心思想是：为每个时间步的图快照计算一个低维的“签名向量”（拉普拉斯谱），然后通过比较当前签名向量与过去签名向量的“典型行为”来计算异常分数。
+
+### 输入输出
+- **输入**：一个多视图动态图 $G = \{G_t\}_{t=1}^T$，其中 $G_t = \{G_{t,r}\}_{r=1}^m$ 是第 $t$ 步、第 $r$ 个视图的图快照。每个图 $G_{t,r}$ 由节点集 $V$ 和带权重的边集 $E_{t,r}$ 定义。
+- **输出**：一个异常分数序列 $s_t$，高分值对应潜在的变化点或事件。
+
+### 关键模块与连接流程
+**1. 图嵌入生成 (Laplacian Spectrum)**
+   - 对每个视图 $r$ 在时间 $t$ 的图 $G_{t,r}$，计算其（未归一化）拉普拉斯矩阵 $L_{t,r} = D_{t,r} - A_{t,r}$。
+   - 对 $L_{t,r}$ 进行奇异值分解（SVD），得到奇异值向量 $\sigma_{t,r} \in \mathbb{R}^n$（$n$ 为节点数）。此向量即为该图快照的**签名向量**。
+   - **选择拉普拉斯谱的原因**：1) 其特征值与图结构属性（如连通分量、社区结构）密切相关；2) 奇异值编码了低秩近似的压缩误差，反映全局结构变化；3) 对节点排列不变；4) 对稀疏矩阵计算高效。
+
+**2. 时间依赖建模 (Dual Sliding Windows for LAD)**
+   - LAD维护两个独立的滑动窗口：一个**短期窗口**和一个**长期窗口**。
+   - 对于每个窗口，收集窗口内所有历史签名向量，构成一个矩阵 $C$。
+   - 对 $C$ 进行SVD，其**第一左奇异向量** $\tilde{\sigma}_t$ 被视为该窗口时间内“典型”或“正常”行为的表示。
+   - 异常分数 $s_t$ 定义为当前签名向量 $\sigma_t$ 与两个窗口的典型行为向量之间的**余弦相似度**（或距离）的综合（例如取平均或最小值）。这允许LAD同时捕捉短期的突变和相对于长期模式的偏离。
+
+**3. 多视图聚合 (Multi-view Aggregation for MultiLAD)**
+   - MultiLAD在**签名向量生成后、计算异常分数前**进行多视图融合。
+   - 对每个视图 $r$，得到其签名向量 $\sigma_{t,r}$。MultiLAD通过**标量幂均值操作**聚合所有视图的签名向量，得到一个**聚合向量** $\sigma_t^{agg}$。
+   - 标量幂均值操作定义为：对于每个奇异值的位置 $i$，计算 $\sigma_{t,i}^{agg} = (\frac{1}{m} \sum_{r=1}^m (\sigma_{t,r,i})^p)^{1/p}$，其中 $p$ 是一个超参数。
+   - **直观解释**：该操作能从多个视图中识别并强化一致的模式（高信息量的奇异值），同时抑制来自单个视图的噪声（不一致或异常大的奇异值）。$p$ 值控制聚合的“硬度”。
+   - 之后，使用与LAD相同的**双滑动窗口机制**，但作用于**聚合后的签名向量序列** $\{\sigma_t^{agg}\}$ 来计算最终的多视图异常分数。
+
+### 训练与推理
+- **无监督/免训练**：LAD和MultiLAD均是**无监督**方法，不需要标签数据。参数（窗口大小、幂均值参数p等）通过经验或验证集设定。
+- **推理流程**：在线处理时间序列：1) 为新到的图快照计算签名向量（LAD直接计算，MultiLAD先计算各视图签名再聚合）；2) 更新滑动窗口中的历史签名矩阵；3) 计算当前签名与窗口内典型行为的差异，输出异常分数。
+
+### 与已有方法的差异
+- **vs. Activity vector** [26]：LAD使用拉普拉斯谱而非加权邻接矩阵的主特征向量，且显式使用双窗口。
+- **vs. EdgeMonitoring** [52]：LAD/MultiLAD无需节点顺序固定和节点数不变的强假设。
+- **vs. 多视图聚类方法**：如矩阵幂均值拉普拉斯（PML）[34]用于静态图聚类，而本文用**标量幂均值**操作处理动态图变化点检测，目标不同。
+- **vs. 其他多视图异常检测**：本文在图快照（时间点）级别进行异常检测，而非节点实例级别。
+
+## 6. 实验与结果
+- **使用的数据集**：
+    - **合成数据集**：用于可控实验，验证方法在不同变化类型（事件/变化点）、噪声水平下的性能。
+    - **真实世界数据集**：
+        - **单视图**：Congress 联合提案网络、Senate 共同赞助网络、NYC Transit 2015-2016。
+        - **多视图**：NYC Transit 2019-2020（包含绿色出租车、黄色出租车、出租车辆、高容量出租车辆四个视图）、NYC Transit 2020-2021。
+- **对比方法**：包括单视图基线（如`Activity vector`、`TENSORSPLAT`、`EdgeMonitoring`）以及它们的多视图扩展（如`Max/ Mean/ Concat`）。
+- **评价指标**：主要使用精度、召回率、F1分数等标准分类指标，评估检测到的变化点与真实事件（或注入的变化）的匹配程度。
+- **主实验结果**：
+    - 在合成实验中，LAD和MultiLAD在F1分数等指标上**大幅优于**所有对比方法。
+    - 在真实世界实验中，LAD和MultiLAD成功识别出如COVID-19封锁令、圣诞节等重大事件。例如，MultiLAD在NYC数据中准确检测到2020年3月22日（纽约州“暂停”计划首日）为异常日。
+- **消融实验**：文中通过合成实验探讨了窗口大小、幂均值参数p、视图数量等的影响。
+- **泛化实验**：展示了MultiLAD在合成数据中随视图数量增加，性能增益显著提升。
+- **效率信息**：PDF文本中未提供详细的计算成本、FLOPs或参数量比较。但文中提到拉普拉斯谱对稀疏矩阵可高效计算。
+
+## 7. 这篇论文真正有价值的地方
+1. **问题定义与范式**：清晰定义了多视图动态图的变化点检测问题，为该领域提供了首个基线方法（MultiLAD）。
+2. **优雅的特征工程**：将图拉普拉斯谱（奇异值）作为图快照的“指纹”，是一个理论上可解释、对结构变化敏感且计算可行的方案。
+3. **简单有效的多视图聚合机制**：**标量幂均值操作**是一个轻量、可解释且效果显著的聚合策略，其思想可启发其他需要融合多源信息的序列分析任务（如多模态时间序列）。
+4. **显式的时间建模**：短期与长期双窗口设计直觉清晰，能同时应对突发性事件和渐进性变化点。
+5. **开源与可复现性**：代码公开，便于社区验证和扩展。
+
+## 8. 局限与问题
+- **假设依赖**：在问题定义中假设节点集合 $V$ 固定且各视图节点数相同。虽然文中提到MultiLAD能处理该假设不成立的情况（Section 6.1），但具体机制未在提供的文本中详细说明。
+- **计算成本**：对每个图快照计算SVD，对于超大规模动态图可能成为瓶颈。尽管文本中提到了稀疏计算，但未给出具体的复杂度分析。
+- **参数选择**：短期/长期窗口大小、幂均值参数p、L2归一化等需要根据数据调整，缺乏自动化的参数选择指导。
+- **异常分数解释**：方法输出一个异常分数序列，需要人工设定阈值来确定变化点，文中未详细讨论阈值选择策略。
+- **视图权重视角**：标量幂均值操作对所有视图的奇异值位置进行同等聚合，未显式学习不同视图或不同奇异值维度的重要性权重。
+- **数据集限制**：真实世界数据集验证主要集中在交通网络领域，在其他领域（如社交网络、生物网络）的效果未在提供文本中展现。
+
+## 9. 我该怎么使用这篇论文
+- **如果快速了解**：阅读**摘要**和**引言**（第1节），即可掌握论文的问题、动机、核心贡献和主要结果。
+- **如果复现**：重点阅读**方法部分**（第4、5节，特别是公式1和相关的滑动窗口、幂均值操作描述）以及**实验部分**（第8节）的设置。同时需参考开源代码。
+- **如果借鉴创新点**：
+    - 学习其将**谱图理论**（拉普拉斯谱）用于图序列分析的思路。
+    - 借鉴**双滑动窗口**机制用于同时捕捉短期和长期时间模式。
+    - 借鉴**标量幂均值**操作进行多视图/多模态特征融合的设计。
+- **如果写related work**：可放在**动态图异常检测/变化点检测**、**多视图/多层图学习**、**谱图方法在机器学习中的应用**这几个类别中。
+
+## 10. 和其他论文的关系
+根据论文主题“S_变化检测_ChangeDetection”，本文很可能与以下论文相关（使用双链写法）：
+- 其他基于谱方法的动态图分析论文。
+- 其他关注多视图或动态图异常检测的论文。
+- 在时间序列上应用滑动窗口和比较策略的经典变化点检测论文（如CUSUM等）。
+- 在单视图动态图上提出的变化点检测方法，如本文中对比的`EdgeMonitoring`和`Activity vector`。
+- 多视图聚类方法，如本文中提到的使用矩阵幂均值拉普拉斯（PML）的工作。
+**注意**：由于知识库内容未知，此处仅为基于本文参考文献和主题的合理推测，未乱加链接。
+
+## 11. 关键词
+动态图，变化点检测，多视图图，拉普拉斯谱，奇异值分解，滑动窗口，异常检测，谱图方法，时间序列分析，标量幂均值，图嵌入。
+
+## 12. 可信度说明
+本笔记主要基于提供的PDF文本的前12页（约占全文40%）生成。内容覆盖了**摘要、引言、相关工作、问题定义以及LAD方法的部分详解（第4章）**。论文的核心思想、动机、LAD的主要模块（拉普拉斯谱、双滑动窗口）以及MultiLAD的设计意图（多视图聚合）均有明确文本依据。**限制**在于：1) MultiLAD方法的具体公式和算法流程（可能在第5章）未包含在提供的文本中，相关内容基于上下文的合理推断；2) 详细的实验结果数字（如具体F1分数值）、消融实验的具体结论以及第6、7、8节的完整内容缺失，因此“实验与结果”部分写得较为概括。总体而言，笔记基于现有文本准确提炼了核心内容，对未明确信息进行了标注。
+
+---
+
+> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2086 字符/页)); 来源缓存: `.paper-cache/extracts/2023_Laplacian_Change_Poi.txt` (30/30 页; 原 AI 主体 12/30 + 全文补读 13-30); 生成日期: 2026-06-04; 模式: LLM (mimo-v2.5-pro).
+## 全文补读记录
+
+- **补读日期**: 2026-06-08
+- **补读范围**: PDF p.13-30; 原 AI 主体覆盖 p.1-12, 本记录补足到 p.1-30。
+- **提取情况**: 缺失页 18 页, 其中 18 页提取到可读文本。缺失页包含正文/附录内容, 其中约 2 页偏参考文献。
+- **状态说明**: 这是 AI 全文覆盖补读, 不是人工精读复核；`human_reviewed` 仍应保持 `false`。
+
+### 缺失页章节线索
+
+- p.13: Laplacian Change Point Detection for Multi-view Dynamic Graphs 13
+- p.13: 7.4 Real-world Experiments
+- p.13: UCI Message and Senate co-sponsorship experiments, LAD is able to achieve strong performance using only the top 6
+- p.14: May June July August September October
+- p.14: The activity vector method requires full SVD which are computationally expensive and it is only able to detect
+- p.15: Laplacian Change Point Detection for Multi-view Dynamic Graphs 15
+- p.15: Equally, on October 19th 2015 an election took place and the Liberal party won an additional 148 seats, with a total
+- p.15: 7.5 Summary of LAD Results
+- p.15: In the UCI message and senate co-sponsorship experiments, LAD achieves strong performance using only the top 6
+- p.16: Dataset Pure Hybrid Resample UCI Senate
+- p.16: Lastly, synthetic experiment results suggest that LAD can be used in a hybrid environment where both change points
+- p.16: 8 MULTI-VIEW EXPERIMENTS
+
+### 缺失页关键摘录
+
+- p.13: Fig. 3. LAD perfectly recovers all events and change points defined in Table 2.
+- p.13: Here, we evaluate the performance of LAD on two real-world benchmark datasets, as well as an original dataset. For
+- p.13: is the number of seats in the House of Commons of Canada. More information regarding each dataset can be found in
+- p.13: 7.4.1 UCI Message .In this dataset, we treat each day as an individual time point. There are 59,835 total messages
+- p.13: usernames, email and IP addresses were removed thus we use the dataset description provided in [ 37] to find significant
+- p.13: events in the dataset. We select the short term window to be 7 days as suggested by Panzarasa et al . [37] . The long term
+- p.13: Figure 4 shows the 𝑍∗scores predicted from both the short term and long term window (with top 6 eigenvalues).
+- p.13: has strongest correlation to the average edge weight per snapshot in this dataset.
+- p.13: 7.4.2 Senate co-sponsorship Network .In this dataset, an edge is formed between two congresspersons if they are
+- p.14: From Figure 5, it is clear that LAD can easily detect the above change points (using only the top 6 singular values).
+- p.15: LAD detects 2013 and 2015 as two significant change points. Figure 6 shows the 𝑍∗scores predicted by LAD. 2013 is
+- p.15: Table 3 summarizes the empirical performances of LAD and its comparison to alternative methods. We observe that
+<!-- AI_READING_NOTE_END -->

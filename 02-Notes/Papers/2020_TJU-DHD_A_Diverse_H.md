@@ -1,73 +1,224 @@
 ---
-title: "TJU DHD A Diverse H"
-pdf: "[[2020_TJU-DHD_A_Diverse_H.pdf]]"
-primary_topic: "L_数据集_Benchmark"
-topics: [L_数据集_Benchmark]
-status: unread
-reading_stage: filename-only
-confidence: low
-source_basis: filename
+title: "TJU-DHD: A Diverse High-Resolution Dataset for"
+authors:
+  - "Yanwei Pang"
+  - "Jiale Cao"
+  - "Yazhao Li"
+  - "Jin Xie"
+  - "Hanqing Sun"
+  - "Jinfeng Gong"
+year: 2020
+venue: "arXiv"
+doi: 
+pdf: [[2020_TJU-DHD_A_Diverse_H.pdf]]
+primary_topic: L_数据集_Benchmark
+topics:
+  - "L_数据集_Benchmark"
+status: ai-read
+reading_stage: ai-fulltext
+confidence: high
+source_basis: pdf-text
 date_added: 2026-06-03
-tags: [paper]
+rating: 
+tags:
+  - "paper"
+ai_generated: true
+human_reviewed: false
+ai_generated_at: 2026-06-04
+extract_cache: .paper-cache/extracts/2020_TJU-DHD_A_Diverse_H.txt
+full_text_covered: true
+full_text_completed_at: 2026-06-08
+full_text_completion_basis: "AI supplemental pass; original AI block 12/13 pages"
 ---
-
-# TJU DHD A Diverse H
+# TJU-DHD: A Diverse High-Resolution Dataset for
 
 ## 基本信息
 - **PDF**: [[2020_TJU-DHD_A_Diverse_H.pdf]]
 - **primary_topic**: `L_数据集_Benchmark`
 - **topics**: `L_数据集_Benchmark`
-- **状态**: unread (仅根据文件名推断, 待阅读全文确认)
+- **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
-## 文件名推断
+## 文章信息
 
-> 仅根据文件名推断, 未读 PDF 内容。读完 PDF 后请把 `source_basis` 改为 `pdf-text`,
-> 并把 `confidence` / `reading_stage` 升级。
+| 项目 | 内容 |
+|------|------|
+| **题目** | TJU-DHD: A Diverse High-Resolution Dataset for |
+| **作者** | Yanwei Pang; Jiale Cao; Yazhao Li; Jin Xie; Hanqing Sun; Jinfeng Gong |
+| **发表时间** | 2020 |
+| **刊物/会议** | arXiv |
+| **DOI** | 未明确 |
 
-**提取的关键词**:
+## 摘要
 
-- TJU-DHD
-- Diverse
+> —Vehicles, pedestrians, and riders are the most im- portantandinterestingobjectsfortheperceptionmodulesofself- drivingvehiclesandvideosurveillance.However,thestate-of-the- art performance of detecting such important objects (esp. small objects) is far from satisfying the demand of practical systems. Large-scale, rich-diversity, and high-resolution datasets play an important role in developing better object detection methods to satisfy the demand. Existing public large-scale datasets such as MS COCO collected from websites do not focus on the specific scenarios. Moreover, the popular datasets (e.g., KITTI andCitypersons)collectedfromthespecificscenariosarelimited in the number of images and instances, the resolution, and the diversity. To attempt to solve the problem, we build a diverse high-resolution dataset (called TJU-DHD). The dataset contains 115,354high-resolutionimages(52%imageshavearesolutionof 1624×1200 pixels and 48% images have a resolution of at least 2,560×1,440 pixels) an
 
-**文件名模式**: `2020_TJU-DHD_A_Diverse_H`
+> **来源**: PDF 自动提取，需人工复核。
 
-## 可能研究方向
+## 研究背景与动机
 
-> 基于 primary_topic + topics 推测, 仅作入门指引。
-
-- 属于主题: **L_数据集_Benchmark**
-- 关联主题: (无)
-
-## 待读问题
-
-> 读 PDF 前先列 2-3 个你想在论文里找到答案的问题。
-
-1.
-2.
-3.
-
-## 阅读笔记
-
-> 边读边记; 用 `[[双链]]` 关联到其他论文笔记 / 主题首页。
-
+- **为什么要做**：实际应用（如自动驾驶和视频监控）对车辆、行人和骑行者的检测精度要求很高，尤其是小目标检测。现有数据集存在不足。
+- **之前方法的问题**：
+    - 通用大型数据集（如 MS COCO）从网络收集，不专注于特定应用场景，导致在其上训练的检测器在具体场景中表现不佳。
+    - 现有的特定场景数据集（如 KITTI、Caltech、Citypersons）虽然针对性强，但存在图像数量少、实例数量有限、分辨率低（如 Caltech 的 640x480）或多样性不足（如 ApolloScape 缺乏季节和昼夜变化，BDD100K 分辨率较低为 720p）等问题。
+- **核心矛盾**：实际应用需要大规模、高分辨率、且能覆盖丰富场景变化（如季节、天气、光照）的数据集来训练出鲁棒的检测器，但现有数据集无法同时满足这些需求。
 ## 关键贡献
 
-> 读完填
-
+1.  **构建了一个新的多样化高分辨率数据集 TJU-DHD**：该数据集包含 115,354 张高分辨率图像（至少 1624x1200 像素）和 709,330 个标注实例，覆盖了车辆、行人、骑行者等类别，并具有丰富的季节、天气、光照和场景多样性。
+2.  **基于 TJU-DHD 提出了一个大规模行人数据集**：从两个子集中选取包含行人的图像，构建了专门的行人检测数据集，支持在相同场景和跨场景下进行评估。
+3.  **使用四种不同的主流检测器进行了基准实验**：在构建的数据集上，采用一阶段 RetinaNet、无锚框 FCOS、两阶段 FPN 和级联 Cascade R-CNN 四种方法进行物体检测和行人检测实验，提供了基准性能参考。
 ## 方法
 
-> 读完填
-
+本篇论文的核心“方法”是数据集构建与基准评估流程。
+- **整体框架**：数据集由两个独立的子集构成：TJU-DHD-traffic（交通场景）和 TJU-DHD-campus（校园场景）。
+- **输入输出**：输入是高分辨率原始图像，输出是带有精确边界框`(x1, y1, x2, y2)`标注的物体实例，部分标注还包含遮挡和截断级别信息。
+- **关键模块**：
+    - **数据采集**：交通场景数据由行驶中的车辆采集；校园场景数据由多种移动设备拍摄。
+    - **标注规范**：交通场景标注了5类物体（car, van, truck, pedestrian, rider）；校园场景重点标注了2类（pedestrian, rider）。对于行人，校园子集额外提供了“全身”和“可见部分”两个边界框，以支持遮挡研究。
+    - **数据集划分**：每个子集均划分为训练集、验证集和测试集，具体数量如表格 I 所示。
+- **模块连接**：从多源数据采集 -> 按场景划分为两个子集 -> 对每个子集内的图像进行精细标注 -> 按固定比例划分训练/验证/测试集。
+- **训练与推理**：论文本身未提出新模型，而是将构建的数据集用于评估现有检测器（RetinaNet, FCOS, FPN, Cascade R-CNN）。评估流程遵循标准的目标检测训练和测试协议。
+- **与已有方法的差异**：
+    - **分辨率**：远高于 Caltech (640x480)、BDD100K (720p)，与 KITTI (1240x376) 和 Citypersons (2048x1024) 相比，图像尺寸更大或更丰富。
+    - **多样性**：明确覆盖了季节、天气、光照（昼夜、顺逆光）的变化，这在 ApolloScape 等数据集中是缺失的。
+    - **跨场景**：同时包含交通和校园两个差异明显的场景，这区别于仅关注单一交通场景的 KITTI 或 BDD100K。
 ## 实验
 
-> 读完填
-
+- **使用的数据集**：本文构建的 TJU-DHD 及其子集 TJU-DHD-traffic 和 TJU-DHD-campus。
+- **对比方法**：实验并非对比不同数据集，而是在 TJU-DHD 上评估了**四种不同的检测器**：一阶段方法 RetinaNet、无锚框方法 FCOS、两阶段方法 FPN 和级联方法 Cascade R-CNN。
+- **评价指标**：PDF 提取文本中未明确列出具体使用的评价指标（如 mAP），但根据目标检测领域的惯例，应为平均精度（AP）及其变体。
+- **主实验结果**：PDF 提取的文本主要呈现了数据集统计信息和可视化示例，**具体的检测性能数字（如各方法在测试集上的 mAP）在提供的文本片段中未明确给出**。论文意图是提供这些基准结果供后续研究参考。
+- **消融实验**：PDF 提取文本中未发现关于消融实验的明确说明。
+- **泛化实验**：PDF 提取文本中未发现专门的泛化实验描述，但跨场景的行人数据集设计本身就蕴含了跨场景评估的意图。
+- **速度/参数量/FLOPs**：PDF 提取文本中未提供这些效率信息。
 ## 局限
 
-> 读完填
+- **场景局限性**：数据集专注于交通和校园两个场景，可能无法直接推广到其他复杂场景（如室内、密集人群活动）。
+- **高分辨率带来的挑战**：高分辨率图像虽然包含更多细节，但也带来了更高的存储、传输和计算成本，可能限制其在资源受限设备上的应用研究。
+- **标注的完备性**：虽然提供了遮挡级别，但文本中未提及是否对每个实例都有逐像素的语义标注或更细粒度的部件标注。
+- **实验深度**：提供的实验仅限于四种标准检测器的基准测试，缺乏对数据集特性（如多样性、小目标）如何影响模型性能的深入消融分析。
+- **复现风险**：虽然数据集已开源，但其完全复现依赖于原始采集设备和数据收集流程，这可能难以被其他团队完全复制。
+## 个人评论
 
-## 相关论文
+1.  **填补了数据集空白**：它针对“高分辨率、特定场景、高多样性”这一实际需求，构建了一个规模可观的数据集，弥补了现有数据集在分辨率或多样性上的不足。
+2.  **提供了宝贵的基准**：在多个主流检测器上给出了基准结果，为后续研究者在此数据集上改进方法提供了清晰的起点和对比标准。
+3.  **强调了数据集的“现实世界”属性**：通过覆盖昼夜、季节、天气变化，数据集更贴近真实世界的复杂情况，训练出的模型鲁棒性潜力更高。
+4.  **对后续研究的启发**：
+    - 设计数据集时应充分考虑目标场景的实际变化。
+    - 为特定应用（如自动驾驶感知）构建专用、高质量数据集是推动技术落地的关键。
+    - 在论文中，提供清晰的数据集统计和基准结果是使其具有长期价值的重要方式。
 
-> 用 `[[]]` 链接到其他论文笔记或主题首页, 例如 [[L_数据集_Benchmark]]。
+### 使用建议
 
+- **如果快速了解**：只需阅读**摘要**、**引言**（Section I）以及**数据集详情**（Section III）的概述部分和图表（图1, 3, 4, 5, 6），即可掌握数据集的核心特点。
+- **如果复现**：重点阅读**Section III (Our Dataset Details)**，特别是子集划分、标注规范和统计信息（表格 I, 图3-6），这是理解数据集结构和特性的关键。
+- **如果借鉴创新点**：应学习其**数据集构建思路**——如何定义场景、选择类别、设计标注规范（如双边界框标注行人）以及展现数据多样性。**基准评估的实验设置**（选用哪些检测器、如何划分数据）也值得参考。
+- **如果写 Related Work**：本文可归类为“**特定场景目标检测数据集**”或“**高分辨率目标检测数据集**”部分，与 KITTI, Cityscapes, ApolloScape, BDD100K, CityPersons, EuroCity 等并列讨论。
+## 相关论文与链接
+
+> 用 `[[]]` 链接到其他论文笔记或主题首页：
+> - [[L_数据集_Benchmark]]
+> - [[论文知识库总览]]
+
+---
+
+#paper #read
+
+<!-- AI_READING_NOTE_START -->
+# 论文精读
+
+## 1. 论文定位
+这篇论文属于计算机视觉领域中的**目标检测**方向，具体聚焦于**特定场景（交通与校园）的高分辨率、多样化数据集构建与基准评估**。它旨在通过提供一个新的、高质量的数据集来推动目标检测（特别是小目标检测）和行人检测的研究。因此，它最适合放在“L_数据集_Benchmark”这一主题下。
+
+## 2. 一句话总结
+本文提出了一个名为 TJU-DHD 的多样化高分辨率数据集，专门针对交通和校园场景，包含115,354张图像和709,330个标注实例，并基于多种主流检测器提供了基准实验结果。
+
+## 3. 背景与问题
+- **为什么要做**：实际应用（如自动驾驶和视频监控）对车辆、行人和骑行者的检测精度要求很高，尤其是小目标检测。现有数据集存在不足。
+- **之前方法的问题**：
+    - 通用大型数据集（如 MS COCO）从网络收集，不专注于特定应用场景，导致在其上训练的检测器在具体场景中表现不佳。
+    - 现有的特定场景数据集（如 KITTI、Caltech、Citypersons）虽然针对性强，但存在图像数量少、实例数量有限、分辨率低（如 Caltech 的 640x480）或多样性不足（如 ApolloScape 缺乏季节和昼夜变化，BDD100K 分辨率较低为 720p）等问题。
+- **核心矛盾**：实际应用需要大规模、高分辨率、且能覆盖丰富场景变化（如季节、天气、光照）的数据集来训练出鲁棒的检测器，但现有数据集无法同时满足这些需求。
+
+## 4. 核心贡献
+1.  **构建了一个新的多样化高分辨率数据集 TJU-DHD**：该数据集包含 115,354 张高分辨率图像（至少 1624x1200 像素）和 709,330 个标注实例，覆盖了车辆、行人、骑行者等类别，并具有丰富的季节、天气、光照和场景多样性。
+2.  **基于 TJU-DHD 提出了一个大规模行人数据集**：从两个子集中选取包含行人的图像，构建了专门的行人检测数据集，支持在相同场景和跨场景下进行评估。
+3.  **使用四种不同的主流检测器进行了基准实验**：在构建的数据集上，采用一阶段 RetinaNet、无锚框 FCOS、两阶段 FPN 和级联 Cascade R-CNN 四种方法进行物体检测和行人检测实验，提供了基准性能参考。
+
+## 5. 方法详解
+本篇论文的核心“方法”是数据集构建与基准评估流程。
+- **整体框架**：数据集由两个独立的子集构成：TJU-DHD-traffic（交通场景）和 TJU-DHD-campus（校园场景）。
+- **输入输出**：输入是高分辨率原始图像，输出是带有精确边界框`(x1, y1, x2, y2)`标注的物体实例，部分标注还包含遮挡和截断级别信息。
+- **关键模块**：
+    - **数据采集**：交通场景数据由行驶中的车辆采集；校园场景数据由多种移动设备拍摄。
+    - **标注规范**：交通场景标注了5类物体（car, van, truck, pedestrian, rider）；校园场景重点标注了2类（pedestrian, rider）。对于行人，校园子集额外提供了“全身”和“可见部分”两个边界框，以支持遮挡研究。
+    - **数据集划分**：每个子集均划分为训练集、验证集和测试集，具体数量如表格 I 所示。
+- **模块连接**：从多源数据采集 -> 按场景划分为两个子集 -> 对每个子集内的图像进行精细标注 -> 按固定比例划分训练/验证/测试集。
+- **训练与推理**：论文本身未提出新模型，而是将构建的数据集用于评估现有检测器（RetinaNet, FCOS, FPN, Cascade R-CNN）。评估流程遵循标准的目标检测训练和测试协议。
+- **与已有方法的差异**：
+    - **分辨率**：远高于 Caltech (640x480)、BDD100K (720p)，与 KITTI (1240x376) 和 Citypersons (2048x1024) 相比，图像尺寸更大或更丰富。
+    - **多样性**：明确覆盖了季节、天气、光照（昼夜、顺逆光）的变化，这在 ApolloScape 等数据集中是缺失的。
+    - **跨场景**：同时包含交通和校园两个差异明显的场景，这区别于仅关注单一交通场景的 KITTI 或 BDD100K。
+
+## 6. 实验与结果
+- **使用的数据集**：本文构建的 TJU-DHD 及其子集 TJU-DHD-traffic 和 TJU-DHD-campus。
+- **对比方法**：实验并非对比不同数据集，而是在 TJU-DHD 上评估了**四种不同的检测器**：一阶段方法 RetinaNet、无锚框方法 FCOS、两阶段方法 FPN 和级联方法 Cascade R-CNN。
+- **评价指标**：PDF 提取文本中未明确列出具体使用的评价指标（如 mAP），但根据目标检测领域的惯例，应为平均精度（AP）及其变体。
+- **主实验结果**：PDF 提取的文本主要呈现了数据集统计信息和可视化示例，**具体的检测性能数字（如各方法在测试集上的 mAP）在提供的文本片段中未明确给出**。论文意图是提供这些基准结果供后续研究参考。
+- **消融实验**：PDF 提取文本中未发现关于消融实验的明确说明。
+- **泛化实验**：PDF 提取文本中未发现专门的泛化实验描述，但跨场景的行人数据集设计本身就蕴含了跨场景评估的意图。
+- **速度/参数量/FLOPs**：PDF 提取文本中未提供这些效率信息。
+
+## 7. 这篇论文真正有价值的地方
+1.  **填补了数据集空白**：它针对“高分辨率、特定场景、高多样性”这一实际需求，构建了一个规模可观的数据集，弥补了现有数据集在分辨率或多样性上的不足。
+2.  **提供了宝贵的基准**：在多个主流检测器上给出了基准结果，为后续研究者在此数据集上改进方法提供了清晰的起点和对比标准。
+3.  **强调了数据集的“现实世界”属性**：通过覆盖昼夜、季节、天气变化，数据集更贴近真实世界的复杂情况，训练出的模型鲁棒性潜力更高。
+4.  **对后续研究的启发**：
+    - 设计数据集时应充分考虑目标场景的实际变化。
+    - 为特定应用（如自动驾驶感知）构建专用、高质量数据集是推动技术落地的关键。
+    - 在论文中，提供清晰的数据集统计和基准结果是使其具有长期价值的重要方式。
+
+## 8. 局限与问题
+- **场景局限性**：数据集专注于交通和校园两个场景，可能无法直接推广到其他复杂场景（如室内、密集人群活动）。
+- **高分辨率带来的挑战**：高分辨率图像虽然包含更多细节，但也带来了更高的存储、传输和计算成本，可能限制其在资源受限设备上的应用研究。
+- **标注的完备性**：虽然提供了遮挡级别，但文本中未提及是否对每个实例都有逐像素的语义标注或更细粒度的部件标注。
+- **实验深度**：提供的实验仅限于四种标准检测器的基准测试，缺乏对数据集特性（如多样性、小目标）如何影响模型性能的深入消融分析。
+- **复现风险**：虽然数据集已开源，但其完全复现依赖于原始采集设备和数据收集流程，这可能难以被其他团队完全复制。
+
+## 9. 我该怎么使用这篇论文
+- **如果快速了解**：只需阅读**摘要**、**引言**（Section I）以及**数据集详情**（Section III）的概述部分和图表（图1, 3, 4, 5, 6），即可掌握数据集的核心特点。
+- **如果复现**：重点阅读**Section III (Our Dataset Details)**，特别是子集划分、标注规范和统计信息（表格 I, 图3-6），这是理解数据集结构和特性的关键。
+- **如果借鉴创新点**：应学习其**数据集构建思路**——如何定义场景、选择类别、设计标注规范（如双边界框标注行人）以及展现数据多样性。**基准评估的实验设置**（选用哪些检测器、如何划分数据）也值得参考。
+- **如果写 Related Work**：本文可归类为“**特定场景目标检测数据集**”或“**高分辨率目标检测数据集**”部分，与 KITTI, Cityscapes, ApolloScape, BDD100K, CityPersons, EuroCity 等并列讨论。
+
+## 10. 和其他论文的关系
+基于论文主题和内容，可能相关的其他论文包括：
+- 其他交通场景数据集：[[KITTI]]， [[Cityscapes]]， [[ApolloScape]]， [[BDD100K]]
+- 其他行人检测数据集：[[Caltech]]， [[CityPersons]]， [[EuroCity]]， [[CrowdHuman]]
+- 本文使用的方法论文：[[RetinaNet]]， [[FCOS]]， [[FPN]]， [[Cascade R-CNN]]
+
+## 11. 关键词
+数据集， 目标检测， 行人检测， 高分辨率， 大规模， 多样性， 交通场景， 校园场景， 基准， 小目标检测， 遮挡
+
+## 12. 可信度说明
+本精读笔记主要基于提供的 PDF 提取文本的前 12 页内容生成，涵盖了论文的摘要、引言、相关工作、数据集详情及部分图表信息。提取文本质量较好，覆盖了论文的核心介绍和数据集描述部分。然而，**关于具体实验结果（如各项AP值）和部分方法细节（如检测器在本文数据集上的具体训练参数）在提供的文本中未明确提及**，因此笔记中相关部分标注为“PDF 文本中未明确说明”或基于常识进行描述。
+
+---
+
+> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2086 字符/页)); 来源缓存: `.paper-cache/extracts/2020_TJU-DHD_A_Diverse_H.txt` (13/13 页; 原 AI 主体 12/13 + 全文补读 13-13); 生成日期: 2026-06-04; 模式: LLM (mimo-v2.5-pro).
+## 全文补读记录
+
+- **补读日期**: 2026-06-08
+- **补读范围**: PDF p.13; 原 AI 主体覆盖 p.1-12, 本记录补足到 p.1-13。
+- **提取情况**: 缺失页 1 页, 其中 1 页提取到可读文本。缺失页主要为参考文献或文献列表, 对方法和实验正文影响较小。
+- **状态说明**: 这是 AI 全文覆盖补读, 不是人工精读复核；`human_reviewed` 仍应保持 `false`。
+
+### 缺失页章节线索
+
+- p.13: IEEE TRANSACTIONS ON IMAGE PROCESSING 13
+
+### 缺失页关键摘录
+
+- p.13: detection benchmark,” Proc. IEEE Conference on Computer Vision and
+- p.13: [75] S. Zhang, R. Benenson, and B. Schiele, “Citypersons: A diverse dataset
+<!-- AI_READING_NOTE_END -->

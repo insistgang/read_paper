@@ -10,8 +10,6 @@
      - 推荐 (仅 source_basis=pdf-text 时要求): authors, year, venue,
        topics, source_basis, reading_stage, confidence
   4. PDF 重复 (按 md5)
-  5. 00-Inbox 残留 (有 PDF 但没导入到 01-Papers)
-  6. 04-Attachments/PDFs/ 不再作为论文主入口 (警告)
 
 退出码:
   0  一切正常
@@ -24,11 +22,16 @@ import hashlib
 import re
 import sys
 from pathlib import Path
+from typing import Optional
 
 # 必填: 不管骨架还是完整笔记都要有
 REQUIRED_FM_FIELDS = {"title", "pdf", "primary_topic", "status", "date_added", "tags"}
 # 推荐: 完整笔记应该有, 骨架阶段(source_basis=filename)允许空
 RECOMMENDED_FM_FIELDS = {"authors", "year", "venue", "topics", "source_basis", "reading_stage", "confidence"}
+AI_START_MARKER = "<!-- AI_READING_NOTE_START -->"
+AI_END_MARKER = "<!-- AI_READING_NOTE_END -->"
+AI_REQUIRED_HEADINGS = tuple(f"## {number}." for number in range(1, 13))
+COVERAGE_RE = re.compile(r"\((\d+)/(\d+)\s*页(?:\)|[;；])")
 
 
 def md5_of(path: Path, chunk: int = 1 << 20) -> str:
@@ -51,15 +54,97 @@ def parse_frontmatter(md_text: str) -> dict[str, str]:
         return {}
     block = md_text[3:end].strip()
     out: dict[str, str] = {}
-    for line in block.splitlines():
-        line = line.rstrip()
+    lines = block.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i].rstrip()
         if not line or line.startswith("#") or line.startswith("-"):
-            # 简化: 不展开 list/block, 只把第一行 key: value 抓出来
+            i += 1
             continue
         m = re.match(r"^([A-Za-z_][\w-]*)\s*:\s*(.*?)\s*$", line)
-        if m:
-            out[m.group(1)] = m.group(2)
+        if not m:
+            i += 1
+            continue
+        key, value = m.group(1), m.group(2)
+        i += 1
+        list_items = []
+        while i < len(lines):
+            item = re.match(r'^\s+-\s+(.+?)\s*$', lines[i])
+            if not item:
+                break
+            list_items.append(item.group(1).strip())
+            i += 1
+        out[key] = f"[{', '.join(list_items)}]" if list_items else value
     return out
+
+
+def is_blank_frontmatter_value(value: str) -> bool:
+    normalized = value.strip().strip('"').strip("'").strip()
+    return normalized in {"", "[]", "null", "None", "~"}
+
+
+def frontmatter_scalar(value: str) -> str:
+    return value.strip().strip('"').strip("'").strip()
+
+
+def parse_coverage_marker(text: str) -> Optional[tuple[int, int]]:
+    """解析 `(N/M 页)` 和补读后的 `(M/M 页; 原 AI 主体...)` 覆盖标记。"""
+    match = COVERAGE_RE.search(text)
+    if not match:
+        return None
+    return int(match.group(1)), int(match.group(2))
+
+
+def check_ai_note(md_path: Path, text: str, fm: dict[str, str]) -> tuple[list[str], list[str]]:
+    """检查 AI 笔记状态、区块结构和提取覆盖范围。"""
+    errors, warnings = [], []
+    status = frontmatter_scalar(fm.get("status", ""))
+    start_count = text.count(AI_START_MARKER)
+    end_count = text.count(AI_END_MARKER)
+
+    if status == "ai-read":
+        if start_count != 1 or end_count != 1:
+            errors.append(
+                f"[AI 区块错误] {md_path.name}: "
+                f"START={start_count}, END={end_count}, ai-read 必须各有 1 个"
+            )
+            return errors, warnings
+
+        ai_block = text.split(AI_START_MARKER, 1)[1].split(AI_END_MARKER, 1)[0]
+        missing = [heading for heading in AI_REQUIRED_HEADINGS if heading not in ai_block]
+        if missing:
+            errors.append(
+                f"[AI 章节缺失] {md_path.name}: {', '.join(missing)}"
+            )
+        if "无 LLM 模式" in ai_block:
+            errors.append(f"[AI fallback 残留] {md_path.name}")
+
+        coverage = parse_coverage_marker(ai_block)
+        if coverage and coverage[0] < coverage[1]:
+            warnings.append(
+                f"[AI 提取不完整] {md_path.name}: "
+                f"只覆盖 {coverage[0]}/{coverage[1]} 页"
+            )
+
+    if status == "extraction_failed":
+        expected = {
+            "reading_stage": "extraction-failed",
+            "confidence": "low",
+            "source_basis": "pdf-extraction-failed",
+        }
+        mismatches = []
+        for key, expected_value in expected.items():
+            actual = frontmatter_scalar(fm.get(key, ""))
+            if actual != expected_value:
+                mismatches.append(f"{key}={actual or '(空)'}")
+        if start_count or end_count:
+            mismatches.append(f"AI markers={start_count}/{end_count}")
+        if mismatches:
+            errors.append(
+                f"[提取失败状态错误] {md_path.name}: " + ", ".join(mismatches)
+            )
+
+    return errors, warnings
 
 
 # 统一"非论文笔记"排除规则 (跟 start.sh / scripts/paper / generate_skeleton_notes 一致):
@@ -113,13 +198,28 @@ def check_library(papers: Path, notes: Path) -> tuple[list, list]:
         if missing:
             warnings.append(f"[frontmatter 缺字段] {md_path.name}: {', '.join(sorted(missing))}")
         # 推荐字段: 只在 source_basis == 'pdf-text' 时警告, 骨架阶段不警告
-        if fm.get("source_basis") == "pdf-text":
+        document_type = frontmatter_scalar(fm.get("document_type", "paper")) or "paper"
+        if frontmatter_scalar(fm.get("source_basis", "")) == "pdf-text" and document_type != "supplementary":
             optional_missing = RECOMMENDED_FM_FIELDS - set(fm.keys())
             if optional_missing:
                 warnings.append(
                     f"[推荐字段缺失 - 完整笔记阶段] {md_path.name}: "
                     f"{', '.join(sorted(optional_missing))}"
                 )
+            optional_blank = sorted(
+                field
+                for field in RECOMMENDED_FM_FIELDS
+                if field in fm and is_blank_frontmatter_value(fm[field])
+            )
+            if optional_blank:
+                warnings.append(
+                    f"[推荐字段为空 - 完整笔记阶段] {md_path.name}: "
+                    f"{', '.join(optional_blank)}"
+                )
+
+        ai_errors, ai_warnings = check_ai_note(md_path, text, fm)
+        errors.extend(ai_errors)
+        warnings.extend(ai_warnings)
 
     # 4. PDF 重复 (md5)
     by_hash: dict[str, list[Path]] = {}
@@ -138,33 +238,6 @@ def check_library(papers: Path, notes: Path) -> tuple[list, list]:
             )
 
     return errors, warnings
-
-
-def check_inbox(inbox: Path) -> list:
-    warnings = []
-    if not inbox.is_dir():
-        return []
-    pdfs = list(inbox.glob("*.pdf"))
-    mds = list(inbox.glob("*.md"))
-    if pdfs and not mds:
-        warnings.append(
-            f"[00-Inbox 残留] {len(pdfs)} 个 PDF 没导入到 01-Papers, "
-            f"跑 ./start.sh 选项 2 或 scripts/paper_ai.py batch 处理"
-        )
-    return warnings
-
-
-def check_attachments_pdfs(att: Path) -> list:
-    warnings = []
-    if not att.is_dir():
-        return []
-    pdfs = list(att.glob("*.pdf"))
-    if pdfs:
-        warnings.append(
-            f"[04-Attachments/PDFs 残留] {len(pdfs)} 个 PDF, 当前约定 PDF 应在 01-Papers/. "
-            f"如果是临时附件可忽略, 否则建议合并到 01-Papers/。"
-        )
-    return warnings
 
 
 def main():
@@ -188,15 +261,11 @@ def main():
 
     papers = root / "01-Papers"
     notes = root / "02-Notes" / "Papers"
-    inbox = root / "00-Inbox"
-    attachments = root / "04-Attachments" / "PDFs"
     verbose = args.verbose
 
     print(f"📚 论文库健康检查 — 根目录: {root}\n")
 
     errs, warns = check_library(papers, notes)
-    warns += check_inbox(inbox)
-    warns += check_attachments_pdfs(attachments)
 
     # 统计
     pdf_count = len(list(papers.glob("*.pdf"))) if papers.is_dir() else 0

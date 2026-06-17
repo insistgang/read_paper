@@ -17,7 +17,7 @@ Thumbs.db
 *.temp
 ~*
 
-# PDF files (默认不跟踪, 改用 Git LFS 或在 04-Attachments/PDFs 单独管理)
+# PDF files (默认不跟踪; 如需 Git 同步大文件请改用 Git LFS)
 *.pdf
 
 # Large files
@@ -86,3 +86,7 @@ pip-delete-this-directory.txt
 
 # AI 提取的 PDF 文本缓存 (机器辅助用, 不进正式知识库)
 .paper-cache/
+
+# mavis/opencode 工具产物 (防止 plan 引擎把 node_modules 装到仓库里)
+.opencode/
+01-Papers/.opencode/

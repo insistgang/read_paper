@@ -1,74 +1,279 @@
 ---
-title: "HiFi Mamba MRI重建 HiFi Mamba MRI Reconstruction"
-pdf: "[[HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction.pdf]]"
-primary_topic: "A1_医学图像_分割"
-topics: [A1_医学图像_分割]
-status: unread
-reading_stage: filename-only
-confidence: low
-source_basis: filename
+title: "HiFi-Mamba: Dual-Stream w-Laplacian Enhanced Mamba for High-Fidelity"
+authors:
+  - "Hongli Chen"
+  - "Pengcheng Fang"
+  - "Yuxia Chen"
+  - "Yingxuan Ren"
+  - "Jing Hao"
+  - "Fangfang Tang"
+  - "Xiaohao Cai"
+  - "Shanshan Shan"
+  - "Feng Liu"
+year: 2025
+venue: pensable modality due to its non-invasive nature and ex-
+doi: 
+pdf: [[HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction.pdf]]
+primary_topic: A1_医学图像_分割
+topics:
+  - "A1_医学图像_分割"
+status: ai-read
+reading_stage: ai-complete
+confidence: high
+source_basis: pdf-text
 date_added: 2026-06-03
-tags: [paper]
+rating: 
+tags:
+  - "paper"
+ai_generated: true
+human_reviewed: false
+ai_generated_at: 2026-06-05
+extract_cache: .paper-cache/extracts/HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction.txt
 ---
 
-# HiFi Mamba MRI重建 HiFi Mamba MRI Reconstruction
+# HiFi-Mamba: Dual-Stream w-Laplacian Enhanced Mamba for High-Fidelity
 
 ## 基本信息
 - **PDF**: [[HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction.pdf]]
 - **primary_topic**: `A1_医学图像_分割`
 - **topics**: `A1_医学图像_分割`
-- **状态**: unread (仅根据文件名推断, 待阅读全文确认)
+- **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
-## 文件名推断
+## 文章信息
 
-> 仅根据文件名推断, 未读 PDF 内容。读完 PDF 后请把 `source_basis` 改为 `pdf-text`,
-> 并把 `confidence` / `reading_stage` 升级。
+| 项目 | 内容 |
+|------|------|
+| **题目** | HiFi-Mamba: Dual-Stream w-Laplacian Enhanced Mamba for High-Fidelity |
+| **作者** | Hongli Chen; Pengcheng Fang; Yuxia Chen; Yingxuan Ren; Jing Hao; Fangfang Tang; Xiaohao Cai; Shanshan Shan; Feng Liu |
+| **发表时间** | 2025 |
+| **刊物/会议** | pensable modality due to its non-invasive nature and ex- |
+| **DOI** | 未明确 |
 
-**提取的关键词**:
+## 摘要
 
-- HiFi-Mamba
-- MRI
-- 重建
+> Reconstructinghigh-fidelityMRimagesfromundersampled k-space data remains a challenging problem in MRI. While Mambavariantsforvisiontasksofferpromisinglong-range modeling capabilities with linear-time complexity, their di- rectapplicationtoMRIreconstructioninheritstwokeylim- itations: (1) insensitivity to high-frequency anatomical de- tails; and (2) reliance on redundant multi-directional scan- ning.Toaddresstheselimitations,weintroduceHigh-Fidelity Mamba (HiFi-Mamba), a novel dual-stream Mamba-based architecturecomprisingstackedw-Laplacian(WL)andHiFi- Mambablocks.Specifically,theWLblockperformsfidelity- preserving spectral decoupling, producing complementary low- and high-frequency streams. This separation enables theHiFi-Mambablocktofocusonlow-frequencystructures, enhancing global feature modeling. Concurrently, the HiFi- Figure1:Illustrationofscanninganddecoupling.(a)Scan- Mamba block selectively integrates high-frequency features ningstrategies.Multi-directionalscanningintroducesred
 
-**文件名模式**: `HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction`
+> **来源**: PDF 自动提取，需人工复核。
 
-## 可能研究方向
+## 研究背景与动机
 
-> 基于 primary_topic + topics 推测, 仅作入门指引。
-
-- 属于主题: **A1_医学图像_分割**
-- 关联主题: (无)
-
-## 待读问题
-
-> 读 PDF 前先列 2-3 个你想在论文里找到答案的问题。
-
-1.
-2.
-3.
-
-## 阅读笔记
-
-> 边读边记; 用 `[[双链]]` 关联到其他论文笔记 / 主题首页。
-
+- **为什么要做**：MRI采集时间长，为加速扫描而对k空间数据进行欠采样会违反奈奎斯特采样定理，导致图像出现混叠伪影和质量下降。因此，需要先进的重建算法从欠采样数据中恢复高质量图像。
+- **之前方法的问题**：
+    1.  **传统压缩感知（CS）方法**：需要大量超参数调优，对采样模式和噪声变化鲁棒性差。
+    2.  **基于CNN的方法**：得益于其层次化和局部特征提取能力，但**感受野有限**，难以捕捉重建全局解剖结构所必需的**长程依赖关系**，尤其在高度欠采样条件下。
+    3.  **基于Transformer的方法**：通过自注意力机制能建模全局依赖，但标准Transformer的计算复杂度是**二次方级别**，对高分辨率MRI应用构成挑战。其高效变体（如Swin Transformer）通过窗口注意力限制了感受野，牺牲了全局建模能力。
+    4.  **直接将Mamba应用于MRI重建**：存在三个根本性局限：a) 现有的多方向空间扫描策略引入**计算冗余**；b) 其状态空间参数仅通过局部变换独立生成，**缺乏空间邻域上下文**；c) 对重建中至关重要的**高频解剖细节不敏感**。
+- **核心矛盾**：如何在保持**计算效率**（线性复杂度）的同时，有效捕捉**全局上下文依赖**，并特别关注对图像质量至关重要的**高频细节**。
 ## 关键贡献
 
-> 读完填
-
+1.  **提出了一个新颖的HiFi-Mamba块**：该块采用高效的双流架构。它使用**单向扫描**来提升效率，并引入**跨流指导机制**来解决Mamba固有的局部性和高频不敏感性问题。
+2.  **设计了一个轻量级的ω-Laplacian块**：该块执行保真度保持的频谱解耦，将特征分解为**高频和低频两个互补的流**，从而实现频率感知的双流处理。
+3.  **在公共MRI基准上取得了最先进的结果**：在多个评估场景中，HiFi-Mamba一致地超越了领先的CNN、Transformer和Mamba基线模型。
+4.  **建立了重建保真度和计算效率之间的优越平衡**：在提升性能的同时，模型设计紧凑且高效。
 ## 方法
 
-> 读完填
+**整体框架**：HiFi-Mamba遵循**展开优化框架**，网络骨干由K=8个级联的HiFi-Mamba组（Group）构成。每个组包含两个连续的Mamba单元（Unit）用于特征精炼，后接一个数据一致性（DC）块。DC块将原始采集的k空间测量值强制融入重建过程中。
 
+**输入输出**：
+- **输入**：欠采样图像 `I_in ∈ R^{H×W×2}`，是一个两通道张量，代表复值MR数据的实部和虚部。
+- **输出**：重建图像 `I_out ∈ R^{H×W×2}`。
+
+**关键模块与连接**：
+1.  **补丁嵌入**：输入图像首先通过补丁嵌入操作 `P(·)` 转换为补丁嵌入 `F_in`。
+2.  **Mamba单元**：每个单元是核心模块，采用**非对称双流**架构。
+    - **流准备（频率解耦）**：输入特征图 `F_in` 被拆分为 `F1` 和 `F2`。`F1` 经过 **ω-Laplacian (WL) 块**，分解为低频成分 `F_low` 和残余高频成分 `F'_high`。`F2` 与 `F'_high` 逐元素相加，形成最终的高频流 `F_high`。
+    - **非对称并行处理**：
+        - **高频流**：`F_high` 首先经过一个**条件精炼模块（CRM）** 提取解剖引导特征 `G`。`G` 再经过第二个CRM精炼得到 `F̃_high`。CRM是一个用于跨分辨率特征变换的模块。
+        - **低频流**：`F_low` 在**HiFi-Mamba块**中处理，该块在 `G` 的明确指导下进行长程依赖建模，输出 `F̃_low`。这种**跨流指导**将高频线索注入全局上下文建模。
+    - **双流融合**：`F̃_low` 和 `F̃_high` 被拼接后，由**双流融合注意力（DSFA）** 模块融合，生成 `F_fused`。最终单元输出 `F_out = F_fused + F_in`（残差连接）。
+3.  **ω-Laplacian块**：执行保真度保持的频谱解耦。它用小波变换替代了传统拉普拉斯金字塔的分辨率分解，实现结构化、可逆的频率分离。具体为：对输入 `F1` 先CRM精炼，然后进行2D离散小波变换，对低频子带LL上采样得到低频基 `F_low`，再从精炼特征中减去 `F_low` 得到高频残差 `F_high`。
+4.  **HiFi-Mamba块**：专门处理低频特征 `F_low` 并受 `G` 指导。
+    - **初始参数生成**：从 `F_low` 生成初始状态空间参数（B, C, Δ），此阶段包含局部卷积上下文但尚未受高频流指导。
+    - **跨频率指导**：从引导图 `G` 生成指导项 `B_h` 和 `C_h`，通过门控机制（GELU和逐元素乘）动态滤波，然后将其与初始参数 B, C 相加，实现对SSM输入投影和输出投影的动态调制，从而将高频信息注入模型。
+    - **空间感知精炼**：对参数 Δ, B, C 分别应用一维深度卷积，使每个token的参数能受到其空间邻域的影响，注入局部上下文。
+    - **输出生成**：使用精炼后的参数进行选择性扫描（Selective Scan）得到 `F_ssm`，最终输出 `F̃_low = Linear_out(F_ssm ⊙ SiLU(Z))`，结合了长程上下文和局部特征。
+5.  **数据一致性（DC）块**：每个HiFi-Mamba组之后和网络最终输出前都应用，确保重建结果与原始k空间数据一致。
+
+**训练方式**：使用AdamW优化器，初始学习率1e-3，余弦退火加5个epoch预热，共训练100个epoch，批大小为4，采用L1损失函数。
+
+**推理流程**：输入欠采样图像 → 补丁嵌入 → 经过8个级联的HiFi-Mamba组（每个组内包含两个Mamba单元处理后接一个DC块） → 反补丁化 → 最终图像域DC块 → 输出重建图像。
+
+**和已有方法的差异**：
+- 相比多方向扫描的Mamba（如vMamba），采用**单向扫描**避免重复访问，减少冗余计算。
+- 相比直接应用Mamba，引入了**频率解耦（WL块）** 和**跨流指导机制**，显式处理高低频信息，增强了高频敏感性。
+- 通过**空间感知精炼**（深度卷积），弥补了Mamba参数生成过于局部化的缺陷。
 ## 实验
 
-> 读完填
-
+- **使用的数据集**：
+    1.  **fastMRI (knee)**：1,172例单线圈冠状面膝关节扫描，使用质子密度脂肪抑制（PDFS）子集，矩阵大小320×320。
+    2.  **CC359 (brain)**：临床扫描的原始脑部MR数据，矩阵大小256×256。
+- **对比方法**：
+    - CNN-based: UNet, ISTA-Net
+    - Transformer-based: ReconFormer, FPSFormer
+    - Mamba-based: LMO
+- **评价指标**：PSNR (↑), SSIM (↑), NMSE (↓)。
+- **主实验结果** (基于Table 1)：
+    - **HiFi-Mamba (P2，补丁大小为2)** 在大多数评估场景下一致优于现有方法。
+    - 在**AF=8（8倍加速）** 时提升尤其显著：在fastMRI上PSNR达31.38 dB（LMO为31.10 dB），在CC359上PSNR达28.08 dB（LMO为27.99 dB）。
+    - **HiFi-Mamba (P1，补丁大小为1)** 性能更优，例如在CC359 4x AF下PSNR达到36.93 dB（LMO为35.35 dB）。
+- **消融实验**：PDF文本中未找到专门的消融实验表格或详细描述。
+- **泛化实验**：在两个不同解剖部位（膝关节、脑部）的数据集上均表现优异，证明了良好的泛化能力。
+- **效率信息** (基于Table 2，但文本不完整)：
+    - FLOPs：ReconFormer为270.60G，FPSFormer为200.45G，LMO为484.98G。HiFi-Mamba的FLOPs数据在提供的文本中未完整显示，但文中强调其保持了“紧凑和高效的模型设计”，且LMO因使用4方向扫描FLOPs很高。
+    - 模型参数量在提供的文本中未明确说明。
 ## 局限
 
-> 读完填
+1.  **实验设置的全面性**：PDF文本中未展示完整的消融实验（例如，跨流指导、空间感知精炼、单向扫描各贡献多少性能？），这使得其核心创新点的有效性验证不够充分。
+2.  **数据集局限**：实验仅在两个MRI数据集（膝盖、大脑）上进行，且均为单线圈。其在其他模态（如多线圈MRI、CT、超声）或更复杂解剖结构上的泛化性未得到验证。
+3.  **计算成本**：尽管声称效率改进，但未提供与ReconFormer、FPSFormer等Transformer方法详细FLOPs对比的完整表格。基于LMO的484.98G FLOPs，HiFi-Mamba的实际计算开销需结合完整数据评估。
+4.  **对采样模式的依赖**：实验使用的是等间距1D笛卡尔欠采样掩模。在更复杂、非笛卡尔或学习到的采样模式下，其性能是否稳定有待考察。
+5.  **复杂性与可复现性**：方法结合了多个新颖模块（WL块、带指导的HiFi-Mamba块、CRM、DSFA），整体框架相对复杂。论文提供了代码链接，但完整的复现和调试可能仍有一定门槛。
+## 个人评论
 
-## 相关论文
+1.  **架构设计思路**：提出了**“频率解耦 + 双流异步处理 + 跨流指导”** 的范式，专门针对MRI重建任务中高频细节处理的痛点。这种思路可以启发其他需要同时关注全局结构和精细纹理的图像复原任务（如超分辨率、去噪）。
+2.  **对SSM模型的针对性改造**：没有直接套用Mamba，而是分析其局限性（局部性、高频不敏感、扫描冗余）并给出了具体的、模块化的解决方案（空间感知精炼、跨流指导、单向扫描）。这种“诊断问题-提出针对性改进”的研究方式值得学习。
+3.  **效率与性能的平衡**：通过单向扫描显著降低了计算冗余，同时通过精巧的指导机制提升了高频保持能力，实现了优于前代Mamba模型（LMO）的性能和更优的效率。
+4.  **标准化对比的意识**：论文提到了“采用统一透明的预处理策略”以确保公平比较，并提供了附录细节，这体现了严谨的实验态度。
 
-> 用 `[[]]` 链接到其他论文笔记或主题首页, 例如 [[A1_医学图像_分割]]。
+### 使用建议
 
+- **如果快速了解**：只读 **Abstract**、**Introduction**（特别是第1、2页引出问题的部分）和 **Experiments** 中的 **Table 1** 以及结论段落，即可抓住核心思想与主要结果。
+- **如果复现**：重点精读 **Method** 部分的 **Overall Pipeline** 和 **Mamba Unit** 的描述，结合 **Figure 2** 理解数据流。需要仔细研究 **ω-Laplacian Block** 和 **HiFi-Mamba Block** 的实现细节，并参考附录中的预处理策略和超参数设置。
+- **如果借鉴创新点**：
+    - 学习其**频率解耦**的思想，可将类似的双流机制用于其他需要区分高低频信息的任务（如图像去模糊）。
+    - 学习其**跨模态/流指导**的机制，尝试将一个分支的特征（如边缘图）作为先验指导另一个分支的主干网络。
+    - 学习其**单向扫描策略**，思考在视觉任务中如何简化或改进Mamba的扫描方式以提升效率。
+- **如果写Related Work**：可将其归类于以下几部分：1) 基于深度学习的MRI重建；2) 状态空间模型（特别是Mamba）在视觉领域的应用；3) 频率感知的神经网络设计。
+## 相关论文与链接
+
+> 用 `[[]]` 链接到其他论文笔记或主题首页：
+> - [[A1_医学图像_分割]]
+> - [[论文知识库总览]]
+
+---
+
+#paper #read
+
+<!-- AI_READING_NOTE_START -->
+# 论文精读
+
+## 1. 论文定位
+这篇论文属于**医学图像重建**方向，具体是**磁共振成像（MRI）重建**。它旨在解决从欠采样的k空间数据（频率域数据）中重建出高保真度MR图像这一临床关键问题。该研究的主要范式是基于深度学习的图像重建。因此，本文最适合放在**“A1_医学图像_分割”**主题下，尽管其核心任务是“重建”而非“分割”，但都属于医学图像分析的核心领域。
+
+## 2. 一句话总结
+这篇论文提出了**HiFi-Mamba**，一个基于状态空间模型（SSM）的双流架构，通过频率解耦和单向扫描策略，解决了Mamba在MRI重建中高频细节丢失和计算冗余的问题，从而实现了高效且高保真的图像重建。
+
+## 3. 背景与问题
+- **为什么要做**：MRI采集时间长，为加速扫描而对k空间数据进行欠采样会违反奈奎斯特采样定理，导致图像出现混叠伪影和质量下降。因此，需要先进的重建算法从欠采样数据中恢复高质量图像。
+- **之前方法的问题**：
+    1.  **传统压缩感知（CS）方法**：需要大量超参数调优，对采样模式和噪声变化鲁棒性差。
+    2.  **基于CNN的方法**：得益于其层次化和局部特征提取能力，但**感受野有限**，难以捕捉重建全局解剖结构所必需的**长程依赖关系**，尤其在高度欠采样条件下。
+    3.  **基于Transformer的方法**：通过自注意力机制能建模全局依赖，但标准Transformer的计算复杂度是**二次方级别**，对高分辨率MRI应用构成挑战。其高效变体（如Swin Transformer）通过窗口注意力限制了感受野，牺牲了全局建模能力。
+    4.  **直接将Mamba应用于MRI重建**：存在三个根本性局限：a) 现有的多方向空间扫描策略引入**计算冗余**；b) 其状态空间参数仅通过局部变换独立生成，**缺乏空间邻域上下文**；c) 对重建中至关重要的**高频解剖细节不敏感**。
+- **核心矛盾**：如何在保持**计算效率**（线性复杂度）的同时，有效捕捉**全局上下文依赖**，并特别关注对图像质量至关重要的**高频细节**。
+
+## 4. 核心贡献
+1.  **提出了一个新颖的HiFi-Mamba块**：该块采用高效的双流架构。它使用**单向扫描**来提升效率，并引入**跨流指导机制**来解决Mamba固有的局部性和高频不敏感性问题。
+2.  **设计了一个轻量级的ω-Laplacian块**：该块执行保真度保持的频谱解耦，将特征分解为**高频和低频两个互补的流**，从而实现频率感知的双流处理。
+3.  **在公共MRI基准上取得了最先进的结果**：在多个评估场景中，HiFi-Mamba一致地超越了领先的CNN、Transformer和Mamba基线模型。
+4.  **建立了重建保真度和计算效率之间的优越平衡**：在提升性能的同时，模型设计紧凑且高效。
+
+## 5. 方法详解
+**整体框架**：HiFi-Mamba遵循**展开优化框架**，网络骨干由K=8个级联的HiFi-Mamba组（Group）构成。每个组包含两个连续的Mamba单元（Unit）用于特征精炼，后接一个数据一致性（DC）块。DC块将原始采集的k空间测量值强制融入重建过程中。
+
+**输入输出**：
+- **输入**：欠采样图像 `I_in ∈ R^{H×W×2}`，是一个两通道张量，代表复值MR数据的实部和虚部。
+- **输出**：重建图像 `I_out ∈ R^{H×W×2}`。
+
+**关键模块与连接**：
+1.  **补丁嵌入**：输入图像首先通过补丁嵌入操作 `P(·)` 转换为补丁嵌入 `F_in`。
+2.  **Mamba单元**：每个单元是核心模块，采用**非对称双流**架构。
+    - **流准备（频率解耦）**：输入特征图 `F_in` 被拆分为 `F1` 和 `F2`。`F1` 经过 **ω-Laplacian (WL) 块**，分解为低频成分 `F_low` 和残余高频成分 `F'_high`。`F2` 与 `F'_high` 逐元素相加，形成最终的高频流 `F_high`。
+    - **非对称并行处理**：
+        - **高频流**：`F_high` 首先经过一个**条件精炼模块（CRM）** 提取解剖引导特征 `G`。`G` 再经过第二个CRM精炼得到 `F̃_high`。CRM是一个用于跨分辨率特征变换的模块。
+        - **低频流**：`F_low` 在**HiFi-Mamba块**中处理，该块在 `G` 的明确指导下进行长程依赖建模，输出 `F̃_low`。这种**跨流指导**将高频线索注入全局上下文建模。
+    - **双流融合**：`F̃_low` 和 `F̃_high` 被拼接后，由**双流融合注意力（DSFA）** 模块融合，生成 `F_fused`。最终单元输出 `F_out = F_fused + F_in`（残差连接）。
+3.  **ω-Laplacian块**：执行保真度保持的频谱解耦。它用小波变换替代了传统拉普拉斯金字塔的分辨率分解，实现结构化、可逆的频率分离。具体为：对输入 `F1` 先CRM精炼，然后进行2D离散小波变换，对低频子带LL上采样得到低频基 `F_low`，再从精炼特征中减去 `F_low` 得到高频残差 `F_high`。
+4.  **HiFi-Mamba块**：专门处理低频特征 `F_low` 并受 `G` 指导。
+    - **初始参数生成**：从 `F_low` 生成初始状态空间参数（B, C, Δ），此阶段包含局部卷积上下文但尚未受高频流指导。
+    - **跨频率指导**：从引导图 `G` 生成指导项 `B_h` 和 `C_h`，通过门控机制（GELU和逐元素乘）动态滤波，然后将其与初始参数 B, C 相加，实现对SSM输入投影和输出投影的动态调制，从而将高频信息注入模型。
+    - **空间感知精炼**：对参数 Δ, B, C 分别应用一维深度卷积，使每个token的参数能受到其空间邻域的影响，注入局部上下文。
+    - **输出生成**：使用精炼后的参数进行选择性扫描（Selective Scan）得到 `F_ssm`，最终输出 `F̃_low = Linear_out(F_ssm ⊙ SiLU(Z))`，结合了长程上下文和局部特征。
+5.  **数据一致性（DC）块**：每个HiFi-Mamba组之后和网络最终输出前都应用，确保重建结果与原始k空间数据一致。
+
+**训练方式**：使用AdamW优化器，初始学习率1e-3，余弦退火加5个epoch预热，共训练100个epoch，批大小为4，采用L1损失函数。
+
+**推理流程**：输入欠采样图像 → 补丁嵌入 → 经过8个级联的HiFi-Mamba组（每个组内包含两个Mamba单元处理后接一个DC块） → 反补丁化 → 最终图像域DC块 → 输出重建图像。
+
+**和已有方法的差异**：
+- 相比多方向扫描的Mamba（如vMamba），采用**单向扫描**避免重复访问，减少冗余计算。
+- 相比直接应用Mamba，引入了**频率解耦（WL块）** 和**跨流指导机制**，显式处理高低频信息，增强了高频敏感性。
+- 通过**空间感知精炼**（深度卷积），弥补了Mamba参数生成过于局部化的缺陷。
+
+## 6. 实验与结果
+- **使用的数据集**：
+    1.  **fastMRI (knee)**：1,172例单线圈冠状面膝关节扫描，使用质子密度脂肪抑制（PDFS）子集，矩阵大小320×320。
+    2.  **CC359 (brain)**：临床扫描的原始脑部MR数据，矩阵大小256×256。
+- **对比方法**：
+    - CNN-based: UNet, ISTA-Net
+    - Transformer-based: ReconFormer, FPSFormer
+    - Mamba-based: LMO
+- **评价指标**：PSNR (↑), SSIM (↑), NMSE (↓)。
+- **主实验结果** (基于Table 1)：
+    - **HiFi-Mamba (P2，补丁大小为2)** 在大多数评估场景下一致优于现有方法。
+    - 在**AF=8（8倍加速）** 时提升尤其显著：在fastMRI上PSNR达31.38 dB（LMO为31.10 dB），在CC359上PSNR达28.08 dB（LMO为27.99 dB）。
+    - **HiFi-Mamba (P1，补丁大小为1)** 性能更优，例如在CC359 4x AF下PSNR达到36.93 dB（LMO为35.35 dB）。
+- **消融实验**：PDF文本中未找到专门的消融实验表格或详细描述。
+- **泛化实验**：在两个不同解剖部位（膝关节、脑部）的数据集上均表现优异，证明了良好的泛化能力。
+- **效率信息** (基于Table 2，但文本不完整)：
+    - FLOPs：ReconFormer为270.60G，FPSFormer为200.45G，LMO为484.98G。HiFi-Mamba的FLOPs数据在提供的文本中未完整显示，但文中强调其保持了“紧凑和高效的模型设计”，且LMO因使用4方向扫描FLOPs很高。
+    - 模型参数量在提供的文本中未明确说明。
+
+## 7. 这篇论文真正有价值的地方
+1.  **架构设计思路**：提出了**“频率解耦 + 双流异步处理 + 跨流指导”** 的范式，专门针对MRI重建任务中高频细节处理的痛点。这种思路可以启发其他需要同时关注全局结构和精细纹理的图像复原任务（如超分辨率、去噪）。
+2.  **对SSM模型的针对性改造**：没有直接套用Mamba，而是分析其局限性（局部性、高频不敏感、扫描冗余）并给出了具体的、模块化的解决方案（空间感知精炼、跨流指导、单向扫描）。这种“诊断问题-提出针对性改进”的研究方式值得学习。
+3.  **效率与性能的平衡**：通过单向扫描显著降低了计算冗余，同时通过精巧的指导机制提升了高频保持能力，实现了优于前代Mamba模型（LMO）的性能和更优的效率。
+4.  **标准化对比的意识**：论文提到了“采用统一透明的预处理策略”以确保公平比较，并提供了附录细节，这体现了严谨的实验态度。
+
+## 8. 局限与问题
+1.  **实验设置的全面性**：PDF文本中未展示完整的消融实验（例如，跨流指导、空间感知精炼、单向扫描各贡献多少性能？），这使得其核心创新点的有效性验证不够充分。
+2.  **数据集局限**：实验仅在两个MRI数据集（膝盖、大脑）上进行，且均为单线圈。其在其他模态（如多线圈MRI、CT、超声）或更复杂解剖结构上的泛化性未得到验证。
+3.  **计算成本**：尽管声称效率改进，但未提供与ReconFormer、FPSFormer等Transformer方法详细FLOPs对比的完整表格。基于LMO的484.98G FLOPs，HiFi-Mamba的实际计算开销需结合完整数据评估。
+4.  **对采样模式的依赖**：实验使用的是等间距1D笛卡尔欠采样掩模。在更复杂、非笛卡尔或学习到的采样模式下，其性能是否稳定有待考察。
+5.  **复杂性与可复现性**：方法结合了多个新颖模块（WL块、带指导的HiFi-Mamba块、CRM、DSFA），整体框架相对复杂。论文提供了代码链接，但完整的复现和调试可能仍有一定门槛。
+
+## 9. 我该怎么使用这篇论文
+- **如果快速了解**：只读 **Abstract**、**Introduction**（特别是第1、2页引出问题的部分）和 **Experiments** 中的 **Table 1** 以及结论段落，即可抓住核心思想与主要结果。
+- **如果复现**：重点精读 **Method** 部分的 **Overall Pipeline** 和 **Mamba Unit** 的描述，结合 **Figure 2** 理解数据流。需要仔细研究 **ω-Laplacian Block** 和 **HiFi-Mamba Block** 的实现细节，并参考附录中的预处理策略和超参数设置。
+- **如果借鉴创新点**：
+    - 学习其**频率解耦**的思想，可将类似的双流机制用于其他需要区分高低频信息的任务（如图像去模糊）。
+    - 学习其**跨模态/流指导**的机制，尝试将一个分支的特征（如边缘图）作为先验指导另一个分支的主干网络。
+    - 学习其**单向扫描策略**，思考在视觉任务中如何简化或改进Mamba的扫描方式以提升效率。
+- **如果写Related Work**：可将其归类于以下几部分：1) 基于深度学习的MRI重建；2) 状态空间模型（特别是Mamba）在视觉领域的应用；3) 频率感知的神经网络设计。
+
+## 10. 和其他论文的关系
+基于提供的主题和论文内容，这篇论文与以下研究方向可能相关：
+- **基于Mamba的视觉模型**：如 `[[vMamba]]`、`[[Vision Mamba (Vim)]]`，本文是其下游任务（MRI重建）的具体应用和改进。
+- **MRI重建领域的Mamba工作**：如文中直接对比的 `[[LMO]]`、`[[MambaMIR]]`，本文针对它们进行了改进。
+- **频率域深度学习**：与一些将小波变换、傅里叶变换融入网络的工作（如 `[[Wavelet-MRI]]`、`[[F-FNet]]`）在思想上有相通之处。
+- **展开优化模型**：与 `[[ADMM-Net]]`、`[[ISTA-Net]]`、`[[DuDoRNet]]` 等模型属于同一类范式，但骨干网络从CNN/Transformer换成了Mamba。
+
+（注：根据用户指令“不确定，少写，不要乱连”，以上 `[[双链]]` 仅为基于主题和内容的合理推测，具体关联需根据实际知识库验证。）
+
+## 11. 关键词
+MRI重建, Mamba, 状态空间模型, 频率解耦, 高频敏感性, 单向扫描, 双流架构, 深度学习, 长程依赖, 计算效率, 图像重建
+
+## 12. 可信度说明
+本精读笔记**完全基于提供的PDF提取文本生成**，未使用任何外部知识或训练数据中的信息。
+- **主要信息来源**：笔记中的方法细节、实验设置和结果（如数据集、对比方法、指标、Table 1中的关键数字）均严格来自文本。
+- **提取质量评估**：文本提取质量良好，涵盖了论文的主要部分（摘要、引言、相关工作、方法、实验）。但存在以下不完整之处：
+    1.  实验结果的**Table 2（效率对比）** 不完整，缺少HiFi-Mamba的FLOPs数据。
+    2.  文本未包含**消融实验**的具体结果表格或段落。
+    3.  部分**附录内容**（如详细预处理策略）未在提取文本中。
+- 对于文本中未明确说明的信息（如完整的消融实验、模型参数量、在其他数据集上的泛化性），笔记中已明确标注“PDF文本中未找到”或“未明确说明”，确保了信息的可靠性。
+
+---
+
+> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2782 字符/页)); 来源缓存: `.paper-cache/extracts/HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction.txt` (9/9 页); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro).
+<!-- AI_READING_NOTE_END -->

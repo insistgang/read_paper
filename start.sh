@@ -12,10 +12,11 @@ show_menu() {
     echo "2. 添加新论文（AI生成笔记）"
     echo "3. 批量处理PDF"
     echo "4. 查看论文统计"
-    echo "5. 配置AI设置"
-    echo "6. 退出"
+    echo "5. 生成阅读质量仪表盘"
+    echo "6. 配置AI设置"
+    echo "7. 退出"
     echo ""
-    read -p "请输入选项 (1-6): " choice
+    read -p "请输入选项 (1-7): " choice
     echo ""
 }
 
@@ -96,6 +97,11 @@ show_stats() {
     done
 }
 
+generate_dashboard() {
+    echo "正在生成阅读质量仪表盘..."
+    python3 scripts/generate_dashboard.py
+}
+
 # 配置AI
 configure_ai() {
     echo "🤖 AI配置"
@@ -122,8 +128,9 @@ while true; do
         2) add_paper ;;
         3) batch_process ;;
         4) show_stats ;;
-        5) configure_ai ;;
-        6) echo "👋 再见!"; exit 0 ;;
+        5) generate_dashboard ;;
+        6) configure_ai ;;
+        7) echo "👋 再见!"; exit 0 ;;
         *) echo "无效选项，请重新选择" ;;
     esac
     

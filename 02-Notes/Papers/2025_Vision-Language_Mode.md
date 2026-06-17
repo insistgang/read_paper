@@ -1,73 +1,259 @@
 ---
-title: "Vision Language Mode"
-pdf: "[[2025_Vision-Language_Mode.pdf]]"
-primary_topic: "G_视觉基础模型_VLM_LLM"
-topics: [G_视觉基础模型_VLM_LLM, R_综述_Survey]
-status: unread
-reading_stage: filename-only
-confidence: low
-source_basis: filename
+title: "Vision-Language Modeling Meets Remote Sensing:"
+authors:
+  - "Xingxing Weng"
+  - "Chao Pang"
+  - "Gui-Song Xia"
+year: 2025
+venue: "Vision-Language Modeling Meets Remote Sensing:"
+doi: 
+pdf: [[2025_Vision-Language_Mode.pdf]]
+primary_topic: G_视觉基础模型_VLM_LLM
+topics:
+  - "G_视觉基础模型_VLM_LLM"
+status: ai-read
+reading_stage: ai-fulltext
+confidence: high
+source_basis: pdf-text
 date_added: 2026-06-03
-tags: [paper]
+rating: 
+tags:
+  - "paper"
+ai_generated: true
+human_reviewed: false
+ai_generated_at: 2026-06-05
+extract_cache: .paper-cache/extracts/2025_Vision-Language_Mode.txt
+full_text_covered: true
+full_text_completed_at: 2026-06-08
+full_text_completion_basis: "AI supplemental pass; original AI block 12/35 pages"
 ---
-
-# Vision Language Mode
+# Vision-Language Modeling Meets Remote Sensing:
 
 ## 基本信息
 - **PDF**: [[2025_Vision-Language_Mode.pdf]]
 - **primary_topic**: `G_视觉基础模型_VLM_LLM`
-- **topics**: `G_视觉基础模型_VLM_LLM`, `R_综述_Survey`
-- **状态**: unread (仅根据文件名推断, 待阅读全文确认)
+- **topics**: `G_视觉基础模型_VLM_LLM`
+- **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
-## 文件名推断
+## 文章信息
 
-> 仅根据文件名推断, 未读 PDF 内容。读完 PDF 后请把 `source_basis` 改为 `pdf-text`,
-> 并把 `confidence` / `reading_stage` 升级。
+| 项目 | 内容 |
+|------|------|
+| **题目** | Vision-Language Modeling Meets Remote Sensing: |
+| **作者** | Xingxing Weng; Chao Pang; Gui-Song Xia |
+| **发表时间** | 2025 |
+| **刊物/会议** | Vision-Language Modeling Meets Remote Sensing: |
+| **DOI** | 未明确 |
 
-**提取的关键词**:
+## 摘要
 
-- Vision-Language
-- Mode
+> —Vision-language modeling (VLM) aims to bridge 25 the information gap between images and natural language. NumberofPapers Under the new paradigm of first pre-training on massive image- Contrastive-Based VLM text pairs and then fine-tuning on task-specific data, VLM in 20 the remote sensing domain has made significant progress. The Instruction-Based VLM GeoRSCLIP, SkyCLIP, EarthGPT, LHRS-Bot, resultingmodelsbenefitfromtheabsorptionofextensivegeneral Generation-Based VLM DiffusionSat, CRS-Diff, knowledgeanddemonstratestrongperformanceacrossavariety 15 Datasets For VLM VRSBench, UrBench, … ofremotesensingdataanalysistasks.Moreover,theyarecapable Research Hotspot of interacting with users in a conversational manner. In this paper, we aim to provide the remote sensing community with 10 a timely and comprehensive review of the developments in VLM using the two-stage paradigm. Specifically, we first cover a taxonomy of VLM in remote sensing: contrastive learning, 5 GeoCLIP, CSP, GeoChat, SATI
 
-**文件名模式**: `2025_Vision-Language_Mode`
+> **来源**: PDF 自动提取，需人工复核。
 
-## 可能研究方向
+## 研究背景与动机
 
-> 基于 primary_topic + topics 推测, 仅作入门指引。
-
-- 属于主题: **G_视觉基础模型_VLM_LLM**
-- 关联主题: R_综述_Survey
-
-## 待读问题
-
-> 读 PDF 前先列 2-3 个你想在论文里找到答案的问题。
-
-1.
-2.
-3.
-
-## 阅读笔记
-
-> 边读边记; 用 `[[双链]]` 关联到其他论文笔记 / 主题首页。
-
+- **这篇论文为什么要做**：近年来，视觉语言建模在遥感领域发展迅速，涌现了大量新模型和数据集，但缺乏一篇全面、及时的综述来梳理这些进展，特别是深入分析其关键设计、数据集构建和未来挑战。现有综述要么侧重于早期工作和纯视觉模型，要么对关键设计分析不足，且对数据集的重视不够 (p. 1-2)。
+- **之前方法有什么问题**：早期的VLM方法遵循“从头监督训练”范式，通常在小型特定数据集（如UCM-captions）上设计精心架构并训练。这些模型**任务特定**（例如，专为图像描述设计），泛化能力差，在大规模部署中表现不佳，并且难以处理多种任务（如既能描述图像又能回答视觉问题）(p. 1)。
+- **作者想解决的核心矛盾**：**传统任务特定模型的局限性**与**利用大规模通用知识提升模型泛化性和多功能性**之间的矛盾。新范式通过大规模预训练吸收通用知识，再微调适配具体任务，为解决这一矛盾提供了途径 (p. 1)。
 ## 关键贡献
 
-> 读完填
-
+1.  **提出了一个系统的遥感VLM分类法**：基于预训练阶段桥接视觉与语言模态的策略，将遥感VLM划分为**对比学习、视觉指令调优和文本条件图像生成**三类，并详细阐述了每类常用的网络架构和预训练目标 (p. 2)。
+2.  **全面综述了对比式VLM的最新进展**：深入分析了**基础模型构建**（关注训练数据集、预训练目标、编码器架构）和**有效适配方法**（如用于图文检索、零样本分类等下游任务）这两个主要研究方向 (p. 2, 4)。
+3.  **全面综述了指令式VLM的最新进展**：分析了其**模型架构**（视觉编码器、连接器、LLM）、**训练策略**（仅SFT或预训练+SFT）以及所赋予的**模型能力**（通用能力与独特能力）(p. 2)。
+4.  **全面综述了生成式VLM的进展**：总结了用于遥感图像生成、增强和解释的**生成式基础模型**，以及文本条件扩散模型在**下游应用**（如图像描述、全色锐化、零样本目标识别）中的拓展 (p. 2, 4)。
+5.  **系统总结了VLM相关数据集**：涵盖了用于**预训练、微调和评估**的数据集，并分析了其构建方法（如图像来源、字幕生成）和关键属性（如规模、任务适应性）(p. 2)。
+6.  **提出了未来研究方向**：讨论了跨模态表征对齐、模糊需求理解、可解释性驱动的模型可靠性、持续可扩展的模型能力以及具有更丰富模态和更大挑战的大规模数据集等挑战 (p. 1)。
 ## 方法
 
-> 读完填
+作为一篇综述论文，本文的“方法”部分主要是对现有三类VLM方法的原理、架构和目标的系统性总结。
 
+- **整体框架与分类**：论文将基于预训练-微调范式的遥感VLM分为三类，其核心区别在于**预训练阶段如何桥接图像和文本**（如图3所示）：
+    1.  **对比学习**：学习将图像和文本映射到共享表征空间。
+    2.  **视觉指令调优**：利用预训练的大语言模型（LLM），通过指令数据进行对齐和微调。
+    3.  **文本条件图像生成**：学习图像和文本之间的隐式联合分布，通常基于扩散模型。
+- **关键模块与数学机制**：
+    - **对比学习（以CLIP为代表）**：
+        - **输入输出**：输入是一批图文对 `(xi, yi)`，输出是图像和文本的嵌入向量 `eI_i`, `eT_i`。
+        - **关键模块**：**图像编码器**和**文本编码器**。
+        - **机制**：通过**InfoNCE损失**（公式1）进行训练，最大化匹配图文对的相似度，最小化不匹配对的相似度 (p. 2-3)。
+        - **遥感适配**：两个研究方向：1) 构建大规模遥感图文数据集（如RS5M）并预训练领域专用基础模型（如GeoRSCLIP）；2) 将通用CLIP模型适配到下游任务（如分类、检索）(p. 3)。
+    - **视觉指令调优（以LLaVA为代表）**：
+        - **输入输出**：输入是图像 `xi`、语言指令 `qi` 和对应的真实回答 `yi`，输出是模型生成的回答。
+        - **关键模块**：**预训练视觉编码器**、**连接器**和**预训练大语言模型（LLM）**。
+        - **机制**：训练时，视觉编码器和LLM通常**冻结**，仅训练连接器。目标函数是**条件概率的交叉熵损失**（公式2），即根据图像和指令自回归地生成回答 (p. 3)。
+        - **与已有方法差异**：不同于CLIP直接对齐图文对，它将图文数据预处理为指令跟随格式，利用LLM强大的语言理解和推理能力 (p. 3)。
+    - **文本条件图像生成（以Stable Diffusion为代表）**：
+        - **输入输出**：输入是文本描述和噪声，输出是生成的图像。
+        - **关键模块**：**文本编码器**、**变分自编码器（VAE）** 和**去噪U-Net**。
+        - **机制**：训练目标是**均方误差损失**（公式3），让去噪U-Net预测添加到潜在表示上的噪声 (p. 3-4)。
+- **与已有方法的差异**：早期方法是从头训练的小规模、任务特定模型。新范式（三类VLM共同点）的核心差异在于**利用大规模预训练来吸收通用知识**，从而获得更好的泛化能力和多任务处理能力 (p. 1)。
 ## 实验
 
-> 读完填
+本文为综述，自身未提出新方法并进行统一实验。但它系统地总结和引用了大量已有工作的实验设置。
 
+- **使用的数据集**：在对比式VLM部分，Table I列举了多个基础模型的**预训练数据集**，如**RS5M**（超过500万对）[7]、**SkyScript** [8]、**RET-3+SEG-4+DET-10** [2]、**fMoW** [117]等 (p. 4-5)。
+- **对比方法与评价指标**：Table I总结了各模型在**零样本场景分类、图文检索、语义定位**等任务上的评估 (p. 4)。
+- **主实验结果**：论文通过图表（如Fig. 1显示论文发表数量趋势）和对各模型的定性总结（Table I）展示了进展。例如，GeoRSCLIP和RemoteCLIP是公开的代表性对比学习基础模型。**PDF文本中未提供各模型在具体任务上的具体性能数字**。
+- **消融实验**：论文在对比式VLM部分提到了一些关键设计，如S-CLIP [18] 和 Set-CLIP [26] 通过新的损失函数（如伪标签损失、MK-MMD损失）来利用大量无配对数据，这可以视为一种技术层面的“消融”分析 (p. 5)。
+- **泛化实验**：零样本评估本身就是测试模型泛化能力的典型设置，多个模型（如GeoRSCLIP、SkyCLIP）都在此类任务上进行了评估 (p. 4)。
+- **效率信息**：**PDF文本中未明确说明**各模型的参数量、FLOPs或推理速度。
 ## 局限
 
-> 读完填
+- **综述的时效性与覆盖面**：基于arXiv预印本（2025年5月），可能未覆盖在此之后的最新工作。且作为综述，其分析深度可能不如针对某一具体方法的深入研究论文。
+- **数据集构建的潜在问题**：论文指出，使用预训练VLM（如BLIP2）生成遥感图像描述存在**准确性挑战** (p. 4)。此外，构建的数据集（如RS5M）的语义多样性可能受限于源图像数据集预定义的类别 (p. 5)。
+- **未来方向较宽泛**：提出的未来方向（如“解释驱动的模型可靠性”）虽然重要，但描述相对宏观，缺乏具体的、可操作的技术路径。
+- **实验分析依赖二手信息**：作为综述，其对实验结果的分析基于已有文献的报告，无法验证这些结果的可复现性，也缺乏在统一基准下的横向公平比较。
+## 个人评论
 
-## 相关论文
+1.  **提供了系统且及时的视角**：对于刚进入或想了解遥感VLM领域的研究者，这篇综述提供了一个清晰、全面的知识地图，特别是其**三分类法**（对比、指令、生成）非常有助于快速把握领域脉络。
+2.  **深入的数据集构建方法论**：论文详细分析了遥感VLM数据集的构建方法，包括**图像来源**（利用现有遥感图像数据集）和**字幕生成**（使用预训练VLM生成、基于规则从标注转换、利用OpenStreetMap等）。这对研究者自建数据集有很强的指导意义 (p. 4-5)。
+3.  **连接了基础模型与下游应用**：论文不仅介绍了基础模型本身，还系统梳理了这些模型如何**适配**到各类下游任务（如图像描述、零样本分类、图像生成、全色锐化等），揭示了基础模型的实用价值。
+4.  **指明了未来的研究瓶颈**：提出的五个未来方向（如跨模态对齐、模糊需求理解、模型可靠性）极具启发性，指出了当前模型与遥感专家之间的差距，为后续研究选题提供了重要参考 (p. 1)。
 
-> 用 `[[]]` 链接到其他论文笔记或主题首页, 例如 [[G_视觉基础模型_VLM_LLM]]。
+### 使用建议
 
+- **如果快速了解领域**：阅读 **Abstract** 和 **I. Introduction** 部分，以及 **II. The Taxonomy** 部分的开头和图3，即可掌握核心分类和背景。
+- **如果复现具体模型**：重点查看 **Table I** 和**第III、IV、V节**中关于具体模型（如GeoRSCLIP、GeoChat、DiffusionSat）的描述，以及**第VI节**中相关的数据集信息。
+- **如果借鉴创新点进行研究**：应深入阅读 **III-A. Foundation Model Construction** 中关于数据集构建和预训练目标的创新（如S-CLIP的伪标签损失），以及 **III-B. Effective Adaptation** 和**第V节**中模型适配的方法。
+- **如果撰写Related Work**：可将本综述作为**遥感视觉语言建模领域的权威综述**来引用，特别是需要引用该领域发展脉络、分类体系或数据集情况时。
+## 相关论文与链接
+
+> 用 `[[]]` 链接到其他论文笔记或主题首页：
+> - [[G_视觉基础模型_VLM_LLM]]
+> - [[论文知识库总览]]
+
+---
+
+#paper #read
+
+<!-- AI_READING_NOTE_START -->
+# 论文精读
+
+## 1. 论文定位
+这篇论文属于计算机视觉与自然语言处理的交叉领域，具体聚焦于**遥感（Remote Sensing）领域的视觉语言建模（Vision-Language Modeling, VLM）**。它是一篇**综述（Survey）论文**，旨在系统性地梳理和回顾近年来该领域在**预训练-微调（pre-training followed by fine-tuning）** 新范式下取得的进展。论文适合放在 **“视觉基础模型_VLM_LLM”** 这一主题下，因为它全面覆盖了遥感VLM的基础模型（包括对比式、指令式和生成式）、相关数据集以及未来展望。
+
+## 2. 一句话总结
+本文系统性地综述了遥感领域基于预训练-微调范式的视觉语言模型、数据集及未来研究方向，重点分析了对比学习、视觉指令调优和文本条件图像生成三类方法。
+
+## 3. 背景与问题
+- **这篇论文为什么要做**：近年来，视觉语言建模在遥感领域发展迅速，涌现了大量新模型和数据集，但缺乏一篇全面、及时的综述来梳理这些进展，特别是深入分析其关键设计、数据集构建和未来挑战。现有综述要么侧重于早期工作和纯视觉模型，要么对关键设计分析不足，且对数据集的重视不够 (p. 1-2)。
+- **之前方法有什么问题**：早期的VLM方法遵循“从头监督训练”范式，通常在小型特定数据集（如UCM-captions）上设计精心架构并训练。这些模型**任务特定**（例如，专为图像描述设计），泛化能力差，在大规模部署中表现不佳，并且难以处理多种任务（如既能描述图像又能回答视觉问题）(p. 1)。
+- **作者想解决的核心矛盾**：**传统任务特定模型的局限性**与**利用大规模通用知识提升模型泛化性和多功能性**之间的矛盾。新范式通过大规模预训练吸收通用知识，再微调适配具体任务，为解决这一矛盾提供了途径 (p. 1)。
+
+## 4. 核心贡献
+1.  **提出了一个系统的遥感VLM分类法**：基于预训练阶段桥接视觉与语言模态的策略，将遥感VLM划分为**对比学习、视觉指令调优和文本条件图像生成**三类，并详细阐述了每类常用的网络架构和预训练目标 (p. 2)。
+2.  **全面综述了对比式VLM的最新进展**：深入分析了**基础模型构建**（关注训练数据集、预训练目标、编码器架构）和**有效适配方法**（如用于图文检索、零样本分类等下游任务）这两个主要研究方向 (p. 2, 4)。
+3.  **全面综述了指令式VLM的最新进展**：分析了其**模型架构**（视觉编码器、连接器、LLM）、**训练策略**（仅SFT或预训练+SFT）以及所赋予的**模型能力**（通用能力与独特能力）(p. 2)。
+4.  **全面综述了生成式VLM的进展**：总结了用于遥感图像生成、增强和解释的**生成式基础模型**，以及文本条件扩散模型在**下游应用**（如图像描述、全色锐化、零样本目标识别）中的拓展 (p. 2, 4)。
+5.  **系统总结了VLM相关数据集**：涵盖了用于**预训练、微调和评估**的数据集，并分析了其构建方法（如图像来源、字幕生成）和关键属性（如规模、任务适应性）(p. 2)。
+6.  **提出了未来研究方向**：讨论了跨模态表征对齐、模糊需求理解、可解释性驱动的模型可靠性、持续可扩展的模型能力以及具有更丰富模态和更大挑战的大规模数据集等挑战 (p. 1)。
+
+## 5. 方法详解
+作为一篇综述论文，本文的“方法”部分主要是对现有三类VLM方法的原理、架构和目标的系统性总结。
+
+- **整体框架与分类**：论文将基于预训练-微调范式的遥感VLM分为三类，其核心区别在于**预训练阶段如何桥接图像和文本**（如图3所示）：
+    1.  **对比学习**：学习将图像和文本映射到共享表征空间。
+    2.  **视觉指令调优**：利用预训练的大语言模型（LLM），通过指令数据进行对齐和微调。
+    3.  **文本条件图像生成**：学习图像和文本之间的隐式联合分布，通常基于扩散模型。
+- **关键模块与数学机制**：
+    - **对比学习（以CLIP为代表）**：
+        - **输入输出**：输入是一批图文对 `(xi, yi)`，输出是图像和文本的嵌入向量 `eI_i`, `eT_i`。
+        - **关键模块**：**图像编码器**和**文本编码器**。
+        - **机制**：通过**InfoNCE损失**（公式1）进行训练，最大化匹配图文对的相似度，最小化不匹配对的相似度 (p. 2-3)。
+        - **遥感适配**：两个研究方向：1) 构建大规模遥感图文数据集（如RS5M）并预训练领域专用基础模型（如GeoRSCLIP）；2) 将通用CLIP模型适配到下游任务（如分类、检索）(p. 3)。
+    - **视觉指令调优（以LLaVA为代表）**：
+        - **输入输出**：输入是图像 `xi`、语言指令 `qi` 和对应的真实回答 `yi`，输出是模型生成的回答。
+        - **关键模块**：**预训练视觉编码器**、**连接器**和**预训练大语言模型（LLM）**。
+        - **机制**：训练时，视觉编码器和LLM通常**冻结**，仅训练连接器。目标函数是**条件概率的交叉熵损失**（公式2），即根据图像和指令自回归地生成回答 (p. 3)。
+        - **与已有方法差异**：不同于CLIP直接对齐图文对，它将图文数据预处理为指令跟随格式，利用LLM强大的语言理解和推理能力 (p. 3)。
+    - **文本条件图像生成（以Stable Diffusion为代表）**：
+        - **输入输出**：输入是文本描述和噪声，输出是生成的图像。
+        - **关键模块**：**文本编码器**、**变分自编码器（VAE）** 和**去噪U-Net**。
+        - **机制**：训练目标是**均方误差损失**（公式3），让去噪U-Net预测添加到潜在表示上的噪声 (p. 3-4)。
+- **与已有方法的差异**：早期方法是从头训练的小规模、任务特定模型。新范式（三类VLM共同点）的核心差异在于**利用大规模预训练来吸收通用知识**，从而获得更好的泛化能力和多任务处理能力 (p. 1)。
+
+## 6. 实验与结果
+本文为综述，自身未提出新方法并进行统一实验。但它系统地总结和引用了大量已有工作的实验设置。
+
+- **使用的数据集**：在对比式VLM部分，Table I列举了多个基础模型的**预训练数据集**，如**RS5M**（超过500万对）[7]、**SkyScript** [8]、**RET-3+SEG-4+DET-10** [2]、**fMoW** [117]等 (p. 4-5)。
+- **对比方法与评价指标**：Table I总结了各模型在**零样本场景分类、图文检索、语义定位**等任务上的评估 (p. 4)。
+- **主实验结果**：论文通过图表（如Fig. 1显示论文发表数量趋势）和对各模型的定性总结（Table I）展示了进展。例如，GeoRSCLIP和RemoteCLIP是公开的代表性对比学习基础模型。**PDF文本中未提供各模型在具体任务上的具体性能数字**。
+- **消融实验**：论文在对比式VLM部分提到了一些关键设计，如S-CLIP [18] 和 Set-CLIP [26] 通过新的损失函数（如伪标签损失、MK-MMD损失）来利用大量无配对数据，这可以视为一种技术层面的“消融”分析 (p. 5)。
+- **泛化实验**：零样本评估本身就是测试模型泛化能力的典型设置，多个模型（如GeoRSCLIP、SkyCLIP）都在此类任务上进行了评估 (p. 4)。
+- **效率信息**：**PDF文本中未明确说明**各模型的参数量、FLOPs或推理速度。
+
+## 7. 这篇论文真正有价值的地方
+1.  **提供了系统且及时的视角**：对于刚进入或想了解遥感VLM领域的研究者，这篇综述提供了一个清晰、全面的知识地图，特别是其**三分类法**（对比、指令、生成）非常有助于快速把握领域脉络。
+2.  **深入的数据集构建方法论**：论文详细分析了遥感VLM数据集的构建方法，包括**图像来源**（利用现有遥感图像数据集）和**字幕生成**（使用预训练VLM生成、基于规则从标注转换、利用OpenStreetMap等）。这对研究者自建数据集有很强的指导意义 (p. 4-5)。
+3.  **连接了基础模型与下游应用**：论文不仅介绍了基础模型本身，还系统梳理了这些模型如何**适配**到各类下游任务（如图像描述、零样本分类、图像生成、全色锐化等），揭示了基础模型的实用价值。
+4.  **指明了未来的研究瓶颈**：提出的五个未来方向（如跨模态对齐、模糊需求理解、模型可靠性）极具启发性，指出了当前模型与遥感专家之间的差距，为后续研究选题提供了重要参考 (p. 1)。
+
+## 8. 局限与问题
+- **综述的时效性与覆盖面**：基于arXiv预印本（2025年5月），可能未覆盖在此之后的最新工作。且作为综述，其分析深度可能不如针对某一具体方法的深入研究论文。
+- **数据集构建的潜在问题**：论文指出，使用预训练VLM（如BLIP2）生成遥感图像描述存在**准确性挑战** (p. 4)。此外，构建的数据集（如RS5M）的语义多样性可能受限于源图像数据集预定义的类别 (p. 5)。
+- **未来方向较宽泛**：提出的未来方向（如“解释驱动的模型可靠性”）虽然重要，但描述相对宏观，缺乏具体的、可操作的技术路径。
+- **实验分析依赖二手信息**：作为综述，其对实验结果的分析基于已有文献的报告，无法验证这些结果的可复现性，也缺乏在统一基准下的横向公平比较。
+
+## 9. 我该怎么使用这篇论文
+- **如果快速了解领域**：阅读 **Abstract** 和 **I. Introduction** 部分，以及 **II. The Taxonomy** 部分的开头和图3，即可掌握核心分类和背景。
+- **如果复现具体模型**：重点查看 **Table I** 和**第III、IV、V节**中关于具体模型（如GeoRSCLIP、GeoChat、DiffusionSat）的描述，以及**第VI节**中相关的数据集信息。
+- **如果借鉴创新点进行研究**：应深入阅读 **III-A. Foundation Model Construction** 中关于数据集构建和预训练目标的创新（如S-CLIP的伪标签损失），以及 **III-B. Effective Adaptation** 和**第V节**中模型适配的方法。
+- **如果撰写Related Work**：可将本综述作为**遥感视觉语言建模领域的权威综述**来引用，特别是需要引用该领域发展脉络、分类体系或数据集情况时。
+
+## 10. 和其他论文的关系
+- **基础技术**：本综述建立在一系列基础模型之上，如 [[CLIP]]（对比学习基础）、[[LLaVA]]（指令调优基础）、[[Stable Diffusion]]（生成基础）。
+- **遥感领域特定模型**：本综述核心回顾的对象，包括：
+    - 对比式：[[GeoRSCLIP]]、[[RemoteCLIP]]、[[SkyCLIP]]、[[GeoCLIP]]
+    - 指令式：[[GeoChat]]、[[LHRS-Bot]]、[[EarthGPT]]
+    - 生成式：[[DiffusionSat]]、[[RS-SD]]、[[CRS-Diff]]
+- **相关数据集**：总结并引用了多个关键数据集，如 [[RS5M]]、[[SkyScript]]、[[Million-AID]]、[[fMoW]]、[[BigEarthNet]]。
+
+## 11. 关键词
+视觉语言建模、遥感、预训练-微调范式、对比学习、视觉指令调优、文本条件图像生成、基础模型、数据集、零样本学习、扩散模型、大语言模型
+
+## 12. 可信度说明
+本精读笔记**主要基于用户提供的PDF提取文本（前12页）**生成。这部分内容涵盖了**摘要、引言、整体分类框架（第II节）以及对比学习方法的详细综述（第III节开头部分，包括Table I）**。因此，笔记中关于论文定位、背景、核心贡献、方法框架（对比学习部分）以及数据集构建方法的描述**可信度高**。
+然而，由于提供的文本不完整，**对于指令调优（第IV节）、生成式模型（第V节）、数据集总结（第VI节）以及未来展望（第VII节）的详细内容，笔记只能基于已有部分进行概括性推断，或标注信息缺失**。具体模型的实验性能数字在提供的文本中未出现，故已如实标注。
+
+---
+
+> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2086 字符/页)); 来源缓存: `.paper-cache/extracts/2025_Vision-Language_Mode.txt` (35/35 页; 原 AI 主体 12/35 + 全文补读 13-35); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro).
+## 全文补读记录
+
+- **补读日期**: 2026-06-08
+- **补读范围**: PDF p.13-35; 原 AI 主体覆盖 p.1-12, 本记录补足到 p.1-35。
+- **提取情况**: 缺失页 23 页, 其中 23 页提取到可读文本。缺失页包含正文/附录内容, 其中约 6 页偏参考文献。
+- **状态说明**: 这是 AI 全文覆盖补读, 不是人工精读复核；`human_reviewed` 仍应保持 `false`。
+
+### 缺失页章节线索
+
+- p.13: TABLE V
+- p.13: Referring Expression Generation
+- p.13: Object Attribute Recognition
+- p.13: Image Property Recognition
+- p.13: Geometric Measurement
+- p.13: Building Vectorizing
+- p.13: Multi-Label Classification
+- p.13: Honest Question Answering
+- p.13: Image/Region Scene Graph Generation
+- p.13: Temporal Scene Classification
+- p.13: Temporal Referring Expression
+- p.13: Spatial Change Referring Expression
+
+### 缺失页关键摘录
+
+- p.13: image in detail.” [6]. From Table VI, we can observe that
+- p.13: the UCM-captions dataset, RS-LLaV A achieves BLEU scores
+- p.13: metrics. On the NWPU-Captions [63] dataset, EarthGPT [6]
+- p.13: (2)Scene Classification: Table VII presents evaluations on
+- p.13: remote sensing visual knowledge improves model accuracy
+- p.13: RESISC45 [53] dataset, which includes 45 scene categories
+- p.13: eralization, achieving accuracy above 91% on the AID [102]
+- p.13: dataset and over 93% on the WHU-RS19 [71] dataset. Sky-
+- p.13: SenseGPT notably achieves the highest accuracy, reaching
+- p.13: dataset, used for land use and land cover classification, has an
+- p.13: datasets, LHRS-Bot [9] achieves an accuracy below 57%.
+- p.13: Table VII. Under a supervised setting, RSGPT [1] establishes
+<!-- AI_READING_NOTE_END -->

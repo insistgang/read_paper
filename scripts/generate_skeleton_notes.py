@@ -40,7 +40,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_PAPERS = ROOT / "01-Papers"          # PDF 原文目录 (只读)
 DEFAULT_NOTES = ROOT / "02-Notes" / "Papers"  # 论文笔记目录 (输出)
 DEFAULT_TOPICS_JSON = DEFAULT_PAPERS / "paper_topics.json"  # 主题映射, 留在 01-Papers
-DEFAULT_LIT = ROOT / "05-Literature"          # 主题首页
+DEFAULT_LIT = ROOT / "03-Literature"          # 主题首页
 
 # 中文停用词（不作为关键词保留）
 STOP_WORDS_ZH = {

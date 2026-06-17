@@ -1,0 +1,3831 @@
+[
+  {
+    "old": "(GRN)ConvNeXtV2",
+    "new": "2023_注意力算子模块_ConvNeXt_V2",
+    "title": "ConvNeXt V2: Co-designing and Scaling ConvNets with Masked Autoencoders",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "(GSC)SegMamba",
+    "new": "2024_注意力算子模块_SegMamba_Long-range",
+    "title": "SegMamba: Long-range Sequential Modeling",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "(UIB)MobileNetV4",
+    "new": "2024_注意力算子模块_MobileNetV4_Universal_模型",
+    "title": "MobileNetV4: Universal Models for the Mobile Ecosystem",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "031002300211-35388227",
+    "new": "2023_AOC_显示器购物凭证",
+    "title": "AOC 显示器购物凭证",
+    "year": "2023",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "1-s2.0-S0950705124009833-main",
+    "new": "2024_通用其他_TGADHead_目标检测_高效_注意力_目标_检测",
+    "title": "TGADHead An efficient and accurate task-guided attention-decoupled head for single-stage object detection",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "1-s2.0-S2590123024016360-main",
+    "new": "2024_遥感目标检测_Semantic_语义分割_违建检测_语义_分割_卫星_图像",
+    "title": "Semantic segmentation of optical satellite images for the illegal construction detection using transfer learning",
+    "year": "2024",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "1608.03981v1",
+    "new": "2017_图像复原增强_Beyond_Gaussian_图像去噪_学习_深度_CNN_图像_去噪",
+    "title": "Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising",
+    "year": "2017",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "1609.06585v1",
+    "new": "2016_通用其他_Image_Denoising_图像去噪_图像_去噪_多尺度_尺度_模型",
+    "title": "Image Denoising via Multi-scale Nonlinear Diﬀusion Models",
+    "year": "2016",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "1808.01316v1",
+    "new": "2018_通用其他_Power_Complementary_图像",
+    "title": "The Power of Complementary Regularizers Image Recovery",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "1901.06046v1",
+    "new": "2019_通用其他_Good_Similar_图像去噪_图像_去噪",
+    "title": "Good Similar Patches for Image Denoising Si Lu",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "1904.07396v2",
+    "new": "2019_通用其他_1904.07396v2",
+    "title": "1904.07396v2",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "1911.07167v2",
+    "new": "2019_通用其他_LIDIA_Lightweight_图像去噪_轻量化_图像_去噪_实例",
+    "title": "LIDIA Lightweight Learned Image Denoising with Instance Adaptation",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2005_Active_Amplification",
+    "new": "2005_通用其他_Active_Amplification",
+    "title": "Active Amplification of the Terrestrial Albedo",
+    "year": "2005",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2009_Embedded_Sensor_Syst",
+    "new": "2009_通用其他_IJCSI_International",
+    "title": "IJCSI International Journal of Computer Science Issues, Vol. 1, 2009 26",
+    "year": "2009",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2010_A_Comparative_Study",
+    "new": "2010_通用其他_IJCSI_International",
+    "title": "IJCSI International Journal of Computer Science Issues, Vol. 7, Issue. 1, No. 1, January 2010 32",
+    "year": "2010",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2010_Detecting_Botnets_Th",
+    "new": "2010_通用其他_Detecting_Botnets_僵尸网络",
+    "title": "Detecting Botnets Through Log Correlation",
+    "year": "2010",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2010_Implications_of_the",
+    "new": "2010_通用其他_Detection_Dynamics_检测",
+    "title": "Detection and Dynamics of Transiting Exoplanets",
+    "year": "2010",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2013_Byzantine_Fault_Tole",
+    "new": "2013_通用其他_BYZANTINE_FAULT_变化",
+    "title": "BYZANTINE FAULT TOLERANT DISTRIBUTED QUICKEST CHANGE",
+    "year": "2013",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2013_Quickest_Change_Poin",
+    "new": "2013_通用其他_Quickest_Change_变化_点云_检测",
+    "title": "Quickest Change Point Detection and Identification",
+    "year": "2013",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2014_Semantic-based_Detec",
+    "new": "2014_通用其他_Semantic-based_Detection_语义_检测",
+    "title": "Semantic-based Detection of Segment Outliers and Unusual",
+    "year": "2014",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2014_Sequential_Detection",
+    "new": "2014_通用其他_Sequential_Detection_检测_变化",
+    "title": "Sequential Detection of an Abrupt Change in a",
+    "year": "2014",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2015_Automatic_Channel_Ne",
+    "new": "2015_通用其他_Automatic_Channel_网络",
+    "title": "Automatic Channel Network Extraction from",
+    "year": "2015",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2015_Precipitation_extrem",
+    "new": "2015_通用其他_Current_Climate_变化",
+    "title": "Current Climate Change Reports manuscript No.",
+    "year": "2015",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2016_A_Survey_on_Object_D",
+    "new": "2016_目标检测_Survey_Object_遥感_目标检测_综述_目标_检测_感知",
+    "title": "A Survey on Object Detection in Optical Remote Sensing Images",
+    "year": "2016",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2017_A_Comprehensive_Surv",
+    "new": "2017_综述_Comprehensive_Survey_遥感_综述_深度_学习_感知",
+    "title": "A Comprehensive Survey of Deep Learning in Remote Sensing:",
+    "year": "2017",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "2017_Building_Detection_f",
+    "new": "2017_遥感目标检测_Building_Detection_建筑检测_建筑_检测_卫星_图像",
+    "title": "Building Detection from Satellite Images on a Global",
+    "year": "2017",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2017_Deep_learning_in_rem",
+    "new": "2017_遥感高光谱变化检测_Deep_Learning_遥感_综述_深度_学习_感知",
+    "title": "Deep Learning in Remote Sensing: A Review",
+    "year": "2017",
+    "topic": "R1_遥感_高光谱_变化检测"
+  },
+  {
+    "old": "2017_Fast_Vehicle_Detecti",
+    "new": "2017_遥感目标检测_Fast_Vehicle_检测_航空",
+    "title": "Fast Vehicle Detection in Aerial Imagery",
+    "year": "2017",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2017_Real-Time_Illegal_Pa",
+    "new": "2017_遥感目标检测_Real-Time_Illegal_非法_检测",
+    "title": "Real-Time Illegal Parking Detection System Based on",
+    "year": "2017",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2018_Application_of_a_sem",
+    "new": "2018_通用其他_Application_语义分割_语义_分割",
+    "title": "Application of a semantic segmentation",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2018_Automatic_Pixelwise",
+    "new": "2018_通用其他_Automatic_Pixelwise_目标_航空",
+    "title": "Automatic Pixelwise Object Labeling for Aerial Imagery Using Stacked U-Nets",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2018_Deep_Learning_Approa",
+    "new": "2018_通用其他_2018InternationalConferenceonIntelli",
+    "title": "2018InternationalConferenceonIntelligentSystems(IS)",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2018_Deep_learning_based",
+    "new": "2018_通用其他_Deep_深度_学习_点云_检测",
+    "title": "Deep learning based cloud detection for medium and high resolution",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2018_Envision_of_an_integ",
+    "new": "2018_通用其他_Antunes_Poshdar",
+    "title": "Antunes, R. and Poshdar, M. (2018). “Envision of an Integrated Information System for Project-Driven",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2018_Mining_Illegal_Insid",
+    "new": "2018_遥感目标检测_Mining_Illegal_非法",
+    "title": "Mining Illegal Insider Trading of Stocks: A Proactive Approach",
+    "year": "2018",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2019_Aggregated_Deep_Loca",
+    "new": "2019_通用其他_Aggregated_Deep_遥感_深度_特征_感知",
+    "title": "Aggregated Deep Local Features for Remote Sensing",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2019_Anticipating_Illegal",
+    "new": "2019_遥感目标检测_Anticipating_Illegal_非法",
+    "title": "Anticipating Illegal Maritime Activities from Anomalous",
+    "year": "2019",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2019_Building_Damage_Dete",
+    "new": "2019_遥感目标检测_Building_Damage_卫星影像_建筑_检测_卫星",
+    "title": "Building Damage Detection in Satellite Imagery Using",
+    "year": "2019",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2019_Building_change_dete",
+    "new": "2019_遥感目标检测_IAPR_Workshop_遥感_识别_感知",
+    "title": "Conference paper published in 2018 10th IAPR Workshop on Pattern Recognition in Remote Sensing (PRRS). All rights reserved by IEEE®.",
+    "year": "2019",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2019_Change_Detection_and",
+    "new": "2019_变化检测_Change_Detection_变化检测_综述_变化_检测",
+    "title": "Change Detection and Notification of Web Pages: A Survey",
+    "year": "2019",
+    "topic": "S_变化检测_ChangeDetection"
+  },
+  {
+    "old": "2019_Efficient_ConvNet-ba",
+    "new": "2019_通用其他_Efficient_ConvNet-based_目标检测_高效_目标_检测_航空",
+    "title": "Efficient ConvNet-based Object Detection for Unmanned Aerial",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2019_Introduction_to_Voic",
+    "new": "2019_通用其他_SD_Jan_语音呈现攻击_检测",
+    "title": "arXiv 1901.01085v1 cs.SD 4 Jan 2019Introduction to Voice Presentation Attack Detection and Recent Advances",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2019_Object_Contour_and_E",
+    "new": "2019_变化检测_Object_Contour_目标_检测",
+    "title": "Object Contour and Edge Detection with RefineContourNet",
+    "year": "2019",
+    "topic": "S_变化检测_ChangeDetection"
+  },
+  {
+    "old": "2019_Object_detection_on",
+    "new": "2019_目标检测_Object_CenterNet_目标检测_目标_检测_航空",
+    "title": "Object detection on aerial imagery using CenterNet",
+    "year": "2019",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2019_R$^2$-CNN_Fast_Tiny",
+    "new": "2019_通用其他_CNN_Fast_目标检测_CNN_目标_检测_尺度",
+    "title": "-CNN: Fast Tiny Object Detection in Large-scale",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2019_Semantic_Change_and",
+    "new": "2019_变化检测_Semantic_Change_语义_变化",
+    "title": "Semantic Change and Emerging Tropes",
+    "year": "2019",
+    "topic": "S_变化检测_ChangeDetection"
+  },
+  {
+    "old": "2019_Spectrum_Prediction",
+    "new": "2019_通用其他_SPECTRUM_PREDICTION_预测_检测_卫星",
+    "title": "SPECTRUM PREDICTION AND INTERFERENCE DETECTION FOR SATELLITE COMMUNICATIONS",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2019_The_Language_of_Lega",
+    "new": "2019_通用其他_Language_Legal_非法",
+    "title": "The Language of Legal and Illegal Activity on the Darknet",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2019_The_Price_of_Free_Il",
+    "new": "2019_遥感目标检测_Price_Free_非法",
+    "title": "The Price of Free Illegal Live Streaming Services",
+    "year": "2019",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2019_Thylakoid_Electron_Tomography",
+    "new": "2019_雷达无线电数学_www.nature.com scientificreports",
+    "title": "www.nature.com/scientificreports",
+    "year": "2019",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "2020_A_Comparison_of_Deep",
+    "new": "2020_综述_Comparison_Deep_目标检测_深度_学习_目标_检测",
+    "title": "A Comparison of Deep Learning Object Detection",
+    "year": "2020",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "2020_A_computer-friendly",
+    "new": "2020_变化检测_建设",
+    "title": "A computer-friendly construction of the monster",
+    "year": "2020",
+    "topic": "S_变化检测_ChangeDetection"
+  },
+  {
+    "old": "2020_Aerial_Imagery_Pixel",
+    "new": "2020_数据集基准_Aerial_Imagery_航空_分割",
+    "title": "Aerial Imagery Pixel-level Segmentation",
+    "year": "2020",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "2020_Attention_Neural_Net",
+    "new": "2020_通用其他_MohbatTharani_AbdulWahabAmin",
+    "title": "MohbatTharani,AbdulWahabAmin,MohammadMaazandMurtazaTaj",
+    "year": "2020",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2020_Deep_Learning_for_Re",
+    "new": "2018_通用其他_Deep_Learning_卫星影像_深度_学习_卫星",
+    "title": "Deep Learning for Recognizing Mobile Targets in Satellite Imagery",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2020_Detecting_the_Presen",
+    "new": "2020_遥感高光谱变化检测_Detecting_Presence",
+    "title": "Detecting the Presence of Vehicles and Equipment",
+    "year": "2020",
+    "topic": "R1_遥感_高光谱_变化检测"
+  },
+  {
+    "old": "2020_DiResNet_Direction-",
+    "new": "2020_目标检测_DiResNet_Direction-aware_网络",
+    "title": "DiResNet: Direction-aware Residual Network for",
+    "year": "2020",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2020_Future_Climate_Chang",
+    "new": "2020_通用其他_Future_Climate_变化",
+    "title": "Future Climate Change Projections over the Indian Region",
+    "year": "2020",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2020_Illegal_Border_Cross",
+    "new": "2020_遥感目标检测_We_非法",
+    "title": " Abstract—We often find illegal immigrants moving from one",
+    "year": "2020",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2020_Object_sieving_and_m",
+    "new": "2020_通用其他_Object_Sieving_目标_航空",
+    "title": "Object Sieving and Morphological Closing to Reduce False Detections in Wide-Area Aerial Imagery",
+    "year": "2020",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2020_Predicting_Illegal_F",
+    "new": "2020_遥感目标检测_Predicting_Illegal_非法",
+    "title": "Predicting Illegal Fishing on the Patagonia Shelf from",
+    "year": "2020",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2020_RSVQA_Visual_Questi",
+    "new": "2020_数据集基准_RSVQA_Visual_视觉_遥感",
+    "title": "RSVQA: Visual Question Answering for Remote",
+    "year": "2020",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "2020_TJU-DHD_A_Diverse_H",
+    "new": "2020_数据集基准_TJU-DHD_Diverse_数据集",
+    "title": "TJU-DHD: A Diverse High-Resolution Dataset for",
+    "year": "2020",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "2021_A_Survey_of_Self-Sup",
+    "new": "2021_自监督主动学习_Survey_Self-Supervised_自监督_综述",
+    "title": "A Survey of Self-Supervised and",
+    "year": "2021",
+    "topic": "Q_自监督_对比学习_主动学习"
+  },
+  {
+    "old": "2021_Active_learning_for",
+    "new": "2021_自监督主动学习_Active_主动学习_学习_卫星_图像",
+    "title": "Active learning for interactive satellite image",
+    "year": "2021",
+    "topic": "Q_自监督_对比学习_主动学习"
+  },
+  {
+    "old": "2021_An_Attention-Fused_N",
+    "new": "2021_通用其他_Attention-Fused_Network_语义分割_注意力_网络_语义_分割",
+    "title": "An Attention-Fused Network for Semantic Segmentation of",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2021_CFC-Net_A_Critical",
+    "new": "2021_通用其他_CFC-Net_Critical_特征_网络",
+    "title": "CFC-Net: A Critical Feature Capturing Network for",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2021_Exploring_Depth_Cont",
+    "new": "2021_通用其他_Exploring_Depth_目标检测_目标_检测",
+    "title": "Exploring Depth Contribution for Camouflaged Object Detection",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2021_Image_Restoration_fo",
+    "new": "2021_图像复原增强_Image_Restoration_遥感_图像复原_图像_复原_感知",
+    "title": "Image Restoration for Remote Sensing: Overview",
+    "year": "2021",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "2021_MPSN_Motion-aware_P",
+    "new": "2021_通用其他_MPSN_Motion-aware_网络_视频",
+    "title": "MPSN: Motion-aware Pseudo-Siamese Network for Indoor Video",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2021_Physical_Adversarial",
+    "new": "2022_物理对抗鲁棒_Physical_Adversarial_对抗_航空_目标_检测器",
+    "title": "Physical Adversarial Attacks on an Aerial Imagery Object Detector",
+    "year": "2022",
+    "topic": "O_物理对抗_安全_鲁棒"
+  },
+  {
+    "old": "2021_S2Looking_A_Satelli",
+    "new": "2021_图像分割_S2Looking_Satellite_数据集_卫星_建筑_变化",
+    "title": "S2Looking: A Satellite Side-Looking Dataset for Building Change",
+    "year": "2021",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "2021_Uncovering_the_Size",
+    "new": "2021_通用其他_UNCOVERING_SIZE_非法",
+    "title": "UNCOVERING THE SIZE OF THE ILLEGAL CORPORATE SERVICE PROVIDER INDUSTRY IN THE NETHERLANDS ANETWORK",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2021_Waste_detection_in_P",
+    "new": "2021_遥感目标检测_SylwiaMajchrowska",
+    "title": "SylwiaMajchrowska AgnieszkaMikołajczyk",
+    "year": "2021",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2021_What_Makes_Sound_Eve",
+    "new": "2021_通用其他_DetectionandClassificationofAcousticScenesandEvents2021_Online",
+    "title": "DetectionandClassificationofAcousticScenesandEvents2021 15–19November2021,Online",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2022_Algorithm_for_detect",
+    "new": "2022_通用其他_Algorithm_检测_非法",
+    "title": "Algorithm for detection of illegal discounting",
+    "year": "2022",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2022_Building_Height_Pred",
+    "new": "2022_遥感目标检测_BUILDING_HEIGHT_实例分割_建筑_预测_实例_分割",
+    "title": "BUILDING HEIGHT PREDICTION WITH INSTANCE SEGMENTATION",
+    "year": "2022",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2022_Deep_object_detectio",
+    "new": "2022_目标检测_Deep_目标检测_深度_目标_检测",
+    "title": "Deep object detection for waterbird monitoring",
+    "year": "2022",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2022_Detecting_A_Single_C",
+    "new": "2022_遥感目标检测_Change-Point_Detection_变化_点云_检测",
+    "title": "Change-Point Detection and Data",
+    "year": "2022",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2022_Elastic_buildings_C",
+    "new": "2022_遥感目标检测_Elastic_Calibrated_建筑_尺度",
+    "title": "Elastic buildings: Calibrated district-scale simulation of",
+    "year": "2022",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2022_Improved_normal-boun",
+    "new": "2022_通用其他_Improved_优化",
+    "title": "Improved normal-boundary intersection algorithm: a method for energy optimization",
+    "year": "2022",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2022_Interpretability_in",
+    "new": "2022_通用其他_Interpretability_Convolutional_网络",
+    "title": "Interpretability in Convolutional Neural Networks for",
+    "year": "2022",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2022_Object_Detection_in",
+    "new": "2022_目标检测_Object_Detection_目标检测_目标_检测_航空",
+    "title": "Object Detection in Aerial Imagery",
+    "year": "2022",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2022_Recognising_the_impo",
+    "new": "2022_通用其他_Recognising_变化",
+    "title": "Recognising the importance of preference change: A call for a coordinated",
+    "year": "2022",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2022_Reinforcement-based",
+    "new": "2022_自监督主动学习_Reinforcement-based_学习_卫星",
+    "title": "Reinforcement-based frugal learning for satellite",
+    "year": "2022",
+    "topic": "Q_自监督_对比学习_主动学习"
+  },
+  {
+    "old": "2022_SODA_Site_Object_De",
+    "new": "2022_目标检测_Duan_SODA_目标检测_数据集_目标_检测_深度_学习",
+    "title": "R. Duan et al. SODA: Site Object Detection dAtaset for Deep Learning in Construction 2022",
+    "year": "2022",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2022_Scrutinizing_Shipmen",
+    "new": "2022_遥感目标检测_Scrutinizing_Shipment_非法",
+    "title": "Scrutinizing Shipment Records To Thwart Illegal Timber Trade",
+    "year": "2022",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2022_Self-supervised_Lear",
+    "new": "2022_自监督主动学习_Self-supervised_Learning_遥感_自监督_学习_感知",
+    "title": "Self-supervised Learning in Remote Sensing: A",
+    "year": "2022",
+    "topic": "Q_自监督_对比学习_主动学习"
+  },
+  {
+    "old": "2023_2307.00056_Proximal_Nested_Sampling",
+    "new": "2023_视觉大模型_Proximal",
+    "title": "Proximal nested sampling with data-driven priors",
+    "year": "2023",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2023_2307.12248_Bilevel_Peer_Review",
+    "new": "2023_雷达无线电数学_Bilevel_Formalism_综述",
+    "title": "A Bilevel Formalism for the Peer-Reviewing Problem",
+    "year": "2023",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "2023_2308.01480_Tensor_Train_Approximation",
+    "new": "2023_雷达无线电数学_Randomized_Block_张量",
+    "title": "A Randomized Block Krylov Method for Tensor",
+    "year": "2023",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "2023_2311.14733_Equalizing_Protected_Attributes",
+    "new": "2023_雷达无线电数学_JiahuiLiu1_XiaohaoCai1",
+    "title": "JiahuiLiu1,XiaohaoCai1,MahesanNiranjan1",
+    "year": "2023",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "2023_A_Multi-scale_Genera",
+    "new": "2023_通用其他_Multi-scale_Generalized_多尺度_尺度",
+    "title": "A Multi-scale Generalized Shrinkage Threshold",
+    "year": "2023",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2023_A_Novel_Multi-scale",
+    "new": "2023_通用其他_Novel_Multi-scale_多尺度_尺度_注意力_特征",
+    "title": "A Novel Multi-scale Attention Feature Extraction",
+    "year": "2023",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2023_An_Aligned_Multi-Tem",
+    "new": "2023_变化检测_Aligned_Multi-Temporal_数据集_多尺度_卫星_图像",
+    "title": "An Aligned Multi-Temporal Multi-Resolution Satellite Image Dataset for",
+    "year": "2023",
+    "topic": "S_变化检测_ChangeDetection"
+  },
+  {
+    "old": "2023_Building-road_Collab",
+    "new": "2023_遥感目标检测_IEEE_Transactions_遥感_感知",
+    "title": "This article has been accepted for publication in IEEE Transactions on Geoscience and Remote Sensing. This is the author's version which has not been fully edited and",
+    "year": "2023",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2023_Detection_of_Illegal",
+    "new": "2023_遥感目标检测_Detection_Illegal_检测_非法",
+    "title": "Detection of Illegal Kiln Activity During SMOG",
+    "year": "2023",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "2023_Laplacian_Change_Poi",
+    "new": "2023_变化检测_LaplacianChangePointDetectionforSingleandMulti-viewDynamicGraph",
+    "title": "LaplacianChangePointDetectionforSingleandMulti-viewDynamicGraphs",
+    "year": "2023",
+    "topic": "S_变化检测_ChangeDetection"
+  },
+  {
+    "old": "2023_Learning_Efficient_U",
+    "new": "2023_通用其他_Learning_Efficient_学习_高效_卫星",
+    "title": "Learning Efficient Unsupervised Satellite",
+    "year": "2023",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2023_Limpets_Computer_Vision_Frontiers",
+    "new": "2023_通用其他_视觉",
+    "title": "Using computer vision to identify",
+    "year": "2023",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2023_OFAR_A_Multimodal_E",
+    "new": "2023_视觉大模型_OFAR_Multimodal_非法",
+    "title": "OFAR: A Multimodal Evidence Retrieval Framework for Illegal",
+    "year": "2023",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2023_Oriented_object_dete",
+    "new": "2023_目标检测_et al. full author details at the en",
+    "title": "et al. [full author details at the end of the article]",
+    "year": "2023",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2023_Super_Sparse_3D_Obje",
+    "new": "2023_目标检测_Super_Sparse_目标检测_三维_目标_检测",
+    "title": "Super Sparse 3D Object Detection",
+    "year": "2023",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2023_Vision-Language_Mode",
+    "new": "2023_视觉大模型_Vision-Language_Models_遥感_视觉_模型_感知",
+    "title": "Vision-Language Models in Remote Sensing:",
+    "year": "2023",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2024_2405.04974_Diffusion_Brain_MRI",
+    "new": "2024_医学图像分类配准生成_Discrepancy-based_Diffusion_扩散模型_模型_检测_脑",
+    "title": "Discrepancy-based Diffusion Models for Lesion Detection in Brain",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "2024_A_Progressive_Image",
+    "new": "2024_通用其他_Progressive_Image_图像复原_图像_复原_网络",
+    "title": "A Progressive Image Restoration Network for",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_Brain-Inspired_Onlin",
+    "new": "2024_视觉大模型_DexinDuan_PeilinLiu",
+    "title": "DexinDuan* PeilinLiu* BingweiHui† FeiWen*‡",
+    "year": "2024",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2024_Call_to_Protect_the",
+    "new": "2024_通用其他_Call_Protect_卫星",
+    "title": "Call to Protect the Dark and Quiet Sky from Harmful Interference by Satellite Constellations",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_Change-Agent_Toward",
+    "new": "2024_数据集基准_Change-Agent_Interactive_变化",
+    "title": "Change-Agent: Towards Interactive Comprehensive",
+    "year": "2024",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "2024_Correlation_of_Objec",
+    "new": "2024_通用其他_Correlation_Object_目标检测_目标_检测",
+    "title": "Correlation of Object Detection Performance with",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_Extracting_Object_He",
+    "new": "2024_通用其他_EXTRACTING_OBJECT_目标_航空",
+    "title": "EXTRACTING OBJECT HEIGHTS FROM LIDAR & AERIAL",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_FreezeAsGuard_Mitig",
+    "new": "2024_视觉大模型_FreezeAsGuard_Mitigating_非法",
+    "title": "FreezeAsGuard: Mitigating Illegal Adaptation of",
+    "year": "2024",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2024_Improving_the_Detect",
+    "new": "2024_通用其他_Improving_Detection_检测_目标_航空_图像",
+    "title": "Improving the Detection of Small Oriented Objects in Aerial Images",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_MagicBathyNet_A_Mul",
+    "new": "2024_数据集基准_MAGICBATHYNET_MULTIMODAL_遥感_数据集_感知_预测_分类",
+    "title": "MAGICBATHYNET A MULTIMODAL REMOTE SENSING DATASET FOR BATHYMETRY PREDICTION AND PIXEL-BASED CLASSIFICATION IN SHALLOW WATERS",
+    "year": "2024",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "2024_NBBOX_Noisy_Boundin",
+    "new": "2024_目标检测_NBBOX_Noisy",
+    "title": "NBBOX: Noisy Bounding Box Improves",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2024_PVAFN_Point-Voxel_A",
+    "new": "2024_目标检测_PVAFN_Point-Voxel_点云_注意力_融合_网络",
+    "title": "PVAFN: Point-Voxel Attention Fusion Network",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2024_Physics-Informed_Rea",
+    "new": "2024_通用其他_Physics-Informed_Real_卫星_检测",
+    "title": "Physics-Informed Real NVP for Satellite Power System Fault Detection",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_Reinforcement_Learni",
+    "new": "2024_自监督主动学习_Reinforcement_Learning_变化检测_学习_变化_检测",
+    "title": "Reinforcement Learning Design for Quickest Change Detection",
+    "year": "2024",
+    "topic": "Q_自监督_对比学习_主动学习"
+  },
+  {
+    "old": "2024_Remote_Sensing_ChatG",
+    "new": "2024_通用其他_Remote_Sensing_遥感_感知_视觉_模型",
+    "title": "Remote Sensing ChatGPT: Solving Remote Sensing Tasks with ChatGPT and Visual Models",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_Remote_Sensing_Spati",
+    "new": "2024_通用其他_Remote_Sensing_遥感_感知_视觉",
+    "title": "Remote Sensing SpatioTemporal Vision-Language",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_SOAR_Advancements_i",
+    "new": "2024_通用其他_SOAR_Advancements_目标",
+    "title": "SOAR: Advancements in Small Body Object",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_YOLOv5-Based_Object",
+    "new": "2024_目标检测_YOLOv5-Based_Object_目标检测_目标_检测",
+    "title": "YOLOv5-Based Object Detection for Emergency",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2024_三维人脸成像及重建技术综述",
+    "new": "2024_三维人脸成像及重建技术综述",
+    "title": "Liu F Zhang K B Yang Q Zhou S B Wang Y L and Sun Z N. 2024. 3D face imaging and reconstruction technology a review. Jour⁃",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "2024_三维场景注视点渲染深度学习方法综述",
+    "new": "2024_三维场景注视点渲染深度学习方法综述",
+    "title": "Li Y Q Hu X Xu X Xu Y N and Wang L. 2024. Deep learningbased foveated rendering in 3D space a review. Journal of Image",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "2024_人脸深度伪造检测方法综述",
+    "new": "2024_人脸深度伪造检测方法综述",
+    "title": "Yao W D Li P C Zhao Y and Wu H C. 2025. Review of research on face deepfake detection methods. Journal of Image and Graph⁃",
+    "year": "2024",
+    "topic": "J_人脸_表情_伪造_情感"
+  },
+  {
+    "old": "2024_单帧红外图像多尺度小目标检测技术综述",
+    "new": "2024_单帧红外图像多尺度小目标检测技术综述",
+    "title": "Kou R K Wang C P Luo Y Zhang Y Xu Z L Peng Z M Wu C Y and Fu Q. 2024. Multiscale smalltarget detection techniques in",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2024_基于单目视觉惯性的同步定位与地图构建方法综述",
+    "new": "2024_基于单目视觉惯性的同步定位与地图构建方法综述",
+    "title": "Zhang G F Huang G Xie W J Chen D P Wang N Liu H M and Bao H J. 2024. A review of monocular visualinertial SLAM. Jour⁃",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "2024_基于物理的可微渲染综述",
+    "new": "2024_基于物理的可微渲染综述",
+    "title": "Xing J K and Xu K. 2024. Physically based differentiable rendering a survey. Journal of Image and Graphics 29 10 29122925",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "2024_增量式尺度估计下的相机位置解算",
+    "new": "2024_增量式尺度估计下的相机位置解算",
+    "title": "Li M H Gao X Xie Z X and Shen S H. 2024. Incremental scale estimationbased camera location recovery. Journal of Image and",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "2024_布料与刚体模型间的空间网格碰撞检测方法",
+    "new": "2024_布料与刚体模型间的空间网格碰撞检测方法",
+    "title": "Jin Y X Qiao X Y Zhang L Wang S S Nan K L and Wang T. 2024. Collision detection method between fabric and complex models",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_改进YOLOv7的交通标志识别模型",
+    "new": "2024_改进YOLOv7的交通标志识别模型",
+    "title": "Meng B and Shi W D. 2024. Improved traffic sign recognition model for YOLOv7. Journal of Image and Graphics 29 09 27372752",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2024_数字室内三维场景构建综述",
+    "new": "2024_数字室内三维场景构建综述",
+    "title": "Yue L Tan H Huang J K and Zhang S K. 2024. Review of digital 3D indoor scene synthesis. Journal of Image and Graphics 29",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "2024_结合文本自训练和对抗学习的领域自适应工业场景文本检测",
+    "new": "2024_结合文本自训练和对抗学习的领域自适应工业场景文本检测",
+    "title": "Lyu X Q Quan W J Han J Chen Y Z and Cai Z T. 2024. Text selftraining and adversarial learningrelevant domain adaptive indus⁃",
+    "year": "2024",
+    "topic": "I_场景文本_OCR"
+  },
+  {
+    "old": "2024_自适应光流估计驱动的微表情识别",
+    "new": "2024_自适应光流估计驱动的微表情识别",
+    "title": "Bao Y T Wu C X Zhang P and Shan C F. 2024. Adaptive optical flow estimationdriven microexpression recognition. Journal of",
+    "year": "2024",
+    "topic": "J_人脸_表情_伪造_情感"
+  },
+  {
+    "old": "2024_融合场景先验的船名文本检测方法",
+    "new": "2024_融合场景先验的船名文本检测方法",
+    "title": "Chen B W Yi Y H Tang Z W Peng J B and Yin A G. 2024. Ship name text detection method with scene priors fusion. Journal of",
+    "year": "2024",
+    "topic": "I_场景文本_OCR"
+  },
+  {
+    "old": "2024_融合非局部特征表示的模糊图像复原",
+    "new": "2024_融合非局部特征表示的模糊图像复原",
+    "title": "Hua X Shu T Li M X Shi Y and Hong H Y. 2024. Nonlocal feature representationembedded blurred image restoration. Journal of",
+    "year": "2024",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "2024_超声波空中触觉图形呈现的时空调制方法",
+    "new": "2024_超声波空中触觉图形呈现的时空调制方法",
+    "title": "Shi J H Sun S Y Yang F Y and Chen J. 2024. Spatiotemporal modulation method for ultrasonic airborne haptic graphic presentation.",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2024_轻量化视觉定位技术综述",
+    "new": "2024_轻量化视觉定位技术综述",
+    "title": "Ye H Q Liu Y D and Shen S H. 2024. Lightweight visualbased localization technology. Journal of Image and Graphics 29 10",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "2024_面向三维人体坐标及旋转角估计的注意力融合网络",
+    "new": "2024_面向三维人体坐标及旋转角估计的注意力融合网络",
+    "title": "Xue F Bian F L and Li S J. 2024. Attention fusion network for estimation of 3D joint coordinates and rotation of human pose. Journal",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "2024_面向增强现实的虚实遮挡技术综述",
+    "new": "2024_面向增强现实的虚实遮挡技术综述",
+    "title": "Wu Y H Li X J and Liu Y. 2024. Virtualreal occlusion handling technologies in augmented reality. Journal of Image and Graphics",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "2025_2508.08117_GRASPTrack_MultiObject_Tracking",
+    "new": "2025_视觉大模型_GRASPTrack_Geometry-Reasoned",
+    "title": "GRASPTrack: Geometry-Reasoned Association via",
+    "year": "2025",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2025_2510.09893_HIPPD_Brain-Inspired_Personality_Detection",
+    "new": "2025_视觉大模型_ProceedingsofMachineLearningResearch304_ACML2025",
+    "title": "ProceedingsofMachineLearningResearch304,2025 ACML2025",
+    "year": "2025",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2025_2511.02142_3D_Growth_Trajectory_Reconstruction",
+    "new": "2025_三维点云_Instance_Segmentation_实例分割_实例_分割_三维",
+    "title": "From Instance Segmentation to 3D Growth",
+    "year": "2025",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "2025_2511.18209_MotionDuet_3D_Motion_Generation",
+    "new": "2025_三维点云_MotionDuet_Dual-Conditioned_三维",
+    "title": "MotionDuet: Dual-Conditioned 3D Human Motion",
+    "year": "2025",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "2025_Are_Open-Vocabulary",
+    "new": "2025_通用其他_Open-Vocabulary_Models_模型_检测",
+    "title": "Are Open-Vocabulary Models Ready for Detection of MEP",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2025_Audit_of_takedown_de",
+    "new": "2025_通用其他_Audit",
+    "title": "Audit of takedown delays across social media reveals failure to",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2025_Benchmarking_Suite_f",
+    "new": "2025_数据集基准_Benchmarking_Suite_合成孔径雷达_雷达_基准",
+    "title": "Benchmarking Suite for Synthetic Aperture Radar Imagery",
+    "year": "2025",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "2025_Cross-View_Open-Voca",
+    "new": "2025_通用其他_JyotiKini_RohitGupta",
+    "title": "JyotiKini RohitGupta MubarakShah",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2025_EdgeAI_Drone_for_Aut",
+    "new": "2025_通用其他_EdgeAI_Drone_建设",
+    "title": "EdgeAI Drone for Autonomous Construction Site Demonstrator*",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2025_Genes_Shells_AI_Scientific_Reports",
+    "new": "2025_通用其他_www.nature.com scientificreports",
+    "title": "www.nature.com/scientificreports",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2025_Lightweight_Object_D",
+    "new": "2025_目标检测_Lightweight_Object_目标检测_轻量化_目标_检测",
+    "title": "Lightweight Object Detection Using Quantized",
+    "year": "2025",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2025_Object_Detection_wit",
+    "new": "2025_目标检测_Information_Fusion_融合",
+    "title": "Information Fusion 126 (2026) 103575",
+    "year": "2025",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2025_Remote_Sensing_Retri",
+    "new": "2025_行人重识别_Remote_Sensing_遥感_感知",
+    "title": "Remote Sensing Retrieval-Augmented Generation:",
+    "year": "2025",
+    "topic": "M_行人_重识别_检索"
+  },
+  {
+    "old": "2025_SAM2-ELNet_Label_En",
+    "new": "2025_视觉大模型_SAM2-ELNet_Label_增强",
+    "title": "SAM2-ELNet: Label Enhancement and Automatic Annotation for",
+    "year": "2025",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2025_SoccerSynth-Detectio",
+    "new": "2025_数据集基准_SoccerSynth-Detection_Synthetic_数据集_检测",
+    "title": "SoccerSynth-Detection: A Synthetic Dataset for",
+    "year": "2025",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "2025_UAV-DETR_Efficient",
+    "new": "2025_目标检测_UAV-DETR_Efficient_目标检测_DETR_高效_目标_检测",
+    "title": "UAV-DETR: Efficient End-to-End Object Detection for Unmanned",
+    "year": "2025",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "2025_Vision-Language_Mode",
+    "new": "2025_视觉大模型_Vision-Language_Modeling_遥感_视觉_感知",
+    "title": "Vision-Language Modeling Meets Remote Sensing:",
+    "year": "2025",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "2026_Towards_Remote_Sensi",
+    "new": "2026_通用其他_Remote_Sensing_遥感_变化检测_感知_变化_检测",
+    "title": "Towards Remote Sensing Change Detection with Neural Memory",
+    "year": "2026",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "21-pr-Image Denoising Using Complex-Valued Deep CNN",
+    "new": "2024_通用其他_Image_Denoising_图像去噪_图像_去噪_深度_CNN",
+    "title": "21-pr-Image Denoising Using Complex-Valued Deep CNN",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "2107.14803v1",
+    "new": "2021_通用其他_2107.14803v1",
+    "title": "2107.14803v1",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "26211-41200-1-SM",
+    "new": "2018_通用其他_SM",
+    "title": "26211-41200-1-SM",
+    "year": "2018",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "3DKMI Krawtchouk矩形状签名 3DKMI",
+    "new": "2024_3DKMI_Krawtchouk矩形状签名_3DKMI",
+    "title": "3DKMI: A MATLAB package to generate shape signatures",
+    "year": "2024",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "3DfusionBlock",
+    "new": "2024_三维点云_Multi-Aperture_Fusion_多尺度_融合_Transformer_网络",
+    "title": "Multi-Aperture Fusion of Transformer-Convolutional Network (MFTC-Net) for",
+    "year": "2024",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "3D方向场变换 3D Orientation Field",
+    "new": "2010_3D方向场变换_3D_Orientation_Field",
+    "title": "Wai-Tsun Yeung, Xiaohao Cai, Zizhen Liang, and Byung-Ho Kang,",
+    "year": "2010",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "3D树木分割图 3D Tree Segmentation",
+    "new": "2019_3D树木分割图_3D_Tree_Segmentation",
+    "title": "Three-dimensional Segmentation of Trees Through a Flexible",
+    "year": "2019",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "3D树木分割图割 3D Tree Graph Cut",
+    "new": "2020_3D树木分割图割_3D_Tree_Graph_Cut",
+    "title": "3D Segmentation of Trees Through a Flexible",
+    "year": "2020",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "3D树木描绘图割 3D Tree Delineation",
+    "new": "2017_3D树木描绘图割_3D_Tree_Delineation",
+    "title": "A graph cut approach to 3D tree delineation, using integrated airborne LiDAR",
+    "year": "2017",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "A-comprehensive-survey-on-deep-active-learning-in-medi_2024_Medical-Image-An",
+    "new": "2024_医学图像分类配准生成_MedicalImageAnalysis95",
+    "title": "MedicalImageAnalysis95(2024)103201",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "A-prior-knowledge-guided-distributionally-robust-optimization_2024_Informati",
+    "new": "2024_医学图像配准张量_InformationSciences673",
+    "title": "InformationSciences673(2024)120705",
+    "year": "2024",
+    "topic": "A3_医学图像_配准_切片_张量_数学"
+  },
+  {
+    "old": "A-survey-on-deep-learning-in-medical-image-registration--Ne_2025_Medical-Ima",
+    "new": "2025_医学图像分类配准生成_Survey_Paper_医学图像_综述_深度_学习_医学_图像",
+    "title": "Survey Paper A survey on deep learning in medical image registration New technologies",
+    "year": "2025",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "ACF",
+    "new": "注意力算子模块_LN_CACACACAMCAMCACACAMCA",
+    "title": "퐹￿￿￿ 퐹￿￿￿LN CACACACAMCAMCACACAMCA",
+    "year": "",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "AFF",
+    "new": "2024_注意力算子模块_YimianDai1_FabianGieseke2",
+    "title": "YimianDai1 FabianGieseke2,3 StefanOehmcke3 YiquanWu1 KobusBarnard4",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "AFPN",
+    "new": "2017_注意力算子模块_AFPN_Asymptotic_目标检测_特征_网络_目标_检测",
+    "title": "AFPN: Asymptotic Feature Pyramid Network for Object Detection",
+    "year": "2017",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "ASSA&FRFN",
+    "new": "2024_注意力算子模块_ThisCVPRpaperistheOpenAccessversion",
+    "title": "ThisCVPRpaperistheOpenAccessversion,providedbytheComputerVisionFoundation.",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "A_Collaborative_Self-Supervised_Domain_Adaptation_for_Low-Quality_Medical_Image_Enhancement",
+    "new": "2024_医学图像分类配准生成_Collaborative_Self-Supervised_自监督",
+    "title": "A Collaborative Self-Supervised Domain",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "A_New_High-Precision_and_Lightweight_Detection_Model_for_Illegal_Construction_Objects_Based_on_Deep_Learning",
+    "new": "2023_遥感建筑检测_A_New_High-Precision_and_Lightweight_Detection_Model_for_Ille",
+    "title": "A_New_High-Precision_and_Lightweight_Detection_Model_for_Illegal_Construction_Objects_Based_on_Deep_Learning",
+    "year": "2023",
+    "topic": "T_遥感_建筑检测"
+  },
+  {
+    "old": "An_Optimized_Edge-Focused_Siamese_Network_for_Monitoring_New_Illegal_Buildings_Using_Satellite_Images",
+    "new": "2024_遥感建筑检测_An_Optimized_Edge-Focused_Siamese_Network_for_Monitoring_New",
+    "title": "An_Optimized_Edge-Focused_Siamese_Network_for_Monitoring_New_Illegal_Buildings_Using_Satellite_Images",
+    "year": "2024",
+    "topic": "T_遥感_建筑检测"
+  },
+  {
+    "old": "Anonymizing-medical-case-based-explanations-through-d_2024_Medical-Image-Ana",
+    "new": "2024_医学图像分类配准生成_MedicalImageAnalysis95_2",
+    "title": "MedicalImageAnalysis95(2024)103209",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "Assessing_the_Ability_of_Generative_Adversarial_Networks_to_Learn_Canonical_Medical_Image_Statistics",
+    "new": "2023_医学图像分类配准生成_Assessing_Ability_对抗",
+    "title": "Assessing the Ability of Generative Adversarial",
+    "year": "2023",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "Assignment_of_AI_Detected_Buildings_from_Satellite_Images_to_Registered_Meters_for_Energy_Theft_Detection",
+    "new": "2022_遥感建筑检测_Assignment_of_AI_Detected_Buildings_from_Satellite_Images_to",
+    "title": "Assignment_of_AI_Detected_Buildings_from_Satellite_Images_to_Registered_Meters_for_Energy_Theft_Detection",
+    "year": "2022",
+    "topic": "T_遥感_建筑检测"
+  },
+  {
+    "old": "Attention",
+    "new": "2022_注意力算子模块_Point_MixSwap_点云",
+    "title": "Point MixSwap: Attentional Point Cloud Mixing",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Author_Biography",
+    "new": "刘景(LiuJing)receivedtheB.S.degreeinelec",
+    "title": "刘景(LiuJing)receivedtheB.S.degreeinelec-",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "Beam-wise-dose-composition-learning-for-head-and-neck-can_2024_Medical-Image",
+    "new": "2024_医学图像分类配准生成_MedicalImageAnalysis92",
+    "title": "MedicalImageAnalysis92(2024)103045",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "Biologically-Inspired_Iterative_Learning_Control_Design_A_Modular-Based_Approach",
+    "new": "2024_控制生物启发_April_Winchester",
+    "title": "10-12 April, 2024. Winchester, UK",
+    "year": "2024",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "CAA&PKIBlock",
+    "new": "2016_注意力算子模块_Poly_Kernel_遥感_网络_感知_检测",
+    "title": "Poly Kernel Inception Network for Remote Sensing Detection",
+    "year": "2016",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CAFFN&MultiOrderGatedAggregation",
+    "new": "2024_注意力算子模块_Published_ICLR",
+    "title": "Published as a conference paper at ICLR 2024 MOGA NET M ULTI -ORDER GATED AGGREGATION",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CAFM&MSFN&CAMixingBlock",
+    "new": "2024_注意力算子模块_Hybrid_Convolutional_注意力_网络",
+    "title": "Hybrid Convolutional and Attention Network for",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CBAM",
+    "new": "2018_注意力算子模块_CBAM_Convolutional_注意力",
+    "title": "CBAM: Convolutional Block Attention Module",
+    "year": "2018",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CBM",
+    "new": "2024_注意力算子模块_B2CNet_Progressive_变化",
+    "title": "B2CNet: A Progressive Change Boundary-to-Center",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CCT",
+    "new": "2022_注意力算子模块_Escaping_Big",
+    "title": "Escaping the Big Data Paradigm with",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CGAFusion",
+    "new": "2023_注意力算子模块_DEA-Net_Single_图像_注意力",
+    "title": "DEA-Net: Single image dehazing based on detail-enhanced convolution and content-guided attention",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CLFT&UCDC",
+    "new": "2023_注意力算子模块_ABC_Attention_注意力",
+    "title": "ABC: Attention with Bilinear Correlation for",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CMUNeXtBlock",
+    "new": "2018_医学图像分割_CMUNeXt_Efficient_医学图像_图像分割_高效_医学_图像_分割",
+    "title": "CMUNeXt: An Efficient Medical Image Segmentation Network based on Large",
+    "year": "2018",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "CPA",
+    "new": "注意力算子模块_CPA",
+    "title": "CPA",
+    "year": "",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CPAM",
+    "new": "2024_注意力算子模块_ImageandVisionComputing147",
+    "title": "ImageandVisionComputing147(2024)105057",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CPB",
+    "new": "注意力算子模块_CLIP_V-Encoder",
+    "title": "CLIP V-Encoder Expand patchs CLIP V-Encoder",
+    "year": "",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CPB_visualisation",
+    "new": "注意力算子模块_How_非法_图像",
+    "title": "Q.How many linear walkways are there ? A.1 Q.Is exactly one case of illegal parking there ? A. yes Q.How many vehicles are observed turning ? A. 1 Q.Is there a car turning around in the image ? A. yes",
+    "year": "",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CPCA",
+    "new": "2021_注意力算子模块_Channel_医学图像_图像分割_注意力_医学_图像_分割",
+    "title": "Channel prior convolutional attention for medical image segmentation.",
+    "year": "2021",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CRMSA",
+    "new": "2024_注意力算子模块_Feature_Re-Embedding_基础模型_特征_模型",
+    "title": "Feature Re-Embedding: Towards Foundation Model-Level Performance in",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CSAttention",
+    "new": "2024_注意力算子模块_Cross-Scale_Attention_尺度_注意力",
+    "title": "Towards Cross-Scale Attention and Surface",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CasDyFBlock&RMB&LFB",
+    "new": "2023_注意力算子模块_CasDyF-Net_Image_图像",
+    "title": "CasDyF-Net: Image Dehazing via Cascaded",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CenSegNet中心体 CenSegNet",
+    "new": "2025_CenSegNet中心体_CenSegNet",
+    "title": "1 CenSegNet a generalist high -throughput deep learning framework for 1 centrosome phenotyping at spatial and single -cell resolution in 2",
+    "year": "2025",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "CoNIC-Challenge--Pushing-the-frontiers-of-nuclear-detectio_2024_Medical-Imag",
+    "new": "2024_医学图像分割_MedicalImageAnalysis92",
+    "title": "MedicalImageAnalysis92(2024)103047",
+    "year": "2024",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "CogM-Link",
+    "new": "注意力算子模块_Inputs_Feature_特征_增强_融合",
+    "title": "Inputs & Feature Extraction Gated Parallel Enhancement Architecture Fusion & Answering",
+    "year": "",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "CondConv",
+    "new": "2019_注意力算子模块_CondConv_Conditionally",
+    "title": "CondConv: Conditionally Parameterized",
+    "year": "2019",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Content-Noise_Complementary_Learning_for_Medical_Image_Denoising",
+    "new": "2022_医学图像分割_Content-Noise_Complementary_学习",
+    "title": "Content-Noise Complementary Learning for",
+    "year": "2022",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "Contrastive_and_Selective_Hidden_Embeddings_for_Medical_Image_Segmentation",
+    "new": "2022_医学图像分割_Contrastive_Selective",
+    "title": "Contrastive and Selective Hidden Embeddings",
+    "year": "2022",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "CornerPoint3D 3D检测新尺度 CornerPoint3D",
+    "new": "2025_CornerPoint3D_3D检测新尺度_CornerPoint3D",
+    "title": "CornerPoint3D: Look at the Nearest Corner Instead of the",
+    "year": "2025",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "Correlated-and-individual-feature-learning-with-contrast-enha_2023_Pattern-R",
+    "new": "2023_医学图像配准张量_Pattern_Recognition_识别_特征_学习",
+    "title": "Pattern Recognition 142 (2023) 109638 Correlated and individual feature learning with contrast-enhanced MR",
+    "year": "2023",
+    "topic": "A3_医学图像_配准_切片_张量_数学"
+  },
+  {
+    "old": "Cover_Letter",
+    "new": "2016_补充材料_IEEE_Transactions",
+    "title": "(or IEEE Transactions on Automatic Control)",
+    "year": "2016",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "DA",
+    "new": "2018_注意力算子模块_A2-Nets_Double_注意力_网络",
+    "title": "A2-Nets: Double Attention Networks",
+    "year": "2018",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DAB",
+    "new": "2024_注意力算子模块_DEFORMTIME_Capturing",
+    "title": "DEFORMTIME: Capturing Variable Dependencies",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DA_Block",
+    "new": "2023_注意力算子模块_SchoolofInformationEngineering",
+    "title": "SchoolofInformationEngineering SchoolofInformationEngineering",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DCA",
+    "new": "2023_注意力算子模块_Dual_Cross-Attention_医学图像_图像分割_注意力_医学_图像_分割",
+    "title": "Dual Cross-Attention for Medical Image Segmentation",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DFF(3d)",
+    "new": "2024_三维点云_D-Net_Dynamic",
+    "title": "D-Net: Dynamic Large Kernel with Dynamic",
+    "year": "2024",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "DICAM",
+    "new": "2024_注意力算子模块_Neurocomputing_Available",
+    "title": "Neurocomputing 584 (2024) 127585 Available online 24 March 2024",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DLKA",
+    "new": "2023_注意力算子模块_Beyond_Self-Attention_医学图像_注意力_医学_图像",
+    "title": "Beyond Self-Attention: Deformable Large Kernel Attention for Medical Image",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DNCNet雷达去噪 DNCNet",
+    "new": "2021_DNCNet雷达去噪_DNCNet",
+    "title": "Theabilitytoinstantlyidentifyandlabeltheinterested",
+    "year": "2021",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "DOConv",
+    "new": "2020_注意力算子模块_DO-Conv_Depthwise",
+    "title": "DO-Conv: Depthwise Over-parameterized",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DSAM",
+    "new": "2024_注意力算子模块_Neural_Networks_网络",
+    "title": "Neural Networks 171 (2024) 429–439 Available online 4 December 2023",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "DWConv",
+    "new": "2016_注意力算子模块_Xception_Deep_深度_学习",
+    "title": "Xception: Deep Learning with Depthwise Separable Convolutions",
+    "year": "2016",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Deep-learning-based-hyperspectral-image-correction-and-unmixing-f_2024_iScie",
+    "new": "2024_遥感高光谱变化检测_Deep_高光谱_深度_学习_图像",
+    "title": "Deep learning-based hyperspectral image",
+    "year": "2024",
+    "topic": "R1_遥感_高光谱_变化检测"
+  },
+  {
+    "old": "Deep-learning-based-synthesis-of-MRI--CT-and-PET--Revi_2024_Medical-Image-An",
+    "new": "2024_医学图像分类配准生成_MedicalImageAnalysis92_2",
+    "title": "MedicalImageAnalysis92(2024)103046",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "Deep-learning-models-for-ischemic-stroke-lesion-seg_2024_Computers-in-Biolog",
+    "new": "2024_医学图像分类配准生成_ComputersinBiologyandMedicine175",
+    "title": "ComputersinBiologyandMedicine175(2024)108509",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "Dual_Adversarial_Attention_Mechanism_for_Unsupervised_Domain_Adaptive_Medical_Image_Segmentation",
+    "new": "2022_医学图像分割_Dual_Adversarial_对抗_注意力",
+    "title": "Dual Adversarial Attention Mechanism for",
+    "year": "2022",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "Dysample(上采样)",
+    "new": "2023_Dysample(上采样)",
+    "title": "Learning to Upsample by Learning to Sample",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "EBSCO-FullText-09_12_2025",
+    "new": "2019_通用其他_EBSCO-FullText-09_12_2025",
+    "title": "EBSCO-FullText-09_12_2025",
+    "year": "2019",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "EBSCO-FullText-09_12_2025 (1)",
+    "new": "2022_通用其他_EBSCO-FullText-09_12_2025",
+    "title": "EBSCO-FullText-09_12_2025 (1)",
+    "year": "2022",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "EFF",
+    "new": "2023_注意力算子模块_ComputersinBiologyandMedicine167",
+    "title": "ComputersinBiologyandMedicine167(2023)107596",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "EGA",
+    "new": "2024_注意力算子模块_MEGANet_Multi-Scale_多尺度_尺度_注意力_网络_分割",
+    "title": "MEGANet: Multi-Scale Edge-Guided Attention Network for Weak Boundary Polyp Segmentation",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "ELAB",
+    "new": "2022_注意力算子模块_Efficient_Long-Range_超分辨率_高效_注意力_网络_图像",
+    "title": "Efficient Long-Range Attention Network for Image Super-resolution",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "ENLTB",
+    "new": "2024_注意力算子模块_Perspective_Unet_分割",
+    "title": "Perspective+ Unet: Enhancing Segmentation",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "EPA3d",
+    "new": "2023_三维点云_UNETR_Delving_医学图像_图像分割_高效_三维_医学_图像",
+    "title": "UNETR++: Delving into Efficient and Accurate 3D Medical Image Segmentation",
+    "year": "2023",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "EPAS_v5_中文终稿",
+    "new": "2016_EPAS_中文终稿",
+    "title": "上海工程技术大学电子电气工程学院，上海 201620",
+    "year": "2016",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "Explainable-artificial-intelligence--XAI--in-deep-learni_2022_Medical-Image-",
+    "new": "2022_医学图像分类配准生成_MedicalImageAnalysis79",
+    "title": "MedicalImageAnalysis79(2022)102470",
+    "year": "2022",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "FADConv",
+    "new": "2024_注意力算子模块_Frequency-Adaptive_Dilated_语义分割_自适应_语义_分割",
+    "title": "Frequency-Adaptive Dilated Convolution for Semantic Segmentation",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FECAttention(时序预测)",
+    "new": "2020_FECAttention(时序预测)",
+    "title": "FECAM: Frequency Enhanced Channel Attention Mechanism for",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FEM&SCAM",
+    "new": "2024_注意力算子模块_FFCA-YOLO_Small_目标检测_YOLO_目标_检测",
+    "title": "FFCA-YOLO for Small Object Detection",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FFA",
+    "new": "2019_注意力算子模块_FFA-Net_Feature_特征_融合_注意力_网络_图像",
+    "title": "FFA-Net: Feature Fusion Attention Network for Single Image Dehazing",
+    "year": "2019",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FINAL_VERSION",
+    "new": "2020_控制生物启发_Structure_Illumination",
+    "title": "Structure and Illumination Constrained GAN for",
+    "year": "2020",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "FMB",
+    "new": "2024_注意力算子模块_SMFANet_Lightweight_超分辨率_轻量化_特征_网络_高效_图像",
+    "title": "SMFANet: A Lightweight Self-Modulation Feature Aggregation Network for Efficient Image Super-Resolution",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FMM",
+    "new": "2023_注意力算子模块_Spatially-Adaptive_Feature_超分辨率_自适应_特征_高效_图像",
+    "title": "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FMS&MDAF",
+    "new": "2024_注意力算子模块_SFFNet_Wavelet-Based",
+    "title": "SFFNet: A Wavelet-Based Spatial and Frequency",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FSAS&DFFN",
+    "new": "2023_注意力算子模块_Efficient_Frequency_高效",
+    "title": "Efficient Frequency Domain-based Transformers",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "FULLTEXT01",
+    "new": "2024_通用其他_FULLTEXT01",
+    "title": "FULLTEXT01",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "FeatUp",
+    "new": "2024_注意力算子模块_StephanieFu_MarkHamilton",
+    "title": "StephanieFu∗ MarkHamilton∗ LauraBrandt",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Few-Shot_Medical_Image_Segmentation_via_Generating_Multiple_Representative_Descriptors",
+    "new": "2024_医学图像分割_Few-Shot_Medical_医学图像_图像分割_医学_图像_分割",
+    "title": "Few-Shot Medical Image Segmentation via",
+    "year": "2024",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "FreqFusion",
+    "new": "2024_注意力算子模块_Frequency-aware_Feature_特征_融合",
+    "title": "Frequency-aware Feature Fusion for",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GAB&GHPA",
+    "new": "2017_注意力算子模块_EGE-UNet_Efficient_高效",
+    "title": "EGE-UNet: an Efficient Group Enhanced UNet",
+    "year": "2017",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GAMED虚假新闻检测 GAMED Fake News",
+    "new": "2005_GAMED虚假新闻检测_GAMED_Fake_News",
+    "title": "GAMED: Knowledge Adaptive Multi-Experts Decoupling for",
+    "year": "2005",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GAU",
+    "new": "2024_注意力算子模块_TheThirty-EighthAAAIConferenceonArtificialIntelligence_AAAI",
+    "title": "TheThirty-EighthAAAIConferenceonArtificialIntelligence(AAAI-24)",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GCTattention",
+    "new": "2020_注意力算子模块_Gated_Channel_视觉_识别",
+    "title": "Gated Channel Transformation for Visual Recognition",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GLSA",
+    "new": "2022_注意力算子模块_DuAT_Dual-Aggregation_医学图像_图像分割_Transformer_网络_医学_图像",
+    "title": "DuAT: Dual-Aggregation Transformer Network for Medical Image Segmentation",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GRSA",
+    "new": "2021_注意力算子模块_GRFormer_Grouped_注意力_轻量化",
+    "title": "GRFormer: Grouped Residual Self-Attention for Lightweight",
+    "year": "2021",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GatedSlotAttention",
+    "new": "2024_注意力算子模块_Gated_Slot_注意力_高效",
+    "title": "Gated Slot Attention for Efficient Linear-Time",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GhostModule",
+    "new": "2012_注意力算子模块_GhostNet_More_特征",
+    "title": "GhostNet: More Features from Cheap Operations",
+    "year": "2012",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GhostModuleV2",
+    "new": "2022_注意力算子模块_GhostNetV2_Enhance",
+    "title": "GhostNetV2: Enhance Cheap Operation with",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GlobalPMFSBlock",
+    "new": "2018_注意力算子模块_PMFSNet_Polarized_多尺度_尺度_特征_注意力_网络",
+    "title": "PMFSNet: Polarized Multi-scale Feature Self-attention Network For",
+    "year": "2018",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "GraphLayer",
+    "new": "2020_注意力算子模块_Graph-Convolutional_Representation_图",
+    "title": "Graph-Convolutional Representation for",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Guest_Editorial_Annotation-Efficient_Deep_Learning_The_Holy_Grail_of_Medical_Imaging",
+    "new": "2021_医学图像分类配准生成_Annotation-Efficient_Deep_医学影像_高效_深度_学习_医学",
+    "title": "Annotation-Efficient Deep Learning: The Holy Grail of Medical Imaging",
+    "year": "2021",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "H3_AP202501081641860289_1",
+    "new": "2024年中国物流无人机行业概览：低空经济助力物流无人机腾飞",
+    "title": "2024年中国物流无人机行业概览：低空经济助力物流无人机腾飞",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "HAAM",
+    "new": "2022_注意力算子模块_IEEE_TRANSACTIONS_医学影像_医学",
+    "title": "IEEE TRANSACTIONS ON MEDICAL IMAGING, VOL. xx, NO. X, NOVEMBER 2022 1",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "HFF",
+    "new": "2024_注意力算子模块_BiomedicalSignalProcessingandControl87",
+    "title": "BiomedicalSignalProcessingandControl87(2024)105534",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "HSE&FuGH&S3DSA",
+    "new": "2024_注意力算子模块_DEFN_Dual-Encoder_网络_三维",
+    "title": "DEFN: Dual-Encoder Fourier Group Harmonics Network for Three-Dimensional",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "HTB",
+    "new": "2024_注意力算子模块_Restoring_Images_图像",
+    "title": "Restoring Images in Adverse Weather Conditions",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "HWAB",
+    "new": "2022_注意力算子模块_Chi-MaoFan_Tsung-JungLiu",
+    "title": "Chi-MaoFan(cid:63) Tsung-JungLiu(cid:63) Kuan-HsienLiu†",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "HWD下采样",
+    "new": "2023_HWD下采样",
+    "title": "PatternRecognition143(2023)109819",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "HiFi-Mamba MRI重建 HiFi-Mamba MRI Reconstruction",
+    "new": "2025_HiFi-Mamba_MRI重建_HiFi-Mamba_MRI_Reconstruction",
+    "title": "HiFi-Mamba: Dual-Stream w-Laplacian Enhanced Mamba for High-Fidelity",
+    "year": "2025",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "HiFi-MambaV2分层MRI HiFi-MambaV2 Hierarchical MRI",
+    "new": "2021_HiFi-MambaV2分层MRI_HiFi-MambaV2_Hierarchical_MRI",
+    "title": "HiFi-MambaV2: Hierarchical Shared-Routed MoE",
+    "year": "2021",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "IDC",
+    "new": "2023_注意力算子模块_InceptionNeXt_When",
+    "title": "InceptionNeXt: When Inception Meets ConvNeXt",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "ISAR卫星特征识别 ISAR",
+    "new": "2024_ISAR卫星特征识别_ISAR",
+    "title": "10-12 April, 2024. Winchester, UK",
+    "year": "2024",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "Illegal_Buildings_Detection_from_Satellite_Images_using_GoogLeNet_and_Cadastral_Map",
+    "new": "2018_遥感目标检测_2018InternationalConferenceonIntelli",
+    "title": "2018InternationalConferenceonIntelligentSystems(IS)",
+    "year": "2018",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "Inception_mixer",
+    "new": "2022_注意力算子模块_Inception_Transformer_Transformer",
+    "title": "Inception Transformer Chenyang Si1 Weihao Yu1;2 Pan Zhou1Yichen Zhou1;2Xinchao Wang2Shuicheng Yan1",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "InfoNorm",
+    "new": "2024_注意力算子模块_InfoNorm_Mutual",
+    "title": "InfoNorm: Mutual Information Shaping of",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Interpretability-Guided-Inductive-Bias-For-Deep-Learnin_2022_Medical-Image-A",
+    "new": "2022_医学图像分类配准生成_MedicalImageAnalysis81",
+    "title": "MedicalImageAnalysis81(2022)102551",
+    "year": "2022",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "LAE&MSFM&RFAConv",
+    "new": "2024_注意力算子模块_LSM-YOLO_Compact_YOLO",
+    "title": "LSM-YOLO: A Compact and Effective ROI",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "LDConv",
+    "new": "2024_注意力算子模块_ImageandVisionComputing149",
+    "title": "ImageandVisionComputing149(2024)105190",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "LMFLoss",
+    "new": "2019_注意力算子模块_AbuAdnanSadi2_LabibChowdhury1",
+    "title": "AbuAdnanSadi2,∗ LabibChowdhury1,∗ NusratJahan2",
+    "year": "2019",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "LMLT",
+    "new": "2024_注意力算子模块_LMLT_Low-to-high_多尺度_视觉_Transformer",
+    "title": "LMLT: Low-to-high Multi-Level Vision Transformer",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "LPA&DMC",
+    "new": "2024_注意力算子模块_SwinPA-Net_Swin_Transformer_多尺度",
+    "title": "SwinPA-Net: Swin Transformer-Based Multiscale",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "LViT_Language_Meets_Vision_Transformer_in_Medical_Image_Segmentation",
+    "new": "2024_医学图像分割_LViT_Language_视觉_Transformer",
+    "title": "LViT: Language Meets Vision Transformer",
+    "year": "2024",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "Learning-image-representations-for-anomaly-detection--Applic_2024_Medical-Im",
+    "new": "2024_医学图像分类配准生成_MedicalImageAnalysis92_3",
+    "title": "MedicalImageAnalysis92(2024)103067",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "LightM-UNet",
+    "new": "2024_医学图像分割_LightM-UNet_Mamba_Mamba_轻量化",
+    "title": "LightM-UNet: Mamba Assists in Lightweight",
+    "year": "2024",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "Like_Squinting_Your_Eyes_The_impact_of_different_fusion_modules_on_change",
+    "new": "2024_通用其他_Like_Squinting_Your_Eyes_The_impact_of_different_fusion_modules",
+    "title": "Like_Squinting_Your_Eyes_The_impact_of_different_fusion_modules_on_change",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "LocalViT",
+    "new": "2012_医学图像分割_LocalViT_Bringing_视觉",
+    "title": "LocalViT: Bringing Locality to Vision Transformers",
+    "year": "2012",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "MAB",
+    "new": "2024_注意力算子模块_NTIRE2024Submission_CONFIDENTIALREVIEWCOPY_综述",
+    "title": "NTIRE2024Submission#17. CONFIDENTIALREVIEWCOPY.DONOTDISTRIBUTE.",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MASAG",
+    "new": "2024_注意力算子模块_Attention-guided_Network_医学图像_注意力_网络_医学_图像",
+    "title": "Attention-guided Network for Medical Image",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MATM&PS2A&MHIASA",
+    "new": "2024_注意力算子模块_IEEE_Selected_遥感_感知",
+    "title": "This article has been accepted for publication in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. This is the author's version which has not been fully edited and",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MDFM",
+    "new": "2024_注意力算子模块_DGMA_Net_多尺度",
+    "title": "DGMA -Net: A Difference-Guided Multiscale",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MFGM&PLM",
+    "new": "2024_注意力算子模块_Prototype-Driven_Multi-Feature_多尺度_特征",
+    "title": "Prototype-Driven Multi-Feature Generation for",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MIAYOLO_Multiexpert_and_Intraclass_Aggregation-Assisted_Suburban_Building_Detection_in_Unmanned_Aerial_Vehicle_Imagery",
+    "new": "2024_遥感建筑检测_MIAYOLO_Multiexpert_and_Intraclass_Aggregation-Assisted_Subur",
+    "title": "MIAYOLO_Multiexpert_and_Intraclass_Aggregation-Assisted_Suburban_Building_Detection_in_Unmanned_Aerial_Vehicle_Imagery",
+    "year": "2024",
+    "topic": "T_遥感_建筑检测"
+  },
+  {
+    "old": "MLA",
+    "new": "2022_注意力算子模块_EfficientViT_Multi-Scale_多尺度_尺度_注意力_预测",
+    "title": "EfficientViT: Multi-Scale Linear Attention for High-Resolution Dense Prediction",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MLAttention(文本分类)",
+    "new": "2018_MLAttention(文本分类)",
+    "title": "AttentionXML: Label Tree-based Attention-Aware",
+    "year": "2018",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MLLA",
+    "new": "2024_注意力算子模块_Demystify_Mamba_Mamba_视觉_注意力",
+    "title": "Demystify Mamba in Vision: A Linear Attention",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MOGO 3D人体运动生成 MOGO Motion",
+    "new": "2023_MOGO_3D人体运动生成_MOGO_Motion",
+    "title": "MOGO: Residual Quantized Hierarchical Causal Transformer for Real-Time and",
+    "year": "2023",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "MSAA",
+    "new": "2015_注意力算子模块_CM-UNet_Hybrid_CNN_Mamba_遥感",
+    "title": "CM-UNet: Hybrid CNN-Mamba UNet for Remote",
+    "year": "2015",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MSAF",
+    "new": "2024_注意力算子模块_DSNet_Novel_语义分割_语义_分割",
+    "title": "DSNet: A Novel Way to Use Atrous Convolutions in Semantic Segmentation",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MSCA",
+    "new": "2012_注意力算子模块_SegNeXt_Rethinking_注意力",
+    "title": "SegNeXt: Rethinking Convolutional Attention Design",
+    "year": "2012",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MSCB&MSACM&EUCB&LGAG",
+    "new": "2024_注意力算子模块_EMCAD_Efficient_高效_多尺度_尺度_注意力_医学",
+    "title": "EMCAD: Efficient Multi-scale Convolutional Attention Decoding for Medical",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "MSPLCK&EPA",
+    "new": "2021_注意力算子模块_MixDehazeNet_Mix_图像_网络",
+    "title": "MixDehazeNet : Mix Structure Block For Image Dehazing Network",
+    "year": "2021",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Mask_to_Height_YOLOv11_2510.27224",
+    "new": "2023_目标检测_Mask-to-Height_YOLOv11-Based",
+    "title": "Mask-to-Height: A YOLOv11-Based Architecture",
+    "year": "2023",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "Multi-source-multi-modal-markers-for-Bayesian-Networks--Ap_2024_Medical-Imag",
+    "new": "2024_医学图像分类配准生成_MedicalImageAnalysis92_4",
+    "title": "MedicalImageAnalysis92(2024)103037",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "NAF",
+    "new": "2022_注意力算子模块_Simple_Baselines_图像复原_图像_复原",
+    "title": "Simple Baselines for Image Restoration",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "NO.2825A30075-b1ad981e31c24999b3a2f13779c88874",
+    "new": "补充材料_NO",
+    "title": "NO.2825A30075-b1ad981e31c24999b3a2f13779c88874",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "OKM",
+    "new": "2022_注意力算子模块_Omni-Kernel_Network_图像复原_网络_图像_复原",
+    "title": "Omni-Kernel Network for Image Restoration",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "PAAblock",
+    "new": "2021_注意力算子模块_UACANet_Uncertainty_不确定性_注意力",
+    "title": "UACANet: Uncertainty Augmented Context Attention for Polyp",
+    "year": "2021",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "PCBAM&SWA",
+    "new": "2024_注意力算子模块_DAU-Net_Dual_注意力",
+    "title": "DAU-Net: Dual attention-aided U-Net for",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "PConv",
+    "new": "2023_注意力算子模块_Run_Don_网络",
+    "title": "Run, Don’t Walk: Chasing Higher FLOPS for Faster Neural Networks",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "PE3d",
+    "new": "2019_三维点云_Project_Excite_分割",
+    "title": "‘Project & Excite’ Modules for Segmentation of",
+    "year": "2019",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "PGM",
+    "new": "2023_注意力算子模块_PromptIR_Prompting_图像",
+    "title": "PromptIR: Prompting for All-in-One Blind Image",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "PPA&DASI&MDCR(红外小目标检测)",
+    "new": "2024_PPA&DASI&MDCR(红外小目标检测)",
+    "title": "HCF-Net: Hierarchical Context Fusion Network for",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "PURIFY分布式优化 PURIFY",
+    "new": "2019_PURIFY分布式优化_PURIFY",
+    "title": "ProcediaComputerScience00(2019)1–25",
+    "year": "2019",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "Parallel ViT",
+    "new": "2022_注意力算子模块_Three_三维",
+    "title": "Three things everyone should know",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "PyConv",
+    "new": "2020_注意力算子模块_Rethinking_Convolutional_网络",
+    "title": "Rethinking Convolutional Neural Networks for",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Quantitative-evaluation-of-Saliency-Based-Explainable-arti_2024_European-Jou",
+    "new": "2024_医学图像分类配准生成_EuropeanJournalofRadiology173",
+    "title": "EuropeanJournalofRadiology173(2024)111356",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "RAB&HDRAB",
+    "new": "2023_注意力算子模块_Dual_Residual_图像去噪_注意力_网络_图像_去噪",
+    "title": "Dual Residual Attention Network for Image Denoising",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "RAMiT&HRAMi",
+    "new": "2024_注意力算子模块_ThisCVPRWorkshoppaperistheOpenAccessversion",
+    "title": "ThisCVPRWorkshoppaperistheOpenAccessversion,providedbytheComputerVisionFoundation.",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "RCM&dpg_head",
+    "new": "2024_注意力算子模块_Context-Guided_Spatial_语义分割_特征_重建_高效_语义_分割",
+    "title": "Context-Guided Spatial Feature Reconstruction for Efficient Semantic Segmentation",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "RFAConv",
+    "new": "2023_注意力算子模块_RFAConv_Innovating_注意力",
+    "title": "RFAConv: Innovating Spatial Attention and Standard Convolutional",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "RSSG",
+    "new": "2024_注意力算子模块_MambaIR_Simple_图像",
+    "title": "MambaIR: A Simple Baseline for Image",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Rethinking-masked-image-modelling-for-medical-image-r_2024_Medical-Image-Ana",
+    "new": "2024_医学图像分割_ContentslistsavailableatScienceDirect",
+    "title": "ContentslistsavailableatScienceDirect",
+    "year": "2024",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "RevIN(时序预测)",
+    "new": "2022_RevIN(时序预测)",
+    "title": "TaesungKim∗ JinheeKim* YunwonTae",
+    "year": "2022",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "Robust-and-fast-stochastic-4D-flow-vector-field-signature-techn_2024_Medical",
+    "new": "2024_医学图像配准张量_MedicalImageAnalysis92",
+    "title": "MedicalImageAnalysis92(2024)103065",
+    "year": "2024",
+    "topic": "A3_医学图像_配准_切片_张量_数学"
+  },
+  {
+    "old": "RobustPCA树木分类 Robust PCA Trees",
+    "new": "2016_RobustPCA树木分类_Robust_PCA_Trees",
+    "title": "Individual Tree Species Classification From Airborne",
+    "year": "2016",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "Robust_Medical_Image_Classification_From_Noisy_Labeled_Data_With_Global_and_Local_Representation_Guided_Co-Training",
+    "new": "2022_医学图像分类配准生成_Robust_Medical_医学图像_鲁棒_医学_图像_分类",
+    "title": "Robust Medical Image Classification From Noisy",
+    "year": "2022",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "SA",
+    "new": "2019_注意力算子模块_Stand-Alone_Self-Attention_注意力_视觉_模型",
+    "title": "Stand-Alone Self-Attention in Vision Models",
+    "year": "2019",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SCKansformer",
+    "new": "2024_注意力算子模块_SCKansformer_Fine-Grained_分类",
+    "title": "SCKansformer: Fine-Grained Classification of",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SCSA",
+    "new": "2017_注意力算子模块_SCSA_Exploring",
+    "title": "SCSA: Exploring the Synergistic Effects Between",
+    "year": "2017",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SDM",
+    "new": "2023_注意力算子模块_PnPNet_Pull-and-Push_网络",
+    "title": "PnPNet: Pull-and-Push Networks for Volumetric",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SFFusion",
+    "new": "2024_注意力算子模块_Multilevel_Multimodal_遥感_语义分割_融合_Transformer_感知_语义",
+    "title": "A Multilevel Multimodal Fusion Transformer for Remote Sensing Semantic Segmentation",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SGFN&ASSA&ACSA",
+    "new": "2023_注意力算子模块_ThisICCVpaperistheOpenAccessversion",
+    "title": "ThisICCVpaperistheOpenAccessversion,providedbytheComputerVisionFoundation.",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SHSA",
+    "new": "2024_注意力算子模块_SHViT_Single-Head_视觉_Transformer_高效",
+    "title": "SHViT: Single-Head Vision Transformer with Memory Efficient Macro Design",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SLAB(prepbn&SLA)",
+    "new": "2020_注意力算子模块_SLAB_Efficient_高效_注意力",
+    "title": "SLAB: Efficient Transformers with Simplified Linear Attention and Progressive",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SLaT三阶段分割 SLaT Segmentation",
+    "new": "2015_SLaT三阶段分割_SLaT_Segmentation",
+    "title": "A Three-stage Approach for Segmenting",
+    "year": "2015",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "SMA&EMLP&Modulator",
+    "new": "2017_注意力算子模块_SMAFormer_Synergistic_多尺度_注意力",
+    "title": "SMAFormer: Synergistic Multi-Attention",
+    "year": "2017",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "SPConv",
+    "new": "2020_注意力算子模块_Split_Slim",
+    "title": "Split to Be Slim: An Overlooked Redundancy in Vanilla Convolution",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "ScaleGraphBlock",
+    "new": "2018_注意力算子模块_MSGNet_Learning_学习_多尺度_尺度",
+    "title": "MSGNet: Learning Multi-Scale Inter-Series Correlations for Multivariate Time",
+    "year": "2018",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Scaling_Laws_for_Neural_Language_Models",
+    "new": "2020_视觉大模型_Scaling_Laws_模型",
+    "title": "Scaling Laws for Neural Language Models",
+    "year": "2020",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "Semi-supervised-medical-image-classification-via-distance-c_2024_Medical-Ima",
+    "new": "2024_医学图像分类配准生成_MedicalImageAnalysis94",
+    "title": "MedicalImageAnalysis94(2024)103107",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "SmoothNet",
+    "new": "2021_控制生物启发_SmoothNet_Plug-and-Play_网络",
+    "title": "SmoothNet: A Plug-and-Play Network for",
+    "year": "2021",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "StarBlocks",
+    "new": "2024_注意力算子模块_XuMa1_XiyangDai2",
+    "title": "XuMa1,XiyangDai2,YueBai1,YizhouWang1,YunFu1",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Structure_and_Illumination_Constrained_GAN_for_Medical_Image_Enhancement",
+    "new": "2021_医学图像分类配准生成_Structure_Illumination",
+    "title": "Structure and Illumination Constrained GAN",
+    "year": "2021",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "SwiftFormerEncoder&ConvEncoder",
+    "new": "2023_注意力算子模块_ThisICCVpaperistheOpenAccessversion_2",
+    "title": "ThisICCVpaperistheOpenAccessversion,providedbytheComputerVisionFoundation.",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "TIAM",
+    "new": "2024_注意力算子模块_InternationalJournalofAppliedEarthObservationandGeoinformati",
+    "title": "InternationalJournalofAppliedEarthObservationandGeoinformation128(2024)103767",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "TIF",
+    "new": "2021_注意力算子模块_DS-TransUNet_Dual_Transformer",
+    "title": "DS-TransUNet: Dual Swin Transformer U-Net",
+    "year": "2021",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "TPAMI.2015.2439281",
+    "new": "2015_论文_TPAMI",
+    "title": "TPAMI.2015.2439281",
+    "year": "2015",
+    "topic": "T_图像处理_其他"
+  },
+  {
+    "old": "TPAMI.2017.2699184",
+    "new": "2017_论文_TPAMI",
+    "title": "TPAMI.2017.2699184",
+    "year": "2017",
+    "topic": "T_图像处理_其他"
+  },
+  {
+    "old": "TSConformerBlock",
+    "new": "2022_注意力算子模块_CMGAN_Conformer-Based",
+    "title": "CMGAN: Conformer-Based Metric-GAN for",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "TSLANet(ICB&ASB)",
+    "new": "2023_注意力算子模块_TSLANet_Rethinking_学习",
+    "title": "TSLANet: Rethinking Transformers for Time Series Representation Learning",
+    "year": "2023",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "TVConv",
+    "new": "2022_注意力算子模块_TVConv_Efficient_高效",
+    "title": "TVConv: Efficient Translation Variant Convolution",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "Talk2Radar 雷达语言多模态 Talk2Radar",
+    "new": "2025_Talk2Radar_雷达语言多模态_Talk2Radar",
+    "title": "Talk2Radar: Bridging Natural Language with 4D mmWave Radar",
+    "year": "2025",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "TfNet_Building_Detection_in_Remote_Sensing_Images_Using_Multi-Scale_Feature_Fusion",
+    "new": "2024_遥感建筑检测_TfNet_Building_Detection_in_Remote_Sensing_Images_Using_Multi",
+    "title": "TfNet_Building_Detection_in_Remote_Sensing_Images_Using_Multi-Scale_Feature_Fusion",
+    "year": "2024",
+    "topic": "T_遥感_建筑检测"
+  },
+  {
+    "old": "Three-ways-ChatGPT-helps-me-in-my-academic-writing",
+    "new": "2024_通用其他_Three-ways-ChatGPT-helps-me-in-my-academic-writing_三维",
+    "title": "Three-ways-ChatGPT-helps-me-in-my-academic-writing",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "TransNet动作识别 TransNet HAR",
+    "new": "2023_TransNet动作识别_TransNet_HAR",
+    "title": "TransNet: A Transfer Learning-Based Network for",
+    "year": "2023",
+    "topic": "K_跟踪_视频_动作"
+  },
+  {
+    "old": "Transforming-medical-imaging-with-Transformers--A-comparativ_2023_Medical-Im",
+    "new": "2023_医学图像分类配准生成_MedicalImageAnalysis85",
+    "title": "MedicalImageAnalysis85(2023)102762",
+    "year": "2023",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "Tucker近似 Tucker Approximation",
+    "new": "2023_Tucker近似_Tucker_Approximation",
+    "title": "JournalofScientificComputing(2023)95:52",
+    "year": "2023",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "ULSAM",
+    "new": "2006_注意力算子模块_ULSAM_Ultra-Lightweight_轻量化_注意力",
+    "title": "ULSAM: Ultra-Lightweight Subspace Attention Module for Compact",
+    "year": "2006",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "WCMFandFACMA",
+    "new": "2022_注意力算子模块_FCMNet_Frequency-aware_目标检测_注意力_网络_目标",
+    "title": "FCMNet Frequency-aware cross-modality attention networks for RGB-D salient object detectionq",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "YMMNet_A_More_Accurate_and_Lightweight_Detector_of_Illegal_Buildings_for_Smart_Cities",
+    "new": "2024_遥感建筑检测_YMMNet_A_More_Accurate_and_Lightweight_Detector_of_Illegal_Bu",
+    "title": "YMMNet_A_More_Accurate_and_Lightweight_Detector_of_Illegal_Buildings_for_Smart_Cities",
+    "year": "2024",
+    "topic": "T_遥感_建筑检测"
+  },
+  {
+    "old": "applsci-14-02690-v2",
+    "new": "2024_通用其他_applsci-14-02690-v2",
+    "title": "applsci-14-02690-v2",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "ar_residual_growth",
+    "new": "注意力算子模块_Autoregressive",
+    "title": "Autoregressive residual growth validation",
+    "year": "",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "assemFormer&mcattn",
+    "new": "2024_注意力算子模块_SvANet_Scale-variant_尺度_注意力_网络",
+    "title": "SvANet: A Scale-variant Attention-based Network",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "axial",
+    "new": "2021_注意力算子模块_Medical_Transformer_医学_Transformer_注意力",
+    "title": "Medical Transformer: Gated Axial-Attention for",
+    "year": "2021",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "benchmark_overview",
+    "new": "补充材料_(3$6 (3$6 (3$6",
+    "title": "(3$6  (3$6  (3$6",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "budget_fairness_accounting",
+    "new": "补充材料_3HULRGLF 6WDQGDUG(7 3ULYDFDZDUH (3$6",
+    "title": "3HULRGLF 6WDQGDUG(7 3ULYDFDZDUH (3$6",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "c22af048-3756-4a19-af0c-dfde22120daa",
+    "new": "上海工程技术大学研究生入学登记表",
+    "title": "上海工程技术大学研究生入学登记表",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "cjig_paper_1",
+    "new": "2024_通用其他_Hu_Xie_综述_图像",
+    "title": "Hu B Xie G Q Li L D Li J Yang J C Lu W and Gao X B. 2024. Progress of image retargeting quality evaluation a survey. Journal",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "cjig_paper_2",
+    "new": "2024_通用其他_Wang_Huo_图像_增强",
+    "title": "Wang Z Huo G L Lan H Hu J M and Wei X. 2024. Fundus image enhancement algorithm based on convolutional dictionary diffu­",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "cjig_paper_3",
+    "new": "2023_通用其他_Wang_Miao_表情_图像",
+    "title": "Wang L A Miao P H Su W Li X Ji N Y and Jiang Y B. 2023. Multimodal referring expression comprehension based on image and",
+    "year": "2023",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "cjig_paper_5",
+    "new": "2023_中图法分类号_文献标识码_文章编号",
+    "title": "中图法分类号： ； 文献标识码： 文章编号： - （ ） - -",
+    "year": "2023",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "cjig_图像处理_基于t-SNE最大化的彩色图像灰度化",
+    "new": "2024_图像处理_基于t-SNE最大化的彩色图像灰度化",
+    "title": "Xie B Xu Y Wang G C Yang S M and Li Y W. 2024. Adaptive decolorization method based on tSNE maximization. Journal of",
+    "year": "2024",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "cjig_图像处理_深度伪造及其取证技术综述",
+    "new": "2024_图像处理_深度伪造及其取证技术综述",
+    "title": "中图法分类号： ； 文献标识码： 文章编号： - （ ） - -",
+    "year": "2024",
+    "topic": "I_场景文本_OCR"
+  },
+  {
+    "old": "cjig_图像处理_深度学习点云质量增强方法综述",
+    "new": "2023_图像处理_深度学习点云质量增强方法综述",
+    "title": "Chen J W Zhao L L Ren L C Sun Z Q Zhang X F and Ma S W. 2023. Deep learningbased quality enhancement for 3D point",
+    "year": "2023",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "cjig_图像处理_结合背景图的高分辨率视频人像实时抠图网络",
+    "new": "2024_图像处理_结合背景图的高分辨率视频人像实时抠图网络",
+    "title": "Peng H Zhang J B Jia D An T Cai P and Zhao J Y. 2024. Realtime highresolution video portrait matting network combined with",
+    "year": "2024",
+    "topic": "K_跟踪_视频_动作"
+  },
+  {
+    "old": "cjig_图像处理_轻量级注意力的束对齐网络的视频超分重建",
+    "new": "2023_图像处理_轻量级注意力的束对齐网络的视频超分重建",
+    "title": "Wu Y H and Sang N. 2023. Consistency constraints and label optimizationrelevant domainunsupervised adaptive pedestrians",
+    "year": "2023",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "cjig_图像识别_多阶段空间感知道路损伤检测网络",
+    "new": "2024_图像识别_多阶段空间感知道路损伤检测网络",
+    "title": "Li W Huang T Q Huang L Q Zheng A K and Xu C. 2024. Largescale datasets for facial tampering detection with inpainting tech⁃",
+    "year": "2024",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "cjig_图像识别_弱监督语义分割方法综述",
+    "new": "2024_图像识别_弱监督语义分割方法综述",
+    "title": "Xiang W K Zhou Q Cui J C Mo Z Y Wu X F Ou W H Wang J D and Liu W Y. 2024. Weakly supervised semantic segmentation",
+    "year": "2024",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "cjig_图像识别_深度学习实时语义分割综述_完整版",
+    "new": "2024_图像识别_深度学习实时语义分割综述_完整版",
+    "title": "Gao C X Xu Z Z Wu D Y Yu C Q and Sang N. 2024. Deep learningbased realtime semantic segmentation a survey. Journal of",
+    "year": "2024",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "cjig_图像识别_红外与可见光图像特征动态选择的目标检测网络",
+    "new": "2024_图像识别_红外与可见光图像特征动态选择的目标检测网络",
+    "title": "Xu K Liu X P Wang H Y Wan J W and Guo Y L. 2024. Infraredvisible image object detection algorithm using feature dynamic",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "cjig_图像识别_自适应异构联邦学习",
+    "new": "2024_图像识别_自适应异构联邦学习",
+    "title": "中图法分类号： ； 文献标识码： 文章编号： - （ ） - -",
+    "year": "2024",
+    "topic": "P_跨域_域自适应_联邦"
+  },
+  {
+    "old": "cjig_图像识别_融合密度和精细分数的行人检测",
+    "new": "2024_图像识别_融合密度和精细分数的行人检测",
+    "title": "中图法分类号： ； 文献标识码： 文章编号： - （ ） - -",
+    "year": "2024",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "cjig_图像识别_行人再识别技术研究进展",
+    "new": "2024_图像识别_行人再识别技术研究进展",
+    "title": "Guo D S Gu Z R Zheng B Dong J Y and Zheng H Y. 2024. Unified framework with iterative prediction for image inpainting and out⁃",
+    "year": "2024",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "cjig_图像识别_高质量超声成像与重建研究综述",
+    "new": "2024_图像识别_高质量超声成像与重建研究综述",
+    "title": "Li Y S Ma C Huang L H Gao X Yan X Wang Y Y and Guo Y. 2024. Review of highquality ultrasound imaging and reconstruc⁃",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "cjig_点云_融合小样本元学习和原型对齐的点云分割算法",
+    "new": "2023_点云_融合小样本元学习和原型对齐的点云分割算法",
+    "title": "Qiu Y F and Niu J L. 2023. Point cloud segmentation algorithm fusing fewshot metalearning and prototype alignment. Journal of",
+    "year": "2023",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "cjig_目标检测_融合点云与图像的环境目标检测研究进展",
+    "new": "2024_目标检测_融合点云与图像的环境目标检测研究进展",
+    "title": "Jia M D Yang J M Meng W L Guo J W Zhang J G and Zhang X P. 2024. Survey on the fusion of point clouds and images for envi⁃",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "cjig_计算机图形学_RGB-D图像多层特征提取算法综述",
+    "new": "2024_计算机图形学_RGB-D图像多层特征提取算法综述",
+    "title": "Li Y and Wu X Q. 2024. Survey of multilevel feature extraction methods for RGB D images. Journal of Image and Graphics 29 05",
+    "year": "2024",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "cjig_计算机图形学_三维场景点云理解与重建技术",
+    "new": "2023_计算机图形学_三维场景点云理解与重建技术",
+    "title": "Gong J Y Lou Y J Liu F Q Zhang Z W Chen H M Zhang Z Z Tan X Xie Y and Ma L Z. 2023. Scene point cloud understanding",
+    "year": "2023",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "cjig_计算机图形学_三维重建场景纹理优化算法综述",
+    "new": "2024_计算机图形学_三维重建场景纹理优化算法综述",
+    "title": "Yu L and Wu X Q. 2024. Survey of texture optimization algorithms for 3D reconstructed scenes. Journal of Image and Graphics",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "cjig_计算机图形学_几何属性引导的三维语义实例重建",
+    "new": "2024_计算机图形学_几何属性引导的三维语义实例重建",
+    "title": "Wan J H Liu X P Chen L L Ao S Zhang P and Guo Y L. 2024. Geometric attributeguided 3D semantic instance reconstruction.",
+    "year": "2024",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "cjig_计算机视觉_分割一切模型SAM的潜力与展望",
+    "new": "2024_计算机视觉_分割一切模型SAM的潜力与展望",
+    "title": "序 言………………………………………………………………………………………………… 王耀南",
+    "year": "2024",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "cjig_计算机视觉_沉浸式环境和多场景中的视觉提示信息综述",
+    "new": "2024_计算机视觉_沉浸式环境和多场景中的视觉提示信息综述",
+    "title": "Ren Y F Li Z Q and Zhang S H. 2024. Survey of visualization methods for multiscene visual cue information in immersive environ⁃",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "cjig_计算机视觉_车路两端纯视觉鸟瞰图感知研究综述",
+    "new": "2024_计算机视觉_车路两端纯视觉鸟瞰图感知研究综述",
+    "title": "Li B K Wu C Z Xiang B Y Zang H J Ren Y S and Zhan S. 2024. Apex frame spotting and recognition of microexpression by opti⁃",
+    "year": "2024",
+    "topic": "L_数据集_Benchmark"
+  },
+  {
+    "old": "cjig_遥感_基于深度学习的光谱图像超分辨率综述",
+    "new": "2024_遥感_基于深度学习的光谱图像超分辨率综述",
+    "title": "Zhang T Wang B F Fu Y Liu S R Ye J C Shan P H and Yan C G. 2024. Deep learningbased spectral image superresolution a",
+    "year": "2024",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "cjig_遥感_多模态遥感图像配准方法研究综述",
+    "new": "2024_遥感_多模态遥感图像配准方法研究综述",
+    "title": "Zhu B and Ye Y X. 2024. Multimodal remote sensing image registration a survey. Journal of Image and Graphics 29 08 21372161",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "cjig_遥感_小样本SAR图像分类方法综述",
+    "new": "2024_遥感_小样本SAR图像分类方法综述",
+    "title": "Wang Z Q Li Y Zhang R Wang J B Li Y C and Chen Y. 2024. Fewshot SAR image classification a survey. Journal of Image and",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "cjig_遥感_热红外高光谱遥感影像信息提取",
+    "new": "2024_遥感_热红外高光谱遥感影像信息提取",
+    "title": "Cao L Q Wang D Xiong H Y and Zhong Y F. 2024. Review of information extraction methods from thermal infrared hyperspectral",
+    "year": "2024",
+    "topic": "R1_遥感_高光谱_变化检测"
+  },
+  {
+    "old": "cjig_遥感_面向无人机海岸带生态系统监测的语义分割基准数据集",
+    "new": "2024_遥感_面向无人机海岸带生态系统监测的语义分割基准数据集",
+    "title": "Wang S K Wang X D Qu L Yao F Q Liu Y Y Li C H Wang Y Z and Zhong G Q. 2024. Semantic segmentation benchmark data­",
+    "year": "2024",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "cjig_遥感_高分遥感影像变化检测",
+    "new": "2024_遥感_高分遥感影像变化检测",
+    "title": "Wang X Li Y Y and Zhang X L. 2024. Ghostguided UNet++ for highresolution remote sensing image change detection. Journal of",
+    "year": "2024",
+    "topic": "S_变化检测_ChangeDetection"
+  },
+  {
+    "old": "cleegn",
+    "new": "2024_注意力算子模块_CLEEGN_Convolutional_网络",
+    "title": "CLEEGN: A Convolutional Neural Network for",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "controlled_ablation",
+    "new": "补充材料_uni00000013 uni00000011 uni00000013",
+    "title": "uni00000013 uni00000011 uni00000013 uni00000013 uni00000013 uni00000013 uni00000011 uni00000013 uni00000013 uni00000014 uni00000013 uni00000011 uni00000013 uni00000013 uni00000015 uni00000013 uni00000011 uni00000013 uni00000013 uni00000016 uni00000036 uni00000057 uni00000048 uni00000044 uni00000047 uni0000005c uni00000010 uni00000056 uni00000057 uni00000044 uni00000057 uni00000048 uni00000003 uni00000030 uni00000036 uni00000028 uni00000028 uni00000010 uni00000033 uni00000024 uni00000036 uni0000005a uni00000012 uni00000052 uni00000003 uni00000024 uni00000035 uni0000005a uni00000012 uni00000052 uni00000003 uni00000045 uni00000058 uni00000047 uni0000004a uni00000048 uni00000057 uni0000005a uni00000012 uni00000052 uni00000003 uni00000024 uni00000026 uni0000002a uni0000005a uni00000012 uni00000052 uni00000003 uni00000047 uni00000058 uni00000044 uni0000004f uni00000010 uni00000057 uni00000055 uni0000004c uni0000004a uni0000004a uni00000048 uni00000055",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "cross_attention",
+    "new": "2020_注意力算子模块_CCNet_Criss-Cross_注意力_语义",
+    "title": "CCNet: Criss-Cross Attention for Semantic",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "dataset",
+    "new": "补充材料_数据集",
+    "title": "dataset",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "dataset-imgs-QAs",
+    "new": "补充材料_OpticalImages_ThermalImages",
+    "title": "(a)OpticalImages (b)ThermalImages Questions Answers",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "dataset_analysis_12",
+    "new": "补充材料_Normal",
+    "title": "0.002.004.006.008.0010.0012.00 Normal",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "dataset_analysis_v5_img_dis",
+    "new": "补充材料_数据集_2",
+    "title": "dataset analysis v5 img dis",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "dataset_analysis_v5_qst_length",
+    "new": "补充材料_distribution traffic participant int",
+    "title": "distribution traffic participant interaction",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "dynamic_conv",
+    "new": "2019_注意力算子模块_Dynamic_Convolution_注意力",
+    "title": "Dynamic Convolution: Attention over Convolution Kernels",
+    "year": "2019",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "efficientViT3D",
+    "new": "2017_注意力算子模块_EffiViTCaps_Efficient_三维_高效_视觉_Transformer",
+    "title": "3D-EffiViTCaps: 3D Efficient Vision Transformer",
+    "year": "2017",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "electronics-13-03033-v2",
+    "new": "2024_通用其他_electronics-13-03033-v2",
+    "title": "electronics-13-03033-v2",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "f3c9e195-f829-49d3-b6b2-4956bc016e4a-2",
+    "new": "上海工程技术大学研究生入学登记表_2",
+    "title": "上海工程技术大学研究生入学登记表",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "ffc",
+    "new": "2020_注意力算子模块_1WangxuanInstituteofComputerTechnolo",
+    "title": "1WangxuanInstituteofComputerTechnology,2CenterforDataScience",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "figure1",
+    "new": "补充材料_Scenario_Domain",
+    "title": "Scenario 1 : Domain Knowledge Gap (Cognitive Missing)",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "ieee-tip-2-badri-final",
+    "new": "2016_论文_ieee-tip-2-badri-final",
+    "title": "ieee-tip-2-badri-final",
+    "year": "2016",
+    "topic": "T_图像处理_其他"
+  },
+  {
+    "old": "illustration_v2",
+    "new": "补充材料_Aligned_Optical-Thermal_图像",
+    "title": "(a) Aligned Optical-Thermal Infrared Image Pairs (c) Cognitive QA pairs for Realistic Traffic",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "isprs-archives-XLII-2-W7-505-2017",
+    "new": "2017_通用其他_XLII-2-W7-505-2017",
+    "title": "isprs-archives-XLII-2-W7-505-2017",
+    "year": "2017",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "isprs-archives-XLII-3-W10-17-2020",
+    "new": "2020_通用其他_XLII-3-W10-17-2020",
+    "title": "isprs-archives-XLII-3-W10-17-2020",
+    "year": "2020",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "isprs-archives-XLVIII-1-2024-247-2024",
+    "new": "2024_通用其他_XLVIII-1-2024-247-2024",
+    "title": "isprs-archives-XLVIII-1-2024-247-2024",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "isprsarchives-XL-1-W5-387-2015",
+    "new": "2015_通用其他_XL-1-W5-387-2015",
+    "title": "isprsarchives-XL-1-W5-387-2015",
+    "year": "2015",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "kan",
+    "new": "2024_注意力算子模块_KAN_Kolmogorov_网络",
+    "title": "KAN: Kolmogorov–Arnold Networks",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "machines-12-00557",
+    "new": "2024_通用其他_machines-12-00557",
+    "title": "machines-12-00557",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "parameter_sensitivity_scan",
+    "new": "补充材料_8SSHUWULJJHUUDWH1 K max+0.012",
+    "title": "8SSHUWULJJHUUDWH1/K max+0.012",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "pnp3d(点云)",
+    "new": "2021_pnp3d(点云)",
+    "title": "PnP-3D: A Plug-and-Play for 3D Point Clouds",
+    "year": "2021",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "regionvit",
+    "new": "2022_注意力算子模块_CV_Mar_ViT_注意力",
+    "title": "arXiv 2106.02689v3 cs.CV 31 Mar 2022Published as a conference paper at ICLR 2022 REGION VIT R EGIONAL -TO-LOCAL ATTENTION FOR",
+    "year": "2022",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "results-question-type-radar",
+    "new": "补充材料_MUL_OPT",
+    "title": "MUL OPT TIR 1-abnormal traffic situation",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "ronneberger2015",
+    "new": "2015_论文_ronneberger2015",
+    "title": "ronneberger2015",
+    "year": "2015",
+    "topic": "T_图像处理_分割"
+  },
+  {
+    "old": "rsablock3d",
+    "new": "2020_注意力算子模块_RSANet_Recurrent_注意力",
+    "title": "RSANet: Recurrent Slice-wise Attention",
+    "year": "2020",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "s10462-025-11212-y",
+    "new": "2025_通用其他_s10462-025-11212-y",
+    "title": "s10462-025-11212-y",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "s11042-024-19279-5",
+    "new": "2025_通用其他_s11042-024-19279-5",
+    "title": "s11042-024-19279-5",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "scSE",
+    "new": "2018_注意力算子模块_Concurrent_Spatial",
+    "title": "Concurrent Spatial and Channel ‘Squeeze &",
+    "year": "2018",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "scalability_overview",
+    "new": "补充材料_uni00000014 uni00000013 uni00000013",
+    "title": "uni00000014 uni00000013 uni00000013 uni00000015 uni00000013 uni00000013 uni00000016 uni00000013 uni00000013 uni00000017 uni00000013 uni00000013 uni00000018 uni00000013 uni00000013 uni00000031 uni00000048 uni00000057 uni0000005a uni00000052 uni00000055 uni0000004e uni00000003 uni00000056 uni0000004c uni0000005d uni00000048 uni00000003 uni00000031 uni00000013 uni00000011 uni00000013 uni00000016 uni00000018 uni00000013 uni00000011 uni00000013 uni00000017 uni00000013 uni00000013 uni00000011 uni00000013 uni00000017 uni00000018 uni00000013 uni00000011 uni00000013 uni00000018 uni00000013 uni00000013 uni00000011 uni00000013 uni00000018 uni00000018 uni00000013 uni00000011 uni00000013 uni00000019 uni00000013 uni00000036 uni00000057 uni00000048 uni00000044 uni00000047 uni0000005c uni00000010 uni00000056 uni00000057 uni00000044 uni00000057 uni00000048 uni00000003 uni00000030 uni00000036 uni00000028",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "sensors-24-07014",
+    "new": "2024_通用其他_sensors-24-07014",
+    "title": "sensors-24-07014",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "ssrn-5357895",
+    "new": "2025_通用其他_ssrn-5357895",
+    "title": "ssrn-5357895",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "supplemental_parameter_scans",
+    "new": "补充材料_(60HWDWVGDHW6",
+    "title": "(60HWDWVGDHW6",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "tradeoff_curve",
+    "new": "补充材料_uni00000013 uni00000011 uni00000013_2",
+    "title": "uni00000013 uni00000011 uni00000013 uni00000013 uni00000011 uni00000015 uni00000013 uni00000011 uni00000017 uni00000013 uni00000011 uni00000019 uni00000013 uni00000011 uni0000001b uni00000014 uni00000011 uni00000013 uni00000026 uni00000052 uni00000050 uni00000050 uni00000058 uni00000051 uni0000004c uni00000046 uni00000044 uni00000057 uni0000004c uni00000052 uni00000051 uni00000003 uni00000048 uni00000049 uni00000049 uni0000004c uni00000046 uni0000004c uni00000048 uni00000051 uni00000046 uni0000005c uni00000003E",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "trigger_rate_validation",
+    "new": "补充材料_0HDVXUHG 8SSHUERXQG 7LPHRXW 6WDWH",
+    "title": "0HDVXUHG 8SSHUERXQG 7LPHRXW 6WDWH",
+    "year": "",
+    "topic": "Z_工具与杂项_figures"
+  },
+  {
+    "old": "wtconv2d",
+    "new": "2024_注意力算子模块_Wavelet_Convolutions",
+    "title": "Wavelet Convolutions for Large Receptive Fields",
+    "year": "2024",
+    "topic": "B_注意力算子模块"
+  },
+  {
+    "old": "yang2020",
+    "new": "2020_论文_yang2020",
+    "title": "yang2020",
+    "year": "2020",
+    "topic": "T_图像处理_去噪"
+  },
+  {
+    "old": "一种针对多分类的网络入侵检测系统模型_杨启成",
+    "new": "2024_一种针对多分类的网络入侵检测系统模型_杨启成",
+    "title": "一种针对多分类的网络入侵检测系统模型_杨启成",
+    "year": "2024",
+    "topic": "T_安全_入侵检测"
+  },
+  {
+    "old": "一阶全卷积遥感图像倾斜目标检测",
+    "new": "2021_一阶全卷积遥感图像倾斜目标检测",
+    "title": "主 办 ： 中中北 国国京 科图应 学象用 院图物 空形理 天 与学计 信学算 息会数 创 学 新 研 研 究 究 所 院 ICS",
+    "year": "2021",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "三维点云场景语义分割研究进展",
+    "new": "2025_三维点云场景语义分割研究进展",
+    "title": "Qiu Z J Zhang L Yao Y Feng X Q and Gao J T. 2025. Survey on semantic segmentation in 3D point cloud scenes. Journal of Image",
+    "year": "2025",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "两阶段分类 Two-Stage",
+    "new": "2019_两阶段分类_Two-Stage",
+    "title": "A TWO-STAGE CLASSIFICATION METHOD FOR",
+    "year": "2019",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "互补特征交互融合的RGB_D实时显著目标检测",
+    "new": "2024_互补特征交互融合的RGB_D实时显著目标检测",
+    "title": "Ye X Y Zhu L Wang W W and Fu Y. 2024. RGB_D salient object detection algorithm based on complementary information interac⁃",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "人工智能在文物行业的应用与展望",
+    "new": "2025_人工智能在文物行业的应用与展望",
+    "title": "中图法分类号： ； ； 文献标识码： 文章编号： - （ ） - -",
+    "year": "2025",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "光学遥感图像小目标检测深度学习算法综述",
+    "new": "2025_光学遥感图像小目标检测深度学习算法综述",
+    "title": "Gao G S Shang Y Q and Dong Y. 2025. Review of deep learning algorithms for small object detection in optical remote sensing",
+    "year": "2025",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "全监督和弱监督图网络的病理图像分割",
+    "new": "2024_全监督和弱监督图网络的病理图像分割",
+    "title": "Shen Y T Chen Z Zhang Q H Chen J H and Wang Q G. 2024. Fully and weakly supervised graph networks for histopathology image",
+    "year": "2024",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "分割恢复联合模型 Segmentation Restoration",
+    "new": "2018_分割恢复联合模型_Segmentation_Restoration",
+    "title": "Variational Image Segmentation Model Coupled with Image Restoration",
+    "year": "2018",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "分割方法论总览 SaT Overview",
+    "new": "2023_分割方法论总览_SaT_Overview",
+    "title": "An Overview of SaT Segmentation 40",
+    "year": "2023",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "分布式无线电优化 Distributed Radio Optimization",
+    "new": "2019_分布式无线电优化_Distributed_Radio_Optimization",
+    "title": "Quantifying Uncertainty in High Dimensional",
+    "year": "2019",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "医学图像分类 Medical Classification",
+    "new": "2025_医学图像分类_Medical_Classification",
+    "title": "Medical image classification by incorporating clinical variables and learned features",
+    "year": "2025",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "医学图像小样本学习 Medical Few-Shot",
+    "new": "2023_医学图像小样本学习_Medical_Few-Shot",
+    "title": "Few-shot Learning for Inference in Medical Imaging with Subspace",
+    "year": "2023",
+    "topic": "A1b_医学图像_小样本_综述"
+  },
+  {
+    "old": "医学报告生成IIHT Medical Report IIHT",
+    "new": "2023_医学报告生成IIHT_Medical_Report_IIHT",
+    "title": "IIHT: Medical Report Generation with",
+    "year": "2023",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "单幅图像去雨数据集和深度学习算法的联合评估与展望",
+    "new": "2021_单幅图像去雨数据集和深度学习算法的联合评估与展望",
+    "title": "主 办 ： 中中北 国国京 科图应 学象用 院图物 空形理 天 与学计 信学算 息会数 创 学 新 研 研 究 究 所 院 ICS",
+    "year": "2021",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "单目标跟踪中的视觉智能评估技术综述",
+    "new": "2024_单目标跟踪中的视觉智能评估技术综述",
+    "title": "Hu S Y Zhao X and Huang K Q. 2024. Visual intelligence evaluation techniques for single object tracking a survey. Journal of",
+    "year": "2024",
+    "topic": "K_跟踪_视频_动作"
+  },
+  {
+    "old": "双面Sketching张量 Two-Sided Sketching",
+    "new": "2024_双面Sketching张量_Two-Sided_Sketching",
+    "title": "An Efficient Two-Sided Sketching Method",
+    "year": "2024",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "变分分割基础Mumford-Shah与ROF Mumford-Shah ROF",
+    "new": "2019_变分分割基础Mumford-Shah与ROF_Mumford-Shah_ROF",
+    "title": "LINKAGE BETWEEN PIECEWISE CONSTANT MUMFORD-SHAH",
+    "year": "2019",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "可见表面检测 Detect Closer Surfaces",
+    "new": "2024_可见表面检测_Detect_Closer_Surfaces",
+    "title": "Detect Closer Surfaces that can be Seen: New Modeling",
+    "year": "2024",
+    "topic": "J_人脸_表情_伪造_情感"
+  },
+  {
+    "old": "可解释AI综述 XAI Survey",
+    "new": "2025_可解释AI综述_XAI_Survey",
+    "title": "Explainable Artificial Intelligence: Advancements and Limitations",
+    "year": "2025",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "叶绿体电子断层扫描 Thylakoid",
+    "new": "2017_叶绿体电子断层扫描_Thylakoid",
+    "title": "Computers & Geosciences 98 (2017) 1–8",
+    "year": "2017",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "图像去模糊研究综述",
+    "new": "2024_图像去模糊研究综述",
+    "title": "Hu Z Y Zhou Q Chen M J Cui J C Wu X F and Zheng B Y. 2024. Survey of image deblurring. Journal of Image and Graphics",
+    "year": "2024",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "图像重定向质量评价的研究进展",
+    "new": "2024_图像重定向质量评价的研究进展",
+    "title": "Hu B Xie G Q Li L D Li J Yang J C Lu W and Gao X B. 2024. Progress of image retargeting quality evaluation a survey. Journal",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "在线无线电干涉成像 Online Radio Imaging",
+    "new": "2017_在线无线电干涉成像_Online_Radio_Imaging",
+    "title": "MNRAS000,1–14(2017) Preprint14December 2017 CompiledusingMNRASLATEXstylefilev3.0",
+    "year": "2017",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "基于双向时序窗口Transformer的网络入侵检测方法_王长浩",
+    "new": "2025_基于双向时序窗口Transformer的网络入侵检测方法_王长浩",
+    "title": "基于双向时序窗口Transformer的网络入侵检测方法_王长浩",
+    "year": "2025",
+    "topic": "T_安全_入侵检测"
+  },
+  {
+    "old": "基于深度学习的医学图像分割方法综述",
+    "new": "2025_基于深度学习的医学图像分割方法综述",
+    "title": "Shi J Wang T T Zhu Z Q Zhao M F Wang B X and An H. 2025. Deep learningbased medical image segmentation methods. Jour⁃",
+    "year": "2025",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "基于深度学习的图像融合方法综述",
+    "new": "2023_基于深度学习的图像融合方法综述",
+    "title": "TangLF,ZhangH, Xu H and Ma J Y.2023.Deep learning-based image fusion: a survey.Journal of Image and Graphics,28(01):",
+    "year": "2023",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "基于深度学习的有向目标检测研究进展_基于深度学习的有向目标检测研究进展",
+    "new": "2024_基于深度学习的有向目标检测研究进展_基于深度学习的有向目标检测研究进展",
+    "title": "Journal of Image and Signal Processing 图像与信号处理, 2024, 13(3), 258-270",
+    "year": "2024",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "基于深度学习的视觉目标检测技术综述",
+    "new": "2021_基于深度学习的视觉目标检测技术综述",
+    "title": "主 办 ： 中中北 国国京 科图应 学象用 院图物 空形理 天 与学计 信学算 息会数 创 学 新 研 研 究 究 所 院 ICS",
+    "year": "2021",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "基于照度与场景纹理注意力图的低光图像增强",
+    "new": "2024_基于照度与场景纹理注意力图的低光图像增强",
+    "title": "Zhao M H Wen Y C Du S L Hu J Shi C and Li P. 2024. Lowlight image enhancement algorithm based on illumination and scene",
+    "year": "2024",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "基于知识蒸馏的轻量化恶意流量检测方法_孙剑文",
+    "new": "2025_基于知识蒸馏的轻量化恶意流量检测方法_孙剑文",
+    "title": "基于知识蒸馏的轻量化恶意流量检测方法_孙剑文",
+    "year": "2025",
+    "topic": "T_安全_入侵检测"
+  },
+  {
+    "old": "基于神经辐射场和三维高斯泼溅的文本指导三维编辑综述",
+    "new": "2025_基于神经辐射场和三维高斯泼溅的文本指导三维编辑综述",
+    "title": "Lu L H Zhang X H Wei H Li R Y Du G G and Wang B Q. 2025. Textguided 3D editing based on neural radiance fields and 3D",
+    "year": "2025",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "增强小目标特征的航空遥感目标检测",
+    "new": "1996_增强小目标特征的航空遥感目标检测",
+    "title": "增强小目标特征的航空遥感目标检测",
+    "year": "1996",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "多传感器树木制图 Multi-Sensor Trees",
+    "new": "2015_多传感器树木制图_Multi-Sensor_Trees",
+    "title": "JuheonLee1,2,XiaohaoCai1,2,Carola-BibianeScho¨nlieb2 andDavidCoomes1",
+    "year": "2015",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "多功能传感器树木分类 Tree Species Classification",
+    "new": "2014_多功能传感器树木分类_Tree_Species_Classification",
+    "title": "Non-parametric Image Registration of Airborne",
+    "year": "2014",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "多层次可解释AI Multilevel XAI",
+    "new": "2024_多层次可解释AI_Multilevel_XAI",
+    "title": "Multilevel Explainable Artificial Intelligence: Visual",
+    "year": "2024",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "多模态大模型驱动的三维视觉理解技术前沿进展",
+    "new": "2025_多模态大模型驱动的三维视觉理解技术前沿进展",
+    "title": "Feng M T Shen J H Wu Z J Peng W X Zhong H Guo Y L Shu X B Zhang H Dong W S and Wang Y N. 2025. Advancements",
+    "year": "2025",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "多特征融合与几何卷积的机载LiDAR点云地物分类",
+    "new": "2022_多特征融合与几何卷积的机载LiDAR点云地物分类",
+    "title": "多特征融合与几何卷积的机载LiDAR点云地物分类",
+    "year": "2022",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "多类ROF分割 Iterated ROF",
+    "new": "2013_多类ROF分割_Iterated_ROF",
+    "title": "Multiclass Segmentation by Iterated ROF",
+    "year": "2013",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "大小模型端云协同进化技术进展",
+    "new": "2024_大小模型端云协同进化技术进展",
+    "title": "Wang Y W Shen T Zhang S Y Wu F Zhao Z Cai H B Lyu C F Ma L Z Yang C L and Wu F. 2024. Advances in edgecloud col⁃",
+    "year": "2024",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "大模型时代的光学文字识别_现状及展望",
+    "new": "2023_大模型时代的光学文字识别_现状及展望",
+    "title": "Li H L Liu Y L Liao W H Huang M X Zhang S and Jin L W. 2025. OCR in the era of large models current status and prospects.",
+    "year": "2023",
+    "topic": "I_场景文本_OCR"
+  },
+  {
+    "old": "大模型高效微调CALM CALM Fine-tuning",
+    "new": "2026_大模型高效微调CALM_CALM_Fine-tuning",
+    "title": "CALM: Culturally Self-Aware Language Models",
+    "year": "2026",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "大规模室外图像3维重建技术研究进展",
+    "new": "1996_大规模室外图像3维重建技术研究进展",
+    "title": "大规模室外图像3维重建技术研究进展",
+    "year": "1996",
+    "topic": "D2_3D_重建_神经辐射场_SLAM"
+  },
+  {
+    "old": "室内场景拟人交互研究进展",
+    "new": "2024_室内场景拟人交互研究进展",
+    "title": "Du T Hu R Z Liu L B Yi L and Zhao H. 2024. Research progress in humanlike indoor scene interaction. Journal of Image and",
+    "year": "2024",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "密集挤压激励网络的多标签胸部X光片疾病分类",
+    "new": "1996_密集挤压激励网络的多标签胸部X光片疾病分类",
+    "title": "密集挤压激励网络的多标签胸部X光片疾病分类",
+    "year": "1996",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "小波框架血管分割 Tight-Frame Vessel",
+    "new": "2011_小波框架血管分割_Tight-Frame_Vessel",
+    "title": "Vessel Segmentation in Medical Imaging Using a",
+    "year": "2011",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "平衡神经网络搜索I Balanced NAS I",
+    "new": "2022_平衡神经网络搜索I_Balanced_NAS",
+    "title": "Balanced neural architecture search and",
+    "year": "2022",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "平衡神经网络搜索II Balanced NAS II",
+    "new": "2021_平衡神经网络搜索II_Balanced_NAS_II",
+    "title": "Balanced Neural Architecture Search and Its",
+    "year": "2021",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "张量CUR分解LoRA tCURLoRA",
+    "new": "2000_张量CUR分解LoRA",
+    "title": "tCURLoRA: Tensor CUR Decomposition Based",
+    "year": "2000",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "情感感知人格检测 EmoPerso Emotion-Aware",
+    "new": "2025_情感感知人格检测_EmoPerso_Emotion-Aware",
+    "title": "EmoPerso: Enhancing Personality Detection with Self-Supervised",
+    "year": "2025",
+    "topic": "J_人脸_表情_伪造_情感"
+  },
+  {
+    "old": "情感计算与理解研究发展概述",
+    "new": "2021_情感计算与理解研究发展概述",
+    "title": "主 办 ： 中中北 国国京 科图应 学象用 院图物 空形理 天 与学计 信学算 息会数 创 学 新 研 研 究 究 所 院 ICS",
+    "year": "2021",
+    "topic": "J_人脸_表情_伪造_情感"
+  },
+  {
+    "old": "扩散模型生成视频数据集及其检测基准研究",
+    "new": "2025_扩散模型生成视频数据集及其检测基准研究",
+    "title": "Zheng T P Chen Y X Wen X Z Li Y C and Wang Z Y. 2025. Diffusion modelgenerated video dataset and detection benchmarks.",
+    "year": "2025",
+    "topic": "K_跟踪_视频_动作"
+  },
+  {
+    "old": "数据增强综述 Data Augmentation",
+    "new": "2023_数据增强综述_Data_Augmentation",
+    "title": "Data Augmentation in Classification and Segmentation:",
+    "year": "2023",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "无人机视角下的目标检测研究进展",
+    "new": "2023_无人机视角下的目标检测研究进展",
+    "title": "冷佳旭1，莫梦竟成1，周应华1，叶永明1，高陈强2，高新波1*",
+    "year": "2023",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "无参考图像质量评价研究进展",
+    "new": "1996_无参考图像质量评价研究进展",
+    "title": "无参考图像质量评价研究进展",
+    "year": "1996",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "无线电干涉不确定性I Radio Interferometric I",
+    "new": "2017_无线电干涉不确定性I_Radio_Interferometric",
+    "title": "MNRAS000,1–16(2017) Preprint12September2018 CompiledusingMNRASLATEXstylefilev3.0",
+    "year": "2017",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "无线电干涉不确定性II Radio Interferometric II",
+    "new": "2017_无线电干涉不确定性II_Radio_Interferometric_II",
+    "title": "MNRAS000,1–13(2017) Preprint12September2018 CompiledusingMNRASLATEXstylefilev3.0",
+    "year": "2017",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "框架管状结构分割 Framelet",
+    "new": "2011_框架管状结构分割_Framelet",
+    "title": "Framelet-Based Algorithm for Segmentation",
+    "year": "2011",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "概念级XAI指标 Concept XAI",
+    "new": "2017_概念级XAI指标_Concept_XAI",
+    "title": "Concept-Based Explainable Artificial Intelligence: Metrics and Benchmarks",
+    "year": "2017",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "水下图像复原和增强方法研究进展",
+    "new": "2025_水下图像复原和增强方法研究进展",
+    "title": "Zhou L Liu Q M Jin K J Zhao W Y and Zhang W D. 2025. Research progress of underwater image restoration and enhancement",
+    "year": "2025",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "注意力与方向特征增强的遥感图像语义分割",
+    "new": "2025_注意力与方向特征增强的遥感图像语义分割",
+    "title": "G Pan Zizhe Gao Feng Gong Chuanzheng Gan Yanhai Dong Junyu. XXXX. RemoteJ Sensing Image Semantic Segmentation with G J",
+    "year": "2025",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "注意力引导局部特征联合学习的人脸表情识别",
+    "new": "2024_注意力引导局部特征联合学习的人脸表情识别",
+    "title": "Lu L D Xia H Y Tan Y M and Song S X. 2024. Attentionguided local feature joint learning for facial expression recognition. Journal",
+    "year": "2024",
+    "topic": "J_人脸_表情_伪造_情感"
+  },
+  {
+    "old": "深度学习单目深度估计研究进展",
+    "new": "2022_深度学习单目深度估计研究进展",
+    "title": "深度学习单目深度估计研究进展",
+    "year": "2022",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "深度学习在医学影像中的应用综述",
+    "new": "1996_深度学习在医学影像中的应用综述",
+    "title": "深度学习在医学影像中的应用综述",
+    "year": "1996",
+    "topic": "A2_医学图像_分类_配准_生成"
+  },
+  {
+    "old": "深度学习架构综述 CNNs RNNs Transformers",
+    "new": "2022_深度学习架构综述_CNNs_RNNs_Transformers",
+    "title": "CNNs, RNNs and Transformers in Human Action Recognition:",
+    "year": "2022",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "深度学习的跨视角地理定位方法综述",
+    "new": "2024_深度学习的跨视角地理定位方法综述",
+    "title": "Zhou B W Li Y Ma X J Miao Z and Zhang R. 2024. A survey of crossview geolocalization methods based on deep learning. Jour⁃",
+    "year": "2024",
+    "topic": "M_行人_重识别_检索"
+  },
+  {
+    "old": "深度学习背景下的图像语义分割方法综述",
+    "new": "2023_深度学习背景下的图像语义分割方法综述",
+    "title": "Yan Y Deng C Li L Zhu L K and Ye B. 2023. Survey of image semantic segmentation methods in the deep learning era. Journal of",
+    "year": "2023",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "深度学习视频超分辨率技术综述",
+    "new": "2023_深度学习视频超分辨率技术综述",
+    "title": "摘 要： 视频超分辨率技术在卫星遥感侦测 、视频监控和医疗影像等方面发挥着关键作用 ，在各领域具有广阔的应",
+    "year": "2023",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "点云神经表示 Neural Varifolds",
+    "new": "2024_点云神经表示_Neural_Varifolds",
+    "title": "Neural varifolds: an aggregate representation for",
+    "year": "2024",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "球面小波分割 Wavelet Sphere",
+    "new": "2019_球面小波分割_Wavelet_Sphere",
+    "title": "WAVELET-BASED SEGMENTATION ON THE SPHERE",
+    "year": "2019",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "生物启发迭代学习控制 ILC",
+    "new": "2025_生物启发迭代学习控制_ILC",
+    "title": "June 24-27, 2025. Thessaloniki, Greece",
+    "year": "2025",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "生物孔隙分割 Bio-Pores",
+    "new": "2016_生物孔隙分割_Bio-Pores",
+    "title": "Variational-based segmentation of biopores in tomographic images",
+    "year": "2016",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "直肠分割放疗 Deep Rectum",
+    "new": "2021_直肠分割放疗_Deep_Rectum",
+    "title": "Deep Rectum Segmentation for Image Guided",
+    "year": "2021",
+    "topic": "A1_医学图像_分割"
+  },
+  {
+    "old": "真实场景下图像超分辨技术现状与趋势",
+    "new": "2025_真实场景下图像超分辨技术现状与趋势",
+    "title": "Sun W Wang Q Z Chen X L Ding C Yan Q S Zhang L and Zhang Y N. 2025. Development of realworld image superresolution.",
+    "year": "2025",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "科学数据与科学文献关联信息存在状态与整合模式设计研究_卫军朝",
+    "new": "2024_科学数据与科学文献关联信息存在状态与整合模式设计研究_卫军朝",
+    "title": "科学数据与科学文献关联信息存在状态与整合模式设计研究",
+    "year": "2024",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "稀疏贝叶斯质量映射I Sparse Bayesian I",
+    "new": "2018_稀疏贝叶斯质量映射I_Sparse_Bayesian",
+    "title": "MNRAS000,1–13(2018) Preprint18May2021 CompiledusingMNRASLATEXstylefilev3.0",
+    "year": "2018",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "稀疏贝叶斯质量映射II Sparse Bayesian II",
+    "new": "2019_稀疏贝叶斯质量映射II_Sparse_Bayesian_II",
+    "title": "MNRAS489,3236–3250(2019) doi:10.1093/mnras/stz2373",
+    "year": "2019",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "稀疏贝叶斯质量映射III Sparse Bayesian III",
+    "new": "2020_稀疏贝叶斯质量映射III_Sparse_Bayesian_III",
+    "title": "MNRAS492,394–404(2020) doi:10.1093/mnras/stz3453",
+    "year": "2020",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "红外与可见光图像分组融合的视觉Transformer",
+    "new": "2023_红外与可见光图像分组融合的视觉Transformer",
+    "title": "SunXH,GuanZandWangX.2023.Visiontransformerforfusinginfraredandvisibleimagesingroups.JournalofImageandGraphics,",
+    "year": "2023",
+    "topic": "C3_目标检测_红外_可见光融合"
+  },
+  {
+    "old": "结合提示学习和视觉语义生成融合的东巴画图像描述",
+    "new": "2025_结合提示学习和视觉语义生成融合的东巴画图像描述",
+    "title": "Luo S Qian W H and Liu P. 2025. Fusion of prompt learning and visual semantic generation for image captioning of Dongba paint⁃",
+    "year": "2025",
+    "topic": "I_场景文本_OCR"
+  },
+  {
+    "old": "绿色AI的隐私保护与能量高效的分布式传感网络同步研究",
+    "new": "2016_绿色AI的隐私保护与能量高效的分布式传感网络同步研究",
+    "title": "ੳ೤ AI֥ႅ඲Ќ޹აିਈིۚٳ֥҃ൔԮۋ ຩ઎๝҄࿹࣮",
+    "year": "2016",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "自然历史馆藏错误标本能计算机视觉方法 Mislabelled Specimens",
+    "new": "2025_自然历史馆藏错误标本能计算机视觉方法_Mislabelled_Specimens",
+    "title": "A Computer Vision Method for Finding Mislabelled Specimens Within Natural History Collections",
+    "year": "2025",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "船舶匹配遥感 Ship Matching",
+    "new": "2023_船舶匹配遥感_Ship_Matching",
+    "title": "Remote Sensing Image Ship Matching Utilising Line Features",
+    "year": "2023",
+    "topic": "C2_目标检测_违建_车辆_船舶_行人"
+  },
+  {
+    "old": "蛋白质结构网络图LL4G LL4G Graph",
+    "new": "2005_蛋白质结构网络图LL4G_LL4G_Graph",
+    "title": "LL4G: Self-Supervised Dynamic Optimization for",
+    "year": "2005",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "融合CNN-GRU和Transformer的网络入侵检测方法_黄迎春",
+    "new": "2024_融合CNN-GRU和Transformer的网络入侵检测方法_黄迎春",
+    "title": "融合CNN-GRU和Transformer的网络入侵检测方法",
+    "year": "2024",
+    "topic": "T_安全_入侵检测"
+  },
+  {
+    "old": "融合Transformer和Inception的网络入侵检测研究_张万琪",
+    "new": "2025_融合Transformer和Inception的网络入侵检测研究_张万琪",
+    "title": "融合Transformer和Inception的网络入侵检测研究",
+    "year": "2025",
+    "topic": "T_安全_入侵检测"
+  },
+  {
+    "old": "融合ViT与对比学习的面部表情识别",
+    "new": "2024_融合ViT与对比学习的面部表情识别",
+    "title": "Cui X Y He C Zhao H K and Wang M L. 2024. Combining ViT with contrastive learning for facial expression recognition. Journal of",
+    "year": "2024",
+    "topic": "J_人脸_表情_伪造_情感"
+  },
+  {
+    "old": "融合数据映射和知识蒸馏的恶意软件轻量化检测方法_罗养霞",
+    "new": "2025_融合数据映射和知识蒸馏的恶意软件轻量化检测方法_罗养霞",
+    "title": "融合数据映射和知识蒸馏的恶意软件轻量化检测方法",
+    "year": "2025",
+    "topic": "T_安全_入侵检测"
+  },
+  {
+    "old": "视觉基础模型研究现状与发展趋势",
+    "new": "2025_视觉基础模型研究现状与发展趋势",
+    "title": "Zhang Y J Zhang R Q Zhou H J Qi J Yu Z F and Huang T J. 2025. Research status and development trends of vision foundation",
+    "year": "2025",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "视觉模型及多模态大模型推进图像复原增强研究进展",
+    "new": "2025_视觉模型及多模态大模型推进图像复原增强研究进展",
+    "title": "Wei Y Y Mao T Y Li B A Wang F Li F Zhang Z and Zhao Y. 2025. Visual and large multimodal models promote image restora⁃",
+    "year": "2025",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "论托马斯·库恩科学哲学的创...学革命的结构》出版60周年_崔伟奇",
+    "new": "2022_论托马斯·库恩科学哲学的创...学革命的结构》出版60周年_崔伟奇",
+    "title": "论托马斯·库恩科学哲学的创新——《科学革命的结构》出版60周年",
+    "year": "2022",
+    "topic": "T_通用_NLP_其他"
+  },
+  {
+    "old": "语义比例分割 Semantic Proportions",
+    "new": "2023_语义比例分割_Semantic_Proportions",
+    "title": "Semantic Segmentation by Semantic Proportions",
+    "year": "2023",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "跨域LiDAR检测 Cross-Domain LiDAR",
+    "new": "2024_跨域LiDAR检测_Cross-Domain_LiDAR",
+    "title": "Revisiting Cross-Domain Problem for",
+    "year": "2024",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "跨域遥感场景解译研究进展",
+    "new": "2024_跨域遥感场景解译研究进展",
+    "title": "Zheng X T Xiao X L Chen X M Lu W X Liu X Y and Lu X Q. 2024. Advancements in crossdomain remote sensing scene interpre⁃",
+    "year": "2024",
+    "topic": "P_跨域_域自适应_联邦"
+  },
+  {
+    "old": "跨层细节感知和分组注意力引导的遥感图像语义分割",
+    "new": "2024_跨层细节感知和分组注意力引导的遥感图像语义分割",
+    "title": "Li L J He Y Xie G Zhang H X and Bai Y H. 2024. Crosslayer detail perception and group attentionguided semantic segmentation",
+    "year": "2024",
+    "topic": "F_图像分割_语义_实例_全景"
+  },
+  {
+    "old": "适合跨域目标检测的雾霾图像增强",
+    "new": "2021_适合跨域目标检测的雾霾图像增强",
+    "title": "主 办 ： 中中北 国国京 科图应 学象用 院图物 空形理 天 与学计 信学算 息会数 创 学 新 研 研 究 究 所 院 ICS",
+    "year": "2021",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "遥感影像小目标检测研究进展",
+    "new": "2023_遥感影像小目标检测研究进展",
+    "title": "袁翔1，程塨1*，李戈1，戴威2，尹文昕2，冯瑛超2，姚西文1，",
+    "year": "2023",
+    "topic": "C_目标检测_通用与旋转框"
+  },
+  {
+    "old": "针对视觉深度学习模型的物理对抗攻击研究综述",
+    "new": "2025_针对视觉深度学习模型的物理对抗攻击研究综述",
+    "title": "Peng Z B Zhang Y Dang Y Chen J Q Shi Z W and Zou Z X. 2025. Review of physical adversarial attacks against visual deep learn⁃",
+    "year": "2025",
+    "topic": "O_物理对抗_安全_鲁棒"
+  },
+  {
+    "old": "雷达工作模式识别 Radar Work Mode",
+    "new": "2023_雷达工作模式识别_Radar_Work_Mode",
+    "title": "DigitalSignalProcessing133(2023)103874",
+    "year": "2023",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "非负子空间小样本学习 Non-negative Subspace",
+    "new": "2024_非负子空间小样本学习_Non-negative_Subspace",
+    "title": "Non-negative Subspace Feature Representation for Few-shot Learning",
+    "year": "2024",
+    "topic": "R2_控制_生物启发_其他跨学科"
+  },
+  {
+    "old": "面向图像复原的非因果选择性状态空间模型",
+    "new": "2025_面向图像复原的非因果选择性状态空间模型",
+    "title": "Xiao J Fan Z H Li D Fu X Y and Zha Z J. 2025. Noncausal selective state space model for image restoration. Journal of Image and",
+    "year": "2025",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "面向深度学习的三维点云补全算法综述",
+    "new": "2025_面向深度学习的三维点云补全算法综述",
+    "title": "Hu F Y Li C L Zhou T Cheng H F and Gu M M. 2025. A survey on point cloud completion algorithms for deep learning. Journal of",
+    "year": "2025",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "面向点云几何压缩的隐式编码网络",
+    "new": "2024_面向点云几何压缩的隐式编码网络",
+    "title": "Chen J H Fang G C Li H R Zhang Y Huang X H and Guo Y L. 2024. An implicit coding network for point cloud geometry com⁃",
+    "year": "2024",
+    "topic": "D_3D_点云_分类_分割_配准"
+  },
+  {
+    "old": "面向透射文档图像复原的模糊扩散模型",
+    "new": "2025_面向透射文档图像复原的模糊扩散模型",
+    "title": "Wang Y J Gong J X Liang Z B Chong Q P Cheng X and Xu J D. 2025. Fuzzy diffusion model for seenthrough document image res⁃",
+    "year": "2025",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "预训练大模型技术在行人重识别的应用综述",
+    "new": "2025_预训练大模型技术在行人重识别的应用综述",
+    "title": "Feng Z X Lai J H Yuan Z Huang Y L and Lai P J. 2025. Advancing universal person reidentification a survey on the applications",
+    "year": "2025",
+    "topic": "M_行人_重识别_检索"
+  },
+  {
+    "old": "高光谱图像智能分类研究综述与展望",
+    "new": "2025_高光谱图像智能分类研究综述与展望",
+    "title": "He M Y Li Q Guo Y and Yan H M. 2025. Overview and prospects of intelligent classification of hyperspectral images. Journal of",
+    "year": "2025",
+    "topic": "R_综述_Survey"
+  },
+  {
+    "old": "高效PEFT微调 Less but Better PEFT",
+    "new": "2005_高效PEFT微调_Less_Better_PEFT",
+    "title": "Less but Better: Parameter-Efficient Fine-Tuning of",
+    "year": "2005",
+    "topic": "G_视觉基础模型_VLM_LLM"
+  },
+  {
+    "old": "高效变分分类 Efficient Variational",
+    "new": "2024_高效变分分类_Efficient_Variational",
+    "title": "JournalofScientificComputing(2024)100:81",
+    "year": "2024",
+    "topic": "N_雷达_无线电_张量_数学"
+  },
+  {
+    "old": "高斯_维纳表示下的稠密焦栈图生成方法",
+    "new": "2025_高斯_维纳表示下的稠密焦栈图生成方法",
+    "title": "Wang Q T Li Z L Ding X Liu Q and Yang Y. 2025. GaussianWienerbased dense focal stack image synthesis. Journal of Image",
+    "year": "2025",
+    "topic": "E_图像复原_超分_去噪_去雨去雾"
+  },
+  {
+    "old": "高维逆问题不确定性量化 Uncertainty Quantification",
+    "new": "2019_高维逆问题不确定性量化_Uncertainty_Quantification",
+    "title": "Quantifying Uncertainty in High Dimensional",
+    "year": "2019",
+    "topic": "N_雷达_无线电_张量_数学"
+  }
+]

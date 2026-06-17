@@ -1,8 +1,8 @@
 # 论文主题分类清单
 
-- **总计**: 499 份 PDF
-- **已归类**: 499
-- **未归类**: 0
+- **总计**: 547 份 PDF
+- **已归类**: 505
+- **未归类**: 42
 
 > 说明：基于**文件名**做关键词匹配归类，未读 PDF 内容。
 > 一个 PDF 可同时属于多个主题 (topics), primary_topic 决定它在哪个分桶。
@@ -19,13 +19,13 @@
 | A3_医学图像_配准_切片_张量_数学 | 3 |
 | B_注意力算子模块 | 134 |
 | C_目标检测_通用与旋转框 | 29 |
-| C2_目标检测_违建_车辆_船舶_行人 | 23 |
+| C2_目标检测_违建_车辆_船舶_行人 | 27 |
 | C3_目标检测_红外_可见光融合 | 1 |
 | D_3D_点云_分类_分割_配准 | 28 |
 | D2_3D_重建_神经辐射场_SLAM | 10 |
-| E_图像复原_超分_去噪_去雨去雾 | 15 |
-| F_图像分割_语义_实例_全景 | 15 |
-| G_视觉基础模型_VLM_LLM | 16 |
+| E_图像复原_超分_去噪_去雨去雾 | 16 |
+| F_图像分割_语义_实例_全景 | 16 |
+| G_视觉基础模型_VLM_LLM | 17 |
 | I_场景文本_OCR | 5 |
 | J_人脸_表情_伪造_情感 | 7 |
 | K_跟踪_视频_动作 | 4 |
@@ -35,11 +35,12 @@
 | O_物理对抗_安全_鲁棒 | 2 |
 | P_跨域_域自适应_联邦 | 2 |
 | Q_自监督_对比学习_主动学习 | 5 |
-| R_综述_Survey | 19 |
+| R_综述_Survey | 18 |
 | S_变化检测_ChangeDetection | 7 |
 | R1_遥感_高光谱_变化检测 | 4 |
 | R2_控制_生物启发_其他跨学科 | 9 |
 | T_通用_NLP_其他 | 66 |
+| U_未归类 | 42 |
 
 ## 详细清单
 
@@ -344,7 +345,7 @@
 - 遥感影像小目标检测研究进展.pdf  
   topics: C_目标检测_通用与旋转框, H_显著性_小目标, R_综述_Survey
 
-### C2_目标检测_违建_车辆_船舶_行人（23）
+### C2_目标检测_违建_车辆_船舶_行人（27）
 
 - 2017_Building_Detection_f.pdf
 - 2017_Fast_Vehicle_Detecti.pdf
@@ -365,9 +366,14 @@
 - 2023_Building-road_Collab.pdf
 - 2023_Detection_of_Illegal.pdf  
   topics: C2_目标检测_违建_车辆_船舶_行人, T_通用_NLP_其他
+- A_New_High-Precision_and_Lightweight_Detection_Model_for_Illegal_Construction_Objects_Based_on_Deep_Learning.pdf
+- An_Optimized_Edge-Focused_Siamese_Network_for_Monitoring_New_Illegal_Buildings_Using_Satellite_Images.pdf  
+  topics: C2_目标检测_违建_车辆_船舶_行人, F_图像分割_语义_实例_全景
 - Illegal_Buildings_Detection_from_Satellite_Images_using_GoogLeNet_and_Cadastral_Map.pdf  
   topics: C2_目标检测_违建_车辆_船舶_行人, F_图像分割_语义_实例_全景
-- Liu2024_Illegal_Construction_Detection.pdf
+- MIAYOLO_Multiexpert_and_Intraclass_Aggregation-Assisted_Suburban_Building_Detection_in_Unmanned_Aerial_Vehicle_Imagery.pdf
+- TfNet_Building_Detection_in_Remote_Sensing_Images_Using_Multi-Scale_Feature_Fusion.pdf
+- YMMNet_A_More_Accurate_and_Lightweight_Detector_of_Illegal_Buildings_for_Smart_Cities.pdf
 - cjig_图像识别_多阶段空间感知道路损伤检测网络.pdf
 - cjig_图像识别_融合密度和精细分数的行人检测.pdf
 - cjig_图像识别_行人再识别技术研究进展.pdf  
@@ -441,10 +447,11 @@
 - 大规模室外图像3维重建技术研究进展.pdf  
   topics: D2_3D_重建_神经辐射场_SLAM, R_综述_Survey
 
-### E_图像复原_超分_去噪_去雨去雾（15）
+### E_图像复原_超分_去噪_去雨去雾（16）
 
 - 2021_Image_Restoration_fo.pdf
 - 2024_融合非局部特征表示的模糊图像复原.pdf
+- 21-pr-Image Denoising Using Complex-Valued Deep CNN.pdf
 - DNCNet雷达去噪 DNCNet.pdf  
   topics: E_图像复原_超分_去噪_去雨去雾, N_雷达_无线电_张量_数学
 - cjig_图像处理_轻量级注意力的束对齐网络的视频超分重建.pdf  
@@ -468,10 +475,11 @@
 - 高斯_维纳表示下的稠密焦栈图生成方法.pdf  
   topics: E_图像复原_超分_去噪_去雨去雾, N_雷达_无线电_张量_数学
 
-### F_图像分割_语义_实例_全景（15）
+### F_图像分割_语义_实例_全景（16）
 
 - 2021_S2Looking_A_Satelli.pdf  
   topics: F_图像分割_语义_实例_全景, L_数据集_Benchmark
+- Assignment_of_AI_Detected_Buildings_from_Satellite_Images_to_Registered_Meters_for_Energy_Theft_Detection.pdf
 - CenSegNet中心体 CenSegNet.pdf
 - cjig_图像识别_弱监督语义分割方法综述.pdf  
   topics: F_图像分割_语义_实例_全景, R_综述_Survey
@@ -493,7 +501,7 @@
 - 跨层细节感知和分组注意力引导的遥感图像语义分割.pdf  
   topics: F_图像分割_语义_实例_全景, P_跨域_域自适应_联邦
 
-### G_视觉基础模型_VLM_LLM（16）
+### G_视觉基础模型_VLM_LLM（17）
 
 - 2023_2307.00056_Proximal_Nested_Sampling.pdf  
   topics: G_视觉基础模型_VLM_LLM, N_雷达_无线电_张量_数学, T_通用_NLP_其他
@@ -514,6 +522,7 @@
 - 2025_Vision-Language_Mode.pdf  
   topics: G_视觉基础模型_VLM_LLM, R_综述_Survey
 - Scaling_Laws_for_Neural_Language_Models.pdf
+- Three-ways-ChatGPT-helps-me-in-my-academic-writing.pdf
 - cjig_计算机视觉_分割一切模型SAM的潜力与展望.pdf
 - 多模态大模型驱动的三维视觉理解技术前沿进展.pdf  
   topics: G_视觉基础模型_VLM_LLM, R_综述_Survey
@@ -629,7 +638,7 @@
 - 2024_Reinforcement_Learni.pdf  
   topics: Q_自监督_对比学习_主动学习, T_通用_NLP_其他
 
-### R_综述_Survey（19）
+### R_综述_Survey（18）
 
 - 2017_A_Comprehensive_Surv.pdf
 - 2020_A_Comparison_of_Deep.pdf
@@ -637,8 +646,6 @@
 - 2024_轻量化视觉定位技术综述.pdf
 - 2024_面向增强现实的虚实遮挡技术综述.pdf
 - cjig_图像识别_高质量超声成像与重建研究综述.pdf
-- cjig_计算机视觉_无人集群系统协同决策与博弈控制综述.pdf  
-  topics: R_综述_Survey, T_通用_NLP_其他
 - cjig_计算机视觉_沉浸式环境和多场景中的视觉提示信息综述.pdf  
   topics: R_综述_Survey, T_通用_NLP_其他
 - cjig_遥感_多模态遥感图像配准方法研究综述.pdf
@@ -753,3 +760,48 @@
 - 平衡神经网络搜索II Balanced NAS II.pdf
 - 绿色AI的隐私保护与能量高效的分布式传感网络同步研究.pdf
 - 自然历史馆藏错误标本能计算机视觉方法 Mislabelled Specimens.pdf
+
+### U_未归类（42）
+
+- 031002300211-35388227.pdf
+- 1-s2.0-S2590123024016360-main.pdf
+- 1608.03981v1.pdf
+- 1609.06585v1.pdf
+- 1808.01316v1.pdf
+- 1901.06046v1.pdf
+- 1904.07396v2.pdf
+- 1911.07167v2.pdf
+- 2107.14803v1.pdf
+- 26211-41200-1-SM.pdf
+- EBSCO-FullText-09_12_2025 (1).pdf
+- EBSCO-FullText-09_12_2025.pdf
+- FULLTEXT01.pdf
+- H3_AP202501081641860289_1.pdf
+- Like_Squinting_Your_Eyes_The_impact_of_different_fusion_modules_on_change.pdf
+- NO.2825A30075-b1ad981e31c24999b3a2f13779c88874.pdf
+- TPAMI.2015.2439281.pdf
+- TPAMI.2017.2699184.pdf
+- applsci-14-02690-v2.pdf
+- c22af048-3756-4a19-af0c-dfde22120daa.pdf
+- electronics-13-03033-v2.pdf
+- f3c9e195-f829-49d3-b6b2-4956bc016e4a-2.pdf
+- ieee-tip-2-badri-final.pdf
+- isprs-archives-XLII-2-W7-505-2017.pdf
+- isprs-archives-XLII-3-W10-17-2020.pdf
+- isprs-archives-XLVIII-1-2024-247-2024.pdf
+- isprsarchives-XL-1-W5-387-2015.pdf
+- machines-12-00557.pdf
+- ronneberger2015.pdf
+- s10462-025-11212-y.pdf
+- s11042-024-19279-5.pdf
+- sensors-24-07014.pdf
+- ssrn-5357895.pdf
+- yang2020.pdf
+- 一种针对多分类的网络入侵检测系统模型_杨启成.pdf
+- 基于双向时序窗口Transformer的网络入侵检测方法_王长浩.pdf
+- 基于知识蒸馏的轻量化恶意流量检测方法_孙剑文.pdf
+- 科学数据与科学文献关联信息存在状态与整合模式设计研究_卫军朝.pdf
+- 融合CNN-GRU和Transformer的网络入侵检测方法_黄迎春.pdf
+- 融合Transformer和Inception的网络入侵检测研究_张万琪.pdf
+- 融合数据映射和知识蒸馏的恶意软件轻量化检测方法_罗养霞.pdf
+- 论托马斯·库恩科学哲学的创...学革命的结构》出版60周年_崔伟奇.pdf

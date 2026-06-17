@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""为每个主题在 05-Literature/ 下生成主题首页 (index note)。
+"""为每个主题在 03-Literature/ 下生成主题首页 (index note)。
 
 每个首页包含:
   - 主题定义 (从 primary_topic 名字推断, 留 TODO 让人工润色)
@@ -9,20 +9,26 @@
 
 约定:
   - 不会覆盖已存在的主题首页 (默认行为; --force 可覆盖)
-  - 文件名: 05-Literature/<主题代码>.md
+  - 文件名: 03-Literature/<主题代码>.md
   - 不会创建主题代码里没有 PDF 的空首页
 """
 import argparse
-import json
 import re
 import sys
 from pathlib import Path
 from typing import Optional
 
-ROOT = Path(__file__).resolve().parent.parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from validate_library import frontmatter_scalar, parse_frontmatter  # noqa: E402
+
+ROOT = SCRIPT_DIR.parent
 DEFAULT_PAPERS = ROOT / "01-Papers"          # PDF 原文目录 (只读)
+DEFAULT_NOTES = ROOT / "02-Notes" / "Papers"
 DEFAULT_TOPICS_JSON = DEFAULT_PAPERS / "paper_topics.json"
-DEFAULT_LIT = ROOT / "05-Literature"
+DEFAULT_LIT = ROOT / "03-Literature"
 DEFAULT_CLASSIFY_PY = ROOT / "scripts" / "classify_papers.py"
 
 # 主题代号 -> 主题中文名 + 一句话定义 (粗略, 供首页用)
@@ -57,6 +63,11 @@ TOPIC_NAMES = {
     "R2_控制_生物启发_其他跨学科": "控制/生物启发/其他",
     "S_变化检测_ChangeDetection": "变化检测",
     "T_通用_NLP_其他": "通用/NLP/其他",
+    "T_安全_入侵检测": "安全/入侵检测",
+    "T_图像处理_其他": "图像处理/其他",
+    "T_图像处理_分割": "图像处理/分割",
+    "T_图像处理_去噪": "图像处理/去噪",
+    "T_遥感_建筑检测": "遥感/建筑检测",
     "Z_工具与杂项_figures": "工具/figures/杂项",
 }
 
@@ -64,6 +75,46 @@ TOPIC_NAMES = {
 def extract_year(stem: str) -> Optional[int]:
     m = re.match(r"^(\d{4})", stem)
     return int(m.group(1)) if m else None
+
+
+def parse_year(value: str, stem: str) -> Optional[int]:
+    scalar = frontmatter_scalar(value)
+    if re.fullmatch(r"\d{4}", scalar):
+        return int(scalar)
+    return extract_year(stem)
+
+
+def parse_topics_value(value: str, primary: str) -> list[str]:
+    scalar = frontmatter_scalar(value)
+    topics: list[str] = []
+    if scalar.startswith("[") and scalar.endswith("]"):
+        raw_items = scalar.strip("[] ")
+        topics = [
+            item.strip().strip('"').strip("'")
+            for item in raw_items.split(",")
+            if item.strip()
+        ]
+    elif scalar:
+        topics = [scalar.strip().strip('"').strip("'")]
+    if primary and primary not in topics:
+        topics.insert(0, primary)
+    return topics or [primary or "U_未归类"]
+
+
+def collect_from_notes(notes: Path) -> dict[str, list[dict]]:
+    by_topic: dict[str, list[dict]] = {}
+    for md_path in sorted(notes.glob("*.md")):
+        text = md_path.read_text(encoding="utf-8", errors="replace")
+        fm = parse_frontmatter(text)
+        primary = frontmatter_scalar(fm.get("primary_topic", "")) or "U_未归类"
+        topics = parse_topics_value(fm.get("topics", ""), primary)
+        by_topic.setdefault(primary, []).append({
+            "stem": md_path.stem,
+            "name": f"{md_path.stem}.md",
+            "year": parse_year(fm.get("year", ""), md_path.stem),
+            "topics": topics,
+        })
+    return by_topic
 
 
 def build_index(topic_code: str, papers: list[dict]) -> str:
@@ -174,19 +225,23 @@ SORT year DESC
 
 def main():
     parser = argparse.ArgumentParser(
-        description="为每个主题在 05-Literature/ 下生成主题首页 (链接 02-Notes/Papers/ 笔记)",
+        description="为每个主题在 03-Literature/ 下生成主题首页 (链接 02-Notes/Papers/ 笔记)",
     )
     parser.add_argument(
         "--papers", type=Path, default=DEFAULT_PAPERS,
         help="PDF 所在目录 (默认: 01-Papers/)",
     )
     parser.add_argument(
+        "--notes", type=Path, default=DEFAULT_NOTES,
+        help="论文笔记目录 (默认: 02-Notes/Papers/)",
+    )
+    parser.add_argument(
         "--topics-json", type=Path, default=DEFAULT_TOPICS_JSON,
-        help="paper_topics.json 路径 (默认: 01-Papers/paper_topics.json)",
+        help="paper_topics.json 路径; 仅在 notes 不存在时作为 fallback",
     )
     parser.add_argument(
         "--lit", type=Path, default=DEFAULT_LIT,
-        help="主题首页输出目录 (默认: 05-Literature/)",
+        help="主题首页输出目录 (默认: 03-Literature/)",
     )
     parser.add_argument(
         "--force", action="store_true",
@@ -198,25 +253,23 @@ def main():
     )
     args = parser.parse_args()
 
-    if not args.papers.is_dir():
-        sys.exit(f"错误: 目录不存在: {args.papers}")
-    if not args.topics_json.is_file():
-        sys.exit(
-            f"错误: {args.topics_json} 不存在, 先跑 scripts/classify_papers.py。"
-        )
+    if args.notes.is_dir():
+        by_topic = collect_from_notes(args.notes)
+    elif args.topics_json.is_file():
+        import json
 
-    paper_topics = json.loads(args.topics_json.read_text(encoding="utf-8"))
-
-    # 按 primary_topic 归桶
-    by_topic: dict[str, list[dict]] = {}
-    for stem, topics in paper_topics.items():
-        primary = topics[0] if topics else "U_未归类"
-        by_topic.setdefault(primary, []).append({
-            "stem": stem,
-            "name": f"{stem}.pdf",
-            "year": extract_year(stem),
-            "topics": topics,
-        })
+        paper_topics = json.loads(args.topics_json.read_text(encoding="utf-8"))
+        by_topic: dict[str, list[dict]] = {}
+        for stem, topics in paper_topics.items():
+            primary = topics[0] if topics else "U_未归类"
+            by_topic.setdefault(primary, []).append({
+                "stem": stem,
+                "name": f"{stem}.pdf",
+                "year": extract_year(stem),
+                "topics": topics,
+            })
+    else:
+        sys.exit(f"错误: {args.notes} 和 {args.topics_json} 都不存在。")
 
     if not args.dry_run:
         args.lit.mkdir(parents=True, exist_ok=True)

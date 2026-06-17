@@ -122,7 +122,7 @@ print(answer)
 <%*
 // 调用AI脚本生成笔记
 const pdfPath = tp.file.title + ".pdf";
-const command = `python3 scripts/paper_ai.py notes "04-Attachments/PDFs/${pdf_path}"`;
+const command = `python3 scripts/paper_ai.py notes "01-Papers/${pdf_path}"`;
 const result = await tp.system.exec(command);
 tR += result;
 %>

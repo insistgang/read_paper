@@ -4,7 +4,6 @@
 VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PAPERS_DIR="$VAULT_DIR/01-Papers"           # PDF 原文
 DEFAULT_NOTES_DIR="$VAULT_DIR/02-Notes/Papers"  # 论文笔记
-TEMPLATES_DIR="$VAULT_DIR/03-Templates"
 # PDF 仍在 01-Papers/; 笔记在 02-Notes/Papers/. 用环境变量可覆盖:
 #   PAPER_PDF_DIR: 自定义 PDF 目录
 #   PAPER_NOTES_DIR: 自定义笔记目录
@@ -21,6 +20,7 @@ show_help() {
     echo "  new <标题>        创建新论文笔记"
     echo "  search <关键词>   搜索论文"
     echo "  stats             显示统计信息"
+    echo "  dashboard         生成阅读质量仪表盘"
     echo "  open              在 Obsidian 中打开"
     echo "  help              显示帮助"
 }
@@ -52,14 +52,38 @@ new_paper() {
     fi
     mkdir -p "$NOTES_DIR"
     
-    # 使用模板创建
-    if [ -f "$TEMPLATES_DIR/Paper Template.md" ]; then
-        sed "s/{{title}}/$title/g; s/{{date}}/$(date +%Y-%m-%d)/g" "$TEMPLATES_DIR/Paper Template.md" > "$filename"
-        echo "✅ 已创建: $filename"
-    else
-        echo "错误: 模板不存在"
-        return 1
-    fi
+    local today=$(date +%Y-%m-%d)
+    cat > "$filename" <<EOF
+---
+title: "$title"
+pdf: "[[$title.pdf]]"
+primary_topic: ""
+topics: []
+status: unread
+reading_stage: filename-only
+confidence: low
+source_basis: filename
+date_added: $today
+tags: [paper]
+---
+
+# $title
+
+## 摘要
+
+## 研究背景与动机
+
+## 关键贡献
+
+## 方法
+
+## 实验
+
+## 局限
+
+## 个人评论
+EOF
+    echo "✅ 已创建: $filename"
 }
 
 search_papers() {
@@ -90,6 +114,10 @@ show_stats() {
     echo "PDF文件 (01-Papers/):        $pdf_count 个"
 }
 
+generate_dashboard() {
+    python3 "$VAULT_DIR/scripts/generate_dashboard.py"
+}
+
 open_vault() {
     if [[ "$OSTYPE" == "darwin"* ]]; then
         open -a Obsidian "$VAULT_DIR"
@@ -111,6 +139,9 @@ case "$1" in
         ;;
     stats)
         show_stats
+        ;;
+    dashboard)
+        generate_dashboard
         ;;
     open)
         open_vault
