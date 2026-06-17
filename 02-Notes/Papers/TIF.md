@@ -10,8 +10,9 @@ year: 2021
 venue: "arXiv"
 doi: 
 pdf: [[TIF.pdf]]
-primary_topic: B_注意力算子模块
+primary_topic: A1_医学图像_分割
 topics:
+  - "A1_医学图像_分割"
   - "B_注意力算子模块"
 status: ai-read
 reading_stage: ai-fulltext
@@ -33,8 +34,8 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/13 pages
 
 ## 基本信息
 - **PDF**: [[TIF.pdf]]
-- **primary_topic**: `B_注意力算子模块`
-- **topics**: `B_注意力算子模块`
+- **primary_topic**: `A1_医学图像_分割`
+- **topics**: `A1_医学图像_分割`, `B_注意力算子模块`
 - **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
@@ -42,100 +43,102 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/13 pages
 
 | 项目 | 内容 |
 |------|------|
-| **题目** | DS-TransUNet: Dual Swin Transformer U-Net |
-| **作者** | Ailiang Lin; Bingzhi Chen; Jiayu Xu; Zheng Zhang; Guangming Lu |
-| **发表时间** | 2021 |
-| **刊物/会议** | arXiv |
+| **题目** | DS-TransUNet: Dual Swin Transformer U-Net for Medical Image Segmentation |
+| **作者** | Ailiang Lin; Bingzhi Chen; Jiayu Xu; Zheng Zhang; Guangming Lu (哈尔滨工业大学(深圳)) |
+| **发表时间** | 2021 (arXiv:2106.06716v1, 2021-06-12) |
+| **刊物/会议** | arXiv 预印本 (后发表于 IEEE TIM) |
 | **DOI** | 未明确 |
 
 ## 摘要
 
-> great progress benefit from the development of deep learning. is to segment the parts with special significance in medical However, most existing methods are based on convolutional imagesandextractrelevantfeaturesthroughsemi-automaticor neural networks (CNNs), which fail to build long-range depen- automatic process, so as to provide reliable basis for clinical dencies and global context connections due to the limitation of receptive field in convolution operation. Inspired by the success diagnosis and pathological research, and assist doctors in ofTransformerwhoseself-attentionmechanismhasthepowerful making more accurate diagnosis. abilitiesofmodelingthelong-rangecontextualinformation,some With the development of deep learning, convolutional neu- researchers have expended considerable efforts in designing the ral networks (CNNs) have become dominant in a series robustvariantsofTransformer-basedU-Net.Moreover,thepatch of medical image segmentation tasks. Among various CNN division used 
+清理后的英文原摘要（据 PDF 提取文本修复空格/连字符、剔除杂入的图表数字）：
 
-> **来源**: PDF 自动提取，需人工复核。
+> Automatic medical image segmentation has made great progress benefit from the development of deep learning. However, most existing methods are based on convolutional neural networks (CNNs), which fail to build long-range dependencies and global context connections due to the limitation of receptive field in convolution operation. Inspired by the success of Transformer whose self-attention mechanism has the powerful abilities of modeling the long-range contextual information, some researchers have expended considerable efforts in designing the robust variants of Transformer-based U-Net. Moreover, the patch division used in vision transformers usually ignores the pixel-level intrinsic structural features inside each patch. To alleviate these problems, in this paper, we propose a novel deep medical image segmentation framework called Dual Swin Transformer U-Net (DS-TransUNet), which might be the first attempt to concurrently incorporate the advantages of hierarchical Swin Transformer into both encoder and decoder of the standard U-shaped architecture to enhance the semantic segmentation quality of varying medical images. Unlike many prior Transformer-based solutions, the proposed DS-TransUNet first adopts dual-scale encoder subnetworks based on Swin Transformer to extract the coarse and fine-grained feature representations of different semantic scales. As the core component for our DS-TransUNet, a well-designed Transformer Interactive Fusion (TIF) module is proposed to effectively establish global dependencies between features of different scales through the self-attention mechanism, in order to make full use of these obtained multi-scale feature representations. Furthermore, we also introduce the Swin Transformer block into decoder to further explore the long-range contextual information during the up-sampling process. Extensive experiments across four typical tasks for medical image segmentation demonstrate the effectiveness of DS-TransUNet, and show that our approach significantly outperforms the state-of-the-art methods.
+
+中文翻译：
+
+> 受益于深度学习的发展，自动医学图像分割已取得长足进步。然而，现有方法大多基于卷积神经网络（CNN），由于卷积操作感受野的限制，它们难以建立长距离依赖和全局上下文连接。受 Transformer 自注意力机制在建模长距离上下文信息方面强大能力的启发，已有一些研究者在设计基于 Transformer 的鲁棒 U-Net 变体上投入了大量精力。此外，视觉 Transformer 中使用的 patch 划分通常会忽略每个 patch 内部的像素级固有结构特征。为缓解这些问题，本文提出一种新颖的深度医学图像分割框架——双 Swin Transformer U-Net（DS-TransUNet），它可能是首个将分层 Swin Transformer 的优势同时引入标准 U 型架构编码器和解码器的尝试，以提升多种医学图像的语义分割质量。与许多此前基于 Transformer 的方案不同，DS-TransUNet 首先采用基于 Swin Transformer 的双尺度编码器子网络，提取不同语义尺度的粗粒度与细粒度特征表示。作为 DS-TransUNet 的核心组件，本文设计了 Transformer 交互融合（TIF）模块，通过自注意力机制在不同尺度特征之间有效建立全局依赖，从而充分利用所获得的多尺度特征表示。此外，本文还将 Swin Transformer 块引入解码器，以在上采样过程中进一步挖掘长距离上下文信息。在医学图像分割的四个典型任务上的大量实验验证了 DS-TransUNet 的有效性，表明本方法显著优于现有最优方法。
+
+> **来源**: 据 PDF 提取文本整理。
 
 ## 研究背景与动机
 
-- **为什么要做**：尽管CNN（如U-Net及其变体）在医学图像分割中取得了成功，但其固有的**局部感受野限制**使其难以建立长距离依赖和全局上下文连接。此外，标准的patch划分会忽略patch内部的像素级结构信息。
+- **为什么要做**：医学图像分割是临床应用（息肉分割、病变分割、细胞分割等）中重要而具挑战性的问题，需在医学图像中分割出有特殊意义的部位、提取相关特征，为临床诊断和病理研究提供可靠依据。尽管 CNN（尤其是编码器-解码器结构的 U-Net 及其变体）在该领域占据主导，但卷积固有的归纳偏置使每个卷积核只能关注局部子区域，**丢失全局上下文、无法建立长距离依赖**。此外，视觉 Transformer 标准的 patch 划分会忽略每个 patch 内部的像素级固有结构特征（如边缘、线条）。
 - **之前方法的问题**：
-    1. 基于CNN的方法（如U-Net++、Attention U-Net等）通过堆叠卷积层和下采样扩大感受野，但这会增加模型复杂度和过拟合风险，且仍是次优的全局建模方案。
-    2. 已有的Transformer方法（如TransUNet、TransFuse、MedT）仅将Transformer应用于编码器，其在解码器中建模长距离依赖的潜力尚未被探索。
-    3. 多尺度特征表示在视觉Transformer中已被证明有效，但在图像分割领域应用较少。
-- **核心矛盾**：如何有效结合**Transformer的全局建模能力**与**多尺度特征表示**的优势，构建一个能够同时在下采样和上采样过程中建模长距离依赖的端到端医学图像分割框架。
+    1. 基于 CNN 的方法（UNet++、Attention U-Net、Res-UNet、DenseUNet、R2U-Net、KiU-Net、UNet 3+ 等）通过堆叠卷积层和下采样扩大感受野，但这会让模型更复杂、更易过拟合，是次优的全局建模方案。已有的卷积注意力机制并非针对医学图像分割设计，全局上下文建模仍有很大局限。
+    2. 已有的 Transformer 方法（TransUNet、TransFuse、MedT 等）**仅将 Transformer 用于编码器**，其在解码器中建模长距离依赖的潜力尚未被验证。
+    3. 多尺度特征表示已被证明对视觉 Transformer（如 CrossViT、MViT、M2TR）很重要，但在图像分割领域应用很少。
+- **核心矛盾**：如何有效结合 **Swin Transformer 的全局建模能力**与**多尺度特征表示**的优势，构建一个能在下采样和上采样过程中同时建模长距离依赖的端到端医学图像分割框架。
+
 ## 关键贡献
 
-1. **首次将Swin Transformer同时应用于U型架构的编码器和解码器**，提出DS-TransUNet框架，该框架能在下采样和上采样过程中建模长距离依赖和多尺度上下文信息。
-2. **引入双分支Swin Transformer编码器**，使用不同尺度的patch（例如s=4和s=8）分别提取图像的粗粒度和细粒度特征，增强特征学习的质量。
-3. **设计了Transformer交互融合（TIF）模块**，该模块利用自注意力机制，在双分支编码器输出的不同尺度特征之间建立有效的全局依赖关系，保证语义一致性。
-4. **在四个典型的医学图像分割任务**（息肉分割、ISIC 2018皮肤病变、GLAS腺体分割、2018数据科学碗细胞核分割）上进行了广泛实验，结果表明DS-TransUNet显著优于现有最优方法。
+1. **首次将分层 Swin Transformer 同时引入 U 型架构的编码器和解码器**（作者自述 "might be the first attempt"），提出 DS-TransUNet 框架，使其能在下采样和上采样过程中建模长距离依赖与多尺度上下文连接。
+2. **引入双分支（dual-branch）Swin Transformer 编码器**提取多尺度特征表示，使模型能捕捉不同语义尺度的粗-细粒度特征，提升特征学习质量。
+3. **设计 Transformer 交互融合（TIF）模块**，基于自注意力机制在粗、细粒度特征之间建立有效的全局依赖，保证粗-细特征的语义一致性（coarse-fine semantic consistency）。
+4. **在四个典型医学图像分割任务**（Polyp Segmentation、ISIC 2018、GLAnd Segmentation (GLAS)、2018 Data Science Bowl）上的大量实验表明，DS-TransUNet 持续优于此前最优方法，**尤其在息肉分割任务上**表现突出。
 ## 方法
 
-- **整体框架**：DS-TransUNet是一个编码器-解码器结构，整体呈U形。编码器为双分支结构，解码器为单分支结构，并包含一个核心的TIF模块用于融合多尺度特征。
+- **整体框架**（Fig. 2）：DS-TransUNet 是 U 型编码器-解码器结构。编码器为**双分支双尺度**结构，解码器为单分支结构，中间由核心的 TIF 模块对双分支多尺度特征进行交互融合。给定输入医学图像，先按两种尺度切分为非重叠 patch 送入两条编码分支，各尺度输出特征经 TIF 融合，最后经基于 Swin Transformer 块的上采样过程恢复到与输入同分辨率，得到最终分割掩码。
 - **输入输出**：输入为原始医学图像，输出为与输入同分辨率的像素级分割预测掩码。
 - **关键模块**：
-    1. **Swin Transformer块**：作为编码器和解码器的基本构建单元。它通过窗口多头自注意力（W-MSA）和移位窗口多头自注意力（SW-MSA）在局部窗口内计算注意力，显著降低计算复杂度，并通过移位窗口机制实现跨窗口信息交互（p.3-4）。
-    2. **双分支编码器**：将输入图像分别用两种不同大小的patch进行划分（如s=4和s=8），并输入到两个独立的、基于Swin Transformer的层级编码器中。每个编码器包含四个阶段，输出四种不同分辨率和维度的特征图（p.5）。
-    3. **Transformer交互融合（TIF）模块**：这是论文的核心（p.7-8）。它接收双分支编码器对应尺度的特征图。TIF模块采用**标准Transformer块**（而非Swin Transformer），因为其可以处理任意形状的序列化特征。其工作流程为：将两个分支的多尺度特征图分别重塑（reshape）为序列化的token，并拼接起来，然后通过标准Transformer的多头自注意力机制进行交互和融合，最后再分割还原回两个分支的原始形状。这使得两个分支的特征能在全局范围内相互调节，实现“粗-细调优”（coarse-fine-tuning）。
-    4. **带Swin Transformer的解码器**：解码器包含三个阶段。每个阶段先将特征图上采样2倍，再与编码器对应阶段的跳跃连接特征图进行拼接，然后将拼接后的特征送入一个**Swin Transformer块**，以建模解码过程中的长距离依赖（p.6）。
-- **模块之间如何连接**：原始图像 -> 双分支编码器（提取多尺度特征） -> TIF模块（对双分支特征进行交互融合） -> 融合后的特征分别送入解码器的三个阶段 -> 在每个解码阶段，上采样特征与对应编码阶段的特征拼接 -> 经过Swin Transformer块 -> 最终得到分割预测。
-- **数学公式/机制直观解释**：Swin Transformer块的核心是分层计算注意力，公式（2）（3）（p.3-4）描述了W-MSA和SW-MSA的操作。TIF模块的关键是利用标准Transformer的公式（1）（p.3），对来自两个分支的、已拼接的token序列进行全局自注意力计算，从而实现跨尺度特征的深度交互。
-- **训练方式**：PDF文本中未明确说明具体的损失函数和优化器细节，但模型整体应为端到端的监督学习。
-- **推理流程**：医学图像输入 -> 双分支编码器提取特征 -> TIF模块融合特征 -> 带Swin Transformer的解码器逐步上采样并融合跳跃连接特征 -> 输出分割掩码。
+    1. **标准 Transformer 块与 Swin Transformer 块**（III-A, Fig. 1）：标准 Transformer 块由多头自注意力（MSA）+MLP 组成，每个子模块前加 LayerNorm、后加残差连接（公式 (1)），但其复杂度对 token 数量是**二次**的，不适合稠密预测/高分辨率任务。Swin Transformer 用 **W-MSA**（在 M×M 窗口内做自注意力，M 默认为 7）和 **SW-MSA**（通过向左上循环移位实现跨窗口交互，不增加额外计算）替代，复杂度降为**线性**，并在相似度计算中加入相对位置偏置（公式 (2)(3)）。
+    2. **双分支双尺度编码器**（III-B, III-D）：输入图像分别按 patch 尺寸 **s=4（primary，小尺度→细粒度）** 和 **s=8（complementary，大尺度→粗粒度）** 切分为非重叠 patch，每个 patch 作为一个 token 经线性嵌入投影到维度 C。每条分支为含**四个 stage** 的 Swin Transformer，前三个 stage 后用 patch merging 层（拼接 2×2 邻接 patch 再线性投影，token 数减 4、分辨率 2 倍下采样、维度翻倍）。四个 stage 输出分辨率为 H/s×W/s、H/2s、H/4s、H/8s，维度为 C、2C、4C、8C。因此小尺度分支（s=4）输出 H/4、H/8、H/16、H/32，大尺度分支（s=8）输出 H/8、H/16、H/32、H/64。
+    3. **Transformer 交互融合（TIF）模块**（III-E，论文核心）：直接拼接多尺度特征再做卷积无法捕捉跨尺度的长距离依赖，故 TIF 用 **MSA 机制**让多尺度特征高效交互。关键设计是**采用标准 Transformer 块而非 Swin 块**——因为 Swin 块本质上作用于矩形特征图，而 TIF 需要处理重塑后的序列化多尺度特征。两个分支对应尺度的特征被 reshape 成指定大小的 token 后送入 TIF，通过标准 Transformer 的自注意力相互交互（提取文本在此处截断，融合后还原的细节据原文后续页，提取缓存未覆盖，待核）。
+    4. **带 Swin Transformer 块的解码器**（III-C）：解码器主要含**三个 stage**，与传统 U-Net 不同，每个 stage 不仅有上采样（**最近邻上采样 Nearest Upsampling**）和跳跃连接，还加入 Swin Transformer 块。编码器 stage 4 的输出作为解码器初始输入；每个解码 stage 先 2 倍上采样，再与编码器同 stage 的跳跃连接特征拼接，然后送入 Swin Transformer 块，以在解码过程中建模长距离依赖和全局上下文。三个 stage 后得到 H/4×W/4 分辨率输出；直接 4 倍上采样会丢失大量浅层特征，故额外将输入图像通过**级联两个 block**（各含 3×3 卷积+组归一化 GroupNorm+ReLU）下采样得到 H×W 和 H/2×W/2 的低层特征，与上述特征一起经跳跃连接产生最终掩码。引入 Swin 块的影响在 V-B 节讨论。
+- **模块之间如何连接**：原始图像 → 双分支双尺度编码器（各 4 stage 提取多尺度特征）→ 各尺度由 TIF 模块交互融合 → 融合特征送入解码器三个 stage（上采样+跳跃连接+Swin 块）→ 结合低层特征经跳跃连接 → 输出分割掩码。
+- **数学公式/机制直观解释**：公式 (1) 是标准 Transformer 的 MSA+MLP+残差（用于 TIF）；公式 (2)(3) 是 W-MSA 与 SW-MSA（用于编码/解码的 Swin 块），通过窗口划分和循环移位把注意力复杂度从二次降到线性。
+- **训练方式**：PDF 提取文本（前 12 页）未明确给出损失函数、优化器和超参数细节；模型整体为端到端的监督分割学习。
+- **推理流程**：医学图像 → 双分支编码器提取多尺度特征 → TIF 融合 → 带 Swin 块的解码器逐步上采样并融合跳跃连接 → 输出分割掩码。
 - **和已有方法的差异**：
-    - **与U-Net系列**：DS-TransUNet用Transformer（Swin Transformer块）替代了大部分CNN卷积块，实现了全局建模。
-    - **与TransUNet**：TransUNet仅在编码器中使用Transformer，而DS-TransUNet在编码器和解码器中均使用了Swin Transformer。
-    - **与CrossViT**：CrossViT用于图像分类，其双分支交互模块使用的是交叉注意力；而DS-TransUNet的TIF模块专门针对分割任务中的多尺度特征融合设计，使用标准的全自注意力进行交互。
+    - **与 U-Net 系列**：用 Swin Transformer 块替代大部分卷积块，实现全局建模与长距离依赖。
+    - **与 TransUNet/TransFuse/MedT**：这些方法仅在编码器使用 Transformer；DS-TransUNet 在编码器和解码器中均使用 Swin Transformer，是统一的 Transformer 编解码架构。
+    - **与 CrossViT**：CrossViT 用于图像分类、双分支交互用的是 cross-attention；DS-TransUNet 的 TIF 针对分割的多尺度特征融合，用标准 Transformer 的全自注意力交互。
 - **论文类型特化（注意力类）**：
-    - **注意力作用维度**：主要作用于**空间维度**（对序列化的图像token计算自注意力）和**多尺度维度**（TIF模块融合不同尺度的特征）。
-    - **可插入网络**：TIF模块是一个可插入的独立模块，用于连接双分支编码器。
-    - **计算量 vs 效果**：通过引入窗口注意力（W-MSA/SW-MSA）和移位窗口机制，在保持建模长距离依赖能力的同时，将计算复杂度从二次方降至线性（相对于token数量），平衡了效率和效果。
+    - **注意力作用维度**：作用于**空间维度**（对序列化 token 计算自注意力）与**多尺度维度**（TIF 融合不同尺度分支特征）。
+    - **可插入网络**：TIF 是连接双分支编码器的独立融合模块，可迁移到其他多尺度/多源特征融合场景。
+    - **计算量 vs 效果**：编码/解码用 Swin 的 W-MSA/SW-MSA 把注意力复杂度从二次降到线性；TIF 在重塑后的 token 上用标准 Transformer 做跨尺度全局交互。
 ## 实验
 
-- **使用的数据集**：
-    1. **Polyp Segmentation**：用于息肉分割。
-    2. **ISIC 2018**：用于皮肤病变分割。
-    3. **GLAnd Segmentation (GLAS)**：用于腺体分割。
-    4. **2018 Data Science Bowl**：用于细胞核分割。
-- **对比方法**：U-Net [1], Attention U-Net [4], TransUNet [17], TransFuse [18], MedT [19] 等。
-- **评价指标**：文中提及了分割任务常用的指标，如Dice、IoU、Accuracy、Precision等，但具体数值需从结果图表中提取。
-- **主实验结果**：PDF文本中未提供完整的具体数字表格，但摘要和结论中明确指出“our approach significantly outperforms the state-of-the-art methods”以及“outperforms previous state-of-the-art methods especially in polyp segmentation task”。
-- **消融实验**：第V-B节（实验部分）应包含消融研究，用于验证：
-    1. 双分支编码器设计的必要性。
-    2. TIF模块的有效性（与简单拼接等融合方式对比）。
-    3. 解码器中引入Swin Transformer块的贡献。
-    （*注：提供的PDF文本截断于第12页，未包含实验结果的具体细节和图表数据，但以上为根据论文结构和引言内容推断的实验部分应包含的核心消融点。*）
-- **泛化实验**：通过在四个不同的医学图像分割任务（息肉、皮肤、腺体、细胞核）上进行实验，验证了方法的泛化能力。
-- **速度/参数量/FLOPs等效率信息**：PDF文本中未明确说明。
+- **使用的数据集**（提取文本明确列出四项任务）：
+    1. **Polyp Segmentation**：息肉分割（论文重点强调的任务）。
+    2. **ISIC 2018**：皮肤病变分割。
+    3. **GLAnd Segmentation (GLAS)**：腺体分割。
+    4. **2018 Data Science (Bowl)**：细胞核分割。
+- **对比方法**（引言/相关工作出现）：U-Net [1]、UNet++ [2]、Attention U-Net [4]、TransUNet [17]、TransFuse [18]、MedT [19] 等。
+- **评价指标**：提取文本（前 12 页）未列出指标具体名称与数值；分割任务通常用 Dice、IoU 等（据原文后续页，提取缓存未覆盖，待核）。
+- **主实验结果**：提取文本未含具体数字表格，但摘要与贡献明确指出 "our approach significantly outperforms the state-of-the-art methods"，且 "outperforms previous state-of-the-art methods especially in polyp segmentation task"。具体性能数值据原文后续页（IV 节），提取缓存未覆盖，待核。
+- **消融实验**：解码器引入 Swin Transformer 块的影响在 **V-B 节**讨论（提取文本 III-C 节有明确指向）。双分支编码器与 TIF 模块的消融为论文结构应有内容，但提取缓存（前 12 页）未覆盖具体设置与数值，待核。
+- **泛化实验**：通过四个不同医学分割任务（息肉、皮肤、腺体、细胞核）验证泛化能力。
+- **速度/参数量/FLOPs 等效率信息**：提取文本未明确说明。
+
+> 注：提取缓存覆盖 PDF 前 12 页，截断于 III-E（TIF 模块）中间，IV/V/VI 节（实验、消融、结论）的具体数据不在提取文本内。涉及具体数字处均标注"待核"，不作编造。
 ## 局限
 
-1. **计算成本**：引入双分支编码器和解码器中的Transformer块，以及TIF模块中的标准自注意力计算，可能会**增加模型的计算开销和内存消耗**，虽然Swin Transformer本身是高效的，但整体架构比原始U-Net更复杂。
-2. **数据依赖**：Transformer架构通常在大规模数据上预训练效果更佳。虽然论文在医学数据集上从头训练取得了好结果，但其对**小样本医学数据集**的适应性和训练稳定性需要进一步验证。
-3. **数据集范围**：实验涵盖了四种任务，但均为常见的2D医学图像分割任务。对于**3D医学图像**（如CT、MRI体积数据）或其他模态（如超声、病理切片）的适用性未在PDF中提及。
-4. **解码器设计**：解码器中上采样仍使用“最近邻上采样”，这是一种相对简单的上采样策略。是否与更先进的上采样方法（如转置卷积）结合效果更好，有待探究。
-5. **复现细节**：PDF中未提供完整的训练超参数（如学习率、优化器、训练轮数）、数据增强策略等，可能给精确复现带来一定挑战。
+1. **计算/内存开销**：双分支编码器 + 解码器中的 Swin 块 + TIF 的标准自注意力使整体架构比原始 U-Net 复杂，虽然 Swin 注意力是线性复杂度，但双分支结构仍增加开销。（提取文本未给出参数量/FLOPs 数值。）
+2. **数据依赖**：Transformer 一般在大规模数据上效果更佳；本文在医学数据上的小样本适应性与训练稳定性需进一步验证（提取文本未给出预训练/从头训练的细节，待核）。
+3. **数据集范围**：四个任务均为 2D 医学图像分割任务，对 3D 体数据（CT/MRI 体积）或其他模态的适用性未在提取文本中涉及。
+4. **解码器上采样**：解码器使用最近邻上采样（Nearest Upsampling，论文明确），相对简单，是否与转置卷积等更复杂上采样结合更优有待探究。
+5. **复现细节**：提取文本（前 12 页）未提供完整训练超参数、数据增强策略，精确复现需参考论文后续页/官方实现。
 ## 个人评论
 
-1. **架构创新**：提出了一个**完整将Swin Transformer应用于U-Net编码器和解码器的端到端框架**，打破了此前Transformer仅用作编码器的惯例，为后续研究提供了一个强大的基线架构。
-2. **模块设计**：**TIF模块**的设计简洁而有效。它展示了如何用一个标准的Transformer块来“桥接”和“调和”来自不同尺度分支的特征，这种“交互式融合”的思想比简单的特征拼接或相加更具表现力，可以广泛应用于需要融合多源、多尺度信息的任务中。
-3. **研究思路启发**：论文清晰地论证了**多尺度特征**与**Transformer全局建模能力**相结合的必要性和有效性。对于希望改进医学图像分割模型的研究者，可以从“双分支/多分支提取不同粒度特征”和“设计高效特征交互/融合模块”这两个角度进行借鉴。
-4. **实用价值**：在息肉分割等关键临床任务上取得显著提升，表明该方法具有实际应用潜力。
+1. **架构创新**：把分层 Swin Transformer **同时**用于 U 型架构的编码器与解码器，打破了此前 Transformer 仅用作编码器的惯例，为"全 Transformer 的 U-Net"提供了一个可直接复用的强基线。
+2. **模块设计**：**TIF 模块**的取舍很值得学习——作者刻意在融合处选**标准 Transformer 块而非 Swin 块**，理由是 Swin 的窗口注意力依赖矩形特征图、不适合处理 reshape 后的跨尺度序列。这个"按数据形态选注意力变体"的判断比单纯堆模块更有工程价值；其"交互式融合"思想也比简单拼接/相加更具表现力，可迁移到多模态、多尺度特征融合场景。
+3. **研究思路启发**：论文清晰论证了"多尺度特征"与"Transformer 全局建模"结合的必要性。对想改进医学分割的研究者，可从"双分支/多分支提取不同粒度特征"和"设计高效跨尺度交互/融合模块"两条线借鉴。
+4. **实用价值**：论文反复强调在息肉分割上的显著提升（"especially in polyp segmentation task"），该任务有明确临床意义，方法具有落地潜力。
 
 ### 使用建议
 
-- **如果快速了解**：重点阅读**摘要（Abstract）** 和**引言（I. Introduction）** 的后半部分，以及**图2（Fig. 2）** 所展示的整体架构图。
-- **如果复现**：精读**方法（III. Method）** 部分，特别是第III-A（Swin Transformer块）、III-D（多尺度特征表示）和III-E（TIF模块）小节，理解其数学公式和实现细节。同时需要参考原始Swin Transformer论文[15]来获取Swin Transformer块的具体实现。
+- **如果快速了解**：读**摘要**与**引言后半部分**，配合**图 2（Fig. 2）整体架构图**与**图 1（标准/Swin Transformer 块）**。
+- **如果复现**：精读**方法（III. Method）**，尤其 III-A（Swin/标准 Transformer 块）、III-B/III-D（双分支双尺度编码器）、III-C（带 Swin 块的解码器）、III-E（TIF 模块），并参考原始 Swin Transformer 论文 [15] 获取 Swin 块实现细节。注意 patch 尺寸 s=4 为 primary（细粒度）、s=8 为 complementary（粗粒度）。
 - **如果借鉴创新点**：
-    1. 学习其**双分支编码器提取多尺度特征**的设计思想。
-    2. 重点研究**TIF模块**，理解如何用Transformer块进行特征交互融合，这个模块可以尝试应用于自己的多模态或多尺度特征融合场景。
-    3. 借鉴其将**Transformer块引入解码器**来增强长距离依赖建模的思路。
-- **如果写Related Work**：这篇论文可以放在以下几个类别中：
-    - 基于Transformer的医学图像分割方法。
-    - 多尺度视觉Transformer。
-    - 编码器-解码器架构的改进（特别是U-Net变体）。
-    - 特征融合模块的设计。
+    1. 学习双分支编码器提取多尺度特征的设计。
+    2. 重点研究 TIF 模块——尤其"为什么在融合处用标准 Transformer 而非 Swin"，可迁移到自己的多尺度/多模态融合。
+    3. 借鉴把 Swin 块引入解码器以增强解码端长距离依赖建模的思路。
+- **如果写 Related Work**：可归入①基于 Transformer 的医学图像分割；②多尺度视觉 Transformer；③U-Net 变体与编解码改进；④特征融合模块设计。
 ## 相关论文与链接
 
 > 用 `[[]]` 链接到其他论文笔记或主题首页：
+> - [[A1_医学图像_分割]]
 > - [[B_注意力算子模块]]
 > - [[论文知识库总览]]
 
@@ -147,109 +150,80 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/13 pages
 # 论文精读
 
 ## 1. 论文定位
-这篇论文属于**医学图像分割**与**视觉Transformer**交叉的研究方向。它针对基于CNN的医学图像分割方法在建模全局上下文和长距离依赖方面的不足，提出了一种全新的基于Transformer的U型网络架构。该论文适合放在“注意力算子模块”这一主题下，因为其核心创新点——Transformer Interactive Fusion (TIF)模块——本质是一个基于自注意力机制的多尺度特征交互融合模块。
+本文处于**医学图像分割**与**视觉 Transformer**的交叉方向。它针对 CNN 在全局上下文/长距离依赖建模上的不足，提出一个把分层 Swin Transformer 同时用于编码器和解码器的 U 型分割框架 DS-TransUNet，核心创新是基于标准 Transformer 自注意力的多尺度交互融合（TIF）模块。论文主题首先是**医学图像分割（A1）**，其方法贡献又是一个可复用的**注意力/融合模块（B）**，故主分类归 A1、辅以 B。
 
 ## 2. 一句话总结
-本文提出了DS-TransUNet，一种在编码器和解码器中均采用分层Swin Transformer的双分支U型架构，并通过设计一个Transformer交互融合（TIF）模块来有效融合多尺度特征，从而提升医学图像分割的精度。
+DS-TransUNet 用分层 Swin Transformer 构建双分支双尺度的 U 型编解码网络，并设计 Transformer 交互融合（TIF）模块以自注意力机制融合粗-细粒度多尺度特征，在四个医学分割任务上显著优于此前最优方法。
 
 ## 3. 背景与问题
-- **为什么要做**：尽管CNN（如U-Net及其变体）在医学图像分割中取得了成功，但其固有的**局部感受野限制**使其难以建立长距离依赖和全局上下文连接。此外，标准的patch划分会忽略patch内部的像素级结构信息。
+- **为什么要做**：医学图像分割是临床诊断的关键步骤；CNN/U-Net 系列虽主导该领域，但卷积归纳偏置导致只关注局部子区域、丢失全局上下文、难建长距离依赖。视觉 Transformer 的 patch 划分又会忽略 patch 内像素级结构（边缘/线条）。
 - **之前方法的问题**：
-    1. 基于CNN的方法（如U-Net++、Attention U-Net等）通过堆叠卷积层和下采样扩大感受野，但这会增加模型复杂度和过拟合风险，且仍是次优的全局建模方案。
-    2. 已有的Transformer方法（如TransUNet、TransFuse、MedT）仅将Transformer应用于编码器，其在解码器中建模长距离依赖的潜力尚未被探索。
-    3. 多尺度特征表示在视觉Transformer中已被证明有效，但在图像分割领域应用较少。
-- **核心矛盾**：如何有效结合**Transformer的全局建模能力**与**多尺度特征表示**的优势，构建一个能够同时在下采样和上采样过程中建模长距离依赖的端到端医学图像分割框架。
+    1. CNN 方法（UNet++、Attention U-Net、Res-UNet、KiU-Net、UNet 3+ 等）靠堆卷积+下采样扩感受野，模型更复杂、易过拟合，全局建模次优。
+    2. TransUNet/TransFuse/MedT 等只在**编码器**用 Transformer，解码器端潜力未验证。
+    3. 多尺度特征对视觉 Transformer（CrossViT/MViT/M2TR）有效，但在分割中罕用。
+- **核心矛盾**：如何把 Swin 的全局建模与多尺度特征表示结合，构建在下采样与上采样过程中都能建模长距离依赖的端到端医学分割框架。
 
 ## 4. 核心贡献
-1. **首次将Swin Transformer同时应用于U型架构的编码器和解码器**，提出DS-TransUNet框架，该框架能在下采样和上采样过程中建模长距离依赖和多尺度上下文信息。
-2. **引入双分支Swin Transformer编码器**，使用不同尺度的patch（例如s=4和s=8）分别提取图像的粗粒度和细粒度特征，增强特征学习的质量。
-3. **设计了Transformer交互融合（TIF）模块**，该模块利用自注意力机制，在双分支编码器输出的不同尺度特征之间建立有效的全局依赖关系，保证语义一致性。
-4. **在四个典型的医学图像分割任务**（息肉分割、ISIC 2018皮肤病变、GLAS腺体分割、2018数据科学碗细胞核分割）上进行了广泛实验，结果表明DS-TransUNet显著优于现有最优方法。
+1. **首次（作者自述 might be the first）把分层 Swin Transformer 同时引入 U 型架构编码器和解码器**，在下采样和上采样过程中建模长距离依赖与多尺度上下文。
+2. **双分支 Swin Transformer 编码器**提取不同语义尺度的粗-细粒度特征，提升特征学习质量。
+3. **TIF 模块**基于自注意力在粗、细粒度特征间建立全局依赖，保证粗-细特征语义一致性。
+4. 四个医学分割任务（Polyp、ISIC 2018、GLAS、2018 Data Science Bowl）大量实验表明持续优于 SOTA，**尤其在息肉分割任务**。
 
 ## 5. 方法详解
-- **整体框架**：DS-TransUNet是一个编码器-解码器结构，整体呈U形。编码器为双分支结构，解码器为单分支结构，并包含一个核心的TIF模块用于融合多尺度特征。
-- **输入输出**：输入为原始医学图像，输出为与输入同分辨率的像素级分割预测掩码。
-- **关键模块**：
-    1. **Swin Transformer块**：作为编码器和解码器的基本构建单元。它通过窗口多头自注意力（W-MSA）和移位窗口多头自注意力（SW-MSA）在局部窗口内计算注意力，显著降低计算复杂度，并通过移位窗口机制实现跨窗口信息交互（p.3-4）。
-    2. **双分支编码器**：将输入图像分别用两种不同大小的patch进行划分（如s=4和s=8），并输入到两个独立的、基于Swin Transformer的层级编码器中。每个编码器包含四个阶段，输出四种不同分辨率和维度的特征图（p.5）。
-    3. **Transformer交互融合（TIF）模块**：这是论文的核心（p.7-8）。它接收双分支编码器对应尺度的特征图。TIF模块采用**标准Transformer块**（而非Swin Transformer），因为其可以处理任意形状的序列化特征。其工作流程为：将两个分支的多尺度特征图分别重塑（reshape）为序列化的token，并拼接起来，然后通过标准Transformer的多头自注意力机制进行交互和融合，最后再分割还原回两个分支的原始形状。这使得两个分支的特征能在全局范围内相互调节，实现“粗-细调优”（coarse-fine-tuning）。
-    4. **带Swin Transformer的解码器**：解码器包含三个阶段。每个阶段先将特征图上采样2倍，再与编码器对应阶段的跳跃连接特征图进行拼接，然后将拼接后的特征送入一个**Swin Transformer块**，以建模解码过程中的长距离依赖（p.6）。
-- **模块之间如何连接**：原始图像 -> 双分支编码器（提取多尺度特征） -> TIF模块（对双分支特征进行交互融合） -> 融合后的特征分别送入解码器的三个阶段 -> 在每个解码阶段，上采样特征与对应编码阶段的特征拼接 -> 经过Swin Transformer块 -> 最终得到分割预测。
-- **数学公式/机制直观解释**：Swin Transformer块的核心是分层计算注意力，公式（2）（3）（p.3-4）描述了W-MSA和SW-MSA的操作。TIF模块的关键是利用标准Transformer的公式（1）（p.3），对来自两个分支的、已拼接的token序列进行全局自注意力计算，从而实现跨尺度特征的深度交互。
-- **训练方式**：PDF文本中未明确说明具体的损失函数和优化器细节，但模型整体应为端到端的监督学习。
-- **推理流程**：医学图像输入 -> 双分支编码器提取特征 -> TIF模块融合特征 -> 带Swin Transformer的解码器逐步上采样并融合跳跃连接特征 -> 输出分割掩码。
-- **和已有方法的差异**：
-    - **与U-Net系列**：DS-TransUNet用Transformer（Swin Transformer块）替代了大部分CNN卷积块，实现了全局建模。
-    - **与TransUNet**：TransUNet仅在编码器中使用Transformer，而DS-TransUNet在编码器和解码器中均使用了Swin Transformer。
-    - **与CrossViT**：CrossViT用于图像分类，其双分支交互模块使用的是交叉注意力；而DS-TransUNet的TIF模块专门针对分割任务中的多尺度特征融合设计，使用标准的全自注意力进行交互。
-- **论文类型特化（注意力类）**：
-    - **注意力作用维度**：主要作用于**空间维度**（对序列化的图像token计算自注意力）和**多尺度维度**（TIF模块融合不同尺度的特征）。
-    - **可插入网络**：TIF模块是一个可插入的独立模块，用于连接双分支编码器。
-    - **计算量 vs 效果**：通过引入窗口注意力（W-MSA/SW-MSA）和移位窗口机制，在保持建模长距离依赖能力的同时，将计算复杂度从二次方降至线性（相对于token数量），平衡了效率和效果。
+- **整体框架（Fig. 2）**：U 型编码器-解码器。编码器为双分支双尺度结构，解码器单分支，中间用 TIF 融合两分支多尺度特征，最后经 Swin 块上采样恢复到输入分辨率，输出掩码。
+- **标准/Swin Transformer 块（III-A, Fig. 1）**：标准块 = MSA + MLP + 残差 + LN（公式 (1)），复杂度对 token 数二次；Swin 块用 W-MSA（M×M 窗口内自注意力，M 默认 7）+ SW-MSA（左上循环移位实现跨窗口交互），复杂度线性，含相对位置偏置（公式 (2)(3)）。
+- **双分支双尺度编码器（III-B, III-D）**：输入按 patch 尺寸 **s=4（primary，细粒度）/ s=8（complementary，粗粒度）** 切分为非重叠 patch，每 patch 一个 token 投影到维度 C；每分支 4 个 stage，前 3 stage 后 patch merging（拼 2×2 邻接 patch + 线性层，token 减 4、2× 下采样、维度翻倍）。各 stage 分辨率 H/s、H/2s、H/4s、H/8s，维度 C、2C、4C、8C；故 s=4 分支输出 H/4…H/32，s=8 分支输出 H/8…H/64。
+- **TIF 模块（III-E，核心）**：直接拼接+卷积无法捕跨尺度长距离依赖，故用 MSA 交互；**刻意用标准 Transformer 块而非 Swin 块**，因 Swin 作用于矩形特征图、不适合 reshape 后的多尺度序列。两分支对应尺度特征 reshape 成指定大小 token 后送入 TIF 做自注意力交互（融合后还原细节据原文后续页，提取缓存未覆盖，待核）。
+- **带 Swin 块的解码器（III-C）**：三个 stage，每 stage = 最近邻上采样(2×) + 与编码器同 stage 跳跃连接拼接 + Swin Transformer 块；编码器 stage 4 输出为解码器初始输入。三 stage 后得 H/4×W/4；为避免直接 4× 上采样丢失浅层特征，另把输入图像经级联两个 block（3×3 卷积+GroupNorm+ReLU）下采样得 H×W、H/2×W/2 低层特征，经跳跃连接生成最终掩码。Swin 块影响在 V-B 节讨论。
+- **数学机制**：公式 (1) 用于 TIF 的标准 Transformer；公式 (2)(3) 用于编/解码的 Swin 块，把注意力复杂度从二次降到线性。
+- **训练方式**：提取文本（前 12 页）未明确损失/优化器/超参，整体为端到端监督分割。
+- **与已有方法差异**：用 Swin 块替代大部分卷积（vs U-Net）；编解码统一用 Transformer（vs 仅编码器的 TransUNet/TransFuse/MedT）；TIF 用全自注意力做分割多尺度融合（vs CrossViT 的分类 cross-attention）。
 
 ## 6. 实验与结果
-- **使用的数据集**：
-    1. **Polyp Segmentation**：用于息肉分割。
-    2. **ISIC 2018**：用于皮肤病变分割。
-    3. **GLAnd Segmentation (GLAS)**：用于腺体分割。
-    4. **2018 Data Science Bowl**：用于细胞核分割。
-- **对比方法**：U-Net [1], Attention U-Net [4], TransUNet [17], TransFuse [18], MedT [19] 等。
-- **评价指标**：文中提及了分割任务常用的指标，如Dice、IoU、Accuracy、Precision等，但具体数值需从结果图表中提取。
-- **主实验结果**：PDF文本中未提供完整的具体数字表格，但摘要和结论中明确指出“our approach significantly outperforms the state-of-the-art methods”以及“outperforms previous state-of-the-art methods especially in polyp segmentation task”。
-- **消融实验**：第V-B节（实验部分）应包含消融研究，用于验证：
-    1. 双分支编码器设计的必要性。
-    2. TIF模块的有效性（与简单拼接等融合方式对比）。
-    3. 解码器中引入Swin Transformer块的贡献。
-    （*注：提供的PDF文本截断于第12页，未包含实验结果的具体细节和图表数据，但以上为根据论文结构和引言内容推断的实验部分应包含的核心消融点。*）
-- **泛化实验**：通过在四个不同的医学图像分割任务（息肉、皮肤、腺体、细胞核）上进行实验，验证了方法的泛化能力。
-- **速度/参数量/FLOPs等效率信息**：PDF文本中未明确说明。
+- **数据集**：Polyp Segmentation、ISIC 2018、GLAS、2018 Data Science (Bowl) 四个任务（提取文本明确）。
+- **对比方法**：U-Net、UNet++、Attention U-Net、TransUNet、TransFuse、MedT 等。
+- **评价指标 / 主结果数值**：提取文本（前 12 页，截断于 III-E）未含具体指标名与数值表；论文摘要/贡献明确 "significantly outperforms the state-of-the-art methods"、"especially in polyp segmentation task"。具体 Dice/IoU 等数值据原文后续页（IV 节），提取缓存未覆盖，待核。
+- **消融**：解码器引入 Swin 块的影响在 V-B 节（提取文本指向明确）；双分支/TIF 的消融为应有内容但缓存未覆盖，待核。
+- **泛化**：四个不同任务覆盖息肉/皮肤/腺体/细胞核，验证泛化能力。
+- **效率信息**：提取文本未明确参数量/FLOPs/速度。
 
 ## 7. 这篇论文真正有价值的地方
-1. **架构创新**：提出了一个**完整将Swin Transformer应用于U-Net编码器和解码器的端到端框架**，打破了此前Transformer仅用作编码器的惯例，为后续研究提供了一个强大的基线架构。
-2. **模块设计**：**TIF模块**的设计简洁而有效。它展示了如何用一个标准的Transformer块来“桥接”和“调和”来自不同尺度分支的特征，这种“交互式融合”的思想比简单的特征拼接或相加更具表现力，可以广泛应用于需要融合多源、多尺度信息的任务中。
-3. **研究思路启发**：论文清晰地论证了**多尺度特征**与**Transformer全局建模能力**相结合的必要性和有效性。对于希望改进医学图像分割模型的研究者，可以从“双分支/多分支提取不同粒度特征”和“设计高效特征交互/融合模块”这两个角度进行借鉴。
-4. **实用价值**：在息肉分割等关键临床任务上取得显著提升，表明该方法具有实际应用潜力。
+1. **架构层面**：把 Swin 同时用于编码器和解码器，给出"全 Transformer U-Net"的可复用强基线。
+2. **模块取舍**：TIF 在融合处**主动选标准 Transformer 而非 Swin**，理由是数据形态（reshape 后的跨尺度序列 vs 矩形特征图）——这种按张量形态选注意力变体的判断很有借鉴价值。
+3. **方法论**：清晰论证"多尺度特征 + Transformer 全局建模"结合的必要性，给出双分支提取 + 交互融合的范式。
+4. **临床价值**：在息肉分割等有明确临床意义的任务上强调显著提升。
 
 ## 8. 局限与问题
-1. **计算成本**：引入双分支编码器和解码器中的Transformer块，以及TIF模块中的标准自注意力计算，可能会**增加模型的计算开销和内存消耗**，虽然Swin Transformer本身是高效的，但整体架构比原始U-Net更复杂。
-2. **数据依赖**：Transformer架构通常在大规模数据上预训练效果更佳。虽然论文在医学数据集上从头训练取得了好结果，但其对**小样本医学数据集**的适应性和训练稳定性需要进一步验证。
-3. **数据集范围**：实验涵盖了四种任务，但均为常见的2D医学图像分割任务。对于**3D医学图像**（如CT、MRI体积数据）或其他模态（如超声、病理切片）的适用性未在PDF中提及。
-4. **解码器设计**：解码器中上采样仍使用“最近邻上采样”，这是一种相对简单的上采样策略。是否与更先进的上采样方法（如转置卷积）结合效果更好，有待探究。
-5. **复现细节**：PDF中未提供完整的训练超参数（如学习率、优化器、训练轮数）、数据增强策略等，可能给精确复现带来一定挑战。
+1. **开销**：双分支 + 解码器 Swin 块 + TIF 自注意力使架构比原始 U-Net 复杂（提取文本未给参数量/FLOPs 数值）。
+2. **数据依赖**：Transformer 偏好大数据，医学小样本适应性/训练稳定性需进一步验证（提取文本未给预训练细节，待核）。
+3. **范围**：四个任务均为 2D，未覆盖 3D 体数据或其他模态。
+4. **上采样**：解码器用最近邻上采样（论文明确），较简单，与转置卷积等结合是否更优待探究。
+5. **复现**：提取文本（前 12 页）未给完整超参/增强策略，精确复现需后续页/官方实现。
 
 ## 9. 我该怎么使用这篇论文
-- **如果快速了解**：重点阅读**摘要（Abstract）** 和**引言（I. Introduction）** 的后半部分，以及**图2（Fig. 2）** 所展示的整体架构图。
-- **如果复现**：精读**方法（III. Method）** 部分，特别是第III-A（Swin Transformer块）、III-D（多尺度特征表示）和III-E（TIF模块）小节，理解其数学公式和实现细节。同时需要参考原始Swin Transformer论文[15]来获取Swin Transformer块的具体实现。
-- **如果借鉴创新点**：
-    1. 学习其**双分支编码器提取多尺度特征**的设计思想。
-    2. 重点研究**TIF模块**，理解如何用Transformer块进行特征交互融合，这个模块可以尝试应用于自己的多模态或多尺度特征融合场景。
-    3. 借鉴其将**Transformer块引入解码器**来增强长距离依赖建模的思路。
-- **如果写Related Work**：这篇论文可以放在以下几个类别中：
-    - 基于Transformer的医学图像分割方法。
-    - 多尺度视觉Transformer。
-    - 编码器-解码器架构的改进（特别是U-Net变体）。
-    - 特征融合模块的设计。
+- **快速了解**：摘要 + 引言后半 + 图 2（架构）+ 图 1（Transformer/Swin 块）。
+- **复现**：精读 III-A/B/C/D/E，参考 Swin Transformer [15]；记住 s=4 primary（细）、s=8 complementary（粗），解码器三 stage + 级联卷积低层特征支路。
+- **借鉴创新点**：双分支多尺度提取；TIF 的"为何用标准 Transformer 不用 Swin"；解码器引入 Swin 块。
+- **写 Related Work**：归入①Transformer 医学分割；②多尺度视觉 Transformer；③U-Net 变体/编解码改进；④特征融合模块。
 
 ## 10. 和其他论文的关系
-根据提供的主题和文件名，可能相关的论文包括：
-- `[[TransUNet]]`：本文的重要基线之一，仅在编码器使用Transformer。
-- `[[TransFuse]]`：本文的另一个基线，融合CNN和Transformer特征。
-- `[[MedT]]`：基于轴向注意力的医学Transformer方法。
-- `[[Swin Transformer]]`：本文核心骨干网络的来源。
-- `[[CrossViT]]`：启发了本文多尺度双分支设计的图像分类模型。
-- `[[Attention U-Net]]`：经典的CNN注意力方法，是U-Net变体的代表。
-- `[[U-Net]]`：本文所基于的基础架构。
-*（注：由于未访问完整的论文库，以上为基于论文内容和通用知识的推测，具体关联需根据实际论文库内容确认。）*
+- `[[TransUNet]]`：重要基线，仅编码器用 Transformer。
+- `[[TransFuse]]`：基线，融合 CNN 与 Transformer 特征。
+- `[[MedT]]`：基于 Gated Axial-Attention 的医学 Transformer。
+- `[[Swin Transformer]]`：本文骨干来源（W-MSA/SW-MSA、分层架构、相对位置偏置）。
+- `[[CrossViT]]`：启发双分支多尺度设计的图像分类模型（用 cross-attention）。
+- `[[Attention U-Net]]` / `[[U-Net]]` / `[[UNet++]]`：CNN U-Net 系列对比基线。
+*（注：上述链接为基于论文引用与通用知识的推测，具体关联以实际论文库为准。）*
 
 ## 11. 关键词
-医学图像分割, Swin Transformer, U-Net, 多尺度特征, Transformer交互融合模块, 双分支编码器, 长距离依赖, 自注意力机制, 视觉Transformer, 语义分割
+医学图像分割, Swin Transformer, U-Net, 双分支双尺度编码器, 多尺度特征, Transformer 交互融合(TIF), 长距离依赖, 自注意力, W-MSA/SW-MSA, 语义分割
 
 ## 12. 可信度说明
-本笔记主要基于提供的PDF提取文本（前12页）生成，内容涵盖了摘要、引言、相关工作以及方法（III. Method）的大部分内容（包括A、B、C、D、E五个小节）。提取的文本质量良好，逻辑连贯。然而，由于文本截断于第12页（方法部分的E节中间），**实验结果（第IV节）、消融实验（第V节）、结论（第VI节）以及参考文献等关键部分的信息缺失**。因此，关于实验具体数据、效率分析等部分的信息在笔记中标注为“未明确说明”或根据上下文进行合理推断。对于需要完整实验数据支撑的分析（如具体性能数字），需参考论文原文后续页面。
+本笔记主要基于 PDF 提取缓存（标注 12/13 页，实际正文覆盖到 III-E TIF 模块中间被截断）。提取文本质量良好、逻辑连贯，摘要、引言、相关工作、方法 III-A~III-E 的描述均有原文支撑。**实验数据（IV 节）、完整消融（V 节）、结论（VI 节）的具体数字未在提取文本中**，凡涉及具体指标/参数处均标注"待核"或"PDF 文本未明确"，未编造数值。相比上一版，本版修正了三处事实：①补全标题副标题 "for Medical Image Segmentation"；②澄清 patch 尺寸 s=4 为 primary/细粒度、s=8 为 complementary/粗粒度（原版表述含糊）；③明确解码器为三 stage + 最近邻上采样 + 级联两 block 低层特征支路；并把主分类由 B 调整为 A1（医学图像分割）。
 
 ---
 
-> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2086 字符/页)); 来源缓存: `.paper-cache/extracts/TIF.txt` (13/13 页; 原 AI 主体 12/13 + 全文补读 13-13); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro).
+> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好, 约 2086 字符/页); 来源缓存: `.paper-cache/extracts/TIF.txt` (提取 12/13 页, 截断于 III-E TIF 模块; 原 AI 主体 12/13 + 全文补读 13-13); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro)。本轮 Opus 重读据提取文本核对并修正若干事实, human_reviewed 仍为 false。
 ## 全文补读记录
 
 - **补读日期**: 2026-06-08
