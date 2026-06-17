@@ -1,5 +1,5 @@
 ---
-title: "SOAR: Advancements in Small Body Object"
+title: "SOAR: Advancements in Small Body Object Detection for Aerial Imagery Using State Space Models and Programmable Gradients"
 authors:
   - "Tushar Verma"
   - "Yash Bhartari"
@@ -8,12 +8,12 @@ authors:
   - "Shubhkarman Singh"
   - "Jyotsna Singh"
 year: 2024
-venue: it particularly effective in remote sensing image classification.
+venue: "arXiv preprint (arXiv:2405.01699v2 [cs.CV])"
 doi: 
 pdf: [[2024_SOAR_Advancements_i.pdf]]
-primary_topic: T_通用_NLP_其他
+primary_topic: C2_目标检测_违建_车辆_船舶_行人
 topics:
-  - "T_通用_NLP_其他"
+  - "C2_目标检测_违建_车辆_船舶_行人"
 status: ai-read
 reading_stage: ai-complete
 confidence: high
@@ -28,12 +28,12 @@ ai_generated_at: 2026-06-04
 extract_cache: .paper-cache/extracts/2024_SOAR_Advancements_i.txt
 ---
 
-# SOAR: Advancements in Small Body Object
+# SOAR: Advancements in Small Body Object Detection for Aerial Imagery
 
 ## 基本信息
 - **PDF**: [[2024_SOAR_Advancements_i.pdf]]
-- **primary_topic**: `T_通用_NLP_其他`
-- **topics**: `T_通用_NLP_其他`
+- **primary_topic**: `C2_目标检测_违建_车辆_船舶_行人`
+- **topics**: `C2_目标检测_违建_车辆_船舶_行人`
 - **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
@@ -41,120 +41,128 @@ extract_cache: .paper-cache/extracts/2024_SOAR_Advancements_i.txt
 
 | 项目 | 内容 |
 |------|------|
-| **题目** | SOAR: Advancements in Small Body Object |
-| **作者** | Tushar Verma; Yash Bhartari; Rishi Jarwal; Suraj Singh; Shubhkarman Singh; Jyotsna Singh |
-| **发表时间** | 2024 |
-| **刊物/会议** | it particularly effective in remote sensing image classification. |
+| **题目** | SOAR: Advancements in Small Body Object Detection for Aerial Imagery Using State Space Models and Programmable Gradients |
+| **作者** | Tushar Verma; Yash Bhartari; Rishi Jarwal; Suraj Singh; Shubhkarman Singh; Jyotsna Singh (Netaji Subhas University of Technology) |
+| **发表时间** | 2024 (arXiv v2, 2024-05-06) |
+| **刊物/会议** | arXiv preprint (arXiv:2405.01699v2 [cs.CV]) |
+| **代码** | https://github.com/yash2629/S.O.A.R |
 | **DOI** | 未明确 |
 
 ## 摘要
 
-> significant challenges in computer vision due to the minimal because it was monitored from a distance. Their tiny size data inherent in small-sized objects and their propensity to be sometimesleadstothembeingconfusedfornoise,whichhasa obscured by larger objects and background noise. Traditional detrimental effect on tracking accuracy. The small objects can methods using transformer-based models often face limitations stemmingfromthelackofspecializeddatabases,whichadversely be defined as MS-COCO [1] metric evaluation, small objects affecttheirperformancewithobjectsofvaryingorientationsand are defined as having an area of 32 × 32 pixels or less, scales.Thisunderscorestheneedformoreadaptable,lightweight which is a commonly used threshold for datasets including models. In response, this paper introduces two innovative ap- commonobjects.Therehavebeensomemodelsthathavebeen proaches that significantly enhance detection and segmentation developed to help in the particular problem and continuou
+> **清理后英文原摘要**（据 PDF 提取文本整理，修复断词与空格）:
+>
+> Small object detection in aerial imagery presents significant challenges in computer vision due to the minimal data inherent in small-sized objects and their propensity to be obscured by larger objects and background noise. Traditional methods using transformer-based models often face limitations stemming from the lack of specialized databases, which adversely affect their performance with objects of varying orientations and scales. This underscores the need for more adaptable, lightweight models. In response, this paper introduces two innovative approaches that significantly enhance detection and segmentation capabilities for small aerial objects. Firstly, we explore the use of the SAHI framework on the newly introduced lightweight YOLOv9 architecture, which utilizes Programmable Gradient Information (PGI) to reduce the substantial information loss typically encountered in sequential feature extraction processes. The paper employs the Vision Mamba model, which incorporates position embeddings to facilitate precise location-aware visual understanding, combined with a novel bidirectional State Space Model (SSM) for effective visual context modeling. This State Space Model adeptly harnesses the linear complexity of CNNs and the global receptive field of Transformers, making it particularly effective in remote sensing image classification. Our experimental results demonstrate substantial improvements in detection accuracy and processing efficiency, validating the applicability of these approaches for real-time small object detection across diverse aerial scenarios. This paper also discusses how these methodologies could serve as foundational models for future advancements in aerial object recognition technologies.
 
-> **来源**: PDF 自动提取，需人工复核。
+> **中文翻译**:
+>
+> 航空影像中的小目标检测在计算机视觉中面临重大挑战：小目标本身携带的信息极少，又极易被较大目标和背景噪声所淹没。基于 Transformer 的传统方法常受限于缺乏专门的数据库，在面对不同朝向、不同尺度的目标时性能下降，凸显出对更具适应性、更轻量模型的需求。为此，本文提出两条创新路线来增强对航空小目标的检测与分割能力。第一，将 SAHI（切片辅助超推理）框架用于新近提出的轻量级 YOLOv9 架构——后者借助可编程梯度信息（PGI）来减少顺序特征提取过程中的严重信息损失。第二，采用引入位置嵌入的 Vision Mamba 模型以实现精确的位置感知视觉理解，并结合一种新的双向状态空间模型（SSM）进行视觉上下文建模；该 SSM 兼具 CNN 的线性复杂度与 Transformer 的全局感受野，使其在遥感图像分类中尤为有效。实验结果表明在检测精度与处理效率上均有显著提升，验证了上述方法在多样航空场景下实时小目标检测的适用性。本文还探讨了这些方法作为未来航空目标识别技术基础模型的潜力。
+
+> 来源: 据 PDF 提取文本整理。
 
 ## 研究背景与动机
 
-- **为什么要做**: 航空影像中的小目标检测是自动驾驶、交通监控等应用的关键，但小目标信息少、易被背景噪声和遮挡影响，是当前目标检测领域的重大挑战。
+- **为什么要做**: 目标检测/跟踪是视频监控、智能交通、数字城市等应用的基础，其中**小目标检测**是最大难点。论文沿用 MS-COCO 的口径，将"小目标"定义为面积 ≤ 32×32 像素的目标。这类目标在帧中显得极小（常因远距离拍摄），易被误认为噪声，从而损害跟踪精度。
 - **之前方法的问题**:
-    1. 基于Transformer的模型在处理不同方向和尺度的对象时性能受限，且需要专门的数据库。
-    2. 传统的检测器（如Faster R-CNN, RetinaNet）多在低分辨率、包含大目标的数据集（如MS COCO）上训练，对高分辨率影像中的小目标检测效果不佳。
-    3. 虽然多尺度特征融合等方法被应用，但网络加深会导致参数量和计算量增加，如何在保持精度的同时提升效率是关键。
-    4. 定向目标检测（OBB）虽能改善定位，但并未专门针对“小尺寸”这一核心问题。
-- **核心矛盾**: 需要在**有限的计算资源**下，设计出既能**有效提取小目标微弱特征**（对抗信息损失），又能**建模长距离全局上下文**，同时保持**实时性**的轻量化检测模型。
+    1. 现有的航空**定向检测器**主要关注朝向建模（OBB 取代水平框 HBB 以减少框入的背景噪声），但对**目标尺寸**这一核心问题关注不足。
+    2. 主流检测器（RetinaNet、VarifocalNet、Cascade R-CNN、Faster R-CNN）多在 MS-COCO、Pascal VOC12、ImageNet 等数据集上训练，这些数据多为低分辨率（约 640×480）、大目标占比高（常占图像高度约 60%）的图片，与高分辨率航空影像中的微小目标分布差异很大。
+    3. 多尺度特征融合 / 特征金字塔虽能兼顾浅层物理信息与深层语义信息，但**加深骨干网络会同步增大参数量与计算量**，如何在保精度的同时提速是关键矛盾。
+    4. 基于 Transformer 的方法受限于缺乏专门数据库，对不同朝向、尺度的目标泛化较差。
+- **核心矛盾**: 在**有限算力**下，既要**有效表达小目标的微弱物理信息**（对抗顺序特征提取中的信息损失），又要**建模长程全局上下文**，同时保持**实时性**——这驱动作者转向"轻量 YOLOv9 + SAHI 切片推理 + Mamba 双向 SSM"的组合。
+
 ## 关键贡献
 
-1. **将YOLOv9与SAHI框架结合**：首次在新型轻量级架构YOLOv9上部署SAHI，并应用于DOTA数据集，通过切片推理和微调提升小目标检测性能。
-2. **提出SOAR框架**：设计了一个基于Vision Mamba架构的动态小目标检测框架，并进行了实验验证。该框架引入了**双向状态空间模型**进行视觉上下文建模。
-3. **提出融合PGI与SSM的新框架**：提出了一个将**可编程梯度信息**（PGI）与**状态空间模型表示**相结合的框架，旨在为有效的视觉和计算机视觉任务提供新方案。
+论文在引言"Review of Contributions"中给出三条贡献（与正文一致）:
+
+1. **将 YOLOv9 部署到 DOTA 航空场景**：把切片辅助超推理（SAHI）管线适配器与预训练范式结合到 YOLOv9 上，改进既往工作在航空影像上的小目标检测表现。
+2. **提出 SOAR 框架**：一个基于 Vision Mamba 架构的动态小目标检测框架，并给出实验验证；核心是引入**双向状态空间模型**做视觉上下文建模。
+3. **PGI 与 SSM 融合的新框架**：提出将**可编程梯度信息（PGI）**与**状态空间模型表示**相融合的框架，面向视觉与计算机视觉任务。论文明确把"在解码器/MLP 头之上叠加一层 PGI 层"列为**有前景的未来工作**（而非已完成的核心实现）。
+
 ## 方法
 
-- **整体框架 (SOAR encoder)**: 如图1所示，SOAR框架首先将2D图像分割成展平的2D patches，然后进行线性投影并加入位置嵌入。这些tokens被送入SOAR编码器层进行处理。
+- **整体框架 (SOAR encoder, 图1)**: 先把 2D 图像 `I ∈ R^{H×W×C}` 转成展平的 2D patches `P ∈ R^{J×(S²·C)}`，经线性投影到维度 D 并加入位置嵌入 `E_pos`（公式8，含 class token `V_cls`、可学习投影矩阵 Z）。token 序列 `V_{l-1}` 送入第 l 层 SOAR 编码器。
 - **输入输出**:
-    - **输入**: 航空影像 `I ∈ R^{H×W×C}`。
-    - **输出**: 经过检测头（如MLP）处理后的目标检测结果。
+    - **输入**: 航空影像 `I ∈ R^{H×W×C}`（实现中统一缩放到 224×224）。
+    - **输出**: 经归一化 + MLP 头（公式9-10: `Q=Norm(V^o_L)`, `T=MLP(Q)`）得到结果。
 - **关键模块**:
-    1. **SAHI (Sliced Aided Hyper Inference)**: 一种切片辅助超推理方法，将输入图像切分成重叠的小块进行推理，然后将结果合并。它包含“切片辅助微调”和“切片辅助超推理”两个部分，能增大图像中小目标的相对尺寸。
-    2. **Programmable Gradient Information (PGI)**: 源自YOLOv9的核心思想。为了解决深层网络中信息瓶颈导致的原始数据信息损失问题，PGI通过引入一个辅助的可逆分支和多层次辅助信息，确保关键梯度信息能传回浅层网络，从而减少信息损失（公式5-7）。
-    3. **Vision Mamba 与 状态空间模型**: 借鉴Vision Mamba模型，SOAR编码器层的核心是双向SSM。SSM用于描述一维函数/序列（公式1），通过离散化（公式2-3）和全局卷积（公式4）来处理序列数据。它能以线性复杂度模拟类似CNN的局部性和Transformer的全局感受野。在SOAR中，输入token序列经过归一化和线性投影后，沿**前向**和**后向**两个方向分别应用1D卷积和SSM进行处理。
-    4. **位置嵌入**: 使用随机初始化的可学习参数，为图像patches提供位置感知能力。
-- **模块连接**: 图像 -> 切片/分块 -> 线性投影 + 位置嵌入 -> (多层) SOAR Encoder (内含归一化、线性投影、双向1D-Conv、双向SSM) -> MLP检测头。
+    1. **SAHI (Slicing Aided Hyper Inference)**: 即插即用的切片管线，无需预训练即可叠加到任意检测器上。分两步——**切片辅助微调**（把每张图 `I_F` 切成带重叠的 patch `P_F`，patch 尺寸 M、N 在预设区间 `[M_min,M_max]`、`[N_min,N_max]` 内作为超参，再按长宽比放大，从而**增大小目标的相对像素面积**）与**切片辅助超推理**（推理时切成小 patch、各自前向，再把重叠预测合并回原图）。
+    2. **可编程梯度信息 PGI**: 针对 YOLOv8 在小目标上的不足（感受野不足以捕获足够信息）。依据**信息瓶颈原理**（公式5），数据经层层变换会丢失信息；用**可逆函数**（公式6）保信息不丢，并把瓶颈思想用于轻量模型（公式7）。PGI 通过**辅助可逆分支 + 多层次辅助信息**保证关键梯度回传到浅层。YOLOv9 还用 ELAN 与 CSPNet 组合成的 **Generalized ELAN (GELAN)**。
+    3. **Vision Mamba 与双向 SSM**: 借鉴 Vision Mamba 与 ViT。SSM 用隐状态 `z(t)` 把一维输入 `u(t)` 映到输出 `v(t)`（公式1: `z'(t)=E z(t)+F u(t)`, `v(t)=G z(t)`），经零阶保持离散化（公式2-3）并以全局卷积核 K 高效计算（公式4，K 为结构化卷积核、M 为序列长度，`v=u*K`）。它兼具 **CNN 的线性复杂度**与 **Transformer 的全局感受野**。在 SOAR 编码器内：序列先归一化，线性投影成 x、z（维度 E）；x 沿**前向与后向**两个方向各做 1-D 卷积得 `x'_o`，再投影出 `F_o, G_o, Δ_o`，由 Δ_o 推出离散参数，最后 `V_forward`、`V_backward` 分别过 SSM。
+    4. **位置嵌入**: 用随机初始化的可学习参数提供位置感知。
+- **模块连接**: 图像 → 2D 卷积切 patch（kernel=16, stride=8）/ SAHI 切片 → 线性投影 + 位置嵌入 → (多层) SOAR Encoder（归一化 → 线性投影 → 双向 1D-Conv → 双向 SSM）→ MLP 头。
 - **数学公式/机制解释**:
-    - **信息瓶颈理论** (公式5): 说明数据在通过网络层层变换时，会不可避免地丢失信息（`I(X, X) ≥ I(X, f(X))`）。
-    - **PGI解决方案** (公式6-7): 利用可逆函数保证信息不丢失，并通过PGI将关键梯度信息绕过深层网络直接回传，以指导浅层网络的学习。
-    - **SSM** (公式1-4): 核心是利用状态方程 `z(t)=Ez(t)+Fu(t)` 和输出方程 `v(t)=Gz(t)` 建模序列，通过离散化实现可计算，并通过构建结构化卷积核 `K` 实现高效计算。
-- **训练方式**:
-    - 输入尺寸固定为224×224。
-    - 使用数据增强：随机裁剪、翻转、光度失真、mixup、cutmix等。
-    - 优化器：AdamW，初始学习率5e-4，权重衰减0.05。
-    - 学习率调度：带线性预热的余弦退火调度器。
-    - 批次大小：16，32，64。
-    - 训练轮次：200个epoch。
-    - 损失函数：交叉熵损失。
-- **推理流程**:
-    1. 对输入图像应用SAHI，将其切分为重叠的patches。
-    2. 将每个patch送入训练好的SOAR模型进行独立的前向推理。
-    3. 将所有patch的预测结果合并回原始图像坐标系，得到最终检测结果。
+    - **SSM** (公式1-4): 状态方程 + 输出方程，经离散化与结构化卷积核实现高效序列建模。
+    - **信息瓶颈** (公式5): `I(X,X) ≥ I(X,f(X)) ≥ I(X,g_φ(f_θ(X)))`，层数越多原始信息丢失越多。
+    - **可逆函数与 PGI** (公式6-7): 用可逆变换 `r_ψ` 保信息，瓶颈链 `I(X,X) ≥ I(Y,X) ≥ I(Y,f_θ(X)) ≥ … ≥ I(Y,Ŷ)`，再用 PGI 的辅助可逆分支引导浅层学习。
+    - **patch 嵌入** (公式8): 含 class token、位置嵌入与可学习投影矩阵。
+- **训练方式（Implementation Details）**:
+    - 框架: PyTorch；**双机各 1 张 24GB GPU**，因模型放不下单卡而采用 **DDP 分布式数据并行**。
+    - 输入: 固定 224×224；用 2D 卷积（k=16, s=8）把图像转为序列数据。
+    - 数据增强: 随机裁剪、翻转、光度失真、mixup、cutMix 等。
+    - 优化器: AdamW，初始学习率 5e-4，权重衰减 0.05；余弦退火 + 线性预热。
+    - 批大小: 16 / 32 / 64；训练 200 个 epoch。
+    - 损失: **交叉熵损失**（监督训练）。
+- **推理流程**: 输入图 → SAHI 切成重叠 patch → 每 patch 独立前向 → 合并重叠预测回原图坐标。
 - **和已有方法的差异**:
-    - 相较于传统的CNN或Transformer backbone，SOAR引入了**SSM**，试图在计算效率（线性复杂度）和全局上下文建模能力之间取得更好平衡。
-    - 不同于单纯使用YOLOv9，论文结合了**SAHI**来直接增强模型对高分辨率图像中小目标的检测能力。
-    - 融合了**PGI**的思想来缓解深层网络的信息损失问题，这是一个针对模型可学习性的改进。
+    - 用 **SSM** 替代纯 CNN / Transformer backbone，兼顾线性复杂度与全局上下文。
+    - 用 **SAHI** 直接放大高分辨率航空图中小目标的有效像素面积。
+    - 借 **PGI** 思想缓解深层网络信息损失，改善可学习性。
+
 ## 实验
 
-- **数据集**: **DOTA v1.5**。这是一个用于航空影像目标检测的大型数据集，图像尺寸从800×800到20000×20000像素不等。包含1869张图像（1410训练，438验证，21测试），涵盖18类目标。数据被预处理为灰度图，并将标签格式从DOTA转换为COCO格式。
-- **对比方法**:
-    - SNUNet (一个CNN-based模型)
-    - TransUNetCD (一个Transformer-based模型)
-    - SwinSUNet (一个基于Swin Transformer的模型)
-- **评价指标**:
-    - **精确率** (Precision, Pre)
-    - **召回率** (Recall, Rec)
-    - **F1分数** (F1)
-    - **整体准确率** (Overall Accuracy, OA)
-    - **交并比** (Intersection over Union, IoU)
-    - **Kappa系数** (KC)
-    - **计算效率**: 参数量 (Params, M) 和 浮点运算量 (GFLOPs)
+- **数据集**: **DOTA v1.5**。航空目标检测大型数据集，单图像素从 800×800 到 20000×20000 不等，来源含中国资源卫星中心、Google Earth、GF-2 / JL-1 卫星、CycloMedia 航拍（灰度图来自 GF-2/JL-1 全色波段，RGB 来自 Google Earth/CycloMedia）。类别 15 类（飞机、船、储油罐、棒球场、网球场、篮球场、田径场、港口、桥梁、大车、小车、直升机、环岛、足球场、游泳池、集装箱起重机——v1.5 新增"集装箱起重机"。原笔记"18 类"未在提取文本中得到支持，已修正为依正文逐一列举的类别）。共 **1869** 张图（**1410 训练 / 438 验证 / 21 测试**）。预处理转灰度，并用 dota dev kit 把标签从 DOTA 格式转 COCO 格式。
+- **对比方法**（注：均为变化检测/分割系模型，作者借其骨架做精度对照）:
+    - SNUNet（CNN 类）
+    - TransUNetCD（Transformer 类）
+    - SwinSUNet（Swin Transformer 类）
+- **评价指标**: Precision (Pre)、Recall (Rec)、F1、Overall Accuracy (OA)、IoU、Kappa 系数 (KC)；计算量用 Params(M) 与 GFLOPs。（实现细节处又写明用 P/R/F1 作训练监控指标，见图2 的 F1/Precision/Recall/PR 曲线。注：OA、IoU、KC 是分割/变化检测口径指标，被用在一个号称"目标检测"的任务上，这一指标错配是论文的一处明显瑕疵。）
 - **主实验结果**:
-    - **准确率** (表格 II): SOAR模型的性能与最好的SwinSUNet非常接近，但略有不及。
-        - SOAR: Rec=79.59, Pre=83.06, OA=91.36, F1=81.29, IoU=68.48, KC=75.68
-        - SwinSUNet (最佳): Rec=79.75, Pre=83.50, OA=91.51, F1=81.58, IoU=68.89, KC=76.06
-    - **计算效率** (表格 I): SOAR在参数量和计算量上具有明显优势。
-        - SOAR: **17.13M** 参数, **45.74** GFLOPs
-        - TransUNetCD: 28.37M 参数, 244.54 GFLOPs
-        - SwinSUNet: 39.28M 参数, 43.50 GFLOPs (注：SwinSUNet的GFLOPs低于SOAR，但参数量远高于SOAR)
-- **消融实验**: PDF文本中未明确说明是否进行了详细的消融实验（例如，分别验证PGI、SSM、SAHI各组件的效果）。
-- **泛化实验**: PDF文本中仅在DOTA v1.5上进行了实验，未提及其他数据集的泛化性测试。
-- **速度/参数量/FLOPs**: 如上所述，在参数量方面，SOAR（17.13M）是最轻量化的；在GFLOPs方面，SOAR（45.74）介于SwinSUNet和TransUNetCD之间，远低于TransUNetCD。
+    - **精度对照 (表II)**:
+        | 模型 | Rec | Pre | OA | F1 | IoU | KC |
+        |------|-----|-----|-----|-----|-----|-----|
+        | SNUNet | 72.21 | 74.09 | 87.49 | 73.14 | 57.66 | 64.99 |
+        | TransUNetCD | 77.73 | 82.59 | 90.88 | 80.09 | 66.79 | 74.18 |
+        | SwinSUNet | 79.75 | 83.50 | 91.51 | 81.58 | 68.89 | 76.06 |
+        | **SOAR** | 79.59 | 83.06 | 91.36 | 81.29 | 68.48 | 75.68 |
+      → SOAR 各项均**略逊于但极其接近** SwinSUNet（差距均在 ~0.5 以内），且全面优于 SNUNet 与 TransUNetCD。
+    - **计算量对照 (表I)**:
+        | 模型 | Params(M) | GFLOPs |
+        |------|-----------|--------|
+        | SNUNet | 10.21 | 176.36 |
+        | TransUNetCD | 28.37 | 244.54 |
+        | SwinSUNet | 39.28 | 43.50 |
+        | **SOAR** | **17.13** | 45.74 |
+      → SOAR 参数量 17.13M，仅高于 SNUNet（10.21M），远低于 SwinSUNet（39.28M）；GFLOPs 45.74 与 SwinSUNet（43.50）相当、远低于 SNUNet/TransUNetCD。即在接近 SwinSUNet 精度的同时，**参数量不到其一半**。
+- **消融实验**: 提取文本未给出分别验证 PGI / SSM / SAHI 各组件的消融实验。
+- **泛化实验**: 仅在 DOTA v1.5 上做，未提其他数据集。
+- **速度/参数量/FLOPs**: 参数量上 SOAR 是次轻量（仅大于 SNUNet）；GFLOPs 与 SwinSUNet 同级；总体定位为"精度接近 SOTA、计算开销显著更小"的轻量方案。
+
 ## 局限
 
-- **实验充分性**: 实验仅在一个数据集（DOTA v1.5）上进行，缺乏在其他主流小目标数据集（如VisDrone， AI-TOD）或不同领域数据集上的泛化性验证。
-- **对比基线**: 对比的基线模型（SNUNet, TransUNetCD等）可能不是当前小目标检测领域的SOTA模型。缺乏与最新YOLO系列（如YOLOv8）或其他高效检测器的对比。
-- **模型分析**: 论文未提供详细的消融实验来量化SOAR框架中各个组件（如双向SSM、PGI、位置嵌入）的贡献。
-- **可视化与定性分析**: 虽然有图3的推断结果展示，但缺乏对模型在**困难样本**（如密集、严重遮挡的小目标）上性能的深入定性分析。
-- **计算成本**: 论文使用了双机训练（各24GB GPU），且提到模型太大无法在单卡上训练，暗示其训练成本可能较高，这可能影响其在资源受限场景下的应用。
-- **复现风险**: 论文将发布代码，但依赖Vision Mamba这一较新的模型架构，其稳定性和社区支持尚在发展中。
+- **指标与任务错配**: 论文自称做"目标检测/分割"，但表 II 用的是 OA/IoU/Kappa 这类分割/变化检测指标，对比的 SNUNet/TransUNetCD/SwinSUNet 也都是变化检测/分割模型，缺少标准检测指标（mAP、AP_small）与检测类基线（YOLOv8/v9、RetinaNet 等）的同口径对比，难以直接论证"小目标检测"的提升。
+- **贡献与实现的落差**: 三大贡献中"PGI + SSM 融合层"被作者自己标为**未来工作**；SAHI 用于 YOLOv9 的具体数值收益、以及 SAHI 是否真正进入了表 II 的评测，提取文本未给出明确量化。
+- **实验充分性**: 仅单一数据集（DOTA v1.5），缺 VisDrone、AI-TOD 等主流小目标基准的泛化验证；无消融，无法量化双向 SSM / PGI / 位置嵌入各自贡献。
+- **定性分析不足**: 仅图3 展示推理结果，缺对密集、严重遮挡小目标等困难样本的深入定性分析。
+- **计算成本**: 双机各 24GB GPU、模型放不下单卡需 DDP，训练成本偏高，与"轻量、面向资源受限场景"的卖点存在张力。
+- **写作与可复现**: 摘要末句把模型表述为"在遥感图像分类中有效"，与全文的检测主题略有出入；作者声明使用 ChatGPT 辅助撰写。代码已开源（GitHub），但依赖较新的 Vision Mamba 生态，复现稳定性待验证。
+
 ## 个人评论
 
-1. **方法论启发**: 论文展示了将**状态空间模型 (SSM)** 引入视觉任务（尤其是目标检测）的可行性。SSM的线性复杂度和长程建模能力，为解决Transformer在视觉任务中计算成本高的问题提供了一个有潜力的方向。
-2. **工程实践价值**: 对**SAHI框架**与先进检测器（如YOLOv9）结合的实践进行了验证。SAHI是一种即插即用的、能显著提升现有模型在小目标场景下性能的工程技巧，具有很高的实用价值。
-3. **模型设计思想**: 对**PGI**（可编程梯度信息）理念的借鉴，强调了在深层网络中保留原始数据信息和关键梯度流的重要性，这对设计更有效的骨干网络有启发。
+1. **方向选得对，组合拳合理**: 把 SAHI（放大小目标有效像素）+ YOLOv9/PGI（减信息损失）+ Mamba 双向 SSM（线性复杂度全局建模）三者拼到航空小目标场景，方向是当前热点的合理交集，工程直觉到位。
+2. **执行与论证偏弱**: 最致命的是评测口径与任务不匹配——用变化检测/分割模型和 OA/IoU/Kappa 去"证明"检测能力，且核心融合模块仍是未来工作，使"显著提升"的结论缺乏硬证据；这更像一份有潜力的技术路线草图，而非可直接信赖的检测 SOTA。
+3. **可借鉴点**: SAHI 作为即插即用的小目标增强技巧值得直接复用；双向 SSM 在视觉 backbone 中的前/后向处理机制、以及 PGI 的"辅助可逆分支保梯度"思想，对设计轻量长程 backbone 有启发。建议读者把它当作"思路参考"而非"结果参考"。
 
 ### 使用建议
 
-- **如果快速了解**: 重点阅读 **摘要**、**引言** 的最后部分（贡献总结）、**方法部分的图表** (图1)、**实验部分的表格** (表格I, II) 和 **结论**。
-- **如果复现**: 重点精读 **方法详解 (III)**，特别是公式 (1)-(8) 和对SOAR编码器的描述；**实验部分 (IV)** 的实验设置、数据集处理和实现细节。
-- **如果借鉴创新点**:
-    - 学习**如何将SAHI应用于新模型**以提升小目标性能。
-    - 研究**SSM在视觉backbone中的集成方式**，特别是其双向处理机制。
-    - 理解**PGI**的核心思想，看是否可以将类似的可逆分支或梯度指导策略应用于其他深度网络。
-- **如果写相关工作**: 可将本文归类为以下相关工作的延伸：
-    - **小目标检测方法**（特别是航空/遥感场景）。
-    - **基于YOLO的实时检测器改进**。
-    - **状态空间模型 (Mamba) 在计算机视觉中的应用**。
+- **如果快速了解**: 读清理后摘要、引言末的三条贡献、方法图1、表I/II 即可掌握全貌。
+- **如果复现**: 精读方法 III（公式1-10、SOAR 编码器双向处理）与实现细节 IV.C（224×224、k=16/s=8、AdamW 5e-4/wd 0.05、cosine+warmup、200 epoch、CE loss、DDP 双卡），并对照 GitHub 代码补齐文本未交代的检测头细节。
+- **如果借鉴创新点**: ① SAHI 套到新检测器的方式；② SSM 在视觉 backbone 的双向集成；③ PGI 的可逆分支/梯度引导。
+- **如果写相关工作**: 可归入"航空/遥感小目标检测""基于 YOLO 的实时检测器改进""Mamba/SSM 在视觉中的应用"三类的交叉延伸。
+
 ## 相关论文与链接
 
 > 用 `[[]]` 链接到其他论文笔记或主题首页：
-> - [[T_通用_NLP_其他]]
+> - [[C2_目标检测_违建_车辆_船舶_行人]]
 > - [[论文知识库总览]]
 
 ---
@@ -165,128 +173,72 @@ extract_cache: .paper-cache/extracts/2024_SOAR_Advancements_i.txt
 # 论文精读
 
 ## 1. 论文定位
-这篇论文属于**计算机视觉**领域，具体是**航空影像中的小目标检测**方向。它旨在解决由于小目标像素少、易被遮挡而导致的检测难题。论文结合了新兴的**状态空间模型**（State Space Models, SSMs）与轻量化的**YOLO系列检测器**，并引入了切片推理的辅助框架。因此，它可以被归类到“通用计算机视觉”或“目标检测与识别”主题下，特别是专注于小目标、遥感或航空场景的优化。
+本文属于**计算机视觉 / 目标检测**领域，聚焦**航空（遥感）影像中的小目标检测**。它把三类近期技术拼到一起应对小目标难题：轻量 **YOLOv9**（含 PGI/GELAN）、即插即用的切片框架 **SAHI**、以及 **Vision Mamba** 的双向**状态空间模型（SSM）**。数据集为 **DOTA v1.5**（含飞机、船、车辆等地物类别），因此在本库 taxonomy 中归入 `C2_目标检测_违建_车辆_船舶_行人`（航空/遥感场景的车辆、船舶等地物目标检测），而非原先误标的"通用 NLP/其他"。这是一份 arXiv 预印本（arXiv:2405.01699v2），署名机构为印度 Netaji Subhas University of Technology。
 
 ## 2. 一句话总结
-本文提出了SOAR框架，通过将切片辅助超推理（SAHI）应用于YOLOv9并融合Vision Mamba模型中的双向状态空间模型，以提升航空影像中小目标的检测精度与效率。
+SOAR 通过把 SAHI 切片推理叠到 YOLOv9 上、并用 Vision Mamba 的双向状态空间模型做视觉上下文建模，试图在 DOTA v1.5 航空影像上以更小的参数量逼近 SwinSUNet 的精度，面向实时小目标检测。
 
 ## 3. 背景与问题
-- **为什么要做**: 航空影像中的小目标检测是自动驾驶、交通监控等应用的关键，但小目标信息少、易被背景噪声和遮挡影响，是当前目标检测领域的重大挑战。
-- **之前方法的问题**:
-    1. 基于Transformer的模型在处理不同方向和尺度的对象时性能受限，且需要专门的数据库。
-    2. 传统的检测器（如Faster R-CNN, RetinaNet）多在低分辨率、包含大目标的数据集（如MS COCO）上训练，对高分辨率影像中的小目标检测效果不佳。
-    3. 虽然多尺度特征融合等方法被应用，但网络加深会导致参数量和计算量增加，如何在保持精度的同时提升效率是关键。
-    4. 定向目标检测（OBB）虽能改善定位，但并未专门针对“小尺寸”这一核心问题。
-- **核心矛盾**: 需要在**有限的计算资源**下，设计出既能**有效提取小目标微弱特征**（对抗信息损失），又能**建模长距离全局上下文**，同时保持**实时性**的轻量化检测模型。
+- **动机**: 小目标（MS-COCO 口径下面积 ≤ 32×32 px）信息少、易被噪声/大目标淹没，是检测中的最大难点；现有航空定向检测器偏重朝向（OBB vs HBB）而轻视尺寸；通用检测器（RetinaNet/Cascade R-CNN/Faster R-CNN 等）在低分辨率大目标数据上训练，迁到高分辨率航空小目标上效果差。
+- **核心矛盾**: 加深骨干能融合多尺度信息，却带来参数与算力膨胀；要在有限算力下同时做到"表达微弱物理信息 + 抗信息损失 + 长程全局建模 + 实时"。
+- **作者切入点**: SAHI 放大小目标有效像素、PGI 抗信息损失、双向 SSM 以线性复杂度换全局感受野。
 
 ## 4. 核心贡献
-1. **将YOLOv9与SAHI框架结合**：首次在新型轻量级架构YOLOv9上部署SAHI，并应用于DOTA数据集，通过切片推理和微调提升小目标检测性能。
-2. **提出SOAR框架**：设计了一个基于Vision Mamba架构的动态小目标检测框架，并进行了实验验证。该框架引入了**双向状态空间模型**进行视觉上下文建模。
-3. **提出融合PGI与SSM的新框架**：提出了一个将**可编程梯度信息**（PGI）与**状态空间模型表示**相结合的框架，旨在为有效的视觉和计算机视觉任务提供新方案。
+1. **YOLOv9 + SAHI 部署到 DOTA**：把切片辅助超推理管线与预训练范式适配到 YOLOv9，用于航空小目标。
+2. **SOAR 框架**：基于 Vision Mamba 的动态小目标检测框架，核心为双向 SSM 视觉上下文建模，并给出实验验证。
+3. **PGI ⊕ SSM 融合框架（部分为未来工作）**：提出把可编程梯度信息与状态空间表示融合的设想；其中"在 MLP 头之上叠加 PGI 层"被作者明确列为有前景的 future work。
 
 ## 5. 方法详解
-- **整体框架 (SOAR encoder)**: 如图1所示，SOAR框架首先将2D图像分割成展平的2D patches，然后进行线性投影并加入位置嵌入。这些tokens被送入SOAR编码器层进行处理。
-- **输入输出**:
-    - **输入**: 航空影像 `I ∈ R^{H×W×C}`。
-    - **输出**: 经过检测头（如MLP）处理后的目标检测结果。
-- **关键模块**:
-    1. **SAHI (Sliced Aided Hyper Inference)**: 一种切片辅助超推理方法，将输入图像切分成重叠的小块进行推理，然后将结果合并。它包含“切片辅助微调”和“切片辅助超推理”两个部分，能增大图像中小目标的相对尺寸。
-    2. **Programmable Gradient Information (PGI)**: 源自YOLOv9的核心思想。为了解决深层网络中信息瓶颈导致的原始数据信息损失问题，PGI通过引入一个辅助的可逆分支和多层次辅助信息，确保关键梯度信息能传回浅层网络，从而减少信息损失（公式5-7）。
-    3. **Vision Mamba 与 状态空间模型**: 借鉴Vision Mamba模型，SOAR编码器层的核心是双向SSM。SSM用于描述一维函数/序列（公式1），通过离散化（公式2-3）和全局卷积（公式4）来处理序列数据。它能以线性复杂度模拟类似CNN的局部性和Transformer的全局感受野。在SOAR中，输入token序列经过归一化和线性投影后，沿**前向**和**后向**两个方向分别应用1D卷积和SSM进行处理。
-    4. **位置嵌入**: 使用随机初始化的可学习参数，为图像patches提供位置感知能力。
-- **模块连接**: 图像 -> 切片/分块 -> 线性投影 + 位置嵌入 -> (多层) SOAR Encoder (内含归一化、线性投影、双向1D-Conv、双向SSM) -> MLP检测头。
-- **数学公式/机制解释**:
-    - **信息瓶颈理论** (公式5): 说明数据在通过网络层层变换时，会不可避免地丢失信息（`I(X, X) ≥ I(X, f(X))`）。
-    - **PGI解决方案** (公式6-7): 利用可逆函数保证信息不丢失，并通过PGI将关键梯度信息绕过深层网络直接回传，以指导浅层网络的学习。
-    - **SSM** (公式1-4): 核心是利用状态方程 `z(t)=Ez(t)+Fu(t)` 和输出方程 `v(t)=Gz(t)` 建模序列，通过离散化实现可计算，并通过构建结构化卷积核 `K` 实现高效计算。
-- **训练方式**:
-    - 输入尺寸固定为224×224。
-    - 使用数据增强：随机裁剪、翻转、光度失真、mixup、cutmix等。
-    - 优化器：AdamW，初始学习率5e-4，权重衰减0.05。
-    - 学习率调度：带线性预热的余弦退火调度器。
-    - 批次大小：16，32，64。
-    - 训练轮次：200个epoch。
-    - 损失函数：交叉熵损失。
-- **推理流程**:
-    1. 对输入图像应用SAHI，将其切分为重叠的patches。
-    2. 将每个patch送入训练好的SOAR模型进行独立的前向推理。
-    3. 将所有patch的预测结果合并回原始图像坐标系，得到最终检测结果。
-- **和已有方法的差异**:
-    - 相较于传统的CNN或Transformer backbone，SOAR引入了**SSM**，试图在计算效率（线性复杂度）和全局上下文建模能力之间取得更好平衡。
-    - 不同于单纯使用YOLOv9，论文结合了**SAHI**来直接增强模型对高分辨率图像中小目标的检测能力。
-    - 融合了**PGI**的思想来缓解深层网络的信息损失问题，这是一个针对模型可学习性的改进。
+- **patch 化与嵌入** (公式8): `I ∈ R^{H×W×C}` → 展平 patch `P ∈ R^{J×(S²·C)}` → 线性投影到 D 维 + 位置嵌入 `E_pos`，含 class token `V_cls` 和可学习投影矩阵 Z。实现上用 2D 卷积（kernel=16, stride=8）把图转成序列。
+- **SOAR 编码器（双向 Mamba 块）**: 输入序列归一化 → 线性投影成 x、z（维度 E）→ x 在**前向/后向**两方向各做 1-D 卷积得 `x'_o` → 投影出 `F_o, G_o, Δ_o` → 由 Δ_o 得离散化参数 → `V_forward`/`V_backward` 各过 SSM；末端 `Q=Norm(V^o_L)`、`T=MLP(Q)`（公式9-10）。
+- **SSM 数学** (公式1-4): 连续状态/输出方程 → 零阶保持离散化（公式2-3）→ 结构化卷积核 K 做全局卷积（公式4，`v=u*K`），兼具 CNN 线性复杂度与 Transformer 全局感受野。
+- **PGI / 信息瓶颈** (公式5-7): 层层变换致信息损失（公式5）；可逆函数保信息（公式6）；瓶颈思想用于轻量模型（公式7）；PGI 用辅助可逆分支 + 多层次辅助信息把关键梯度回传浅层。YOLOv9 还用 ELAN+CSPNet = GELAN。
+- **SAHI**: 两步——切片辅助微调（按区间 `[M_min,M_max]`、`[N_min,N_max]` 选 patch 尺寸、保长宽比放大，增大小目标相对面积）+ 切片辅助超推理（推理时切片各自前向、合并重叠预测）。
+- **训练**: PyTorch；双机各 24GB GPU + DDP；224×224 输入；增强含随机裁剪/翻转/光度失真/mixup/cutMix；AdamW（lr=5e-4, wd=0.05）+ cosine 退火 + 线性预热；batch ∈ {16,32,64}；200 epoch；交叉熵损失。
 
 ## 6. 实验与结果
-- **数据集**: **DOTA v1.5**。这是一个用于航空影像目标检测的大型数据集，图像尺寸从800×800到20000×20000像素不等。包含1869张图像（1410训练，438验证，21测试），涵盖18类目标。数据被预处理为灰度图，并将标签格式从DOTA转换为COCO格式。
-- **对比方法**:
-    - SNUNet (一个CNN-based模型)
-    - TransUNetCD (一个Transformer-based模型)
-    - SwinSUNet (一个基于Swin Transformer的模型)
-- **评价指标**:
-    - **精确率** (Precision, Pre)
-    - **召回率** (Recall, Rec)
-    - **F1分数** (F1)
-    - **整体准确率** (Overall Accuracy, OA)
-    - **交并比** (Intersection over Union, IoU)
-    - **Kappa系数** (KC)
-    - **计算效率**: 参数量 (Params, M) 和 浮点运算量 (GFLOPs)
-- **主实验结果**:
-    - **准确率** (表格 II): SOAR模型的性能与最好的SwinSUNet非常接近，但略有不及。
-        - SOAR: Rec=79.59, Pre=83.06, OA=91.36, F1=81.29, IoU=68.48, KC=75.68
-        - SwinSUNet (最佳): Rec=79.75, Pre=83.50, OA=91.51, F1=81.58, IoU=68.89, KC=76.06
-    - **计算效率** (表格 I): SOAR在参数量和计算量上具有明显优势。
-        - SOAR: **17.13M** 参数, **45.74** GFLOPs
-        - TransUNetCD: 28.37M 参数, 244.54 GFLOPs
-        - SwinSUNet: 39.28M 参数, 43.50 GFLOPs (注：SwinSUNet的GFLOPs低于SOAR，但参数量远高于SOAR)
-- **消融实验**: PDF文本中未明确说明是否进行了详细的消融实验（例如，分别验证PGI、SSM、SAHI各组件的效果）。
-- **泛化实验**: PDF文本中仅在DOTA v1.5上进行了实验，未提及其他数据集的泛化性测试。
-- **速度/参数量/FLOPs**: 如上所述，在参数量方面，SOAR（17.13M）是最轻量化的；在GFLOPs方面，SOAR（45.74）介于SwinSUNet和TransUNetCD之间，远低于TransUNetCD。
+- **数据集**: DOTA v1.5，1869 张（1410 train / 438 val / 21 test），像素 800² ～ 20000²，含飞机/船/储油罐/各类球场/港口/桥梁/大车/小车/直升机/环岛/游泳池/集装箱起重机等地物；转灰度并把标签由 DOTA 转 COCO。
+- **对比与指标**: 基线 SNUNet / TransUNetCD / SwinSUNet（均为变化检测/分割系模型）；指标 Rec/Pre/OA/F1/IoU/KC，外加 Params/GFLOPs。
+- **精度 (表II)**: SOAR Rec=79.59, Pre=83.06, OA=91.36, F1=81.29, IoU=68.48, KC=75.68；最优 SwinSUNet 为 79.75/83.50/91.51/81.58/68.89/76.06。SOAR 各项均**略低于 SwinSUNet 但差距 <0.5**，全面优于 SNUNet/TransUNetCD。
+- **计算量 (表I)**: SOAR 17.13M / 45.74 GFLOPs；SwinSUNet 39.28M / 43.50；TransUNetCD 28.37M / 244.54；SNUNet 10.21M / 176.36。SOAR 以约 SwinSUNet 44% 的参数量逼近其精度。
+- **未做**: 无组件消融、无跨数据集泛化、无标准检测指标（mAP/AP_small）。
 
 ## 7. 这篇论文真正有价值的地方
-1. **方法论启发**: 论文展示了将**状态空间模型 (SSM)** 引入视觉任务（尤其是目标检测）的可行性。SSM的线性复杂度和长程建模能力，为解决Transformer在视觉任务中计算成本高的问题提供了一个有潜力的方向。
-2. **工程实践价值**: 对**SAHI框架**与先进检测器（如YOLOv9）结合的实践进行了验证。SAHI是一种即插即用的、能显著提升现有模型在小目标场景下性能的工程技巧，具有很高的实用价值。
-3. **模型设计思想**: 对**PGI**（可编程梯度信息）理念的借鉴，强调了在深层网络中保留原始数据信息和关键梯度流的重要性，这对设计更有效的骨干网络有启发。
+1. **SSM 进视觉检测的可行性探索**: 用双向 SSM 在航空小目标场景做上下文建模，给"以线性复杂度替代 Transformer 二次复杂度"提供了一个具体落点。
+2. **SAHI 的工程价值**: 切片放大小目标有效像素、即插即用、无需重训，是可直接复用的实用技巧。
+3. **PGI 的设计启发**: "辅助可逆分支保关键梯度回传"对设计抗信息损失的轻量 backbone 有借鉴意义。
 
 ## 8. 局限与问题
-- **实验充分性**: 实验仅在一个数据集（DOTA v1.5）上进行，缺乏在其他主流小目标数据集（如VisDrone， AI-TOD）或不同领域数据集上的泛化性验证。
-- **对比基线**: 对比的基线模型（SNUNet, TransUNetCD等）可能不是当前小目标检测领域的SOTA模型。缺乏与最新YOLO系列（如YOLOv8）或其他高效检测器的对比。
-- **模型分析**: 论文未提供详细的消融实验来量化SOAR框架中各个组件（如双向SSM、PGI、位置嵌入）的贡献。
-- **可视化与定性分析**: 虽然有图3的推断结果展示，但缺乏对模型在**困难样本**（如密集、严重遮挡的小目标）上性能的深入定性分析。
-- **计算成本**: 论文使用了双机训练（各24GB GPU），且提到模型太大无法在单卡上训练，暗示其训练成本可能较高，这可能影响其在资源受限场景下的应用。
-- **复现风险**: 论文将发布代码，但依赖Vision Mamba这一较新的模型架构，其稳定性和社区支持尚在发展中。
+- **指标/任务错配**（最关键）: 自称检测却用 OA/IoU/Kappa 等分割/变化检测指标与同类基线，缺 mAP/AP_small 与 YOLO 系等检测基线的同口径对比，无法直接证明"小目标检测"提升。
+- **贡献注水**: 核心 PGI⊕SSM 融合层是未来工作；SAHI 在 YOLOv9 上的数值收益未给出。
+- **实验单薄**: 单数据集、无消融、无泛化。
+- **资源与卖点矛盾**: 需双机 24GB GPU + DDP（单卡放不下），与"轻量、面向资源受限"自相矛盾。
+- **写作瑕疵**: 摘要末句称"遥感图像分类"与检测主题串台；声明用 ChatGPT 辅助撰写。
 
 ## 9. 我该怎么使用这篇论文
-- **如果快速了解**: 重点阅读 **摘要**、**引言** 的最后部分（贡献总结）、**方法部分的图表** (图1)、**实验部分的表格** (表格I, II) 和 **结论**。
-- **如果复现**: 重点精读 **方法详解 (III)**，特别是公式 (1)-(8) 和对SOAR编码器的描述；**实验部分 (IV)** 的实验设置、数据集处理和实现细节。
-- **如果借鉴创新点**:
-    - 学习**如何将SAHI应用于新模型**以提升小目标性能。
-    - 研究**SSM在视觉backbone中的集成方式**，特别是其双向处理机制。
-    - 理解**PGI**的核心思想，看是否可以将类似的可逆分支或梯度指导策略应用于其他深度网络。
-- **如果写相关工作**: 可将本文归类为以下相关工作的延伸：
-    - **小目标检测方法**（特别是航空/遥感场景）。
-    - **基于YOLO的实时检测器改进**。
-    - **状态空间模型 (Mamba) 在计算机视觉中的应用**。
+- **快速了解**: 清理后摘要 + 三条贡献 + 图1 + 表I/II。
+- **复现**: 方法 III（公式1-10）+ 实现细节 IV.C + GitHub 代码（补文本缺失的检测头细节）。
+- **借鉴**: SAHI 套新检测器 / 双向 SSM 集成 / PGI 可逆分支。
+- **写相关工作**: 归入"航空小目标检测""YOLO 实时检测改进""Mamba/SSM 视觉应用"交叉。
 
 ## 10. 和其他论文的关系
-根据主题，本论文可能与以下类型的论文相关，但具体论文未知，故不使用双链：
-- YOLO系列的最新改进工作，特别是 **YOLOv9** [22]。
-- **Vision Mamba** [26] 及后续将Mamba应用于视觉任务的论文。
-- **SAHI** (Slicing Aided Hyper Inference) [25] 框架的提出或应用论文。
-- 关于**状态空间模型 (SSM)** 在序列建模和视觉中应用的论文，如 **S4, Mamba** 等。
-- 航空影像**小目标检测**和**旋转目标检测**的专题论文。
+- **YOLOv9** [22]（PGI + GELAN）——本文的检测主干来源。
+- **Vision Mamba** [26]、**ViT** [27]——SOAR 编码器的直接灵感。
+- **SAHI** [25]——切片辅助超推理框架。
+- **DOTA** [28]——评测数据集。
+- SSM 序列建模谱系（S4 / Mamba）与航空小目标 / 旋转目标检测专题（R³Det、SCRDet、RoI Transformer 等参考文献 [2]–[9]）。
 
 ## 11. 关键词
-小目标检测， 状态空间模型， YOLOv9， 航空影像， Vision Mamba， 可编程梯度信息， 切片辅助超推理， 遥感， 轻量化模型， 特征融合， 目标检测
+小目标检测, 航空/遥感影像, DOTA v1.5, 状态空间模型(SSM), Vision Mamba, 双向 SSM, YOLOv9, 可编程梯度信息(PGI), 切片辅助超推理(SAHI), 轻量化模型, 目标检测
 
 ## 12. 可信度说明
-本精读笔记主要基于提供的 **PDF文本的前7页内容** 生成，包括标题、作者、摘要、引言、相关工作、方法论部分、实验设置、部分实验结果和结论。文本提取质量整体良好，但存在一些局限：
-- 部分图表信息（如图1、图4）的细节无法从纯文本中完全获取。
-- 实验结果的具体数值和对比信息主要来源于 **表格I和表格II**，这些关键数据是可靠的。
-- 论文中提到的“Fig. 4”（可能展示训练曲线）的具体内容未在提供的文本中描述。
-- 方法论部分的部分数学描述（如公式）在文本中是完整的，但其与图示的对应关系需结合论文原文理解。
-因此，笔记内容严格基于文本，对于文本中未明确说明的信息（如消融实验）已标注。
+本精读基于提取缓存的全部 **7/7 页**（约 3577 字符/页，质量良好），覆盖标题、作者、摘要、引言、相关工作、方法（含完整公式1-10）、实验设置、表I/表II 数值与结论。可靠点：表I/II 的全部数值、训练超参、数据集统计（1869=1410+438+21）、公式与模块描述均直接来自文本。需注意：
+- 图1/图2/图3/图4 的具体内容（架构图、曲线、推理可视化）无法从纯文本完全还原。
+- 提取缓存显示"30348 字符、仅展示前 25000"，参考文献后段被截断，但正文方法与实验关键信息均在前 7 页内已完整覆盖。
+- 原笔记"18 类目标"未获文本支持，已按正文逐一列举的地物类别更正；venue 由乱码修正为 arXiv 预印本。
+- 提取文本对消融实验无任何描述，已标注为"未做/未明确"。
 
 ---
 
-> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (3577 字符/页)); 来源缓存: `.paper-cache/extracts/2024_SOAR_Advancements_i.txt` (7/7 页); 生成日期: 2026-06-04; 模式: LLM (mimo-v2.5-pro).
+> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (3577 字符/页)); 来源缓存: `.paper-cache/extracts/2024_SOAR_Advancements_i.txt` (7/7 页, 原文 30348 字符仅前 25000 入缓存, 参考文献后段未覆盖); 生成日期: 2026-06-04; 模式: LLM (mimo-v2.5-pro); 本轮深度重读据提取文本核对并修正分类/摘要/类别数/venue。
 <!-- AI_READING_NOTE_END -->
