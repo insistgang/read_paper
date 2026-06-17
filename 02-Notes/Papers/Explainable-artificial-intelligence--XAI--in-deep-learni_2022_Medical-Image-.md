@@ -1,5 +1,5 @@
 ---
-title: MedicalImageAnalysis79(2022)102470
+title: "Explainable artificial intelligence (XAI) in deep learning-based medical image analysis"
 authors:
   - "Bas H.M. van der Velden"
   - "Hugo J. Kuijf"
@@ -9,8 +9,9 @@ year: 2022
 venue: Medical Image Analysis
 doi: 10.1016/j.media.2022.102470
 pdf: [[Explainable-artificial-intelligence--XAI--in-deep-learni_2022_Medical-Image-.pdf]]
-primary_topic: A2_医学图像_分类_配准_生成
+primary_topic: R_综述_Survey
 topics:
+  - "R_综述_Survey"
   - "A2_医学图像_分类_配准_生成"
 status: ai-read
 reading_stage: ai-fulltext
@@ -28,86 +29,104 @@ full_text_covered: true
 full_text_completed_at: 2026-06-08
 full_text_completion_basis: "AI supplemental pass; original AI block 12/21 pages"
 ---
-# MedicalImageAnalysis79(2022)102470
+# Explainable artificial intelligence (XAI) in deep learning-based medical image analysis
 
 ## 基本信息
 - **PDF**: [[Explainable-artificial-intelligence--XAI--in-deep-learni_2022_Medical-Image-.pdf]]
-- **primary_topic**: `A2_医学图像_分类_配准_生成`
-- **topics**: `A2_医学图像_分类_配准_生成`
-- **状态**: read (已提取 PDF 内容, 待人工复核)
+- **primary_topic**: `R_综述_Survey`
+- **topics**: `R_综述_Survey`, `A2_医学图像_分类_配准_生成`
+- **状态**: ai-read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
 ## 文章信息
 
 | 项目 | 内容 |
 |------|------|
-| **题目** | MedicalImageAnalysis79(2022)102470 |
-| **作者** | Bas H.M. van der Velden; Hugo J. Kuijf; Kenneth G.A. Gilhuijs; Max A. Viergever |
-| **发表时间** | 2022 |
-| **刊物/会议** | Medical Image Analysis |
+| **题目** | Explainable artificial intelligence (XAI) in deep learning-based medical image analysis |
+| **作者** | Bas H.M. van der Velden; Hugo J. Kuijf; Kenneth G.A. Gilhuijs; Max A. Viergever（荷兰乌得勒支大学医学中心 Image Sciences Institute） |
+| **发表时间** | 2022（Received 22 Jul 2021; Accepted 2 May 2022） |
+| **刊物/会议** | Medical Image Analysis, vol. 79, art. 102470（open access, CC BY） |
 | **DOI** | 10.1016/j.media.2022.102470 |
 
 ## 摘要
 
-本文系统性地综述了深度学习医学图像分析中的可解释AI（XAI）技术，提出了一个基于“模型内/事后、模型特定/模型无关、全局/局部”三个维度的分类框架，并总结了视觉、文本和基于示例的解释方法在不同解剖部位的应用现状。
+**清理后的英文原摘要（据 PDF 提取文本整理）**:
+
+> With an increase in deep learning-based methods, the call for explainability of such methods grows, especially in high-stakes decision making areas such as medical image analysis. This survey presents an overview of explainable artificial intelligence (XAI) used in deep learning-based medical image analysis. A framework of XAI criteria is introduced to classify deep learning-based medical image analysis methods. Papers on XAI techniques in medical image analysis are then surveyed and categorized according to the framework and according to anatomical location. The paper concludes with an outlook of future opportunities for XAI in medical image analysis.
+
+**中文翻译**:
+
+> 随着基于深度学习的方法日益增多，对这类方法可解释性的呼声也在增长，尤其是在医学图像分析这种高风险（high-stakes）决策领域。本综述概述了基于深度学习的医学图像分析中所使用的可解释人工智能（XAI）。文中引入了一套 XAI 评判标准框架，用以对基于深度学习的医学图像分析方法进行分类。随后按该框架以及按解剖部位（anatomical location）对医学图像分析中的 XAI 技术论文进行了梳理和归类。论文最后给出了 XAI 在医学图像分析中未来机会的展望。
+
+> 来源: 据 PDF 提取文本整理。
+
 ## 研究背景与动机
 
-- **为什么要做**：深度学习（DL）在医学图像分析中取得了巨大成功，但其“黑盒”特性引发了担忧。在医疗这种高风险决策领域，医生和监管机构（如欧盟GDPR要求决策需提供有意义信息）需要理解模型是如何做出判断的，以评估其可靠性、发现潜在偏见并满足法规要求。
-- **之前方法的问题**：传统的机器学习方法（如使用手工特征的分类器）其决策过程相对更易理解。而深度学习模型由数百万个参数构成的复杂非线性关系构成，难以凭人类直觉理解其完整决策过程。
-- **核心矛盾**：深度学习模型在医学图像分析中的高性能（state-of-the-art）与其决策过程不可理解（黑盒）之间的矛盾。这篇综述旨在为弥合这一矛盾提供技术视角和现状地图。
+- **为什么要做**：深度学习是当前医学图像分析的 state-of-the-art（Litjens et al., 2017; Meijering, 2020; Shen et al., 2017），但神经网络由众多通过非线性关系交织的层构成，即使逐层检视也无法完全理解其决策过程，因而被视为"黑盒"。在医疗这类高风险决策领域，这种不可理解性可能掩盖模型的偏见（bias）并带来深远后果。
+- **法规与社会驱动**：欧盟《通用数据保护条例》（GDPR，第 15 条）要求患者有权获得关于决策"如何做出"的有意义信息。文中还提到 DARPA（美国国防高级研究计划局）以及 ACM FAccT（公平性、问责制与透明性）会议等推动 XAI 的代表性举措。
+- **术语**：文献中 "interpretable deep learning" 与 "explainable artificial intelligence (XAI)" 常被互换使用（Adadi and Berrada, 2018; Murdoch et al., 2019），本文统一采用 XAI 一词。"好的解释"被界定为：能让人洞察神经网络如何做出决策、和/或使决策变得可理解。
+- **核心矛盾**：深度学习在医学图像分析中的高性能与其决策过程不可理解（黑盒）之间的矛盾。本综述只聚焦于**用深度学习做医学图像分析时所采用的 XAI**，意在为弥合这一矛盾提供技术地图与现状梳理。
+
 ## 关键贡献
 
-1.  **引入XAI分类框架**：提出了一个用于分类深度学习医学图像分析中XAI方法的三维框架（模型内解释 vs. 事后解释，模型特定 vs. 模型无关，全局 vs. 局部解释）（p.2-3， Fig. 1）。
-2.  **系统性综述**：基于该框架，系统性地调查和分类了医学图像分析领域已发表的XAI技术论文（截至2020年10月）（p.1-2）。
-3.  **按技术与解剖部位分类**：将讨论的论文不仅按照XAI技术分类，还按照解剖位置（如脑、乳腺、胸部等）进行了组织和总结（p.2， Table 2）。
-4.  **讨论从计算机视觉的适应**：重点阐述了XAI技术如何从计算机视觉领域被适应和修改，以融入医学成像领域的领域知识（p.2）。
-5.  **总结优缺点与未来展望**：讨论了所综述XAI技术的优缺点，并展望了该领域未来的机会（p.2， Sections 4 & 5）。
+1.  **提出 XAI 分类框架**：基于三组评判标准对深度学习医学图像分析方法分类——**model-based vs. post hoc（模型内 vs. 事后）**、**model-specific vs. model-agnostic（模型特定 vs. 模型无关）**、**global vs. local（全局 vs. 局部，即解释范围 scope）**。该框架改编自 Adadi and Berrada (2018) 与 Murdoch et al. (2019)，见 Section 2、Fig. 1。
+2.  **系统性文献综述**：在 SCOPUS 用检索式 "(explainable deep learning OR interpretable deep learning OR XAI OR interpretable machine learning OR explainable machine learning) AND (medical imaging OR medical image analysis)" 检索，结合 ASReview 主动学习工具排序、与同行讨论以及滚雪球（snowballing）方式扩展，纳入截至 **2020 年 10 月** 的同行评审期刊与会议论文（Section 1）。
+3.  **双维度归类**：将论文同时按 XAI 技术（视觉/文本/基于示例）和按解剖部位（脑、乳腺、心血管、胸部等）组织，集中呈现在 Table 1、Table 2（Section 3）。
+4.  **强调"从计算机视觉到医学"的适配**：XAI 技术多源于计算机视觉，本文专门讨论这些技术如何通过引入医学影像领域知识（如解剖先验、多尺度信息）被改造（Section 1、3）。
+5.  **与既有综述互补**：相比 Reyes et al. (2020)（侧重计算机视觉、未充分评估医学适配）和 Huff et al. (2021)（主要举例视觉解释），本文采取更全面（holistic）的视角，纳入非视觉解释、对 XAI 的批判（critiques）以及 XAI 的评估方法；并在 Section 4 讨论各技术优缺点、Section 5 总结现状与机会（Section 1）。
+
 ## 方法
 
-本文作为综述，其“方法”体现在它提出的分类框架和对现有技术的梳理上。
-- **整体框架**：作者提出一个三维分类框架来组织XAI技术（见p.2-3， Section 2， Fig. 1）：
-    1.  **模型内解释 vs. 事后解释**：模型内解释指模型本身结构设计得可解释（如线性模型）；事后解释指先训练一个黑盒模型，再用其他方法解释其行为。本文重点关注事后解释。
-    2.  **模型特定 vs. 模型无关**：模型特定方法依赖于特定模型类型（如CNN的特定层）；模型无关方法仅通过扰动输入和观察输出变化来解释，适用于任何模型。
-    3.  **全局 vs. 局部解释**：全局解释描述模型在整个数据集上学到的通用规律（如特征重要性）；局部解释针对单个输入样本解释其预测结果（如显著性图）。
-- **技术分类**：基于此框架，综述将XAI技术分为三大类（p.3， Section 3）：
-    - **视觉解释**：最常用的方法，通过显著性图（Saliency Maps）显示图像中对决策重要的区域。包括：
-        - **反向传播类**：如梯度加权类激活映射（Grad-CAM）、层相关性传播（LRP）。这些通常是模型特定（针对CNN）和局部的事后解释。
-        - **扰动类**：如遮挡敏感性（Occlusion Sensitivity）、LIME。这些通常是模型无关和局部的事后解释。
-    - **文本解释**：生成自然语言文本或概念来解释决策。例如，图像描述（Image Captioning）或使用概念激活向量测试（TCAV）。
-    - **基于示例的解释**：通过展示相似或影响性的样本来解释。例如，使用三元组网络、影响力函数或原型。
-- **医学特化**：该框架专门应用于医学图像分析领域。论文强调了将计算机视觉的XAI技术适应到医学领域的关键点，如结合解剖先验知识、处理多尺度医学图像信息（p.3-4， 多尺度CAM的提及）。涉及的任务类型主要是分类（如疾病诊断、严重程度分级），也涵盖检测、分割等；图像模态包括CT、MRI、X光、超声、组织学切片、PET、OCT等多种（见Table 2）。
+本文为综述，其"方法"体现为它提出的分类框架与对现有技术的梳理。
+
+- **三维分类框架**（Section 2, Fig. 1）：
+    1.  **Model-based vs. Post hoc（模型内 vs. 事后）**：model-based 指模型本身简单到可被理解、又复杂到能拟合输入-输出关系（如线性回归、SVM；通过 sparsity 稀疏性或 simulatability 可模拟性实现，例 LASSO 强制许多系数为 0）。但深度网络有成千上万到数百万权重，既不稀疏也无法被人内部模拟，故 model-based 在深度学习中不可行；本文聚焦 **post hoc**——先训练网络再分析其学到的关系（如检视学到的特征、特征重要性、特征交互，以及用显著性图做视觉解释）。Murdoch et al. (2019) 提到的 model-based feature engineering（自动构造可解释特征）是一个例外接口。
+    2.  **Model-specific vs. Model-agnostic（模型特定 vs. 模型无关）**：model-specific 方法局限于特定模型类别（如利用某类神经网络的特有属性），代价是限制了网络选择；其中一些 post hoc 显著性方法只适用于特定 CNN，但并非 model-based。model-agnostic 方法独立于网络类型，仅通过扰动输入、观察输出变化来解释（因而天然是 post hoc）。注意：model-based 一定 model-specific，但反之不成立。
+    3.  **Scope：Global vs. Local（全局 vs. 局部）**：global（数据集级）描述网络在整个数据集上学到的普遍关系（如数据集级特征重要性分数、学到的滤波器可视化）；local 针对单个输入解释其预测（如指向 MRI 上脑肿瘤、解释分类器为何对该样本输出"tumor"的显著性图）。
+- **三类解释技术**（Section 3）：
+    - **视觉解释 / 显著性映射（Visual / saliency mapping）**：医学图像分析中最常见的 XAI 形式（Fig. 2）。
+        - **反向传播类（Backpropagation-based, 3.1.1）**：(Guided) backpropagation（Springenberg et al., 2014）、deconvolution（Zeiler & Fergus, 2014）、partial-derivative 可视化（Simonyan et al., 2013）；**CAM**（Zhou et al., 2016，用全局平均池化替换 CNN 末端全连接层，类激活图为各空间位置视觉模式的加权线性和）；**Grad-CAM**（Selvaraju et al., 2017）；**LRP**（Bach et al., 2015）；**Deep SHAP**（Lundberg & Lee, 2017）；**Trainable attention**（Jetley et al., 2018）。这些通常是 local、model-specific（多数仅对 CNN）、post hoc。
+        - **扰动类（Perturbation-based, 3.1.2）**：Occlusion sensitivity（Zeiler & Fergus, 2014）、**LIME**（Ribeiro et al., 2016）、Meaningful perturbation（Fong & Vedaldi, 2017）、Prediction difference analysis（Zintgraf et al., 2017）。这些通常是 model-agnostic、local、post hoc。
+        - 另有少数方法基于多示例学习（multiple instance learning）。
+    - **文本解释（Textual, 3.2）**：Image captioning（Vinyals et al., 2015）、Image captioning with visual explanation（Zhang et al., 2017a）、**TCAV**（Testing with Concept Activation Vectors，Kim et al., 2018，可做 global 解释）。
+    - **基于示例的解释（Example-based, 3.3）**：Triplet networks（Hoffer & Ailon, 2015）、Influence functions（Koh & Liang, 2017）、Prototypes（Chen et al., 2019）。
+- **医学特化**：由于医学图像常含多尺度信息，文中提到 multi-scale CAM 等改造（p.4）；并以早期采用者为例说明技术如何落地，如 de Vos et al. (2019) 用 deconvolution 在 CT 切片上定位冠脉钙化的决策来源；Jiang et al. (2019) 用 Inception-V3/ResNet-152/Inception-ResNet-V2 集成、加权组合 CAM 定位糖尿病视网膜病变；Lee et al. (2019b) 用 VGG-16/ResNet-50/Inception-V3/Inception-ResNet-V2 四网络集成的 CAM 检测急性颅内出血。模态覆盖 MRI、CT、X-ray、超声、组织学（Histology）、PET、OCT 等（Table 2）。
+
 ## 实验
 
-本文为综述论文，未进行自己的实验，但对现有研究进行了总结。
-- **使用的数据集**：未统一说明。文中提及的各类研究所用数据集多样，涵盖不同解剖部位（脑、乳腺、心血管、胸部等）和模态（MRI， CT， X-ray， 超声， 组织学等）的医学图像（p.4-5， Table 2）。
-- **对比方法**：不适用。
-- **评价指标**：PDF文本中未明确说明用于评估XAI方法本身的系统性指标。综述主要关注技术方法的描述和分类。
-- **主实验结果**：
-    - **技术使用频率**：根据文中描述和图2（p.4），视觉解释是使用最广泛的XAI技术类型，且论文数量逐年增长。
-    - **具体技术应用分布**：从表1（p.4）和表2（p.4-5）可以总结出，**类激活映射（CAM）** 及其变体（如Grad-CAM）是医学图像分析中最常用的视觉解释技术。其他常用技术包括引导反向传播、LRP、遮挡敏感性等。
-- **消融实验/泛化实验/效率信息**：作为综述，本文不包含此类信息。PDF文本中未找到相关描述。
+本文为综述，未做自有实验，而是对现有研究做统计与归类。
+
+- **文献规模与趋势**：Fig. 2 给出医学图像分析中三类 XAI 技术逐年发表论文数，**视觉解释占绝大多数**；2020 年的虚线为基于 2020-10-31 现状的外推。具体逐年论文数 PDF 提取文本未给出数值。
+- **技术-框架对照（Table 1）**：将上述各技术按 Section 2 框架打标（model-based / post hoc / model-specific / model-agnostic / global / local）。例如 CAM、Grad-CAM、LRP 均为 post hoc + model-specific + local；LIME、Occlusion sensitivity 为 post hoc + model-agnostic + local；TCAV、Triplet networks 兼具 global 维度；Deep SHAP 因优化方法被标为 post hoc + model-specific（但一般 SHAP 也可 global + model-agnostic）。
+- **技术-解剖部位分布（Table 2）**：按解剖部位（Bladder、Brain、Breast、Cardiovascular、Chest 等）列出大量论文的作者、模态与所用主要视觉解释技术。从提取覆盖的部分可见 **CAM/Grad-CAM 是最常用的视觉解释技术**，其次为 Guided backpropagation、LRP、Occlusion sensitivity、Trainable attention、Prediction difference analysis 等。脑部（Brain）以 MRI + CAM/Grad-CAM/LRP 为主，乳腺（Breast）跨 X-ray/MRI/超声/组织学多模态。
+- **对比方法 / 评价指标**：作为综述不适用自有对比。值得注意的是，论文在 Section 5 讨论了 **XAI 解释本身的评估方法**（据原文后续页，提取缓存未覆盖，待核）：application-grounded、human-grounded、functionally-grounded 三类评估（与 Doshi-Velez & Kim 的分类一致），其中 application-grounded 用真实任务的人体实验直接测试解释目标，human-grounded 用更简化的人体实验、成本更低，functionally-grounded 不用人体实验、便于自动提取与扩展（线索见原笔记"全文补读记录" p.13-14）。
+- **效率/计算成本**：Section 4.4 "Computational cost" 指出 XAI 计算成本在论文中很少被报告；反向传播类视觉解释通常只需一次（前向+反向）传播、成本低，扰动类则需大量扰动、成本高（据原文 p.13，提取缓存未覆盖，待核）。
+
 ## 局限
 
-- **搜索策略的局限性**：文献检索基于特定的关键词和数据库（SCOPUS），并截止到2020年10月。这可能遗漏了使用其他关键词、在其他数据库发表或在此之后出现的最新研究（p.1）。
-- **侧重技术分类，可能弱化评估**：从提供的文本看，综述重点在技术分类和应用描述。PDF文本中未明确深入讨论“如何评估一个解释的好坏”（如忠诚度、稳定性、可理解性等评估维度），这可能是未来综述可以加强的方面。
-- **缺乏对临床实践影响的深入分析**：虽然提到了GDPR和高风险决策，但前12页文本主要聚焦于技术层面。对于XAI如何真正影响临床决策流程、提高医生信任度等实践层面的深入案例分析，在本文提供部分中未充分体现。
-- **文本和基于示例的解释篇幅可能有限**：从结构看，视觉解释（3.1）是重点，后续的文本解释（3.2）和基于示例的解释（3.3）的详细内容在提供的文本中未出现，可能在实际论文中篇幅较少。
+- **检索范围与时间截止**：仅用 SCOPUS 单一数据库、固定关键词检索，截至 2020 年 10 月，可能遗漏其他关键词/数据库的工作以及此后涌现的研究（Section 1）。
+- **覆盖技术随快速演进而过时**：XAI 与医学深度学习发展迅速，2020 年后的新方法（如 Transformer/概念瓶颈类解释）不在覆盖范围内。
+- **提取缓存仅覆盖前 12 页**：本仓库的 PDF 文本提取缓存只到 p.12（Table 2 的 Chest 部分），Section 4（各技术 pros/cons、计算成本、开源可用性）与 Section 5（讨论、评估方法、展望）的正文未进入缓存。涉及这些部分的结论在本笔记中均标注"据原文后续页，提取缓存未覆盖，待核"，未核证前不应直接引用其细节数字。
+- **解释"好坏"的评估仍是难点**：论文虽在 Section 5 引入三类评估范式，但 XAI 解释忠实度（faithfulness）/稳定性/对临床信任与决策流程的真实影响，本身仍缺乏统一、客观的量化标准——这既是该领域的开放问题，也是本综述受限于一手文献而难以盖棺定论之处。
+
 ## 个人评论
 
-1.  **清晰的框架体系**：提出并应用了一个结构化的三维XAI分类框架（模型内/事后， 模型特定/模型无关， 全局/局部）。这个框架是理解、比较和选择XAI方法的有力工具，对后续研究和论文写作（特别是写综述和背景部分）极具参考价值。
-2.  **领域适配的总结**：它不仅介绍了通用XAI技术，还特别关注了这些技术在医学影像领域的适应、应用案例和面临的挑战，突出了医学领域的特殊性（如多模态、需要领域知识验证）。
-3.  **实用的文献地图**：表2按照解剖部位和XAI技术列出了大量文献，相当于一张“寻宝图”。对于从事特定部位（如脑部MRI）研究或想快速了解某种技术（如Grad-CAM）在医学中应用的研究者来说，可以高效地找到相关工作，节省文献调研时间。
-4.  **启发对“可解释性”的批判性思考**：论文不仅列出方法，还在后续部分（基于引言和结构描述）讨论了XAI的优缺点和未来，这有助于研究者超越技术本身，思考解释的“质量”和“实用性”问题。
+1.  **框架是最大复用价值**：三维框架（model-based/post hoc × model-specific/model-agnostic × global/local）虽改编自 Adadi & Berrada、Murdoch 等通用 XAI 综述，但配上 Table 1 的逐技术打标，等于给医学影像研究者一张"选型决策表"——想要 model-agnostic 就看 LIME/扰动类，想要 global 就看 TCAV，写相关工作时可直接套用这套坐标系。
+2.  **Table 2 是一张"按部位的寻宝图"**：按解剖位置（脑/乳腺/心血管/胸部……）× 模态 × 主要 XAI 技术列出大量一手文献，做特定部位（如脑 MRI）研究时能高效定位同类工作，节省文献调研时间。
+3.  **诚实地指出 XAI 的软肋**：相较只罗列方法的综述，本文（Section 4-5）专门谈计算成本很少被报告、开源可用性、以及解释如何评估，提醒读者超越"画热力图"本身去追问解释的质量与可验证性。
+4.  **需补读后半部分**：本笔记基于的提取缓存只到 p.12，框架与视觉解释部分扎实，但文本解释/示例解释的细节、各技术优缺点、评估范式与展望均依赖原文 p.13-21；若要严肃引用其评估结论，应回到 PDF 原文核对。
 
 ### 使用建议
 
-- **快速了解领域**：重点阅读摘要、引言、第2节（XAI框架）和第5节（结论与展望）。表1和图2能快速获得技术分类和趋势的宏观认识。
-- **复现研究**：本文是综述，无需复现。应根据表2中引用的具体文献，去查找和复现其中介绍的某种XAI技术（如Grad-CAM）在特定医学任务中的应用。
-- **借鉴创新点**：学习其**系统性的分类和综述框架**。当需要撰写自己研究的“相关工作”部分时，可以借鉴其将方法按“模型类型/解释范围/解释形式”等维度进行组织的逻辑。
-- **写相关工作**：当研究涉及“医学图像分析的可解释性”、“深度学习可视化”、“医疗AI的信任与问责”时，这篇综述是必不可少的引用文献。它可以作为该领域研究现状的权威总结。
+- **快速了解领域**：读摘要、Introduction、Section 2（框架）+ Fig. 1、Table 1，再到 Section 5（展望）。Fig. 2 给趋势的宏观印象。
+- **复现研究**：本文是综述无需复现；应顺着 Table 2 的引用去查具体方法（如 Grad-CAM 在某医学任务）的原始论文。
+- **借鉴写作**：撰写"相关工作"时套用其"模型类型 × 解释范围 × 解释形式"的组织逻辑。
+- **写相关工作引用**：涉及"医学图像分析可解释性""深度学习可视化""医疗 AI 的信任与问责"时，这是必引的权威综述。
+
 ## 相关论文与链接
 
 > 用 `[[]]` 链接到其他论文笔记或主题首页：
+> - [[R_综述_Survey]]
 > - [[A2_医学图像_分类_配准_生成]]
 > - [[论文知识库总览]]
 
@@ -119,79 +138,76 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/21 pages
 # 论文精读
 
 ## 1. 论文定位
-本文是一篇综述（Survey）论文，属于深度学习医学图像分析中的“可解释人工智能（XAI）”这一研究方向。它系统性地梳理和总结了XAI技术在医学图像分析领域的应用现状、分类框架及未来趋势。该论文适合放在“医学图像分析中的可解释性”或“深度学习方法的可解释性”这一主题下。
+本文是一篇综述（Survey）论文，发表于 Medical Image Analysis（2022, vol. 79, art. 102470），主题是**基于深度学习的医学图像分析中的可解释人工智能（XAI）**。它系统梳理 XAI 技术在医学影像中的应用现状、提出分类框架并展望未来。其定义性属性是"综述"，故归在 `R_综述_Survey`，因领域聚焦医学影像而辅以 `A2_医学图像_分类_配准_生成`。
 
 ## 2. 一句话总结
-本文系统性地综述了深度学习医学图像分析中的可解释AI（XAI）技术，提出了一个基于“模型内/事后、模型特定/模型无关、全局/局部”三个维度的分类框架，并总结了视觉、文本和基于示例的解释方法在不同解剖部位的应用现状。
+本文系统综述了深度学习医学图像分析中的 XAI 技术，提出 model-based/post hoc、model-specific/model-agnostic、global/local 三维分类框架，并按该框架与解剖部位归类了视觉、文本和基于示例三类解释方法的医学应用现状（截至 2020 年 10 月）。
 
 ## 3. 背景与问题
-- **为什么要做**：深度学习（DL）在医学图像分析中取得了巨大成功，但其“黑盒”特性引发了担忧。在医疗这种高风险决策领域，医生和监管机构（如欧盟GDPR要求决策需提供有意义信息）需要理解模型是如何做出判断的，以评估其可靠性、发现潜在偏见并满足法规要求。
-- **之前方法的问题**：传统的机器学习方法（如使用手工特征的分类器）其决策过程相对更易理解。而深度学习模型由数百万个参数构成的复杂非线性关系构成，难以凭人类直觉理解其完整决策过程。
-- **核心矛盾**：深度学习模型在医学图像分析中的高性能（state-of-the-art）与其决策过程不可理解（黑盒）之间的矛盾。这篇综述旨在为弥合这一矛盾提供技术视角和现状地图。
+- **为什么要做**：深度学习是医学图像分析的 state-of-the-art，但神经网络多层非线性交织、无法被人完全理解，是"黑盒"，可能掩盖偏见且后果严重。
+- **法规驱动**：GDPR 第 15 条要求患者有权获知决策"如何做出"的有意义信息；DARPA、ACM FAccT 等是 XAI 的代表性推动力。
+- **核心矛盾**：医学影像深度学习的高性能 vs. 决策不可理解。论文聚焦"深度学习做医学影像时所用的 XAI"，旨在给出技术地图。术语上 interpretable deep learning 与 XAI 互换，本文统一用 XAI。
 
 ## 4. 核心贡献
-1.  **引入XAI分类框架**：提出了一个用于分类深度学习医学图像分析中XAI方法的三维框架（模型内解释 vs. 事后解释，模型特定 vs. 模型无关，全局 vs. 局部解释）（p.2-3， Fig. 1）。
-2.  **系统性综述**：基于该框架，系统性地调查和分类了医学图像分析领域已发表的XAI技术论文（截至2020年10月）（p.1-2）。
-3.  **按技术与解剖部位分类**：将讨论的论文不仅按照XAI技术分类，还按照解剖位置（如脑、乳腺、胸部等）进行了组织和总结（p.2， Table 2）。
-4.  **讨论从计算机视觉的适应**：重点阐述了XAI技术如何从计算机视觉领域被适应和修改，以融入医学成像领域的领域知识（p.2）。
-5.  **总结优缺点与未来展望**：讨论了所综述XAI技术的优缺点，并展望了该领域未来的机会（p.2， Sections 4 & 5）。
+1.  **XAI 分类框架**：三组标准 model-based vs. post hoc、model-specific vs. model-agnostic、global vs. local，改编自 Adadi & Berrada (2018) 与 Murdoch et al. (2019)（Section 2, Fig. 1）。
+2.  **系统性文献综述**：SCOPUS 检索式 + ASReview 主动学习排序 + 同行讨论 + 滚雪球，纳入截至 2020 年 10 月的期刊/会议论文（Section 1）。
+3.  **双维度归类**：按 XAI 技术（视觉/文本/示例）与按解剖部位（脑/乳腺/心血管/胸部……）双重组织（Table 1、Table 2）。
+4.  **从 CV 到医学的适配**：专门讨论 XAI 技术如何通过引入医学领域知识（解剖先验、多尺度，如 multi-scale CAM）被改造。
+5.  **与既有综述互补**：补 Reyes et al. (2020)、Huff et al. (2021) 之不足，纳入非视觉解释、对 XAI 的批判与评估方法（Section 1）；Section 4 谈优缺点、Section 5 谈现状与机会。
 
 ## 5. 方法详解
-本文作为综述，其“方法”体现在它提出的分类框架和对现有技术的梳理上。
-- **整体框架**：作者提出一个三维分类框架来组织XAI技术（见p.2-3， Section 2， Fig. 1）：
-    1.  **模型内解释 vs. 事后解释**：模型内解释指模型本身结构设计得可解释（如线性模型）；事后解释指先训练一个黑盒模型，再用其他方法解释其行为。本文重点关注事后解释。
-    2.  **模型特定 vs. 模型无关**：模型特定方法依赖于特定模型类型（如CNN的特定层）；模型无关方法仅通过扰动输入和观察输出变化来解释，适用于任何模型。
-    3.  **全局 vs. 局部解释**：全局解释描述模型在整个数据集上学到的通用规律（如特征重要性）；局部解释针对单个输入样本解释其预测结果（如显著性图）。
-- **技术分类**：基于此框架，综述将XAI技术分为三大类（p.3， Section 3）：
-    - **视觉解释**：最常用的方法，通过显著性图（Saliency Maps）显示图像中对决策重要的区域。包括：
-        - **反向传播类**：如梯度加权类激活映射（Grad-CAM）、层相关性传播（LRP）。这些通常是模型特定（针对CNN）和局部的事后解释。
-        - **扰动类**：如遮挡敏感性（Occlusion Sensitivity）、LIME。这些通常是模型无关和局部的事后解释。
-    - **文本解释**：生成自然语言文本或概念来解释决策。例如，图像描述（Image Captioning）或使用概念激活向量测试（TCAV）。
-    - **基于示例的解释**：通过展示相似或影响性的样本来解释。例如，使用三元组网络、影响力函数或原型。
-- **医学特化**：该框架专门应用于医学图像分析领域。论文强调了将计算机视觉的XAI技术适应到医学领域的关键点，如结合解剖先验知识、处理多尺度医学图像信息（p.3-4， 多尺度CAM的提及）。涉及的任务类型主要是分类（如疾病诊断、严重程度分级），也涵盖检测、分割等；图像模态包括CT、MRI、X光、超声、组织学切片、PET、OCT等多种（见Table 2）。
+综述的"方法"= 分类框架 + 技术梳理。
+- **三维框架**（Section 2, Fig. 1）：
+    1.  **Model-based vs. Post hoc**：model-based 靠 sparsity（如 LASSO 强制系数为 0）或 simulatability 让模型本身可懂，但深度网络权重数百万、既不稀疏也不可内部模拟，故不可行；本文聚焦 post hoc——训练后再分析（特征检视、特征重要性、特征交互、显著性图）。例外接口：model-based feature engineering。
+    2.  **Model-specific vs. Model-agnostic**：model-specific 局限于特定模型类别（如某类 CNN 的特有属性），代价是限制网络选择；model-agnostic 仅靠扰动输入观察输出，独立于网络类型、天然 post hoc。model-based 必 model-specific，反之不成立。
+    3.  **Scope：Global vs. Local**：global（数据集级）给整体关系（数据集级特征重要性、滤波器可视化）；local 针对单一输入（如指向 MRI 脑肿瘤、解释该样本为何被判 "tumor" 的显著性图）。
+- **三类技术**（Section 3）：
+    - **视觉/显著性（3.1，最常见）**：反向传播类——(Guided) backprop、deconvolution、partial-derivative（Simonyan 2013）、**CAM**（Zhou 2016，GAP 替换全连接层）、**Grad-CAM**（Selvaraju 2017）、**LRP**（Bach 2015）、**Deep SHAP**（Lundberg & Lee 2017）、**Trainable attention**（Jetley 2018）；扰动类——Occlusion sensitivity、**LIME**（Ribeiro 2016）、Meaningful perturbation（Fong & Vedaldi 2017）、Prediction difference analysis（Zintgraf 2017）；另有 multiple instance learning。
+    - **文本（3.2）**：Image captioning、Image captioning with visual explanation、**TCAV**（Kim 2018，可 global）。
+    - **示例（3.3）**：Triplet networks、Influence functions、Prototypes（Chen 2019）。
+- **医学特化实例**：de Vos et al. (2019) 用 deconvolution 在 CT 切片定位冠脉钙化；Jiang et al. (2019) 三网络集成加权 CAM 定位糖尿病视网膜病变；Lee et al. (2019b) 四网络集成 CAM 检测急性颅内出血；multi-scale CAM 应对多尺度医学信息。模态含 MRI/CT/X-ray/超声/组织学/PET/OCT。
 
 ## 6. 实验与结果
-本文为综述论文，未进行自己的实验，但对现有研究进行了总结。
-- **使用的数据集**：未统一说明。文中提及的各类研究所用数据集多样，涵盖不同解剖部位（脑、乳腺、心血管、胸部等）和模态（MRI， CT， X-ray， 超声， 组织学等）的医学图像（p.4-5， Table 2）。
-- **对比方法**：不适用。
-- **评价指标**：PDF文本中未明确说明用于评估XAI方法本身的系统性指标。综述主要关注技术方法的描述和分类。
-- **主实验结果**：
-    - **技术使用频率**：根据文中描述和图2（p.4），视觉解释是使用最广泛的XAI技术类型，且论文数量逐年增长。
-    - **具体技术应用分布**：从表1（p.4）和表2（p.4-5）可以总结出，**类激活映射（CAM）** 及其变体（如Grad-CAM）是医学图像分析中最常用的视觉解释技术。其他常用技术包括引导反向传播、LRP、遮挡敏感性等。
-- **消融实验/泛化实验/效率信息**：作为综述，本文不包含此类信息。PDF文本中未找到相关描述。
+综述无自有实验，以统计与归类替代。
+- **趋势（Fig. 2）**：三类 XAI 逐年发表数，视觉解释占绝大多数；2020 年为基于 2020-10-31 的外推（虚线）。具体年度数值 PDF 提取文本未给。
+- **技术-框架对照（Table 1）**：CAM/Grad-CAM/LRP = post hoc + model-specific + local；LIME/Occlusion = post hoc + model-agnostic + local；TCAV/Triplet 含 global；Deep SHAP 因优化方法被标 post hoc + model-specific（一般 SHAP 也可 global + model-agnostic）。
+- **技术-部位分布（Table 2）**：按 Bladder/Brain/Breast/Cardiovascular/Chest 等列作者、模态、主要视觉技术。提取覆盖部分显示 **CAM/Grad-CAM 最常用**，其后为 Guided backprop、LRP、Occlusion sensitivity、Trainable attention、Prediction difference analysis。
+- **评估方法与计算成本**（据原文后续页 p.13-14，提取缓存未覆盖，待核）：Section 5 引入 application-grounded / human-grounded / functionally-grounded 三类评估；Section 4.4 指出计算成本很少被报告，反向传播类成本低、扰动类成本高（线索见原笔记"全文补读记录"）。
+- **消融/泛化**：综述不含此类自有实验。
 
 ## 7. 这篇论文真正有价值的地方
-1.  **清晰的框架体系**：提出并应用了一个结构化的三维XAI分类框架（模型内/事后， 模型特定/模型无关， 全局/局部）。这个框架是理解、比较和选择XAI方法的有力工具，对后续研究和论文写作（特别是写综述和背景部分）极具参考价值。
-2.  **领域适配的总结**：它不仅介绍了通用XAI技术，还特别关注了这些技术在医学影像领域的适应、应用案例和面临的挑战，突出了医学领域的特殊性（如多模态、需要领域知识验证）。
-3.  **实用的文献地图**：表2按照解剖部位和XAI技术列出了大量文献，相当于一张“寻宝图”。对于从事特定部位（如脑部MRI）研究或想快速了解某种技术（如Grad-CAM）在医学中应用的研究者来说，可以高效地找到相关工作，节省文献调研时间。
-4.  **启发对“可解释性”的批判性思考**：论文不仅列出方法，还在后续部分（基于引言和结构描述）讨论了XAI的优缺点和未来，这有助于研究者超越技术本身，思考解释的“质量”和“实用性”问题。
+1.  **可操作的选型框架**：三维框架 + Table 1 的逐技术打标，等于一张"想要某种解释属性该选哪个方法"的决策表。
+2.  **领域适配视角**：不止介绍通用 XAI，还专门讲 CV 技术如何加入医学领域知识（解剖先验、多尺度），并给早期采用者实例。
+3.  **按部位的文献地图（Table 2）**：解剖位置 × 模态 × 技术，便于特定部位研究快速定位同类工作。
+4.  **直面 XAI 软肋**：谈计算成本少被报告、开源可用性、解释如何评估，推动读者思考解释的质量与可验证性而非止于热力图。
 
 ## 8. 局限与问题
-- **搜索策略的局限性**：文献检索基于特定的关键词和数据库（SCOPUS），并截止到2020年10月。这可能遗漏了使用其他关键词、在其他数据库发表或在此之后出现的最新研究（p.1）。
-- **侧重技术分类，可能弱化评估**：从提供的文本看，综述重点在技术分类和应用描述。PDF文本中未明确深入讨论“如何评估一个解释的好坏”（如忠诚度、稳定性、可理解性等评估维度），这可能是未来综述可以加强的方面。
-- **缺乏对临床实践影响的深入分析**：虽然提到了GDPR和高风险决策，但前12页文本主要聚焦于技术层面。对于XAI如何真正影响临床决策流程、提高医生信任度等实践层面的深入案例分析，在本文提供部分中未充分体现。
-- **文本和基于示例的解释篇幅可能有限**：从结构看，视觉解释（3.1）是重点，后续的文本解释（3.2）和基于示例的解释（3.3）的详细内容在提供的文本中未出现，可能在实际论文中篇幅较少。
+- **检索范围**：单一 SCOPUS、固定关键词、截至 2020 年 10 月，可能遗漏其他来源与此后工作（Section 1）。
+- **时效性**：2020 年后新方法（如 Transformer/概念瓶颈类解释）未覆盖。
+- **本仓库提取缓存只到 p.12**：Section 4（pros/cons、计算成本、开源）与 Section 5（评估、展望）正文未入缓存，相关结论已标"据原文后续页，提取缓存未覆盖，待核"。
+- **解释评估仍无金标准**：忠实度/稳定性/对临床信任与决策流程的真实影响缺乏统一量化标准，是开放问题。
 
 ## 9. 我该怎么使用这篇论文
-- **快速了解领域**：重点阅读摘要、引言、第2节（XAI框架）和第5节（结论与展望）。表1和图2能快速获得技术分类和趋势的宏观认识。
-- **复现研究**：本文是综述，无需复现。应根据表2中引用的具体文献，去查找和复现其中介绍的某种XAI技术（如Grad-CAM）在特定医学任务中的应用。
-- **借鉴创新点**：学习其**系统性的分类和综述框架**。当需要撰写自己研究的“相关工作”部分时，可以借鉴其将方法按“模型类型/解释范围/解释形式”等维度进行组织的逻辑。
-- **写相关工作**：当研究涉及“医学图像分析的可解释性”、“深度学习可视化”、“医疗AI的信任与问责”时，这篇综述是必不可少的引用文献。它可以作为该领域研究现状的权威总结。
+- **快速了解领域**：摘要 + Introduction + Section 2（框架）+ Fig. 1 + Table 1 + Section 5（展望）；Fig. 2 看趋势。
+- **复现研究**：本文是综述无需复现；顺 Table 2 引用查具体方法的原始论文（如 Grad-CAM 在某医学任务）。
+- **借鉴写作**：套用其"模型类型 × 解释范围 × 解释形式"的组织逻辑写相关工作。
+- **写相关工作引用**：涉及"医学图像分析可解释性""深度学习可视化""医疗 AI 的信任与问责"必引。
 
 ## 10. 和其他论文的关系
-- 本论文是一篇较新的（2022年）且全面的综述，可以与早期更侧重计算机视觉的XAI综述（如文中提到的Adadi and Berrada, 2018; Murdoch et al., 2019）互补。
-- 对于从事具体医学图像分析任务（如脑肿瘤分割、乳腺癌分类）的研究者，本论文可以帮助他们快速定位与自己任务相关的XAI工作（参考Table 2）。
-- （基于文件名和主题`A2_医学图像_分类_配准_生成`）它可能与`医学图像分类`、`深度学习模型解释`等主题下的其他综述或方法论文相关。但因具体论文列表未提供，无法建立确定的`[[双链]]`联系。
+- 框架改编自通用 XAI 综述 Adadi and Berrada (2018) 与 Murdoch et al. (2019)，可与之互补阅读。
+- 明确定位为对 Reyes et al. (2020)（偏 CV、未充分评估医学适配）与 Huff et al. (2021)（主要举例视觉解释）的补充与扩展，强调非视觉解释、批判与评估。
+- 对做具体医学影像任务（脑肿瘤、乳腺癌分类等）的研究者，可经 Table 2 快速定位相关 XAI 工作。
+- 主题上与 `R_综述_Survey` 下其他综述、以及 `A2_医学图像_分类_配准_生成` 下的医学影像方法论文相关；因 PDF 提取未含完整参考文献，未建立确定的 `[[双链]]`。
 
 ## 11. 关键词
-可解释人工智能， 深度学习， 医学图像分析， 综述， 分类框架， 显著性图， 类激活映射（CAM）， 视觉解释， 模型事后解释， 高风险决策
+可解释人工智能（XAI）, 可解释深度学习, 医学图像分析, 综述, 分类框架, model-based/post hoc, model-specific/model-agnostic, global/local, 显著性图, 类激活映射（CAM/Grad-CAM）, LRP, LIME, TCAV, 视觉/文本/示例解释, 高风险决策, GDPR
 
 ## 12. 可信度说明
-本精读笔记主要基于提供的PDF文本的前12页生成，包括摘要、引言、第2节（XAI框架）、第3节开头（介绍三种解释类型及视觉解释的部分内容），以及表1和表2的大部分内容。这些部分清晰地阐述了论文的动机、框架和部分综述结果。然而，由于后续页面（第13-21页）内容缺失，笔记中关于**文本解释（3.2）、基于示例的解释（3.3）、方法的详细讨论、优缺点（第4节）以及完整的结论与展望（第5节）** 的部分信息无法深入，只能在必要处标注“PDF文本中未找到”。提取质量在已提供的文本部分较好，但信息不完整。
+本精读基于本仓库 PDF 提取缓存（覆盖 p.1-12：摘要、Introduction、Section 2 完整框架、Section 3 开头与视觉解释反向传播部分、Table 1 全表、Table 2 至 Chest 部分）。这些部分对论文动机、三维框架、视觉解释技术清单及技术-部位分布的呈现清晰可靠。涉及 Section 3.2/3.3 细节、Section 4（各技术优缺点、计算成本、开源可用性）、Section 5（讨论、application/human/functionally-grounded 三类评估、展望）的内容，提取缓存未覆盖，凡引用之处均标注"据原文后续页，提取缓存未覆盖，待核"，并以原笔记"全文补读记录"中的页面线索为辅助提示，未经 PDF 原文核对前不应直接当作定论引用。提取质量在已覆盖页面较好。
 
 ---
 
-> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2086 字符/页)); 来源缓存: `.paper-cache/extracts/Explainable-artificial-intelligence--XAI--in-deep-learni_2022_Medical-Image-.txt` (21/21 页; 原 AI 主体 12/21 + 全文补读 13-21); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro).
+> **可信度补充**: PDF 提取质量 = **high** (PDF 提取质量好 (2086 字符/页)); 来源缓存: `.paper-cache/extracts/Explainable-artificial-intelligence--XAI--in-deep-learni_2022_Medical-Image-.txt` (提取缓存覆盖 p.1-12/21; 原 AI 主体声称 12/21 + 全文补读 13-21 据页面线索); 生成日期: 2026-06-05; 模式: LLM (mimo-v2.5-pro)。
 ## 全文补读记录
 
 - **补读日期**: 2026-06-08
