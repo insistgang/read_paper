@@ -9,32 +9,32 @@
 - **主题名**: 雷达/无线电/张量/数学
 - **代号**: `N_雷达_无线电_张量_数学`
 - **论文数**: 22
-- **年份分布**: 2019: 5, 2023: 5, 2017: 4, 2024: 3, 2000: 1
+- **年份分布**: 2019: 5, 2023: 3, 2024: 3, 2017: 3, 2022: 2, 2013: 1
 
 ## 论文列表 (按年份排序)
 
-- 2000 [[张量CUR分解LoRA tCURLoRA]]
-- 2005 [[蛋白质结构网络图LL4G LL4G Graph]]
-- 2017 [[叶绿体电子断层扫描 Thylakoid]]
+- 2013 [[2013_Quickest_Change_Poin]]
+- 2014 [[2014_Sequential_Detection]]
 - 2017 [[在线无线电干涉成像 Online Radio Imaging]]
 - 2017 [[无线电干涉不确定性I Radio Interferometric I]]
 - 2017 [[无线电干涉不确定性II Radio Interferometric II]]
 - 2018 [[稀疏贝叶斯质量映射I Sparse Bayesian I]]
-- 2019 [[2019_Thylakoid_Electron_Tomography]]
+- 2019 [[2019_Spectrum_Prediction]]
 - 2019 [[PURIFY分布式优化 PURIFY]]
 - 2019 [[分布式无线电优化 Distributed Radio Optimization]]
 - 2019 [[稀疏贝叶斯质量映射II Sparse Bayesian II]]
 - 2019 [[高维逆问题不确定性量化 Uncertainty Quantification]]
 - 2020 [[稀疏贝叶斯质量映射III Sparse Bayesian III]]
-- 2023 [[2023_2307.12248_Bilevel_Peer_Review]]
+- 2021 [[平衡神经网络搜索II Balanced NAS II]]
+- 2022 [[DNCNet雷达去噪 DNCNet]]  _E_图像复原_超分_去噪_去雨去雾_
+- 2022 [[平衡神经网络搜索I Balanced NAS I]]
 - 2023 [[2023_2308.01480_Tensor_Train_Approximation]]
-- 2023 [[2023_2311.14733_Equalizing_Protected_Attributes]]
 - 2023 [[Tucker近似 Tucker Approximation]]
 - 2023 [[雷达工作模式识别 Radar Work Mode]]
 - 2024 [[ISAR卫星特征识别 ISAR]]
 - 2024 [[双面Sketching张量 Two-Sided Sketching]]
 - 2024 [[高效变分分类 Efficient Variational]]
-- ???? [[Talk2Radar 雷达语言多模态 Talk2Radar]]
+- 2025 [[Talk2Radar 雷达语言多模态 Talk2Radar]]
 
 ## 建议阅读顺序 (TODO: 人工)
 

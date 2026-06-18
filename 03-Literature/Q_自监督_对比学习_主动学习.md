@@ -8,16 +8,15 @@
 
 - **主题名**: 自监督/对比学习/主动学习
 - **代号**: `Q_自监督_对比学习_主动学习`
-- **论文数**: 5
-- **年份分布**: 2021: 2, 2022: 2, 2024: 1
+- **论文数**: 4
+- **年份分布**: 2022: 2, 2021: 1, 2024: 1
 
 ## 论文列表 (按年份排序)
 
-- 2021 [[2021_A_Survey_of_Self-Sup]]
 - 2021 [[2021_Active_learning_for]]
 - 2022 [[2022_Reinforcement-based]]
 - 2022 [[2022_Self-supervised_Lear]]
-- 2024 [[2024_Reinforcement_Learni]]
+- 2024 [[Rethinking-masked-image-modelling-for-medical-image-r_2024_Medical-Image-Ana]]  _A2_医学图像_分类_配准_生成_
 
 ## 建议阅读顺序 (TODO: 人工)
 

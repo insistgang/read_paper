@@ -1710,5 +1710,7 @@
   "高效变分分类 Efficient Variational",
   "高斯_维纳表示下的稠密焦栈图生成方法",
   "高维逆问题不确定性量化 Uncertainty Quantification"
- ]
+ ],
+ "status": "COMPLETE",
+ "done_count": 512
 }

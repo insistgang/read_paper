@@ -8,19 +8,18 @@
 
 - **主题名**: 数据集/Benchmark
 - **代号**: `L_数据集_Benchmark`
-- **论文数**: 8
-- **年份分布**: 2020: 3, 2024: 3, 2025: 2
+- **论文数**: 7
+- **年份分布**: 2025: 3, 2020: 2, 2022: 1, 2024: 1
 
 ## 论文列表 (按年份排序)
 
-- 2020 [[2020_Aerial_Imagery_Pixel]]
 - 2020 [[2020_RSVQA_Visual_Questi]]
 - 2020 [[2020_TJU-DHD_A_Diverse_H]]
-- 2024 [[2024_Change-Agent_Toward]]
+- 2022 [[2022_SODA_Site_Object_De]]  _C_目标检测_通用与旋转框_
 - 2024 [[2024_MagicBathyNet_A_Mul]]
-- 2024 [[cjig_计算机视觉_车路两端纯视觉鸟瞰图感知研究综述]]
 - 2025 [[2025_Benchmarking_Suite_f]]
 - 2025 [[2025_SoccerSynth-Detectio]]
+- 2025 [[扩散模型生成视频数据集及其检测基准研究]]
 
 ## 建议阅读顺序 (TODO: 人工)
 

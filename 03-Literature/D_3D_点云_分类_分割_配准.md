@@ -8,39 +8,30 @@
 
 - **主题名**: 3D 点云分类/分割/配准
 - **代号**: `D_3D_点云_分类_分割_配准`
-- **论文数**: 28
-- **年份分布**: 2024: 7, 2025: 5, 2023: 5, 2019: 2, 2015: 2, 2010: 1
+- **论文数**: 19
+- **年份分布**: 2024: 5, 2023: 4, 2025: 3, 2020: 2, 2019: 1, 2017: 1
 
 ## 论文列表 (按年份排序)
 
-- 2010 [[3D方向场变换 3D Orientation Field]]
 - 2014 [[多功能传感器树木分类 Tree Species Classification]]
-- 2015 [[SLaT三阶段分割 SLaT Segmentation]]
-- 2015 [[多传感器树木制图 Multi-Sensor Trees]]
-- 2016 [[RobustPCA树木分类 Robust PCA Trees]]
 - 2017 [[3D树木描绘图割 3D Tree Delineation]]
 - 2019 [[3D树木分割图 3D Tree Segmentation]]
-- 2019 [[PE3d]]
 - 2020 [[3D树木分割图割 3D Tree Graph Cut]]
+- 2020 [[GraphLayer]]  _B_注意力算子模块_
+- 2021 [[pnp3d(点云)]]
 - 2022 [[多特征融合与几何卷积的机载LiDAR点云地物分类]]
-- 2023 [[EPA3d]]
-- 2023 [[MOGO 3D人体运动生成 MOGO Motion]]
+- 2023 [[2023_Super_Sparse_3D_Obje]]
 - 2023 [[cjig_图像处理_深度学习点云质量增强方法综述]]
 - 2023 [[cjig_点云_融合小样本元学习和原型对齐的点云分割算法]]
 - 2023 [[cjig_计算机图形学_三维场景点云理解与重建技术]]
+- 2024 [[2024_PVAFN_Point-Voxel_A]]
 - 2024 [[3DKMI Krawtchouk矩形状签名 3DKMI]]
-- 2024 [[3DfusionBlock]]
-- 2024 [[DFF(3d)]]
-- 2024 [[cjig_计算机图形学_RGB-D图像多层特征提取算法综述]]
+- 2024 [[可见表面检测 Detect Closer Surfaces]]
 - 2024 [[点云神经表示 Neural Varifolds]]
-- 2024 [[跨域LiDAR检测 Cross-Domain LiDAR]]
 - 2024 [[面向点云几何压缩的隐式编码网络]]
-- 2025 [[2025_2511.02142_3D_Growth_Trajectory_Reconstruction]]
-- 2025 [[2025_2511.18209_MotionDuet_3D_Motion_Generation]]
 - 2025 [[CornerPoint3D 3D检测新尺度 CornerPoint3D]]
 - 2025 [[三维点云场景语义分割研究进展]]
 - 2025 [[面向深度学习的三维点云补全算法综述]]
-- ???? [[pnp3d(点云)]]
 
 ## 建议阅读顺序 (TODO: 人工)
 

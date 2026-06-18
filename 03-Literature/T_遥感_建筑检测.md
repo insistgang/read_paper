@@ -8,17 +8,28 @@
 
 - **主题名**: 遥感/建筑检测
 - **代号**: `T_遥感_建筑检测`
-- **论文数**: 6
-- **年份分布**: 2024: 4, 2023: 1, 2022: 1
+- **论文数**: 17
+- **年份分布**: 2024: 5, 2018: 3, 2022: 3, 2023: 2, 2025: 2, 2017: 1
 
 ## 论文列表 (按年份排序)
 
-- 2022 [[Assignment_of_AI_Detected_Buildings_from_Satellite_Images_to_Registered_Meters_for_Energy_Theft_Detection]]
-- 2023 [[A_New_High-Precision_and_Lightweight_Detection_Model_for_Illegal_Construction_Objects_Based_on_Deep_Learning]]
+- 2017 [[2017_Building_Detection_f]]
+- 2018 [[2018_Automatic_Pixelwise]]
+- 2018 [[2018_Deep_Learning_Approa]]
+- 2018 [[26211-41200-1-SM]]  _S_变化检测_ChangeDetection/C2_目标检测_违建_车辆_船舶_行人_
+- 2019 [[2019_Building_Damage_Dete]]
+- 2022 [[2022_Building_Height_Pred]]
+- 2022 [[2022_Interpretability_in]]
+- 2022 [[EBSCO-FullText-09_12_2025 (1)]]
+- 2023 [[2023_Building-road_Collab]]
+- 2023 [[2023_Learning_Efficient_U]]
 - 2024 [[An_Optimized_Edge-Focused_Siamese_Network_for_Monitoring_New_Illegal_Buildings_Using_Satellite_Images]]
+- 2024 [[Assignment_of_AI_Detected_Buildings_from_Satellite_Images_to_Registered_Meters_for_Energy_Theft_Detection]]
+- 2024 [[FULLTEXT01]]
 - 2024 [[MIAYOLO_Multiexpert_and_Intraclass_Aggregation-Assisted_Suburban_Building_Detection_in_Unmanned_Aerial_Vehicle_Imagery]]
 - 2024 [[TfNet_Building_Detection_in_Remote_Sensing_Images_Using_Multi-Scale_Feature_Fusion]]
-- 2024 [[YMMNet_A_More_Accurate_and_Lightweight_Detector_of_Illegal_Buildings_for_Smart_Cities]]
+- 2025 [[Mask_to_Height_YOLOv11_2510.27224]]
+- 2025 [[s11042-024-19279-5]]  _C2_目标检测_违建_车辆_船舶_行人_
 
 ## 建议阅读顺序 (TODO: 人工)
 

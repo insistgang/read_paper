@@ -8,21 +8,31 @@
 
 - **主题名**: 工具/figures/杂项
 - **代号**: `Z_工具与杂项_figures`
-- **论文数**: 18
-- **年份分布**: 2016: 1
+- **论文数**: 28
+- **年份分布**: 2023: 1, 2016: 1, 2025: 1
 
 ## 论文列表 (按年份排序)
 
 - 2016 [[Cover_Letter]]
+- 2023 [[031002300211-35388227]]
+- 2025 [[NO.2825A30075-b1ad981e31c24999b3a2f13779c88874]]
+- ???? [[ACF]]
 - ???? [[Author_Biography]]
+- ???? [[CPA]]
+- ???? [[CPB]]
+- ???? [[CPB_visualisation]]
+- ???? [[CogM-Link]]
+- ???? [[ar_residual_growth]]
 - ???? [[benchmark_overview]]
 - ???? [[budget_fairness_accounting]]
+- ???? [[c22af048-3756-4a19-af0c-dfde22120daa]]
 - ???? [[controlled_ablation]]
 - ???? [[dataset-imgs-QAs]]
 - ???? [[dataset]]
 - ???? [[dataset_analysis_12]]
 - ???? [[dataset_analysis_v5_img_dis]]
 - ???? [[dataset_analysis_v5_qst_length]]
+- ???? [[f3c9e195-f829-49d3-b6b2-4956bc016e4a-2]]
 - ???? [[figure1]]
 - ???? [[illustration_v2]]
 - ???? [[parameter_sensitivity_scan]]

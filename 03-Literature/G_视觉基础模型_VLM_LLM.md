@@ -8,27 +8,23 @@
 
 - **主题名**: 视觉基础模型/VLM/LLM
 - **代号**: `G_视觉基础模型_VLM_LLM`
-- **论文数**: 16
-- **年份分布**: 2025: 6, 2024: 4, 2023: 3, 2020: 1, 2026: 1, 2005: 1
+- **论文数**: 12
+- **年份分布**: 2025: 6, 2024: 5, 2023: 1
 
 ## 论文列表 (按年份排序)
 
-- 2005 [[高效PEFT微调 Less but Better PEFT]]
-- 2020 [[Scaling_Laws_for_Neural_Language_Models]]
-- 2023 [[2023_2307.00056_Proximal_Nested_Sampling]]
-- 2023 [[2023_OFAR_A_Multimodal_E]]
 - 2023 [[2023_Vision-Language_Mode]]
-- 2024 [[2024_Brain-Inspired_Onlin]]
 - 2024 [[2024_FreezeAsGuard_Mitig]]
+- 2024 [[2024_Remote_Sensing_ChatG]]
+- 2024 [[2024_Remote_Sensing_Spati]]
 - 2024 [[cjig_计算机视觉_分割一切模型SAM的潜力与展望]]
 - 2024 [[大小模型端云协同进化技术进展]]
-- 2025 [[2025_2508.08117_GRASPTrack_MultiObject_Tracking]]
-- 2025 [[2025_2510.09893_HIPPD_Brain-Inspired_Personality_Detection]]
+- 2025 [[2025_Genes_Shells_AI_Scientific_Reports]]
 - 2025 [[2025_SAM2-ELNet_Label_En]]
 - 2025 [[2025_Vision-Language_Mode]]
 - 2025 [[多模态大模型驱动的三维视觉理解技术前沿进展]]
+- 2025 [[结合提示学习和视觉语义生成融合的东巴画图像描述]]
 - 2025 [[视觉基础模型研究现状与发展趋势]]
-- 2026 [[大模型高效微调CALM CALM Fine-tuning]]
 
 ## 建议阅读顺序 (TODO: 人工)
 

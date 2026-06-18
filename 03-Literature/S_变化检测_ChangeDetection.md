@@ -8,18 +8,23 @@
 
 - **主题名**: 变化检测
 - **代号**: `S_变化检测_ChangeDetection`
-- **论文数**: 7
-- **年份分布**: 2019: 3, 2023: 2, 2020: 1, 2024: 1
+- **论文数**: 12
+- **年份分布**: 2024: 6, 2019: 2, 2021: 1, 2023: 1, 2026: 1, 2015: 1
 
 ## 论文列表 (按年份排序)
 
+- 2015 [[isprsarchives-XL-1-W5-387-2015]]  _T_遥感_建筑检测_
+- 2019 [[2019_Building_change_dete]]  _R1_遥感_高光谱_变化检测_
 - 2019 [[2019_Change_Detection_and]]
-- 2019 [[2019_Object_Contour_and_E]]
-- 2019 [[2019_Semantic_Change_and]]
-- 2020 [[2020_A_computer-friendly]]
+- 2021 [[2021_S2Looking_A_Satelli]]  _L_数据集_Benchmark_
 - 2023 [[2023_An_Aligned_Multi-Tem]]
-- 2023 [[2023_Laplacian_Change_Poi]]
+- 2024 [[2024_Change-Agent_Toward]]  _L_数据集_Benchmark_
+- 2024 [[CBM]]
+- 2024 [[Like_Squinting_Your_Eyes_The_impact_of_different_fusion_modules_on_change]]
+- 2024 [[MDFM]]
+- 2024 [[TIAM]]  _B_注意力算子模块_
 - 2024 [[cjig_遥感_高分遥感影像变化检测]]
+- 2026 [[2026_Towards_Remote_Sensi]]
 
 ## 建议阅读顺序 (TODO: 人工)
 
