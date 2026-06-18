@@ -15,11 +15,11 @@ authors:
 year: 2020
 venue: "Assessment of Climate Change over the Indian Region"
 doi: 
-document_type: supplementary
+document_type: paper
 pdf: [[2020_Future_Climate_Chang.pdf]]
-primary_topic: T_通用_NLP_其他
+primary_topic: R2_控制_生物启发_其他跨学科
 topics:
-  - "T_通用_NLP_其他"
+  - "R2_控制_生物启发_其他跨学科"
 status: ai-read
 reading_stage: ai-fulltext
 confidence: high
@@ -40,8 +40,8 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/17 pages
 
 ## 基本信息
 - **PDF**: [[2020_Future_Climate_Chang.pdf]]
-- **primary_topic**: `T_通用_NLP_其他`
-- **topics**: `T_通用_NLP_其他`
+- **primary_topic**: `R2_控制_生物启发_其他跨学科`
+- **topics**: `R2_控制_生物启发_其他跨学科`
 - **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
@@ -123,7 +123,7 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/17 pages
 ## 相关论文与链接
 
 > 用 `[[]]` 链接到其他论文笔记或主题首页：
-> - [[T_通用_NLP_其他]]
+> - [[R2_控制_生物启发_其他跨学科]]
 > - [[论文知识库总览]]
 
 ---

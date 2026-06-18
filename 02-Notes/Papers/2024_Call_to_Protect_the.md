@@ -7,9 +7,9 @@ venue: "IAU CPS"
 doi: 
 document_type: supplementary
 pdf: [[2024_Call_to_Protect_the.pdf]]
-primary_topic: T_通用_NLP_其他
+primary_topic: R2_控制_生物启发_其他跨学科
 topics:
-  - "T_通用_NLP_其他"
+  - "R2_控制_生物启发_其他跨学科"
 status: ai-read
 reading_stage: ai-fulltext
 confidence: high
@@ -30,8 +30,8 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/22 pages
 
 ## 基本信息
 - **PDF**: [[2024_Call_to_Protect_the.pdf]]
-- **primary_topic**: `T_通用_NLP_其他`
-- **topics**: `T_通用_NLP_其他`
+- **primary_topic**: `R2_控制_生物启发_其他跨学科`
+- **topics**: `R2_控制_生物启发_其他跨学科`
 - **状态**: read (已提取 PDF 内容, 待人工复核)
 - **date_added**: 2026-06-03
 
@@ -47,7 +47,10 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/22 pages
 
 ## 摘要
 
-该文件指出，大规模LEO卫星星座的快速发展正严重威胁全球的光学与射电天文观测以及暗夜文化遗产，亟需通过国际合作、行业自律、技术创新和法规监管等综合措施加以保护。
+本文件是国际天文学联合会（IAU）暗夜与宁静天空保护中心（CPS）于 2024 年 3 月 14 日发布的一份立场文件（position document），并非传统的同行评审研究论文。文件阐述 CPS 对低地球轨道（LEO）卫星星座干扰科学与公众访问夜空和射电天空的立场：大规模 LEO 卫星星座的快速发展正严重威胁全球的光学与射电天文观测以及暗夜文化遗产，亟需通过国际合作、行业自律、技术创新和法规监管等综合措施加以保护。文件面向政府、航天产业、公众和天文学界，按执行摘要、总结与建议、正文三个详略层级组织。
+
+> 来源: 据 PDF 提取文本整理。
+
 ## 研究背景与动机
 
 *   **为什么做**：近年来，由产业界和政府推动的LEO卫星星座数量呈爆炸式增长，截至2023年底已超过5000颗，且未来十年可能部署数十万颗。这虽然促进了通信、观测等商业应用，但对依赖黑暗宁静天空的天文学研究及文化遗产造成了前所未有的负面影响。
@@ -110,7 +113,7 @@ full_text_completion_basis: "AI supplemental pass; original AI block 12/22 pages
 ## 相关论文与链接
 
 > 用 `[[]]` 链接到其他论文笔记或主题首页：
-> - [[T_通用_NLP_其他]]
+> - [[R2_控制_生物启发_其他跨学科]]
 > - [[论文知识库总览]]
 
 ---
