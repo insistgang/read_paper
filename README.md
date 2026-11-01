@@ -1,32 +1,32 @@
 # 论文阅读中心
 
-这是一个精简后的 Obsidian 论文知识库。当前结构只保留正在使用的部分：PDF、论文笔记、主题索引、总拆解表、维护脚本、测试、Obsidian 配置和 AI 文本缓存。
+这是一个精简后的 Obsidian 论文知识库。当前结构只保留正在使用的部分：论文笔记、主题索引、总拆解表、维护脚本、测试与 Obsidian 配置。
+
+> 2026-11-01 起，PDF 原文与 PDF 文本缓存按「精确重复文件去重」批次移出本仓库（副本暂存于系统废纸篓批次 `pdf-exact-duplicates-20261101-211037`，清空废纸篓后不可恢复）；Git 历史中仍可取回曾被跟踪的 50 份 PDF。仓库当前定位为**笔记与索引库**，PDF 原文由本机同步盘或单独副本维护。
 
 ## 当前规模
 
 | 项目 | 数量 |
 |---|---:|
-| PDF 原文 | 547 |
+| PDF 原文 | 0（已按去重清理移出本仓库） |
 | Markdown 论文笔记 | 547 |
 | AI 精读区块 | 547 |
-| 主题索引/仪表盘文件 | 36 |
-| PDF 文本缓存 | 547 |
+| 主题索引/仪表盘文件 | 39 |
+| PDF 文本缓存 | 0（`.paper-cache/extracts/` 已随 PDF 一并移出） |
 
 ## 目录结构
 
 ```text
 read_paper/
-├── 01-Papers/                # 547 个 PDF + 分类索引
+├── 01-Papers/                # PDF 已移出（去重清理），仅留分类索引
 │   ├── paper_classification.md
-│   ├── paper_topics.json
-│   └── *.pdf
+│   └── paper_topics.json
 ├── 02-Notes/
-│   └── Papers/               # 547 篇论文笔记，一篇 PDF 对应一篇 md
+│   └── Papers/               # 547 篇论文笔记，含 PDF wikilink 指向
 ├── 03-Literature/            # 主题索引、总览、阅读质量仪表盘
 ├── scripts/                  # 批处理、同步、校验、生成脚本
 ├── tests/                    # 脚本回归测试
 ├── .obsidian/                # Obsidian vault 配置
-├── .paper-cache/extracts/    # PDF 文本提取缓存，不是正式笔记
 ├── 论文阅读拆解表.md          # 547 篇论文批量拆解总表
 ├── requirements.txt
 └── start.sh
@@ -41,7 +41,7 @@ read_paper/
 - 全库三遍 Review 报告：[03-Literature/全库三遍Review报告.md](03-Literature/全库三遍Review报告.md)
 - 批量拆解总表：[论文阅读拆解表.md](论文阅读拆解表.md)
 - 论文笔记：[02-Notes/Papers](02-Notes/Papers)
-- PDF 原文：[01-Papers](01-Papers)
+- PDF 原文：本仓库已不再保留；见上文去重清理说明
 
 ## 日常命令
 
@@ -72,7 +72,7 @@ python3 -m unittest discover -s tests
 
 ## 新增论文
 
-1. 把 PDF 放到 `01-Papers/`。
+1. 把 PDF 放到 `01-Papers/`（PDF 不进 Git，用同步盘或 Git LFS 跨设备同步）。
 2. 生成或补齐同名 Markdown：
 
 ```bash
